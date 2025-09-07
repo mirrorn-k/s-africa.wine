@@ -1,0 +1,140 @@
+1754703902
+%255Ba6310963f4152236a53d811cdc0670ebe1394f17%255D%255B1%255D
+a:1:{s:1155:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:74;}i:1;a:2:{i:0;i:142;i:1;i:76;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:2:{i:0;a:13:{s:4:"id_0";s:3:"142";s:6:"name_1";s:109:"ステラー・オーガニック・ムーンライト・シュナンブラン&ソーヴィニヨンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:261:"「オーガニックだからと言って品質に妥協はない」ライムやグレープフルーツなどの柑橘系の香りに、爽やかな酸味とフルーティな味わいが心地良い。適度なコクとボディも魅力のワインです。";s:13:"search_word_5";s:52:"シュナンブラン,ソーヴィニヨンブラン";s:11:"free_area_6";s:2495:"<div class="productsheet__table">   <h2><small>Stellar Organics Moonlight Chenin Blanc&Sauvignon Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (85％,15％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ライムやグレープフルーツなどの柑橘系の香りに、爽やかな酸味とフルーティな味わいが心地良い。適度なコクとボディも魅力のワインです。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 07:56:59";s:13:"update_date_8";s:19:"2023-11-13 12:30:08";s:6:"sclr_9";s:7:"1400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"76";s:6:"name_1";s:78:"ブーケンハーツクルーフ・ザ・ウルフトラップ・ホワイト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:345:"アーモンド、りんごの花、スパイスなどの豊な香り。やさしい酸味、凝縮した果実味、なめらかでコクのある味わい。それぞれの品種の要素がこのワインを複雑な面白いワインに仕上げている。オークの風味もあり、フィニッシュはクリーンで余韻も長い。";s:13:"search_word_5";s:65:"ヴィオニエ,シュナンブラン,グルナッシュブラン";s:11:"free_area_6";s:3386:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof The Wolftrap White</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／フランシュック</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (38％,32％,30％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.8％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2017’] 2016VT：87 Point／Bronze<br>
+[Platter SA 2020’] 2018VT：4 STAR<br>
+[Platter SA 2017’] 2015VT：4 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+それぞれの品種で発酵。シュナンブランとグルナッシュブランはフレンチオークを使用して熟成。その後ブレンド。濾過して瓶詰。アーモンド、りんごの花、スパイスなどの豊な香り。やさしい酸味、凝縮した果実味、なめらかでコクのある味わい。それぞれの品種の要素がこのワインを複雑な面白いワインに仕上げている。オークの風味もあり、フィニッシュはクリーンで余韻も長い。<br>お勧め料理：シーフード、パスタ、中華料理、アジア料理など。<br>
+<br>
+過去の謎と伝説を思い出すワイン<br>
+18世紀頃ヨーロッパの植民者達がブーケンハーツクルーフのあるフランシュック谷に住み始めた。彼らは当時、山にオオカミが住んでいると信じて「ウルフトラップ（狼のワナ）」を仕掛けたが、実際にはオオカミは居なかったという話からこのワインに名付けられた。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:42:04";s:13:"update_date_8";s:19:"2023-11-13 12:43:19";s:6:"sclr_9";s:7:"1600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

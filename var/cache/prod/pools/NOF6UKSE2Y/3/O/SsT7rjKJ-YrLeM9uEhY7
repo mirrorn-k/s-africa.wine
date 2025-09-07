@@ -1,0 +1,5 @@
+1754885415
+eccube_entity_news%255Beccube_entity_news_eccube.entity.news_48%255D%255B1%255D
+O:35:"Doctrine\ORM\Cache\EntityCacheEntry":2:{s:4:"data";a:10:{s:2:"id";i:48;s:12:"publish_date";O:8:"DateTime":3:{s:4:"date";s:26:"2024-08-01 12:51:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:10:"Asia/Tokyo";}s:5:"title";s:87:"暑い夏をエレガントなスパークリングワインで楽しみましょう！";s:11:"description";s:787:"生産量84,000本。涼しい夜間と早朝に手摘みする。フリーラン・ジュース（1トンあたりで約500リットル）のみを使用。ステンレスタンクで低温発酵。その後マロラクティック発酵（ＭＬＦ）。瓶詰め後、地下セラーで瓶内2次発酵（約3ヶ月）。そのまま熟成。手動による動瓶（ルミュアージュ）。
+ビスケットや桃のような香りを持ち、上品でクリーミーな口あたり。フィニッシュは爽やか。持続性のある綺麗で柔らかな泡。シャンパーニュと間違うような香りと品質は泡ファンに是非飲んでもらいたい。
+シャンパーニュ・ファンにも満足できるリーズナブルな本格派スパークリング。";s:3:"url";s:40:"https://s-africa.wine/products/detail/51";s:11:"link_method";b:0;s:11:"create_date";O:8:"DateTime":3:{s:4:"date";s:26:"2023-08-01 12:53:28.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:10:"Asia/Tokyo";}s:11:"update_date";O:8:"DateTime":3:{s:4:"date";s:26:"2025-03-09 10:01:43.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:10:"Asia/Tokyo";}s:7:"visible";b:1;s:10:"creator_id";i:1;}s:5:"class";s:18:"Eccube\Entity\News";}

@@ -1,0 +1,83 @@
+<script>
+    $(function() {
+        var eccube_copy = window.eccube;
+        var discountRate = {
+            {% for Product in pagination %}
+            "{{ Product.id|escape('js')}}": {{ Product.discountRatesJson|raw }}{% if loop.last == false %}, {% endif %}
+            {% endfor %}
+        };
+        var priceOffOrigin = [];
+        $('.price_off').each(function(index, priceOff) {
+            product_id_ = $(priceOff).parents('li.ec-shelfGrid__item').find('input[name=product_id]').val();
+            priceOffOrigin[product_id_] = $(priceOff).text();
+        });
+        $('select[name=classcategory_id1]')
+            .change(function(event) {
+                var $form = $(this).parents('form');
+                var product_id = $form.find('input[name=product_id]').val();
+                var $sele1 = $(this);
+                var $sele2 = $form.find('select[name=classcategory_id2]');
+                priceOff = $form.parent().find('.price_off').first();
+                price02IncTax = $form.parent().find('.price02-default').first();
+                classcategory_id01 = $sele1.val();
+                if (!$sele2.length) {
+                    classcategory_id01 = $sele1.val();
+                    if(classcategory_id01 && classcategory_id01 !== '__unselected' && priceOff) {
+                        classcategory = eccube_copy.productsClassCategories[product_id][classcategory_id01]['#'];
+                        classcategory_discountRate = discountRate[product_id][classcategory_id01]['#'];
+                        priceOff.removeClass('show');
+                        if(classcategory_discountRate.discount_rate > 0) {
+                            priceOff.text('(' + classcategory_discountRate.discount_rate + '%OFF)');
+                        } else {
+                            priceOff.text('');
+                        }
+                        {% if TaxManagementConfig.isIncludeTaxFlag is not null and TaxManagementConfig.isIncludeTaxFlag == false %}
+                        price02IncTax.text('￥'+classcategory.price02);
+                        {% endif %}
+                    } else {
+                        if(priceOffOrigin[product_id].includes('～')) {
+                            priceOff.addClass('show');
+                        }
+                        priceOff.text(priceOffOrigin[product_id]);
+                    }
+                } else {
+                    if(priceOffOrigin[product_id].includes('～')) {
+                        priceOff.addClass('show');
+                    }
+                    priceOff.text(priceOffOrigin[product_id]);
+                }
+            });
+
+        // 規格2選択時
+        $('select[name=classcategory_id2]')
+            .change(function() {
+                var $form = $(this).parents('form');
+                var product_id = $form.find('input[name=product_id]').val();
+                var $sele1 = $form.find('select[name=classcategory_id1]');
+                var $sele2 = $(this);
+                priceOff = $form.parent().find('.price_off').first();
+                price02IncTax = $form.parent().find('.price02-default').first();
+                classcategory_id01 = $sele1.val();
+                classcategory_id02 = $sele2.val();
+                
+                if(classcategory_id01 && classcategory_id01 !== '__unselected' && classcategory_id02 && classcategory_id02 !== '__unselected' && priceOff) {
+                    classcategory = eccube_copy.productsClassCategories[product_id][classcategory_id01]['#'+classcategory_id02];
+                    classcategory_discountRate = discountRate[product_id][classcategory_id01]['#'+classcategory_id02];
+                    priceOff.removeClass('show');
+                    if(classcategory_discountRate.discount_rate > 0) {
+                        priceOff.text('(' + classcategory_discountRate.discount_rate + '%OFF)');
+                    } else {
+                        priceOff.text('');
+                    }
+                    {% if TaxManagementConfig.isIncludeTaxFlag is not null and TaxManagementConfig.isIncludeTaxFlag == false %}
+                    price02IncTax.text('￥'+classcategory.price02);
+                    {% endif %}
+                } else {
+                    if(priceOffOrigin[product_id].includes('～')) {
+                        priceOff.addClass('show');
+                    }
+                    priceOff.text(priceOffOrigin[product_id]);
+                }
+            });
+    });
+</script>

@@ -1,0 +1,143 @@
+1754692228
+%255Bc4a2a116fe7b98410db63037c4e55453e8c158a2%255D%255B1%255D
+a:1:{s:1154:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:67;}i:1;a:2:{i:0;i:48;i:1;i:27;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:2:{i:0;a:13:{s:4:"id_0";s:2:"48";s:6:"name_1";s:57:"グレネリー・エステートリザーブ・レッド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:192:"明確な骨格のあるボディを持ち、濃厚な味わいでありながら、なめらかでエレガント、「ファンタスティック！」なワインに仕上がっている。";s:13:"search_word_5";s:100:"カベルネソーヴィニヨン,メルロ,シラーズ,カベルネフラン,プティヴェルド";s:11:"free_area_6";s:3034:"<div class="productsheet__table">   <h2><small>Glenelly Estate Reserve Red</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (47％,23％,15％,11％,4％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2015</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2014VT：93 Point<br>
+[Tim Atkin Report 2018’] 2013VT：93 Point<br>
+[Tim Atkin Report 2017’] 2012VT：94 Point<br>
+[Tim Atkin Report 2016’] 2011VT：94 Point<br>
+[Decanter World Wine Awards 2016’] 2010VT：84 Point／Commended<br>
+[Parker Wine Advocate] 2009VT：92 Point<br>
+[Sakura Awards 2016’] 2009VT：Silver
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+グラン・ヴァン・ド・レッドがエステートリザーブに名称変更！<br>カシスやスパイシーなプラム、トーストなどの香り。豊かな酸味と濃厚で凝縮した果実味。細やかで、しっかりした渋みとスパイスの風味。明確な骨格のあるボディを持ち、濃厚な味わいでありながら、なめらかでエレガント、「ファンタスティック！」なワインに仕上がっている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:01:29";s:13:"update_date_8";s:19:"2023-11-13 13:01:41";s:6:"sclr_9";s:7:"3300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"27";s:6:"name_1";s:54:"カノンコップ・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:369:"深いルビー色。カシス、黒系果実、ブルーベリー、紅茶の葉、タバコ、鉛筆の芯、ビターチョコレート、ハーブ、エスプレッソ、オーク由来のスパイスなど複雑な香り。フレッシュで比較的豊かな酸味、凝縮し濃厚な果実味、上品で洗練された渋み、しっかりと太いボディ。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3452:"<div class="productsheet__table">
+	<h2><small>Kanonkop Cabernet Sauvignon</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>15.0％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2018</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2015VT：94 Point<br>
+				[Platter SA 2020’] 2015VT：5.0 STAR
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	温かく乾燥した冬で収穫時期は暑かった。収穫量4トン（2750L)/ha。樹齢：平均26年。花崗岩土壌。オープンタンクで29度で発酵。ピジャージュは2時間おきに。225Lのフレンチオークで24ヶ月熟成（新樽60％、２年目樽40％）。<br>深いルビー色。カシス、黒系果実、ブルーベリー、紅茶の葉、タバコ、鉛筆の芯、ビターチョコレート、ハーブ、エスプレッソ、オーク由来のスパイスなど複雑な香り。フレッシュで比較的豊かな酸味、凝縮し濃厚な果実味、上品で洗練された渋み、しっかりと太いボディ。なめらかでシルキーな味わいでクラシックなエレガント・スタイル。深く長い余韻。濃厚でしっかりしたワインだが、酸味もあるのでワインは決して重たく感じない。酸味、果実味、ボディ、オークの風味、余韻など、全ての要素がマックスでバランス良く保たれている。カベルネソーヴィニョン100％のワインとしては南アフリカ最高峰かつ至福の1本と呼べるだろう。これまでの経験でも、ほぼ「完璧」と言っても良いくらい、最も洗練された過去最高ヴィンテージ（当社バイヤー談）。価格パフォーマンスも優れているので、是非飲んでほしい1本。長期熟成型で早めの抜栓かデキャンターがおすすめ。<br>ビーフステーキ、ラムステーキ、牛肉料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:58:42";s:13:"update_date_8";s:19:"2023-11-13 11:03:18";s:6:"sclr_9";s:7:"7500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

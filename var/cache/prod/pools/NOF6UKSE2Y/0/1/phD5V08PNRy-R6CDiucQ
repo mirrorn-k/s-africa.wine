@@ -1,0 +1,318 @@
+1754863789
+%255Bf616731b6d8a8ef2d807eb250df59dd5c46bcc14%255D%255B1%255D
+a:1:{s:1476:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND (CONVERT(d0_.name USING utf8) COLLATE utf8_unicode_ci LIKE CONVERT(? USING utf8) COLLATE utf8_unicode_ci OR CONVERT(d0_.search_word USING utf8) COLLATE utf8_unicode_ci LIKE CONVERT(? USING utf8) COLLATE utf8_unicode_ci OR EXISTS (SELECT d2_.id FROM dtb_product_class d2_ WHERE (d0_.id = d2_.product_id AND CONVERT(d2_.product_code USING utf8) COLLATE utf8_unicode_ci LIKE CONVERT(? USING utf8) COLLATE utf8_unicode_ci) AND d2_.discriminator_type IN ('productclass'))) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:4:{i:0;s:3:"%3%";i:1;s:3:"%3%";i:2;s:3:"%3%";i:3;a:7:{i:0;i:172;i:1;i:175;i:2;i:177;i:3;i:208;i:4;i:210;i:5;i:209;i:6;i:211;}}&types=a:4:{i:0;i:2;i:1;i:2;i:2;i:2;i:3;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:7:{i:0;a:13:{s:4:"id_0";s:3:"172";s:6:"name_1";s:46:"ラスカリオン・３３ １／３ＲＰＭ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:183:"新鮮な梨、桃、パイナップル、花などの香り。フレッシュで豊かな酸、柔らかなボディ、なめらかで心地良いバランスの取れたワイン。";s:13:"search_word_5";s:97:"シュナンブラン,ルーサンヌ,グルナッシュブラン,ヴィオニエ,ヴェルデホ";s:11:"free_area_6";s:3223:"<div class="productsheet__table">   <h2><small>Rascallion 33 1/3RPM</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (40％,40％,10％,8％,2％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2019’] 2017VT：92 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+主にピーケニアスクルーフ地区の低収量のブドウを使用。収穫は2月下旬で涼しい朝早い時間に実施。除梗、破砕後、ソフトプレスし、フリーランジュース（一番搾り）のみ使用。ステンレスタンクで発酵、そのまま澱が入ったまま（シュール・リー製法）熟成。<br>新鮮な梨、桃、パイナップル、花などの香り。フレッシュで豊かな酸、柔らかなボディ、なめらかで心地良いバランスの取れたワイン。複雑味もあり、素晴らしい南ローヌ・スタイルのブレンド。好きな曲を聞きながら気軽に軽快に楽しんでほしい1本。<br>サラダ、シーフードマリネ、サーモンや白身魚のレモンバターソースやクリームソース、天ぷらに塩、中華・アジア系料理、様々な魚介料理の揚げ物にレモンやライムを搾って。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:17:47";s:13:"update_date_8";s:19:"2023-07-25 03:54:03";s:6:"sclr_9";s:7:"2000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"175";s:6:"name_1";s:57:"カノンコップ・カデット・ケープブレンド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:229:"ダークチョコレートやブラックベリーの風味。様々な品種が複雑に表現され、かつ調和がとれている。フィニッシュはドライで余韻も長い。 カデットとは「士官候補生」";s:13:"search_word_5";s:106:"ピノタージュ,カベルネソーヴィニヨン,メルロ,カベルネフラン,プティヴェルド";s:11:"free_area_6";s:2672:"<div class="productsheet__table">
+	<h2><small>Kanonkop Kadette Cape Blend</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} (37％,33％,26％,3％,1％)</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>14.0％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2020</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2017VT：91 Point<br>
+				[Tim Atkin Report 2018’] 2016VT：91 Point<br>
+				[Tim Atkin Report 2017’] 2015VT：91 Point<br>
+				[Sakura Awards 2017’] 2015VT：Double Gold and The Best Wine for Asian Foods　“TEPPANYAKI” Grand Prix
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	灌漑は補助的に、収穫量7トン/ha（45.5ｈL）樹齢5-30年。オープンタンクで発酵。225Lのフレンチオークの2-3年目の樽で12-14ヶ月熟成。<br>熟したラズベリー、モカ、プラムなどの香り。なめらかで心地良い酸味、凝縮した果実味、程良くしっかりしたボディ。ダークチョコレートやブラックベリーの風味。様々な品種が複雑に表現され、かつ調和がとれている。フィニッシュはドライで余韻も長い。カデットとは「士官候補生」。
+</div>";s:13:"create_date_7";s:19:"2020-11-06 07:27:30";s:13:"update_date_8";s:19:"2023-12-09 02:57:08";s:6:"sclr_9";s:7:"2900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"177";s:6:"name_1";s:69:"カノンコップ・カデット・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:480:"ブラックベリー、ブルーベリー、カシス、削った鉛筆の芯、フレッシュなハーブ、オーク由来のスパイスなどの香り。フレッシュで豊かな酸、細かいけれどしっかりとした渋み、ボディはミディアムからフルボディで締まっている。フルーティな果実味が豊かでとても美味しく、口あたりは柔らかく滑らか。余韻は長く、豊かな果実の風味は最後まで続く。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:2872:"<div class="productsheet__table">
+	<h2><small>Kanonkop Kadette Cabernet Sauvignon</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>14.5％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2020</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>-
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	比較的暖かく乾燥した夏でしたが、夜は涼しくブドウの成長には良かった。<br>分解された花崗岩。樹齢は10-20年。平均収量：7トン/ha。4550L/ha。オープンタンクで3-5日間発酵。その間2時間おきにパンチダウン。フレンチオークで熟成12ヵ月。<br>ブラックベリー、ブルーベリー、カシス、削った鉛筆の芯、フレッシュなハーブ、オーク由来のスパイスなどの香り。フレッシュで豊かな酸、細かいけれどしっかりとした渋み、ボディはミディアムからフルボディで締まっている。フルーティな果実味が豊かでとても美味しく、口あたりは柔らかく滑らか。余韻は長く、豊かな果実の風味は最後まで続く。カベルネソーヴィニョン100%でも非常にバランス良く出来ていて、口あたりは飲みやすく、程よい渋みが心地良い。<br>牛ステーキ、焼肉、ハンバーガー、BBQ、羊肉、熟成したチーズなど。
+</div>";s:13:"create_date_7";s:19:"2020-11-06 07:29:44";s:13:"update_date_8";s:19:"2023-11-13 11:01:55";s:6:"sclr_9";s:7:"3100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"208";s:6:"name_1";s:38:"【セレクト3】お得3本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:172:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1185:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト</td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>赤ワイン、白ワイン、スパークリングワイン</td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>3本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。
+</div>";s:13:"create_date_7";s:19:"2021-08-25 23:53:18";s:13:"update_date_8";s:19:"2021-08-29 14:17:29";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:3:"210";s:6:"name_1";s:86:"【セレクト3】バイヤー厳選　白ワイン大好きセット　3本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:172:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1109:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト</td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>白ワイン</td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>3本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。
+</div>";s:13:"create_date_7";s:19:"2021-08-25 23:55:40";s:13:"update_date_8";s:19:"2021-08-27 02:39:15";s:6:"sclr_9";s:7:"6000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:3:"209";s:6:"name_1";s:86:"【セレクト3】バイヤー厳選　赤ワイン大好きセット　3本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:172:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1137:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト</td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>赤ワイン</td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>3本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。
+</div>";s:13:"create_date_7";s:19:"2021-08-25 23:54:04";s:13:"update_date_8";s:19:"2021-08-27 02:39:05";s:6:"sclr_9";s:7:"6000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:3:"211";s:6:"name_1";s:104:"【セレクト3】バイヤー厳選　スパークリングワイン大好きセット　3本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:172:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1155:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト</td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>スパークリングワイン</td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>3本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。
+</div>";s:13:"create_date_7";s:19:"2021-08-25 23:56:33";s:13:"update_date_8";s:19:"2021-08-27 02:39:27";s:6:"sclr_9";s:7:"7000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

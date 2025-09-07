@@ -1,0 +1,637 @@
+1754871351
+%255B7bd8f3b996e4a863697b8ec1260fe9fa43dd247a%255D%255B1%255D
+a:1:{s:1228:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:17;}i:1;a:10:{i:0;i:47;i:1;i:46;i:2;i:45;i:3;i:44;i:4;i:43;i:5;i:42;i:6;i:212;i:7;i:49;i:8;i:48;i:9;i:50;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:10:{i:0;a:13:{s:4:"id_0";s:2:"47";s:6:"name_1";s:39:"グレネリー・ロゼ・ド・メイ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:273:"ザクロ、キャンディ、フレッシュなラズベリーの香りが豊かに満たされる。フレッシュで豊かな酸。柑橘類やストロベリーなどの風味。エレガントでクリスピーなフィニッシュが最後まで気持ちが良い。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:3065:"<div class="productsheet__table">   <h2><small>Glenelly Rose De May</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ・シモンズバーグ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>ワイナリー直営のレストランのみで販売されていたのを説得。輸出は日本のみ。
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+軽く色付くまで優しく全房でプレス。ジュースはステンレスタンクに移して天然発酵。14度の低温で発酵。マロラクティック発酵は無し、そのまま熟成。透明な美しいブラッシュ・ピンク。グラスに注ぐと、ザクロ、キャンディ、フレッシュなラズベリーの香りが豊かに満たされる。<br>フレッシュで豊かな酸。柑橘類やストロベリーなどの風味。エレガントでクリスピーなフィニッシュが最後まで気持ちが良い。フードフレンドリーで、食欲が沸くような気持ちの良い辛口ロゼ。<br>ワイナリー直営のレストランのみで販売されていたのを説得。輸出は日本のみ。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:00:44";s:13:"update_date_8";s:19:"2023-11-13 13:02:20";s:6:"sclr_9";s:7:"2400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"46";s:6:"name_1";s:57:"グレネリー・グラスコレクション・メルロ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:222:"深く豊かな色、ダークフルーツの香りとスパイシーなプラムなど複雑な香りと凝縮した果実味。程良い酸味を持ち果実味、ボディ、オークの風味のバランスが良い。";s:13:"search_word_5";s:9:"メルロ";s:11:"free_area_6";s:2862:"<div class="productsheet__table">   <h2><small>Glenelly Glass Collection Merlot</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：91 Point<br>
+[Tim Atkin Report 2018’] 2016VT：89 Point<br>
+[Tim Atkin Report 2017’] 2015VT：90 Point<br>
+[Tim Atkin Report 2016’] 2013VT：91 Point<br>
+[Decanter World Wine Awards 2016’] 2013VT：85 Point／Commended<br>
+[Platter SA 2016’] 2013VT：4 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+深く豊かな色、ダークフルーツの香りとスパイシーなプラムなど複雑な香りと凝縮した果実味。程良い酸味を持ち果実味、ボディ、オークの風味のバランスが良い。なめらかで綺麗なメルロ。天然発酵後、フレンチオークで10ケ月熟成。クラシックでエレガントなスタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:00:17";s:13:"update_date_8";s:19:"2023-11-13 13:01:59";s:6:"sclr_9";s:7:"2400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"45";s:6:"name_1";s:69:"グレネリー・グラスコレクション・カベルネフラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:234:"苺のジャムやかみ砕いたチェリーなど凝縮した果実味。渋みはソフトでなめらか。繊細でまろやかな味わい。シルクのような滑らかなタンニンでエキゾチックで余韻も長い。";s:13:"search_word_5";s:21:"カベルネフラン";s:11:"free_area_6";s:2780:"<div class="productsheet__table">   <h2><small>Glenelly Glass Collection Cabernet Franc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2018’] 2016VT：91 Point／Silver<br>
+[Tim Atkin Report 2019’] 2017VT：92 Point<br>
+[Tim Atkin Report 2018’] 2016VT：91 Point<br>
+[Tim Atkin Report 2017’] 2015VT：91 Point<br>
+[Platter SA 2017’]2014VT：3.5 STAR<br>
+[Sakura Awards 2017’] 2014VT：Gold
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+苺のジャムやかみ砕いたチェリーなど凝縮した果実味。渋みはソフトでなめらか。繊細でまろやかな味わい。シルクのような滑らかなタンニンでエキゾチックで余韻も長い。クラシックでエレガントなスタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:59:43";s:13:"update_date_8";s:19:"2023-11-13 13:02:55";s:6:"sclr_9";s:7:"2400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"44";s:6:"name_1";s:57:"グレネリー・グラスコレクション・シラー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:175:"白胡椒のスパイス、スパイシーなプラムなど凝縮した果実味。 渋みはソフトでなめらか。果実の旨味をそのまま表現されている。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:2944:"<div class="productsheet__table">   <h2><small>Glenelly Glass Collection Syrah</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ・シモンズバーグ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2017’] 2015VT：86 Point／Bronze<br>
+[Tim Atkin Report 2019’] 2017VT：91 Point<br>
+[Tim Atkin Report 2018’] 2016VT：90 Point<br>
+[Tim Atkin Report 2016’] 2013VT：92 Point<br>
+2011VT：パーカー90P。2011VT:デキャンター・ワールド・ワインアワード金賞。ワインスペクテーター88点
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+白胡椒のスパイス、スパイシーなプラムなど凝縮した果実味。 渋みはソフトでなめらか。果実の旨味をそのまま表現されている。程良い酸味を持ち、果実味、ボディ、オークの風味のバランスが良い。天然発酵後、フレンチオークで12ケ月熟成。クラシックでエレガントなスタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:55:55";s:13:"update_date_8";s:19:"2023-11-13 13:02:38";s:6:"sclr_9";s:7:"2400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:2:"43";s:6:"name_1";s:63:"グレネリー・グラスコレクション・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:201:"柑橘類、ライム、マーマレード、メロンなどの複雑な香り。爽やかで心地良い酸味、濃縮した果実味、エレガントで綺麗なワインに仕上がっている。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:2765:"<div class="productsheet__table">   <h2><small>Glenelly Glass Collection Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％（ステンレスタンクのみ）</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：89 Point<br>
+[Tim Atkin Report 2016’] 2015VT：88 Point<br>
+2013VT：パーカー85P。2011VT：ワインスペクテーター87点。オールドミューチュアル2012（南ア）銅賞<br>
+2014VT：サクラアワード2016 シルバー受賞
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+柑橘類、ライム、マーマレード、メロンなどの複雑な香り。爽やかで心地良い酸味、濃縮した果実味、エレガントで綺麗なワインに仕上がっている。余韻も長くバランスの良いワイン。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:55:30";s:13:"update_date_8";s:19:"2023-11-13 13:04:06";s:6:"sclr_9";s:7:"2400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:2:"42";s:6:"name_1";s:81:"グレネリー・グラスコレクション・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:204:"カシス、チェリー、スパイス、チョコレートなどの複雑な香り。ワインは程よい渋みと酸味を持ち、果実味、ボディ、オークの風味のバランスが良い。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:2855:"<div class="productsheet__table">   <h2><small>Glenelly Glass Collection Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2017’] 2015VT：85 Point／Commended<br>
+[Tim Atkin Report 2019’] 2017VT：89 Point<br>
+[Tim Atkin Report 2017’] 2015VT：89 Point<br>
+[Tim Atkin Report 2016’] 2014VT：91 Point<br>
+[Decanter World Wine Awards 2016’] 2013VT：85 Point／Commended<br>
+[Parker Wine Advocate] 2013VT：89 Point<br>
+[Real Wine Guide 2015’] 2014VT：旨安賞
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+カシス、チェリー、スパイス、チョコレートなどの複雑な香り。ワインは程よい渋みと酸味を持ち、果実味、ボディ、オークの風味のバランスが良い。余韻も長く、クラシックでエレガントなスタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:55:05";s:13:"update_date_8";s:19:"2023-11-13 13:03:29";s:6:"sclr_9";s:7:"2400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:3:"212";s:6:"name_1";s:72:"グレネリー・エキストラヴァージン・オリーブオイル";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:185:"ワイン同様に自社畑で栽培されたオリーブの力を最大限に引き出したこだわりのグレネリー エステート エキストラバージンオイルです。";s:13:"search_word_5";N;s:11:"free_area_6";N;s:13:"create_date_7";s:19:"2022-02-08 01:53:14";s:13:"update_date_8";s:19:"2024-12-24 03:38:30";s:6:"sclr_9";s:7:"3300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:7;a:13:{s:4:"id_0";s:2:"49";s:6:"name_1";s:66:"グレネリー・エステート・リザーブ・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:189:"豊かな酸味と濃厚な果実味。レモン、ライム、りんご、梨、ライチ、バラなど、複雑な香りに、ワインは、クリーミーでなめらかな味わい。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3238:"<div class="productsheet__table">   <h2><small>Glenelly Estate Reserve Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ・シモンズバーグ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2018’] 2016VT：95 Point／Gold<br>
+[Decanter World Wine Awards 2017’] 2015VT：95 Point／Gold<br>
+[Tim Atkin Report 2019’] 2018VT：92 Point<br>
+[Tim Atkin Report 2018’] 2017VT：92 Point<br>
+[Tim Atkin Report 2017’] 2016VT：95 Point<br>
+[Parker Wine Advocate] 2014VT：92 Point<br>
+[Sakura Awards 2018’] 2015VT：Gold<br>
+[Sakura Awards 2016’] 2013VT：Gold
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+グラン・ヴァン・ド・シャルドネがエステートリザーブに名称変更！<br>
+ブドウは房ごとプレスし、500Lの新樽と２年目のフレンチオークで天然発酵。マロラクティック発酵100％。バトナージュはせずフレッシュでミネラル感が感じられる。豊かな酸味と濃厚な果実味。レモン、ライム、りんご、梨、ライチ、バラなど、複雑な香りに、ワインは、クリーミーでなめらかな味わい。フィニッシュは、フレッシュでリッチ。余韻は長くエレガントに仕上がっている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:05:02";s:13:"update_date_8";s:19:"2023-11-13 13:01:14";s:6:"sclr_9";s:7:"3300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:8;a:13:{s:4:"id_0";s:2:"48";s:6:"name_1";s:57:"グレネリー・エステートリザーブ・レッド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:192:"明確な骨格のあるボディを持ち、濃厚な味わいでありながら、なめらかでエレガント、「ファンタスティック！」なワインに仕上がっている。";s:13:"search_word_5";s:100:"カベルネソーヴィニヨン,メルロ,シラーズ,カベルネフラン,プティヴェルド";s:11:"free_area_6";s:3034:"<div class="productsheet__table">   <h2><small>Glenelly Estate Reserve Red</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (47％,23％,15％,11％,4％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2015</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2014VT：93 Point<br>
+[Tim Atkin Report 2018’] 2013VT：93 Point<br>
+[Tim Atkin Report 2017’] 2012VT：94 Point<br>
+[Tim Atkin Report 2016’] 2011VT：94 Point<br>
+[Decanter World Wine Awards 2016’] 2010VT：84 Point／Commended<br>
+[Parker Wine Advocate] 2009VT：92 Point<br>
+[Sakura Awards 2016’] 2009VT：Silver
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+グラン・ヴァン・ド・レッドがエステートリザーブに名称変更！<br>カシスやスパイシーなプラム、トーストなどの香り。豊かな酸味と濃厚で凝縮した果実味。細やかで、しっかりした渋みとスパイスの風味。明確な骨格のあるボディを持ち、濃厚な味わいでありながら、なめらかでエレガント、「ファンタスティック！」なワインに仕上がっている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:01:29";s:13:"update_date_8";s:19:"2023-11-13 13:01:41";s:6:"sclr_9";s:7:"3300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:9;a:13:{s:4:"id_0";s:2:"50";s:6:"name_1";s:48:"グレネリー・レディ・メイ・レッド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:269:"グレネリー社のフラグシップ。新樽フレンチオークで24カ月熟成。カシスやブラックチェリー、繊細で、ほんのりとスパイシーなプラムの香り。濃い色調で、太く、しっかりとした重みのあるボディ。";s:13:"search_word_5";s:84:"カベルネソーヴィニヨン,カベルネフラン,プチヴェルド,メルロ";s:11:"free_area_6";s:2835:"<div class="productsheet__table">   <h2><small>Glenelly Lady May</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}（85%,7%,4%,4%）</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2014VT：96 Point<br>
+[Tim Atkin Report 2017’] 2013VT：95 Point<br>
+[Tim Atkin Report 2016’] 2012VT：95 Point<br>
+[Platter SA 2017’] 2012VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+新樽フレンチオークで24カ月熟成。<br>カシスやブラックチェリー、繊細で、ほんのりとスパイシーなプラムの香り。濃い色調で、太く、しっかりとした重みのあるボディ。細やかで、なめらかな渋み、フレッシュで活き活きとした果実の味わい。余韻は長く、複雑でパーフェクトなバランスの長期熟成型ワイン。<br>早めの抜栓をお勧めします。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:05:28";s:13:"update_date_8";s:19:"2023-11-13 13:00:44";s:6:"sclr_9";s:7:"7200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

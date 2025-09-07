@@ -1,0 +1,4 @@
+1754885415
+eccube_entity_news%255Beccube_entity_news_eccube.entity.news_6%255D%255B1%255D
+O:35:"Doctrine\ORM\Cache\EntityCacheEntry":2:{s:4:"data";a:10:{s:2:"id";i:6;s:12:"publish_date";O:8:"DateTime":3:{s:4:"date";s:26:"2021-06-01 10:31:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:10:"Asia/Tokyo";}s:5:"title";s:90:"この季節、冷やして飲めばあっという間に飲んでしまう白ワイン！";s:11:"description";s:92:"少し甘さがあり、口当たり最高です。
+スパイス料理に合いますよ！";s:3:"url";s:40:"https://s-africa.wine/products/detail/99";s:11:"link_method";b:0;s:11:"create_date";O:8:"DateTime":3:{s:4:"date";s:26:"2021-06-02 10:39:23.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:10:"Asia/Tokyo";}s:11:"update_date";O:8:"DateTime":3:{s:4:"date";s:26:"2021-06-04 15:16:16.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:10:"Asia/Tokyo";}s:7:"visible";b:1;s:10:"creator_id";i:2;}s:5:"class";s:18:"Eccube\Entity\News";}

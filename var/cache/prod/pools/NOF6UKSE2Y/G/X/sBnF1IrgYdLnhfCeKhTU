@@ -1,0 +1,289 @@
+1754855785
+%255B3bf3a0b910d2d1a0b557cad64d8652c60038923f%255D%255B1%255D
+a:1:{s:1173:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:14;}i:1;a:4:{i:0;i:123;i:1;i:22;i:2;i:23;i:3;i:24;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:4:{i:0;a:13:{s:4:"id_0";s:3:"123";s:6:"name_1";s:49:"ヴィラフォンテ・シリーズＭ（VT15）";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:100:"南アフリカ＆米国のコラボ作品 ＝世界完全割当のプレミアムワインです。";s:13:"search_word_5";s:59:"メルロ,カベルネソーヴィニヨン,マルベック";s:11:"free_area_6";s:3522:"<div class="productsheet__table">   <h2><small>Vilafonte Series M</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／パール</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2015</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2015VT：4.5 STAR<br>
+[Platter SA 2017’] 2013VT：4.5 STAR<br>
+[Tim Atkin Report 2019’] 2016VT：94 Point<br>
+[Tim Atkin Report 2018’] 2015VT：95 Point<br>
+[Tim Atkin Report 2017’] 2014VT：93 Point<br>
+[Tim Atkin Report 2016’] 2013VT：94 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+厳選した綺麗なブドウのみ使用。区画ごとに小さなタンクに細かく分けて発酵。ポンプは使わず、全てリフトで上げ下するグラヴィティ・システム採用。発酵後は、フレンチオークで21ヶ月熟成（新樽17％）。その後、瓶内で1年熟成。<br>ヴィンテージ+10-15年。<br>深く濃厚なガーネット色。ブラックベリー、ブラックチェリー、ラズベリー、ビーフブイヨン、バルサミック、ドライフラワー、ヴァニラ、チョコレート、香水、スパイスなどの香りにオークの風味。柔らかく、なめらかな酸味、程良くしっかりしたボディ、それぞれの品種が複雑、かつ旨く調和し、シルキーなタッチで綺麗な酒質。エレガントで風格を感じさせる上質なワインに仕上がっている。余韻も長く、ソフトなフィニッシュ。<br>セラーで2年ほど寝かせれば更に良くなる。飲む前に早めの抜栓かデカンタージュをお勧めする。<br>牛ステーキ、ラム肉、ビーフシチューなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:08:16";s:13:"update_date_8";s:19:"2021-03-06 07:14:55";s:6:"sclr_9";s:7:"8400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"22";s:6:"name_1";s:49:"ヴィラフォンテ・シリーズＭ（VT16）";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:100:"南アフリカ＆米国のコラボ作品 ＝世界完全割当のプレミアムワインです。";s:13:"search_word_5";s:59:"メルロ,カベルネソーヴィニヨン,マルベック";s:11:"free_area_6";s:3595:"<div class="productsheet__table">   <h2><small>Vilafonte Series M</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／パール</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2015VT：4.5 STAR<br>
+[Platter SA 2017’] 2013VT：4.5 STAR<br>
+[Tim Atkin Report 2019’] 2016VT：94 Point<br>
+[Tim Atkin Report 2018’] 2015VT：95 Point<br>
+[Tim Atkin Report 2017’] 2014VT：93 Point<br>
+[Tim Atkin Report 2016’] 2013VT：94 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+厳選した綺麗なブドウのみ使用。区画ごとに小さなタンクに細かく分けて発酵。ポンプは使わず、全てリフトで上げ下するグラヴィティ・システム採用。発酵後は、フレンチオークで21ヶ月熟成（新樽17％）。その後、瓶内で1年熟成。<br>ヴィンテージ+10-15年。<br>深く濃厚なガーネット色。ブラックベリー、ブラックチェリー、ラズベリー、ビーフブイヨン、バルサミック、ドライフラワー、ヴァニラ、チョコレート、香水、スパイスなどの香りにオークの風味。柔らかく、なめらかな酸味、程良くしっかりしたボディ、それぞれの品種が複雑、かつ旨く調和し、シルキーなタッチで綺麗な酒質。エレガントで風格を感じさせる上質なワインに仕上がっている。余韻も長く、ソフトなフィニッシュ。<br>セラーで2年ほど寝かせれば更に良くなる。飲む前に早めの抜栓かデカンタージュをお勧めする。<br>牛ステーキ、ラム肉、ビーフシチューなど。
+
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:55:07";s:13:"update_date_8";s:19:"2023-07-24 03:19:18";s:6:"sclr_9";s:7:"8600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"23";s:6:"name_1";s:49:"ヴィラフォンテ・シリーズＭ（VT11）";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:100:"南アフリカ＆米国のコラボ作品 ＝世界完全割当のプレミアムワインです。";s:13:"search_word_5";s:59:"メルロ,カベルネソーヴィニヨン,マルベック";s:11:"free_area_6";s:3593:"<div class="productsheet__table">   <h2><small>Vilafonte Series M</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／パール</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2011</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2015VT：4.5 STAR<br>
+[Platter SA 2017’] 2013VT：4.5 STAR<br>
+[Tim Atkin Report 2019’] 2016VT：94 Point<br>
+[Tim Atkin Report 2018’] 2015VT：95 Point<br>
+[Tim Atkin Report 2017’] 2014VT：93 Point<br>
+[Tim Atkin Report 2016’] 2013VT：94 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+厳選した綺麗なブドウのみ使用。区画ごとに小さなタンクに細かく分けて発酵。ポンプは使わず、全てリフトで上げ下するグラヴィティ・システム採用。発酵後は、フレンチオークで21ヶ月熟成（新樽17％）。その後、瓶内で1年熟成。<br>ヴィンテージ+10-15年。<br>深く濃厚なガーネット色。ブラックベリー、ブラックチェリー、ラズベリー、ビーフブイヨン、バルサミック、ドライフラワー、ヴァニラ、チョコレート、香水、スパイスなどの香りにオークの風味。柔らかく、なめらかな酸味、程良くしっかりしたボディ、それぞれの品種が複雑、かつ旨く調和し、シルキーなタッチで綺麗な酒質。エレガントで風格を感じさせる上質なワインに仕上がっている。余韻も長く、ソフトなフィニッシュ。<br>セラーで2年ほど寝かせれば更に良くなる。飲む前に早めの抜栓かデカンタージュをお勧めする。<br>牛ステーキ、ラム肉、ビーフシチューなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:55:49";s:13:"update_date_8";s:19:"2023-07-24 03:14:06";s:6:"sclr_9";s:8:"10100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"24";s:6:"name_1";s:47:"ヴィラフォンテ・シリーズＭ 2004年";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:100:"南アフリカ＆米国のコラボ作品 ＝世界完全割当のプレミアムワインです。";s:13:"search_word_5";s:59:"メルロ,マルベック,カベルネソーヴィニヨン";s:11:"free_area_6";s:3628:"<div class="productsheet__table">   <h2><small>Vilafonte Series M 2004</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／パール</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2004</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2015VT：4.5 STAR<br>
+[Platter SA 2017’] 2013VT：4.5 STAR<br>
+[Tim Atkin Report 2019’] 2016VT：94 Point<br>
+[Tim Atkin Report 2018’] 2015VT：95 Point<br>
+[Tim Atkin Report 2017’] 2014VT：93 Point<br>
+[Tim Atkin Report 2016’] 2013VT：94 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+(コメントは2013年)<br>
+厳選した綺麗なブドウのみ使用。区画ごとに小さなタンクに細かく分けて発酵。ポンプは使わず、全てリフトで上げ下するグラヴィティ・システム採用。発酵後は、フレンチオークで21ヶ月熟成（新樽17％）。その後、瓶内で1年熟成。<br>ヴィンテージ+10-15年。<br>深く濃厚なガーネット色。ブラックベリー、ブラックチェリー、ラズベリー、ビーフブイヨン、バルサミック、ドライフラワー、ヴァニラ、チョコレート、香水、スパイスなどの香りにオークの風味。柔らかく、なめらかな酸味、程良くしっかりしたボディ、それぞれの品種が複雑、かつ旨く調和し、シルキーなタッチで綺麗な酒質。エレガントで風格を感じさせる上質なワインに仕上がっている。余韻も長く、ソフトなフィニッシュ。<br>セラーで2年ほど寝かせれば更に良くなる。飲む前に早めの抜栓かデカンタージュをお勧めする。<br>牛ステーキ、ラム肉、ビーフシチューなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:56:15";s:13:"update_date_8";s:19:"2022-12-17 10:48:53";s:6:"sclr_9";s:8:"13100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

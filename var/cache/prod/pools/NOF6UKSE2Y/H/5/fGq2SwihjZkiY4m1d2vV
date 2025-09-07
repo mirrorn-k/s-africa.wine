@@ -1,0 +1,337 @@
+1754857092
+%255Ba03246bb0ca1458455b5c355cc0a93ed36d58ba1%255D%255B1%255D
+a:1:{s:1182:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:38;}i:1;a:5:{i:0;i:103;i:1;i:150;i:2;i:5;i:3;i:30;i:4;i:85;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:5:{i:0;a:13:{s:4:"id_0";s:3:"103";s:6:"name_1";s:72:"ラステンバーグ・ステレンボッシュ・ストローワイン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"干しブドウ、ハチミツ、グリーンマンゴ、熟した黄桃、マーマレード、オレンジの皮、トロピカルフルーツなどの香り。柔らかな酸、凝縮し、濃厚でハチミツのようななめらかな味。";s:13:"search_word_5";s:53:"シュナンブラン,ヴィオニエ,クルシェン";s:11:"free_area_6";s:3254:"<div class="productsheet__table">   <h2><small>Rustenberg Straw Wine</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (67％,17％,16％)（ケープリースリング）</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>10％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>375ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>2017年ヴェリタス 銀賞
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+畑の土壌は、砂岩、ローム、花崗岩。灌漑はしている畑としていない畑の両方。収穫は2017年2-3月。収穫後、藁（わら）の上で4週間日陰干し。ステンレスタンクで発酵、熟成。<br>干しブドウ、ハチミツ、グリーンマンゴ、熟した黄桃、マーマレード、オレンジの皮、トロピカルフルーツなどの香り。柔らかな酸、凝縮し、濃厚でハチミツのようななめらかな味。フレッシュで優しい酸味と濃厚な甘みのバランスが良く、美味しく飲みやすいように仕上がっている。2017年ヴィンテージも良く、熟成のポテンシャルあり。<br>ブルーチーズ、バニラアイス、チーズケーキ、フルーツタルトなど。そのまま飲んでも、氷を浮かべても、「大人のカキ氷」のようなシロップとして、辛口のスパークリングと混ぜて飲んでも美味しい。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:03:01";s:13:"update_date_8";s:19:"2021-09-03 00:33:28";s:6:"sclr_9";s:7:"2000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"150";s:6:"name_1";s:45:"ステラー・ヘブン・オン・アース";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:195:"「オーガニックだからと言って品質に妥協はない」藁とルイボスティーの葉の上で葡萄を乾燥させて造る至極のデザートワイン。「地上の天国」";s:13:"search_word_5";s:39:"ミュスカドアレキサンドリア";s:11:"free_area_6";s:2829:"<div class="productsheet__table">   <h2><small>Stellar Heaven on Earth Natural Sweet</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／オリファンツリバー</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>10.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>375ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2017’] 5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+藁と南アフリカのお茶ルイボスティの上でぶどうを乾燥させた後に破砕、圧搾、樽での発酵して造られた南アフリカ産デザートワイン。 ハチミツやルイボスティの甘い香り。とても上品で、高級感のある黄金色はなめらかで濃厚な甘さ。この甘さがとても上品で高貴な余韻をもたらします。まさに「ヘブンオンアース」地上の楽園。<br>デザートとして楽しまれても良いですし、バニラアイスクリームなどにかけるのもお勧めです。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:02:42";s:13:"update_date_8";s:19:"2023-11-13 12:30:37";s:6:"sclr_9";s:7:"2600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:1:"5";s:6:"name_1";s:99:"ステレンラスト・シュナン・ド・ミュスカ・ノーブルレイト・ハーベスト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:353:"ボタラリー・ヒルズのシュナンブランのブッシュヴァインの畑は樹齢51年以上。マスカットオブアレキサンドリアは樹齢71年以上。1928年創業時のオリジナル・ラベルを採用し、昔のことを忘れないようにしている。また自社の一番古い畑のブドウを使用している。";s:13:"search_word_5";s:73:"シュナンブラン,マスカット・オブ・アレキサンドリア";s:11:"free_area_6";s:3754:"<div class="productsheet__table">   <h2><small>Stellenrust Chenin D' Muscat Noble Late Harvest</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>10.9％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>375ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2016VT：4.5 STAR<br>
+[Tim Atkin Report 2018’] 2016VT：94 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリー・ヒルズのシュナンブランのブッシュヴァインの畑は樹齢51年以上。マスカットオブアレキサンドリアは樹齢71年以上。シュナンブランは4月からの霧（きり）により貴腐菌が付着する。マスカットオブアレキサンドリアは、ブドウが完熟後、人工的にブドウの房の上の茎をペンチで曲げて、ブドウに水分を行きにくくすることによってドライレーズン状にしていく。<br>5月下旬の寒い夜に収穫。破砕後、一部スキンコンタクト、果汁は古いオーク樽に入り2-3週間かけて、それぞれの品種ごとに分けて天然発酵。12か月熟成しブレンド。<br>香り、風味ともにアプリコットを強く感じる。他にもハチミツ、熟したトロピカルフルーツ、キャンディなどの香り。豊かな酸、凝縮した果実味、リッチでなめらか、濃厚な味。甘いハチミツのような味わいですが、しっかりした酸味もあり、後口に甘味が残らずバランス良く出来ている。最後にほんのりスパイスの感じもある。<br>南アフリカを代表するシュナンブラン生産者のステレンラストだからこそ作れる樹齢の古いブドウの濃縮感たっぷりのスペシャルなデザートワイン。<br>チーズ、ベイクドチーズケーキ、焼きプリン、焼菓子など。
+</div>";s:13:"create_date_7";s:19:"2020-09-26 06:43:26";s:13:"update_date_8";s:19:"2023-11-13 11:37:19";s:6:"sclr_9";s:7:"3100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"30";s:6:"name_1";s:45:"キアモント・フルーフォンティン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:294:"「フルーフォンテイン」は、「花の咲く場所」という意味。草を刈った時の香り、ドライアプリコット、柑橘類などの香り。優しい酸味、濃厚で凝縮したハチミツ、梨、柑橘類、アーモンドなどの風味が口中に広がる。";s:13:"search_word_5";s:30:"ソーヴィニヨンブラン";s:11:"free_area_6";s:3442:"<div class="productsheet__table">   <h2><small>Keermont Fleurfontein</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>375ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：92 Point<br>
+[Tim Atkin Report 2018’] 2017VT：93 Point<br>
+[Platter SA 2020’] 2018VT：4 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ブドウは2005年に植樹されたもので、樹齢15年。収穫の２，３週間前にブドウの茎を曲げることによって、水分がブドウに行きにくくなり、自然に乾燥、干しブドウのようになっていく。ハンガリーオークとフレンチオークに入れ天然発酵。そのまま18ヶ月熟成。ろ過せずに手作業で瓶詰め。生産量3500本。<br>ピュアなイエローゴールド、草を刈った時の香り、キウイフルーツ、ドライアプリコット、柑橘類やヘーゼルナッツなどの香り。優しい酸味、濃厚で凝縮したハチミツ、梨、柑橘類、アーモンドなどの風味が口中に広がる。比較的ボリューミーなワインで、酸と甘みのバランスも良い。ほんのりと新樽の香りも感じ、複雑性もあり、エレガントに仕上がっている。<br>少し塩味のあるタッチで、長く凝縮した濃厚な味わいはが最後まで続く。良く冷やしてそのままでも楽しめる。<br>ブルーチーズ、ハード系チーズなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:36:04";s:13:"update_date_8";s:19:"2023-11-13 12:05:22";s:6:"sclr_9";s:7:"4300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:2:"85";s:6:"name_1";s:72:"ブーケンハーツクルーフ・ノーブルレイトハーベスト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:237:"フランシュックの川に面した1997年に植樹された自社畑のオーガニック認証のある1ブロックのブドウを使用。ノーブルレイトハーベストは、毎年1樽のみ作られる貴重なワイン。";s:13:"search_word_5";s:12:"セミヨン";s:11:"free_area_6";s:2929:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Noble Late Harvest</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／フランシュック</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>375ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2016VT：95 Point<br>
+[Platter SA 2020’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+フランシュックの川に面した1997年に植樹された自社畑のオーガニック認証のある1ブロックのブドウを使用。ノーブルレイトハーベストは、毎年1樽のみ作られる貴重なワイン。遅摘み貴腐ブドウを新樽のフレンチオークで発酵、30ヶ月熟成。<br>アプリコットやパイナップル、クリーム・ブリュレ、シナモンなどの香り。酸味と甘さのバランスが良く、コクがあり、蜂蜜のような濃厚でリッチな味わい。オークの風味もあり、ゴージャスなワインに仕上がっている。ソーテルヌ・スタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:49:23";s:13:"update_date_8";s:19:"2023-11-13 12:41:01";s:6:"sclr_9";s:7:"5700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

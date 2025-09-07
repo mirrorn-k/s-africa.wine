@@ -1,0 +1,560 @@
+1754692259
+%255B6c19997cdb5f339513f7e35e87287bee9acddeaf%255D%255B1%255D
+a:1:{s:1212:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:26;}i:1;a:8:{i:0;i:25;i:1;i:175;i:2;i:177;i:3;i:176;i:4;i:27;i:5;i:26;i:6;i:125;i:7;i:28;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:8:{i:0;a:13:{s:4:"id_0";s:2:"25";s:6:"name_1";s:63:"カノンコップ・カデット・ピノタージュ・ロゼ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:273:"色は繊細な薄いサーモンピンク。花、ストロベリー、ラズベリー、トロピカルフルーツ、パイナップルなどの香り。優しいフレッシュな酸味、フルーティで、バランス良くエレガントにまとまっている。";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2844:"<div class="productsheet__table">
+	<h2><small>Kanonkop Kadette Pinotage Rose</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>14.2％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml／スクリューキャップ</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2022</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2019VT：89 Point<br>
+			[Tim Atkin Report 2018’] 2017VT：88 Point
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	栽培/製造：土壌は、風化した花崗岩、砂岩。収穫量は6トン/ha。収穫後、破砕、色が出過ぎないようにプレス。ステンレスタンクで13度で発酵、熟成。<br>熟成ポテンシャル：ヴィンテージ+2-3年。色は繊細な薄いサーモンピンク。花、ストロベリー、ラズベリー、トロピカルフルーツ、パイナップルなどの香り。優しいフレッシュな酸味、フルーティで、バランス良くエレガントにまとまっている。ボディはロゼの中では太く、しっかりした骨格のあるフルボディ・タイプ。味わいはドライで、前菜からメインまで幅広い料理に合う。<br>シーフード、サラダ、キッシュ、パスタ、エビチリ、中華料理、スパイシーな料理、アジア系料理など。カデットとは、「士官候補生」。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:57:29";s:13:"update_date_8";s:19:"2023-11-13 11:01:05";s:6:"sclr_9";s:7:"2100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"175";s:6:"name_1";s:57:"カノンコップ・カデット・ケープブレンド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:229:"ダークチョコレートやブラックベリーの風味。様々な品種が複雑に表現され、かつ調和がとれている。フィニッシュはドライで余韻も長い。 カデットとは「士官候補生」";s:13:"search_word_5";s:106:"ピノタージュ,カベルネソーヴィニヨン,メルロ,カベルネフラン,プティヴェルド";s:11:"free_area_6";s:2672:"<div class="productsheet__table">
+	<h2><small>Kanonkop Kadette Cape Blend</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} (37％,33％,26％,3％,1％)</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>14.0％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2020</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2017VT：91 Point<br>
+				[Tim Atkin Report 2018’] 2016VT：91 Point<br>
+				[Tim Atkin Report 2017’] 2015VT：91 Point<br>
+				[Sakura Awards 2017’] 2015VT：Double Gold and The Best Wine for Asian Foods　“TEPPANYAKI” Grand Prix
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	灌漑は補助的に、収穫量7トン/ha（45.5ｈL）樹齢5-30年。オープンタンクで発酵。225Lのフレンチオークの2-3年目の樽で12-14ヶ月熟成。<br>熟したラズベリー、モカ、プラムなどの香り。なめらかで心地良い酸味、凝縮した果実味、程良くしっかりしたボディ。ダークチョコレートやブラックベリーの風味。様々な品種が複雑に表現され、かつ調和がとれている。フィニッシュはドライで余韻も長い。カデットとは「士官候補生」。
+</div>";s:13:"create_date_7";s:19:"2020-11-06 07:27:30";s:13:"update_date_8";s:19:"2023-12-09 02:57:08";s:6:"sclr_9";s:7:"2900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"177";s:6:"name_1";s:69:"カノンコップ・カデット・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:480:"ブラックベリー、ブルーベリー、カシス、削った鉛筆の芯、フレッシュなハーブ、オーク由来のスパイスなどの香り。フレッシュで豊かな酸、細かいけれどしっかりとした渋み、ボディはミディアムからフルボディで締まっている。フルーティな果実味が豊かでとても美味しく、口あたりは柔らかく滑らか。余韻は長く、豊かな果実の風味は最後まで続く。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:2872:"<div class="productsheet__table">
+	<h2><small>Kanonkop Kadette Cabernet Sauvignon</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>14.5％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2020</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>-
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	比較的暖かく乾燥した夏でしたが、夜は涼しくブドウの成長には良かった。<br>分解された花崗岩。樹齢は10-20年。平均収量：7トン/ha。4550L/ha。オープンタンクで3-5日間発酵。その間2時間おきにパンチダウン。フレンチオークで熟成12ヵ月。<br>ブラックベリー、ブルーベリー、カシス、削った鉛筆の芯、フレッシュなハーブ、オーク由来のスパイスなどの香り。フレッシュで豊かな酸、細かいけれどしっかりとした渋み、ボディはミディアムからフルボディで締まっている。フルーティな果実味が豊かでとても美味しく、口あたりは柔らかく滑らか。余韻は長く、豊かな果実の風味は最後まで続く。カベルネソーヴィニョン100%でも非常にバランス良く出来ていて、口あたりは飲みやすく、程よい渋みが心地良い。<br>牛ステーキ、焼肉、ハンバーガー、BBQ、羊肉、熟成したチーズなど。
+</div>";s:13:"create_date_7";s:19:"2020-11-06 07:29:44";s:13:"update_date_8";s:19:"2023-11-13 11:01:55";s:6:"sclr_9";s:7:"3100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"176";s:6:"name_1";s:54:"カノンコップ・カデット・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:256:"なめらかで心地良い酸味、凝縮した果実味、程良くしっかりしたボディ。細やかで上品な渋み。エレガントなスタイル。フィニッシュはドライで余韻も長い。 カデットとは「士官候補生」。";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2465:"<div class="productsheet__table">
+	<h2><small>Kanonkop Kadette Pinotage</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>14.5％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2020</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2017VT：92 Point<br>
+				[Tim Atkin Report 2018’] 2016VT：90 Point<br>
+				[Tim Atkin Report 2017’] 2015VT：91 Point<br>
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	灌漑は補助的に。収穫量6-7トン/ha（38.5-45.5ｈL）、樹齢5-20年。オープンタンクで発酵。225Lのフレンチオークの2-3年目の樽で14ヶ月熟成。<br>赤い果実、プラム、チョコレートなどの香り。なめらかで心地良い酸味、凝縮した果実味、程良くしっかりしたボディ。細やかで上品な渋み。エレガントなスタイル。フィニッシュはドライで余韻も長い。カデットとは「士官候補生」。
+</div>";s:13:"create_date_7";s:19:"2020-11-06 07:28:37";s:13:"update_date_8";s:19:"2023-11-13 11:00:01";s:6:"sclr_9";s:7:"3100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:2:"27";s:6:"name_1";s:54:"カノンコップ・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:369:"深いルビー色。カシス、黒系果実、ブルーベリー、紅茶の葉、タバコ、鉛筆の芯、ビターチョコレート、ハーブ、エスプレッソ、オーク由来のスパイスなど複雑な香り。フレッシュで比較的豊かな酸味、凝縮し濃厚な果実味、上品で洗練された渋み、しっかりと太いボディ。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3452:"<div class="productsheet__table">
+	<h2><small>Kanonkop Cabernet Sauvignon</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>15.0％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2018</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2015VT：94 Point<br>
+				[Platter SA 2020’] 2015VT：5.0 STAR
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	温かく乾燥した冬で収穫時期は暑かった。収穫量4トン（2750L)/ha。樹齢：平均26年。花崗岩土壌。オープンタンクで29度で発酵。ピジャージュは2時間おきに。225Lのフレンチオークで24ヶ月熟成（新樽60％、２年目樽40％）。<br>深いルビー色。カシス、黒系果実、ブルーベリー、紅茶の葉、タバコ、鉛筆の芯、ビターチョコレート、ハーブ、エスプレッソ、オーク由来のスパイスなど複雑な香り。フレッシュで比較的豊かな酸味、凝縮し濃厚な果実味、上品で洗練された渋み、しっかりと太いボディ。なめらかでシルキーな味わいでクラシックなエレガント・スタイル。深く長い余韻。濃厚でしっかりしたワインだが、酸味もあるのでワインは決して重たく感じない。酸味、果実味、ボディ、オークの風味、余韻など、全ての要素がマックスでバランス良く保たれている。カベルネソーヴィニョン100％のワインとしては南アフリカ最高峰かつ至福の1本と呼べるだろう。これまでの経験でも、ほぼ「完璧」と言っても良いくらい、最も洗練された過去最高ヴィンテージ（当社バイヤー談）。価格パフォーマンスも優れているので、是非飲んでほしい1本。長期熟成型で早めの抜栓かデキャンターがおすすめ。<br>ビーフステーキ、ラムステーキ、牛肉料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:58:42";s:13:"update_date_8";s:19:"2023-11-13 11:03:18";s:6:"sclr_9";s:7:"7500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:2:"26";s:6:"name_1";s:39:"カノンコップ・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:216:"過去ビンテージ15IWSCでピノタージュ世界一！なめらかで心地良い酸味、凝縮した果実味、しっかりと太いボディ。細やかで上品な渋み。エレガントなスタイル。";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2878:"<div class="productsheet__table">
+	<h2><small>Kanonkop Pinotage</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>14.2％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2020</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2017VT：94 Point<br>
+				[Tim Atkin Report 2018’] 2016VT：94 Point<br>
+				[Tim Atkin Report 2017’] 2015VT：94 Point<br>
+				[Tim Atkin Report 2016’] 2014VT：93 Point<br>
+				[Platter SA 2018’] 2016VT：4.5 STAR<br>
+				[Platter SA 2016’] 2014VT：4.5 STAR<br>
+				[Parker Wine Advocate] 2016VT：90 Point
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	灌漑は無し。収穫量5トン/ha（32.5ｈL）。樹齢、最高は62年の古木。オープンタンクで発酵、225Lのフレンチオークで16ヶ月熟成（新樽75％ 2年目樽25％）。<br>若いヴィンテージでは、赤い果実、プラムなど、複雑でフルーティな香り。熟成すると、森の土などの香り。なめらかで心地良い酸味、凝縮した果実味、しっかりと太いボディ。細やかで上品な渋み。エレガントなスタイル。新樽にも負けない力を持っているが、パワフルさが前に出すぎているわけでもない。酸味、果実味、ボディの全ての要素がマックスでバランス良く保たれている。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:58:05";s:13:"update_date_8";s:19:"2023-11-13 11:03:42";s:6:"sclr_9";s:7:"7500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:3:"125";s:6:"name_1";s:42:"カノンコップ・ポールサウアー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:276:"酸味、果実味、ボディの全ての要素がマックスでバランス良く保たれている。これぞ「カノンコップのポールサウアー」と言わんばかりの威風堂々とした風格を見せつけてくれるワールドクラス・ワイン。";s:13:"search_word_5";s:65:"カベルネソーヴィニヨン,カベルネフラン,メルロ";s:11:"free_area_6";s:3415:"<div class="productsheet__table">
+	<h2><small>Kanonkop Paul Sauer</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} (76％,17％,7％)</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>14.0％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2019</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2020’] 2017VT：98 Point<br>
+				[Tim Atkin Report 2019’] 2016VT：96 Point<br>
+				[Tim Atkin Report 2018’] 2015VT：100 Point<br>
+				[Tim Atkin Report 2017’] 2014VT：96 Point<br>
+				[Tim Atkin Report 2016’] 2012VT：96 Point<br>
+				[Platter SA 2020’] 2017VT：5 STAR
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	収穫量4トン/ha（27.5ｈL）。平均樹齢：27年。オープンタンクで29℃で５日間かけて発酵。その間、2時間おきに攪拌作業。225Lのフレンチオークで24ヶ月熟成（新樽100％）。<br>深いルビー色。プラム、カシス、サワーチェリーなどの黒系果実の香りがベースにあり、タバコ、杉、シガーボックスなどの香りもある。2015年は、暖かい気候の為、果実味が前面に出ている。落ち着くまで少々時間が必要。なめらかで心地良い酸味、しっかりと太いボディ。上品な渋みで、クラシックなエレガント・スタイル。余韻は長い。フレンチオークの新樽１００％使用にも関わらず、樽の風味が強すぎることもなく、上品に仕上がっている。濃厚でしっかりしたワインだが、パワフルさが前に出すぎているわけでもない。酸味、果実味、ボディの全ての要素がマックスでバランス良く保たれている。同じトップレンジの中でも他と比べてレベルは１段上。これぞ「カノンコップのポールサウアー」と言わんばかりの威風堂々とした風格を見せつけてくれるワールドクラス・ワイン。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:19:49";s:13:"update_date_8";s:19:"2023-07-25 01:54:17";s:6:"sclr_9";s:7:"8800.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:7;a:13:{s:4:"id_0";s:2:"28";s:6:"name_1";s:63:"カノンコップ・ブラックラベル・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:225:"プラム、ブラックチェリーなどの赤い果実の香りに香水やスパイスなどの香り。柔らかく滑らかな酸が後口まで続く。凝縮した濃厚な果実味、太くしっかりした骨格。";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:3051:"<div class="productsheet__table">
+	<h2><small>Kanonkop Black Label Pinotage</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>15.0％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2020</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2017VT：96 Point<br>
+				[Tim Atkin Report 2018’] 2016VT：96 Point<br>
+				[Tim Atkin Report 2017’] 2015VT：96 Point<br>
+				[Platter SA 2020’] 2017VT：5.0 STAR
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	樹齢62年のブッシュヴァイン（株仕立て）。灌漑なし。収穫量2.8トン/ha。収穫後はオープンなコンクリートタンクで発酵。２時間おきにピジャージュで攪拌（かくはん）。3.5日後、圧搾し、ジュースのみを採取。100％フレンチオークの新樽で１８カ月熟成。<br>プラム、ブラックチェリーなどの赤い果実の香りに香水やスパイスなどの香り。柔らかく滑らかな酸が後口まで続く。凝縮した濃厚な果実味、太くしっかりした骨格。力強さと、シルキーでなめらかな口あたり、渋みは細やかでしっかりと最後まで続く。余韻は長く、ドライなフィニッシュ。カノンコップのフラグシップにふさわしい品格を感じさせる。実際には、ワインはまだ若く、飲み頃はまだ先で、デカンタージュしてから飲むことを勧める。<br>牛肉、羊肉など赤い肉の料理。スパイシーなアジア料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:59:13";s:13:"update_date_8";s:19:"2023-11-13 11:08:28";s:6:"sclr_9";s:8:"35000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

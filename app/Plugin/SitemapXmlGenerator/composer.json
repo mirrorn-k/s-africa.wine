@@ -1,0 +1,1 @@
+{"name":"ec-cube\/sitemapxmlgenerator","version":"1.2.1","description":"Sitemap XML Generator","type":"eccube-plugin","require":{"ec-cube\/plugin-installer":"~0.0.7 || ^2.0"},"extra":{"code":"SitemapXmlGenerator","id":2165}}

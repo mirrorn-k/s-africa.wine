@@ -1,0 +1,411 @@
+1754692019
+%255B6f080faf92378e3ae03d09ac4b02ac415033b971%255D%255B1%255D
+a:1:{s:1192:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:47;}i:1;a:6:{i:0;i:62;i:1;i:137;i:2;i:136;i:3;i:31;i:4;i:9;i:5;i:119;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:6:{i:0;a:13:{s:4:"id_0";s:2:"62";s:6:"name_1";s:84:"デイビット＆ナディア・シーブリッツクルーフ・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:258:"ワインマグ（南ア）95点。デカンター・オンラインサイト（2016年9月29日）93点。「こんなピノタージュは今までに経験したことが無いだろう」と、コメントしたニュータイプ のピノタージュ！";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2762:"<div class="productsheet__table">   <h2><small>David and Nadia Sadie Siebritskloof Pinotage</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：91 Point<br>
+ワインマグ（南ア）95点 VT:2015
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1990年初期に植えられた葡萄畑から古いフレンチ―オークで14カ月熟成。20％は全房発酵。黒スグリ、カシス、チェリーなど赤・黒系の香りだけでなくオリーブや紫の花など複雑な香り。ナチュラルな味わいだがしっかりとした葡萄本来の力強さを感じられる。ピノタージュという品種の幅を広げる新しいスタイルのピノタージュと言える。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:51:07";s:13:"update_date_8";s:19:"2022-03-26 03:27:17";s:6:"sclr_9";s:7:"3900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"137";s:6:"name_1";s:73:"Bヴィントナーズ・ブラック・ブリーム・ピノノワール";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:455:"南アフリカを代表するトップ・メーカーの1つ、ラーツのオーナー兼醸造家のブルーワーが、従兄のガヴィンと一緒に2015年に立ち上げたブランド。レッドチェリー、ラズベリー、ストロベリー、ダークフルーツ、スミレ、土、シナモン、クローブ、スパイス、紅茶などの香り。豊かでフレッシュな酸味、優しいタッチのミディアムボディ。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:3196:"<div class="productsheet__table">   <h2><small>B Vintners Black Bream Pinot Noir</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウォーカーベイ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>2015VT：ワインスペクテーター93点
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+収穫量：6-8トン/ha。畑は海に近く、標高も３５０mの所にあり、冷涼な気候。土壌は石灰岩質。このような土壌、海に近いロケーション、標高の高さ、これらのコンディションにより高品質なピノノワールが誕生した。発酵後は、フレンチオークで熟成。ヴィンテージ+5-8年。Bヴィントナーズのユニークな地域の畑シリーズ。<br>ブラック・ブリームの名前の由来は、南アフリカの国魚（National Fish, "Galjoen")の別名で、この魚は近づくのが危険な波の洗いサンゴ礁の浅瀬に生息している。いわゆる天然の要害のような場所で、魚にとっては天国のような所。このブラックブリームの畑もアクセスの悪い、秘境のような所で、マイクロクライメート（微細気候）により、この地域独特のテロワールを表現している。<br>鶏肉、鴨肉、豚肉、マッシュルームを使った料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:39:39";s:13:"update_date_8";s:19:"2021-03-06 07:14:10";s:6:"sclr_9";s:7:"4400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"136";s:6:"name_1";s:51:"ラーツ・ドロマイト・カベルネフラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:405:"ダーク＆レッドチェリー、ダークベリー、花、スパイス、ハーブなどの香り。豊かな酸味、ミディアムからフルボディ、シンプルなスタイルで、果実の風味がそのままにピュアに感じられる。フィニッシュに向かってなめらかでソフトな口あたり。渋みは細やかでしっかり。余韻も長く、エレガント。";s:13:"search_word_5";s:37:"カベルネフラン,マルベック";s:11:"free_area_6";s:3167:"<div class="productsheet__table">   <h2><small>Raats Dolomite Cabernet Franc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (95％,5％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：92 Point<br>
+[Platter SA 2017’] 2015VT：4 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+樹齢7-20年。6-8トン/ha。土壌は苦灰石/白雲石花崗岩（酸、フレッシュ、ミネラリーなフィニッシュを与える）。収穫後は5日間冷却。発酵後、バスケットプレスを経て、ステンレスタンクでマロラクティック発酵。その後300Lの3-5年目(3/1ずつ）の中古のフレンチオークで14ヶ月熟成（新樽なし）。ヴィンテージ+2-5年。<br>ダーク＆レッドチェリー、ダークベリー、花、スパイス、ハーブなどの香り。豊かな酸味、ミディアムからフルボディ、シンプルなスタイルで、果実の風味がそのままにピュアに感じられる。フィニッシュに向かってなめらかでソフトな口あたり。渋みは細やかでしっかり。余韻も長く、エレガント。<br>豚肉、ジビエ、羊肉、ハードチーズなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:39:06";s:13:"update_date_8";s:19:"2023-11-13 12:52:40";s:6:"sclr_9";s:7:"4700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"31";s:6:"name_1";s:27:"キアモント・シラー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:330:"フレッシュなハーブ、ラベンダー、ブルーベリー、ヴァニラなどの香り。フレッシュで豊かな酸、優しいボディ感で綺麗なタッチ。赤いリンゴやスパイス、青い茎の風味もある。渋みはやや荒々しいが、全体としては、なめらかで綺麗なワイン。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:3981:"<div class="productsheet__table">   <h2><small>Keermont Syrah</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2015VT：93 Point<br>
+[Tim Atkin Report 2017’] 2014VT：94 Point<br>
+[Platter SA 2020’] 2015VT：4.5 STAR<br>
+[Platter SA 2019’] 2014VT：4 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+キアモントの3ヶ所の畑のシラーを使用。<br>①スティープサイド 2005年植樹。収穫量1.4トン/ha。北向き斜面でパワフルでリッチ、スパイシーなシラー<br>②トップサイド 2006年植樹。収穫量0.4トン/ha。 標高350ｍで西向き斜面、アロマティックで程良いボディとナチュラルな酸が特徴。<br>③スウィートウォーター 2006年植樹。収穫量6.7トン/ha。3ヶ所の中で最も涼しい畑でブドウはゆっくりと生育する。比較的で軽めでハーブの香りのするエレガントさが特徴）<br>④2012年のムールヴェードル 2009年植樹。収穫量2.3トン/ha）を13％ブレンドし、ワインに少し重みを持たせ、より複雑なアロマティックなワインに仕上がった。<br>ブドウは熟度に応じて選別し手作業で収穫。500リットルと225リットルのフレンチオークで20カ月熟成。<br>比較的明るい色合い、フレッシュなハーブ、ラベンダー、熟したサクランボなどの香り。フレッシュで豊かな酸、優しいボディ感で綺麗なタッチ。赤いリンゴやスパイス、青い茎の風味もある。味わいはエレガントでクリーンな酸味。全体としては、なめらかで綺麗なワイン。フィニッシュはジューシーでハーヴィーな余韻が長く続く。ワインを通して、冷涼感とナチュラル感、丁寧に作られたことが感じられる。<br>料理：ローストビーフ、豚肉、鶏肉、トマト料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:40:52";s:13:"update_date_8";s:19:"2023-11-13 12:04:53";s:6:"sclr_9";s:7:"4700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:1:"9";s:6:"name_1";s:36:"アタラクシア・セレニティ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"セレニティはヴィンテージが変わるたびに醸造家のケヴィンが新たなチャレンジをしている。無論、品質には妥協無し。フレッシュで豊かな果実味、繊細でエレガント。余韻は長い。";s:13:"search_word_5";s:50:"ピノノワール,サンソー,ピノタージュ";s:11:"free_area_6";s:4793:"<div class="productsheet__table">   <h2><small>Ataraxia Serenity</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}(60%,30%,10%)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.3％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>	[Tim Atkin Report 2020’] 2018VT：93 Point<br>
+[Tim Atkin Report 2019’] 2017VT：92 Point<br>
+[Parker Wine Advocate] 2015VT：91 Point<br>
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ブドウの生育期間のほとんどは非常に乾燥した年だったが、収穫前の数ヵ月は温暖な気温だった。乾燥した気候によりブドウの粒は小さく凝縮し、絶妙なバランスと洗練されたブドウが出来た。ブドウは、その地域のテロワールの魅力を表現することを目的に、畑での収穫時から厳選している。<br>このワインは、ピノノワールとサンソー、冷涼地域で育ったピノタージュという正に南アフリカらしいブドウ品種の親子ブレンドで、優しいスタイルのワインに仕上げています。このワインで大切なことは、どのような品種の構成で出来ているということではなく、ワインのスタイルにあります。ブドウの品種というのは、あくまでもテロワールを表現する手段であって、ワインそのものを表現するものではないという考えです。<br>収穫後は3品種ともオープンタンクに入れ、7-10日間のコールドマセラシオンを経て発酵。発酵後は品種ごとにプレスして225Lのフレンチオークでマロラクティック発酵を経て11ヵ月熟成（新樽20％、2年目樽80％）。ブレンドして瓶詰。醸造家ケヴィンが、このワインは、主張するようなタイプのワインではなく、優しく「ささやく」ようなスタイルのワインと表現している。<br>彼は、このワインは、ボルドーブレンドでもなく、ローヌブレンドでもない、これこそがピノタージュとその親品種をブレンドした真の南アフリカらしいブレンドと呼んでいる。実際このワインは、抑制的で落ち着き、緊張感もあり、非常に友好的で、面白く、魅力的である。レッドベリー、赤系果実、スパイスなど、繊細かつ活き活きとした豊かな香り。優しく心地良い酸、なめらかでチャーミングな果実味とミネラル。 洗練された渋み、柔らかいボディ、バランス良く、エレガント。三つの品種がケヴィンのセンスによって見事に調和しチャーミングなワインに仕上がっている。個性的かつストーリー的にも面白いワイン。<br>料理：鶏肉、鴨肉、豚肉、牛肉、ジビエ、和食、焼鳥、オイスターソースを使った中華料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:30:40";s:13:"update_date_8";s:19:"2023-11-13 12:17:47";s:6:"sclr_9";s:7:"5100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:3:"119";s:6:"name_1";s:54:"ロングリッジ・デイプレック・サンソー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:194:"1974年に植樹された灌漑無しのブッシュヴァイン（株仕立て）。古い樹齢の為、収穫量は自然に減る。天然発酵後、フレンチオークで9か月熟成。";s:13:"search_word_5";s:12:"サンソー";s:11:"free_area_6";s:3306:"<div class="productsheet__table">   <h2><small>Longridge Die Plek Cinsault</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.3％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：92 Point<br>
+[Platter SA 2018’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1974年に植樹された灌漑無しのブッシュヴァイン（株仕立て）。古い樹齢の為、収穫量は自然に減る。天然発酵後、フレンチオークで9か月熟成。ろ過も冷却もしてないので、自然な無害の澱が発生することもあります。<br>ラズベリー、アロマティックな花の香り、軽いオークの香りなど。フレッシュで豊かな酸、ミディアムボディ、繊細で、熟したストロベリーやチェリー、スパイスの風味。渋みはソフトで心地良い。酸と果実味のバランスが良く、ドライで優しい味わい。繊細でシルキーなタッチ、全体にエレガントにまとまっている。ステレンボシュ地区では最も冷涼なヘルダーバーグらしい酸とのバランスが取れた優れたサンソー。<br>和食、アジア料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:15:37";s:13:"update_date_8";s:19:"2023-07-25 04:02:05";s:6:"sclr_9";s:7:"6300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

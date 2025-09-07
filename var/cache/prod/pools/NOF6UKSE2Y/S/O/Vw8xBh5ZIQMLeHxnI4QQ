@@ -1,0 +1,272 @@
+1754692304
+%255B830891854dfd3fc1172836b941dc170f3e0d054e%255D%255B1%255D
+a:1:{s:1172:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:19;}i:1;a:4:{i:0;i:54;i:1;i:55;i:2;i:56;i:3;i:57;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:4:{i:0;a:13:{s:4:"id_0";s:2:"54";s:6:"name_1";s:62:"コンスタンシア グレン ソーヴィニヨンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:320:"このワインに使われるブドウは、ベストなブロックのものを使用。早朝の涼しい時間に収穫。ブドウはプレス後、ステンレスタンクで発酵、5ヵ月熟成。2％セミヨンをブレンドすることで、シャープな酸を抑え、少しまろやかにしている。";s:13:"search_word_5";s:43:"ソーヴィニョンブラン,セミヨン";s:11:"free_area_6";s:3420:"<div class="productsheet__table">   <h2><small>Constantia Glen Souvignon Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／コンスタンシア</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (98％,2％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2017VT：91 Point<br>
+[Platter SA 2018’] 2017VT：5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+このワインに使われるブドウは、ベストなブロックのものを使用。早朝の涼しい時間に収穫。ブドウはプレス後、ステンレスタンクで発酵、5ヵ月熟成。２％セミヨンをブレンドしすることで、シャープな酸を抑え、少しまろやかにしている。<br>ハーブ、ライム、グレープフルーツ、白桃などの香り。美しく豊かな酸味、凝縮した果実味、ミネラルの要素、なめらかでリッチ、程良いボディ、エレガントで高級感を漂わせている。余韻は長く、クリーンで洗われるような綺麗なフィニッシュ。<br>ワインは酸味とのバランスが良く、洗練されエレガントな素晴らしいコンスタンシアの見本的なソーヴィニョンブランと言える。今でもフレッシュに楽しめるが、熟成しても楽しめるタイプなので、是非セラーに入れて欲しい。<br>グリルした魚やホタテにレモンやライムのソース、アボガド、グリーンアスパラ、イチジクとヤギのチーズ、鶏肉料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:32:45";s:13:"update_date_8";s:19:"2023-11-13 12:27:03";s:6:"sclr_9";s:7:"2900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"55";s:6:"name_1";s:38:"コンスタンシア グレン ツー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:327:"ハーブ、グレープフルーツ、ライム、白い花などの控え目でエレガントな香り。美しく豊かな酸味、凝縮し深みのある果実味、石のニュアンスのミネラル、程良くしっかりしたボディ、ほんのりとクリーミーで抑制されたエレガントなワイン。";s:13:"search_word_5";s:43:"ソーヴィニョンブラン,セミヨン";s:11:"free_area_6";s:3551:"<div class="productsheet__table">   <h2><small>Constantia Glen Two</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／コンスタンシア</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (68％,32％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2017VT：93 Point<br>
+[Platter SA 2018’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+このワインに使われるブドウは、ベストなブロックのものを使用。早朝の涼しい時間に収穫。50％のブドウは全房でプレス。全て600mlの樽で発酵、そのまま7ヵ月熟成。新樽17％使用。残りは2-6年目の樽を使用。樽はフレンチオーク以外にオースリアンオーク10％、フレンチアカシア8％、アンフォラは７％使用している。<br>ハーブ、グレープフルーツ、ライム、白い花などの控え目でエレガントな香り。美しく豊かな酸味、凝縮し深みのある果実味、石のニュアンスのミネラル、程良くしっかりしたボディ、ほんのりとクリーミーで抑制されたエレガントなワイン。ソーヴィニョンブランは、ワインにフレッシュな酸味と骨格を与え、セミヨンは重みとリッチな味わいを与えている。二つの品種が見事に調和し、バランスのとれた美しいワインに仕上がっている。今でもフレッシュに楽しめるが、熟成しても楽しめるタイプなので、是非セラーに入れて欲しい。<br>グリルした魚、サーモンにレモンバターソース、グリーンアスパラ、鶏肉、豚肉料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:33:09";s:13:"update_date_8";s:19:"2023-11-13 12:27:20";s:6:"sclr_9";s:7:"4000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"56";s:6:"name_1";s:41:"コンスタンシア グレン スリー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:276:"バランスのとれた美しいワイン。コストパフォーマンスに優れ、ボルドー右岸系のブレンドの替わりとして提案できる。今でも楽しめるが、熟成しても楽しめるタイプなので、是非セラーに入れて欲しい。";s:13:"search_word_5";s:65:"メルロ,カベルネフラン,カベルネソーヴィニョン";s:11:"free_area_6";s:3297:"<div class="productsheet__table">   <h2><small>Constantia Glen Three</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／コンスタンシア</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (58％,25％,17％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2014VT：93 Point<br>
+[Platter SA 2018’] 2014VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+それぞれの品種ごとに発酵、フレンチオークで17ヵ月熟成。新樽28％使用。2年目樽60％、3年目樽は12％使用。軽くフィルターして瓶詰。更に瓶熟成を2年してからリリース。生産量46,000本。<br>赤系、黒系の果実、熟した果実、ドライハーブ、鉛筆の芯、白コショウやスパイスなどの香り。美しく豊かな酸味、凝縮し深みのある果実味、柔らかさと程良いボディを兼ね備え、渋みは細やかで洗練されている。味わいはリッチでなめらか、フルーティかつエレガントな風味がこのワイン全体を包み込み、上品に仕上げている。3つの品種が見事に調和し、バランスのとれた美しいワイン。コストパフォーマンスに優れ、ボルドー右岸系のブレンドの替わりとして提案できる。<br>赤身の牛肉、ローストした羊肉、ラムチョップ、鴨肉、ローストポーク、焼き野菜など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:34:34";s:13:"update_date_8";s:19:"2023-11-13 12:26:12";s:6:"sclr_9";s:7:"4200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"57";s:6:"name_1";s:48:"コンスタンシア・グレン・ファイブ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:315:"「これぞ、フラッグシップ」と言わんばかりの威風堂々とした存在感を漂わせている。タンニンはしっかりしていても、あくまでも細やかでスムーズ、丸みを帯びた骨格は、エレガントで綺麗なコンスタンシアらしさを表現している。";s:13:"search_word_5";s:97:"カベルネソーヴィニョン,カベルネフラン,メルロ,プチベルド,マルベック";s:11:"free_area_6";s:3603:"<div class="productsheet__table">   <h2><small>Constantia Glen Fives</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／コンスタンシア</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (30％,29％,23％,12％,6％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2019’] 2015VT：97 Point／Platinum<br>
+[Tim Atkin Report 2018’] 2014VT：95 Point<br>
+[Platter SA 2018’] 2014VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。それぞれの品種ごとに発酵、225Ｌのフレンチオークで18ヵ月熟成。新樽80％使用。2年目樽20％使用。軽くフィルターして瓶詰。更に瓶熟成を3年してからリリース。生産量24,000本。<br>赤系、黒系の果実、熟した果実、ジューシーなプラム、湿った土、鉛筆の芯、ハーブやスパイスなどの香り。柔らかい酸味、凝縮し深みのある果実味、しっかりした骨格とボディを兼ね備え、渋みは細やかで洗練されている。味わいはリッチでなめらか、フレッシュな酸味とミネラル、果実味、ボディ、全ての要素が見事に調和し、「これぞ、フラッグシップ」と言わんばかりの威風堂々とした存在感を漂わせている。タンニンはしっかりしていても、あくまでも細やかでスムーズ、丸みを帯びた骨格は、エレガントで綺麗なコンスンシアらしさを表現している。今でも楽しめるが、熟成しても楽しめるタイプなので、是非セラーに入れて欲しい。<br>ラムチョップ、ローストポーク、マッシュルームのリゾットなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:35:23";s:13:"update_date_8";s:19:"2023-11-13 12:26:37";s:6:"sclr_9";s:7:"5900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

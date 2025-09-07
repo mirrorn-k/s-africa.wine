@@ -1,0 +1,204 @@
+1754825461
+%255B728707b9a65d82c78ff2480dbaa0c2a429c8ea04%255D%255B1%255D
+a:1:{s:1163:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:50;}i:1;a:3:{i:0;i:25;i:1;i:81;i:2;i:47;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:3:{i:0;a:13:{s:4:"id_0";s:2:"25";s:6:"name_1";s:63:"カノンコップ・カデット・ピノタージュ・ロゼ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:273:"色は繊細な薄いサーモンピンク。花、ストロベリー、ラズベリー、トロピカルフルーツ、パイナップルなどの香り。優しいフレッシュな酸味、フルーティで、バランス良くエレガントにまとまっている。";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2844:"<div class="productsheet__table">
+	<h2><small>Kanonkop Kadette Pinotage Rose</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>14.2％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml／スクリューキャップ</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2022</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2019VT：89 Point<br>
+			[Tim Atkin Report 2018’] 2017VT：88 Point
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	栽培/製造：土壌は、風化した花崗岩、砂岩。収穫量は6トン/ha。収穫後、破砕、色が出過ぎないようにプレス。ステンレスタンクで13度で発酵、熟成。<br>熟成ポテンシャル：ヴィンテージ+2-3年。色は繊細な薄いサーモンピンク。花、ストロベリー、ラズベリー、トロピカルフルーツ、パイナップルなどの香り。優しいフレッシュな酸味、フルーティで、バランス良くエレガントにまとまっている。ボディはロゼの中では太く、しっかりした骨格のあるフルボディ・タイプ。味わいはドライで、前菜からメインまで幅広い料理に合う。<br>シーフード、サラダ、キッシュ、パスタ、エビチリ、中華料理、スパイシーな料理、アジア系料理など。カデットとは、「士官候補生」。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:57:29";s:13:"update_date_8";s:19:"2023-11-13 11:01:05";s:6:"sclr_9";s:7:"2100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"81";s:6:"name_1";s:72:"ブーケンハーツクルーフ・ポークパインリッジ・ロゼ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:270:"ピンクグレープフルーツ、スイカ、ザクロ、ライム、チェリー、ピンクペッパーなどの香り。フレッシュな酸、フルーティで程よくしっかりしたボディ、酸と果実味のバランスが良く心地良いワイン。";s:13:"search_word_5";s:22:"シラー,サンソー";s:11:"free_area_6";s:3160:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Porcupine Ridge Rose</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} </td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>限定品
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+フレッシュで活き活きとしたフルーティなロゼをイメージして比較的若い樹齢のブドウをメインに使用。セニエ式。収穫後、冷却、ステンレスタンクで発酵＆熟成。明るい透明感のあるサーモンピンク。<br>ピンクグレープフルーツ、スイカ、ザクロ、ライム、チェリー、ピンクペッパーなどの香り。フレッシュな酸、フルーティで程よくしっかりしたボディ、酸と果実味のバランスが良く心地良いワイン。余韻は長くドライなフィニッシュ。爽やかでフルーティ、春、夏、アウトドア、テラスなどで楽しみたい。<br>サーモン、シーフードのマリネ、ギョウザ、春巻き、中華料理、鶏肉料理、サラダ、アジア系料理など。<br>
+日々 愛用されるテーブルワインをテーマに、畑の人気者 ハリネズミをモチーフとしている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:44:27";s:13:"update_date_8";s:19:"2023-11-13 12:44:23";s:6:"sclr_9";s:7:"2200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"47";s:6:"name_1";s:39:"グレネリー・ロゼ・ド・メイ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:273:"ザクロ、キャンディ、フレッシュなラズベリーの香りが豊かに満たされる。フレッシュで豊かな酸。柑橘類やストロベリーなどの風味。エレガントでクリスピーなフィニッシュが最後まで気持ちが良い。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:3065:"<div class="productsheet__table">   <h2><small>Glenelly Rose De May</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ・シモンズバーグ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>ワイナリー直営のレストランのみで販売されていたのを説得。輸出は日本のみ。
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+軽く色付くまで優しく全房でプレス。ジュースはステンレスタンクに移して天然発酵。14度の低温で発酵。マロラクティック発酵は無し、そのまま熟成。透明な美しいブラッシュ・ピンク。グラスに注ぐと、ザクロ、キャンディ、フレッシュなラズベリーの香りが豊かに満たされる。<br>フレッシュで豊かな酸。柑橘類やストロベリーなどの風味。エレガントでクリスピーなフィニッシュが最後まで気持ちが良い。フードフレンドリーで、食欲が沸くような気持ちの良い辛口ロゼ。<br>ワイナリー直営のレストランのみで販売されていたのを説得。輸出は日本のみ。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:00:44";s:13:"update_date_8";s:19:"2023-11-13 13:02:20";s:6:"sclr_9";s:7:"2400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

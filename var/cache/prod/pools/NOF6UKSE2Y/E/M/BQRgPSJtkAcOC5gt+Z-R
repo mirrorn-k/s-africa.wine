@@ -1,0 +1,744 @@
+1754704154
+%255Ba3d9470af9ce31b2c031274bc4967e643dd881de%255D%255B1%255D
+a:1:{s:1341:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:12:{i:0;i:39;i:1;i:57;i:2;i:66;i:3;i:65;i:4;i:64;i:5;i:63;i:6;i:41;i:7;i:61;i:8;i:60;i:9;i:59;i:10;i:58;i:11;i:40;}i:1;a:11:{i:0;i:178;i:1;i:149;i:2;i:147;i:3;i:51;i:4;i:6;i:5;i:52;i:6;i:19;i:7;i:18;i:8;i:12;i:9;i:11;i:10;i:53;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:11:{i:0;a:13:{s:4:"id_0";s:3:"178";s:6:"name_1";s:69:"ステレンラスト・シュナンブラン・スパークリング";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:261:"青リンゴ、ライム、柑橘類など、フレッシュな果実の香り。爽やかで優しい酸味、フルーティで柔らかな泡。ふくよかで、ほんのりリッチ、ライムや柑橘類などの風味も豊かで心地良いワイン。";s:13:"search_word_5";s:73:"シュナンブラン,マスカット・オブ・アレキサンドリア";s:11:"free_area_6";s:3170:"<div class="productsheet__table">   <h2><small>Stellenrust Chenin Blanc Sparkling Brut</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>シャルマ方式
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリー・ヒルズの風化した花崗岩質の畑で15-32年のブッシュヴァイン・シュナンブランと、同じボタラリー・ヒルズの花崗岩質のマスカット・オブ・アレキサンドリアのブッシュヴァインのブドウを使用。<br>朝早くに収穫。ブドウは全房で優しくプレス。ステンレスタンクで発酵し、3ヶ月熟成。シャルマ方式でタンク内二次発酵。ボトリング前にマスカット・オブ・アレキサンドリアをブレンド。青リンゴ、ライム、柑橘類など、フレッシュな果実の香り。爽やかで優しい酸味、フルーティで柔らかな泡。ふくよかで、ほんのりリッチ、ライムや柑橘類などの風味も豊かで心地良いワイン。<br>南アフリカを代表するシュナンブランの生産者、ステレンラスト社のグッドバリューなスパークリング。<br>生カキ、シーフード、スパイス料理、サラダ、パスタなど。
+</div>";s:13:"create_date_7";s:19:"2020-11-19 04:52:37";s:13:"update_date_8";s:19:"2023-07-25 02:17:54";s:6:"sclr_9";s:7:"2400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"149";s:6:"name_1";s:69:"ステラー・オーガニックス・ロゼ・スパークリング";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:198:"フレッシュ＆フルーティでクラシックなシャンパーニの風味。優しいスムーズな泡で飲みやすい。エレガントで赤い果実を思わせるフィニッシュ。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:2718:"<div class="productsheet__table">   <h2><small>Stellar Organics Rose Sparkling</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステンレスタンクで発酵後、ブレンドし。柑橘類や酵母の香り。フレッシュ＆フルーティでクラシックなシャンパーニの風味。優しいスムーズな泡で飲みやすい。エレガントで赤い果実を思わせるフィニッシュ。<br>カナペなどの前菜、ソフトチーズ、伊勢海老、スパイシーなアジア料理など。リーズナブルで美味しいオーガニックワインを探している人に特にお薦め。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:02:08";s:13:"update_date_8";s:19:"2023-11-13 12:35:49";s:6:"sclr_9";s:7:"2500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"147";s:6:"name_1";s:60:"ステラー・オーガニックス・スパークリング";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:273:"「オーガニックだからと言って品質に妥協はない」グレープフルーツやライムの香り。フレッシュで爽やか、優しい酸味と柔らかい泡が心地良く飲みやすいスパークリング。程良くしっかりしたボディ。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:2916:"<div class="productsheet__table">   <h2><small>Stellar Organics Sparkling</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+グレープフルーツやライムの香り。フレッシュで爽やか、優しい酸味と柔らかい泡が心地良く飲みやすいスパークリング。程良くしっかりしたボディで、辛すぎず、心地良い酸味とスムーズでほんのりナッツやビスケットのような風味も感じるフィニッシュ。<br>お勧め料理は前菜、牡蠣（カキ）、寿司、天ぷらなど幅広く。<br>オーガニックで、フェアトレードで、リーズナブルで、フルーティで、スイスイ飲めるスパークリングワイン。リーズナブルで美味しいオーガニックワインを探している人に特にお薦め。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:00:49";s:13:"update_date_8";s:19:"2024-12-24 05:16:26";s:6:"sclr_9";s:7:"2500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"51";s:6:"name_1";s:48:"クローヌ・ボレアリス・ブリュット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:247:"ビスケットや桃のような香りを持ち、上品でクリーミーな口あたり。フィニッシュは爽やか。持続性のある綺麗で柔らかな泡。 酸化防止剤無添加なので健康志向な方にオススメです。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:3428:"<div class="productsheet__table">   <h2><small>Krone Borealis Brut</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (72％,28％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2017VT：89 Point<br>
+[Sakura Awards 2017’] 2015VT：Gold<br>
+1995年、2004年の南アフリカ・ダイナーズクラブ最優秀ワイン醸造家に選ばれる。2000年、2001年にエアー・フランス・クラシック・トロフィ大会のスパークリング部門（シャンパーニュ製法）で金賞。「憎らしいほど極めてオリジナルのシャンパーニュに近い」と評される。
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+生産量84,000本。涼しい夜間と早朝に手摘みする。フリーラン・ジュース（1トンあたりで約500リットル）のみを使用。ステンレスタンクで低温発酵。その後マロラクティック発酵（ＭＬＦ）。瓶詰め後、地下セラーで瓶内2次発酵（約3ヶ月）。そのまま熟成。手動による動瓶（ルミュアージュ）。<br>ビスケットや桃のような香りを持ち、上品でクリーミーな口あたり。フィニッシュは爽やか。持続性のある綺麗で柔らかな泡。シャンパーニュと間違うような香りと品質は泡ファンに是非飲んでもらいたい。<br>シャンパーニュ・ファンにも満足できるリーズナブルな本格派スパークリング。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:28:04";s:13:"update_date_8";s:19:"2023-11-13 13:07:11";s:6:"sclr_9";s:7:"3100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:1:"6";s:6:"name_1";s:66:"ステレンラスト・ＭＣＣ・ロゼ・スパークリング";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:275:"2015世界スパークリングワイン・チャレンジ（英国）でドンペリニョン2005、クリスタル2006などを制し1位。2012年ロンドンオリンピックに採用されたワイナリー「ステレンラスト」のスパークリングワイン。";s:13:"search_word_5";s:59:"カベルネフラン,シャルドネ,シュナンブラン";s:11:"free_area_6";s:3570:"<div class="productsheet__table">   <h2><small>Stellenrust Sparkling</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}(62%,19%,19%)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>2015年世界スパークリングワインチャレンジで第１位<br>
+サクラアワード2016 シルバー受賞<br>
+2012年ロンドン・オリンピックに採用されたワイナリー<br>
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+クレマン・ド・ロワールのスタイルで、ロワール品種を使用した瓶内２次発酵。シュナンブランは樹齢32年のブッシュヴァイン（株仕立て。ボタラリー地区）、シャルドネは10年（ボタラリー地区）、カベルネフランは16年の樹齢（ヘルダーバーグ地区）。シュナンブランはステンレスタンクで天然発酵後、澱が入ったまま7ヶ月熟成。シャルドネとカベルネフランは3＆4年目のフレンチオークで天然発酵後、7ヶ月熟成し、ブレンド。瓶内２次発酵後は、澱引き（おりびき：デゴルジュマン）前に18カ月熟成。 打栓後、更に３ヶ月してから出荷。<br>リンゴ、レモン、桃、チェリー、レッドベリーなどの香り。爽やかなスッキリした酸味、キメ細かく、綺麗でスムーズな泡が長く続く上品なスパークリング。薄い綺麗なピンク色。<br>受賞・評価：2015世界スパークリングワイン・チャレンジ（英国）でドンペリニョン2005、クリスタル2006などを制し1位。（出典：http://www.topwinesa.com/?p=4419）
+</div>";s:13:"create_date_7";s:19:"2020-09-26 06:45:55";s:13:"update_date_8";s:19:"2023-11-13 11:37:54";s:6:"sclr_9";s:7:"3300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:2:"52";s:6:"name_1";s:51:"クローヌ・ロゼ・キュベ・ブリュット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:256:"持続性のある綺麗で柔らかな泡。シャンパーニュと間違うような香りと品質は泡ファンに是非飲んでもらいたいスパークリングです。 酸化防止剤無添加なので健康志向な方にオススメです。";s:13:"search_word_5";s:34:"ピノノワール,シャルドネ";s:11:"free_area_6";s:3289:"<div class="productsheet__table">   <h2><small>Krone Rose Cuvee Brut</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (74％,26％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：89 Point<br>
+2015プラッター（南ア）4星。2006年9月&12月で「ロゼ・スパークリングでは南アフリカでもベスト＆ワールドクラスに匹敵する」と高い評価を得る。ワインメーカーのニッキーは1995年、2004年に南アフリカ・ダイナーズクラブ最優秀ワイン醸造家に選ばれる。白のスパークリング（クローヌ・ボレアリス・ブリュット）は2000年、2001年にエアー・フランス・クラシック・トロフィ大会のスパークリング部門（シャンパーニュ製法）で金賞。「憎らしいほど極めてオリジナルのシャンパーニュに近い」と評される。
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ナチュラルな淡いサーモンピンク色。細かで持続的な泡。フレッシュ＆爽やかな赤りんごやベリー系の豊かな香り。繊細で華やか、ややクリーミーでエレガントなスパークリング。 雑誌Dressに掲載されました。
+<img src="{{ asset('/html/user_data/upload/img/Dress_Krone.jpg') }}" alt="雑誌Dress" >
+
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:28:34";s:13:"update_date_8";s:19:"2023-07-25 04:21:42";s:6:"sclr_9";s:7:"4200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:2:"19";s:6:"name_1";s:78:"ウォータークルーフ・アストライオス・ピノノワール・MCC";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:234:"チェリー、花、ハーブ、スパイス、焼きリンゴなどの香り。フレッシュで豊かな酸味、優しいボディで、泡は綺麗でキメ細やか。心地良い爽やかなワインで上品なスタイル。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:3067:"<div class="productsheet__table">   <h2><small>Waterkloof Astraeus Pinot Noir MCC</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／エルギン</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2018’] 4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+冷涼地区エルギンよりオーガニックブドウを購入。土壌はテーブルマウンテン砂岩。この土は、ワインにミネラル分を与える。ブドウは全房でバスケット・プレス。600Lの古樽で天然発酵。その後、澱が入ったまま9ヶ月熟成。その後、瓶内で2次発酵後11ヶ月熟成。デゴルジュマン（澱引き）後、更に7ヶ月熟成して出荷。<br>料理：前菜、和食、寿司、サーモン、シーフード、アジア系料理など。<br>チェリー、花、ハーブ、スパイス、焼きリンゴなどの香り。フレッシュで豊かな酸味、優しいボディで、泡は綺麗でキメ細やか。心地良い爽やかなワインで上品なスタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:52:25";s:13:"update_date_8";s:19:"2023-11-13 12:20:58";s:6:"sclr_9";s:7:"4250.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:7;a:13:{s:4:"id_0";s:2:"18";s:6:"name_1";s:75:"ウォータークルーフ・アストライオス・シャルドネ・MCC";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:243:"フレッシュで豊かな酸味、程よいボディ。泡は綺麗でキメ細やか。リッチで複雑な面もある。フィニッシュはドライで爽やか。全体には心地良い爽やかなワインで上品なスタイル。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3093:"<div class="productsheet__table">   <h2><small>Waterkloof Astraeus Chardon Reserve Brut</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／エルギン</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2018’] 4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+涼地区エルギンよりオーガニックブドウを購入。土壌はテーブルマウンテン砂岩。この土は、ワインにミネラル分を与える。ブドウは全房でバスケット・プレス。600Lの古樽で天然発酵。その後、澱が入ったまま9ヶ月熟成。その後、瓶内で2次発酵後2年熟成。デゴルジュマン（澱引き）後、更に6ヶ月熟成して出荷。<br>ワインに複雑味を加えるために、2009ヴィンテージのシャルドネMCCを15％混ぜている。<br>フレッシュで豊かな酸味、程よいボディ。泡は綺麗でキメ細やか。リッチで複雑な面もある。フィニッシュはドライで爽やか。全体には心地良い爽やかなワインで上品なスタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:51:50";s:13:"update_date_8";s:19:"2023-11-13 12:20:28";s:6:"sclr_9";s:7:"4250.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:8;a:13:{s:4:"id_0";s:2:"12";s:6:"name_1";s:36:"アリステア・ＭＣＣ・ロゼ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:249:"MCCの申し子、クローヌの息子が手掛けるワイン。細やかで、綺麗、エレガントで洗練されたワイン。細やかで上品、優しいムースのような美しい泡が長く続き、かつ複雑で深みもある。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:3214:"<div class="productsheet__table">   <h2><small>Aristea MCC Rose</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.50％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：91 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ゆっくりと優しく全房でプレス。一番搾りとベストなジュースのみ使用。発酵後、マロラクティック発酵を経て、ベースとなるワインが完成。全てのワインをブレンドして瓶詰し、2次発酵。瓶内で最低2年熟成。生産量4000本。<br>色は繊細なサーモンピンク。赤いベリー系、ストロベリー、チェリーなど、フレッシュでチャーミングな果実の香り。活き活きとした豊かな酸味は最初から最後まで続く。細やかで上品、優しいムースのような美しい泡が長く続き、かつ複雑で深みもある。ゴージャスだけど派手すぎない、クラシックでエレガントなスタイル。南アフリカのMCCスパークリングとしては素晴らしい1本。<br>サーモン、エビ、カルパッチョなどの前菜に、また、牛肉などのメイン料理に、イチゴと一緒にデザートに多彩に対応できる。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:33:43";s:13:"update_date_8";s:19:"2023-11-13 13:06:16";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:9;a:13:{s:4:"id_0";s:2:"11";s:6:"name_1";s:39:"アリステア・ＭＣＣ・ブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:264:"「まるで若いクリュッグのよう！」と評された泡。細やかで上品、優しいムースのような美しい泡が長く続き、かつ複雑で深みもある。しっかりしたボディとクラシックでエレガントなスタイル。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:3402:"<div class="productsheet__table">   <h2><small>Aristea MCC Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2015VT：89 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。ゆっくりと優しく全房でプレス。一番搾りとベストなジュースのみ使用。発酵後、マロラクティック発酵を経て、ベースとなるワインが完成。一部のシャルドネは樽で熟成。全てのワインをブレンドして瓶詰し、2次発酵。瓶内で最低3年熟成。生産量4200本。<br>フレッシュな柑橘類、リンゴ、イースト香、ビスケットなどの香り。活き活きとした豊かな酸味は最初から最後まで続く。細やかで上品、優しいムースのような美しい泡が長く続き、かつ複雑で深みもある。しっかりしたボディとクラシックでエレガントなスタイル。南アフリカのMCC（瓶内二次発酵）スパークリングとしては素晴らしい1本。<br>マシュー曰く、デカンター誌のライターに「まるで若いクリュッグのよう」と評されたと。<br>生ハム、カルパッチョなどの前菜に、また、シーフード、レモンソース、クリームソースなどのメイン料理に、イチゴと一緒にデザートに多彩に対応できる。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:33:01";s:13:"update_date_8";s:19:"2023-11-13 13:06:01";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:10;a:13:{s:4:"id_0";s:2:"53";s:6:"name_1";s:75:"クローヌ・ＭＣＣ・カイマンスハット・ブランドブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:324:"柑橘類の花や皮、リンゴ、レモンなど、爽やかな香り。スッキリとした爽やかで綺麗な酸、持続的で細やかな心地良いスムーズな泡。程よい厚みとボディ、ドライでシャープなフィニッシュ。僅かにトーストした香りも感じることが出来る。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3874:"<div class="productsheet__table">   <h2><small>Krone MCC Kaaimansgat Blanc de Blancs</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／トゥルバッハ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2016VT：89 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+2016年は暑く、乾燥した年だった。しかし、幸いにもカイマンスハットの畑は、オーバーバーグの冷涼地域、エランズクルーフ地区の冬は雪に覆われるような標高700mの高地冷涼な所で、あまり影響を受けなかった。ここは、普段は昼が暑くても夜は冷え、ブドウがゆっくり育つので、酸のしっかりした完熟ブドウで、pHの低い、MCCにパーフェクトなブドウが育つ。<br>2016年はブドウは2015年より小さく、上質であった。シャルドネは2/19の夜間に収穫し、最高のブドウを収穫できた。<br>シャルドネは樹齢31年。灌漑なし。全房でプレスし、フリーランジュース（500L/トン）のみ使用。天然発酵で6ヶ月。発酵樽は2500Ｌの大樽。瓶内2次発酵は、地下室の冷涼な貯蔵庫で3年熟成後デゴルジュマン。その際２ｇ/Ｌのドサージュ以外何も入れない。<br>柑橘類の花や皮、リンゴ、レモンなど、爽やかな香り。スッキリとした爽やかで綺麗な酸、持続的で細やかな心地良いスムーズな泡。程よい厚みとボディ、ドライでシャープなフィニッシュ。僅かにトーストした香りも感じることが出来る。冷涼な地域を感じさせる豊かな酸のフレッシュさ、ドライで洗練された上品な泡は、今飲んで美味しく、10年以上熟成するものと思われる。<br>シーフード、スモークサーモン、ホタテ、牡蠣、生ハム、天ぷら他様々な料理に幅広く合いやすい。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:31:31";s:13:"update_date_8";s:19:"2023-11-13 13:07:27";s:6:"sclr_9";s:8:"10400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

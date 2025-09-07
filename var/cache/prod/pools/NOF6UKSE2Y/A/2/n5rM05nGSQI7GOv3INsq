@@ -1,0 +1,268 @@
+1754861565
+%255B6d0e8ca8921cb58622c15353c56981b7709ce282%255D%255B1%255D
+a:1:{s:1172:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:11;}i:1;a:4:{i:0;i:13;i:1;i:14;i:2;i:12;i:3;i:11;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:4:{i:0;a:13:{s:4:"id_0";s:2:"13";s:6:"name_1";s:33:"アリステア・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:231:"桃、洋ナシ、オレンジ、柑橘類、ヴァニラなどの香り。フレッシュで豊かな酸味、綺麗で雑味の無いジュース。優しくリッチ、ふくよかで、なめらか、シルキーなタッチ。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3545:"<div class="productsheet__table">   <h2><small>Aristea Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>	[Tim Atkin Report 2019’] 2018VT：93 Point<br>
+[Tim Atkin Report 2018’] 2017VT：93 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+5度の低温室で1日置く。全体の半分を全房でプレス。残りは除梗してプレス。ジュースの30％は、フレンチオークに移され天然発酵。残りは人工酵母を入れてフレンチオークで発酵、熟成。全ての樽でマロラクティック発酵を経て11ヵ月熟成。新樽使用40％、2年目樽30％、3年目樽30％。熟成中は時々バトナージュ。生産量4800本。<br>桃、洋ナシ、オレンジ、柑橘類、ヴァニラなどの香り。フレッシュで豊かな酸味、綺麗で雑味の無いジュース。優しくリッチ、ふくよかで、なめらか、シルキーなタッチ。柑橘類やトロピカルフルーツの複雑な風味に、オーク由来のヴァニラ、スパイスなど風味が良いアクセントになっている。<br>最初から最後まで爽やかで上品な酸味がこのワインを支え、ゴージャスだけど派手すぎない、クラシックでエレガントなスタイルに仕上げている。<br>オレンジやグレープフルーツ他柑橘類の入ったサラダ、白身魚のソテーや鶏肉、牛肉料理にレモンを絞って、またはレモンバターソースで。その他、クリームソースなど。　
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:34:15";s:13:"update_date_8";s:19:"2023-07-25 04:18:37";s:6:"sclr_9";s:7:"4600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"14";s:6:"name_1";s:51:"アリステア・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:384:"ブラックチェリー、プラム、熟した黒系果実などの香り。フレッシュで豊かな酸味、綺麗で雑味の無いジュース。キメ細やかで上品な渋みに引き締まったボディ。優しくなめらか、シルキーなタッチ。パワフルで大きなワインではなく、スタイリッシュで控え目感のある上品なワイン。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3546:"<div class="productsheet__table">   <h2><small>Aristea Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：92 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+5度の低温室で1日置く。除梗、破砕後、オープンタンクで25度で6日間発酵。その間、1日に4−6回パンチダウン。その後ソフトプレスしフレンチオークに移され、マロラクティック発酵を経て18ヵ月熟成。新樽、2年目樽、3年目樽はそれぞれ1/3ずつ使用。生産量4000本。<br>ブラックチェリー、プラム、熟した黒系果実などの香り。フレッシュで豊かな酸味、綺麗で雑味の無いジュース。キメ細やかで上品な渋みに引き締まったボディ。優しくなめらか、シルキーなタッチ。パワフルで大きなワインではなく、スタイリッシュで控え目感のある上品なワイン。オーク由来のシナモンやスパイスの風味も加わり、酸味と果実味、ボディと渋み、それぞれが主張し過ぎずパーフェクトに調和している。<br>何もブレンドされず、カベルネソーヴィニョン100％の単一ワインとしては、かなりの上質。このワインからマシューのこだわりと技術の高さを感じ取れる。エレガントで何も申し分がない。<br>上品な肉料理と合わせたいフードワイン。赤身の牛肉や羊肉、デザートではガトーショコラなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:34:47";s:13:"update_date_8";s:19:"2022-03-26 02:08:30";s:6:"sclr_9";s:7:"4800.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"12";s:6:"name_1";s:36:"アリステア・ＭＣＣ・ロゼ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:249:"MCCの申し子、クローヌの息子が手掛けるワイン。細やかで、綺麗、エレガントで洗練されたワイン。細やかで上品、優しいムースのような美しい泡が長く続き、かつ複雑で深みもある。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:3214:"<div class="productsheet__table">   <h2><small>Aristea MCC Rose</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.50％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：91 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ゆっくりと優しく全房でプレス。一番搾りとベストなジュースのみ使用。発酵後、マロラクティック発酵を経て、ベースとなるワインが完成。全てのワインをブレンドして瓶詰し、2次発酵。瓶内で最低2年熟成。生産量4000本。<br>色は繊細なサーモンピンク。赤いベリー系、ストロベリー、チェリーなど、フレッシュでチャーミングな果実の香り。活き活きとした豊かな酸味は最初から最後まで続く。細やかで上品、優しいムースのような美しい泡が長く続き、かつ複雑で深みもある。ゴージャスだけど派手すぎない、クラシックでエレガントなスタイル。南アフリカのMCCスパークリングとしては素晴らしい1本。<br>サーモン、エビ、カルパッチョなどの前菜に、また、牛肉などのメイン料理に、イチゴと一緒にデザートに多彩に対応できる。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:33:43";s:13:"update_date_8";s:19:"2023-11-13 13:06:16";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"11";s:6:"name_1";s:39:"アリステア・ＭＣＣ・ブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:264:"「まるで若いクリュッグのよう！」と評された泡。細やかで上品、優しいムースのような美しい泡が長く続き、かつ複雑で深みもある。しっかりしたボディとクラシックでエレガントなスタイル。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:3402:"<div class="productsheet__table">   <h2><small>Aristea MCC Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2015VT：89 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。ゆっくりと優しく全房でプレス。一番搾りとベストなジュースのみ使用。発酵後、マロラクティック発酵を経て、ベースとなるワインが完成。一部のシャルドネは樽で熟成。全てのワインをブレンドして瓶詰し、2次発酵。瓶内で最低3年熟成。生産量4200本。<br>フレッシュな柑橘類、リンゴ、イースト香、ビスケットなどの香り。活き活きとした豊かな酸味は最初から最後まで続く。細やかで上品、優しいムースのような美しい泡が長く続き、かつ複雑で深みもある。しっかりしたボディとクラシックでエレガントなスタイル。南アフリカのMCC（瓶内二次発酵）スパークリングとしては素晴らしい1本。<br>マシュー曰く、デカンター誌のライターに「まるで若いクリュッグのよう」と評されたと。<br>生ハム、カルパッチョなどの前菜に、また、シーフード、レモンソース、クリームソースなどのメイン料理に、イチゴと一緒にデザートに多彩に対応できる。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:33:01";s:13:"update_date_8";s:19:"2023-11-13 13:06:01";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

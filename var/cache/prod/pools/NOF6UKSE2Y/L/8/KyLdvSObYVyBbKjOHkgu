@@ -1,0 +1,1215 @@
+1754859280
+%255Bba3d023747886dbfa6d897358ce7fff61d18b5ef%255D%255B1%255D
+a:1:{s:3972:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, d1_.id AS id_9, d1_.product_code AS product_code_10, d1_.stock AS stock_11, d1_.stock_unlimited AS stock_unlimited_12, d1_.sale_limit AS sale_limit_13, d1_.price01 AS price01_14, d1_.price02 AS price02_15, d1_.delivery_fee AS delivery_fee_16, d1_.visible AS visible_17, d1_.create_date AS create_date_18, d1_.update_date AS update_date_19, d1_.currency_code AS currency_code_20, d1_.point_rate AS point_rate_21, d2_.id AS id_22, d2_.tax_rate AS tax_rate_23, d2_.tax_adjust AS tax_adjust_24, d2_.apply_date AS apply_date_25, d2_.create_date AS create_date_26, d2_.update_date AS update_date_27, d3_.id AS id_28, d3_.stock AS stock_29, d3_.create_date AS create_date_30, d3_.update_date AS update_date_31, d4_.id AS id_32, d4_.backend_name AS backend_name_33, d4_.name AS name_34, d4_.sort_no AS sort_no_35, d4_.visible AS visible_36, d4_.create_date AS create_date_37, d4_.update_date AS update_date_38, d5_.id AS id_39, d5_.backend_name AS backend_name_40, d5_.name AS name_41, d5_.sort_no AS sort_no_42, d5_.visible AS visible_43, d5_.create_date AS create_date_44, d5_.update_date AS update_date_45, d6_.id AS id_46, d6_.file_name AS file_name_47, d6_.sort_no AS sort_no_48, d6_.create_date AS create_date_49, d7_.id AS id_50, d7_.create_date AS create_date_51, d0_.discriminator_type AS discriminator_type_52, d0_.creator_id AS creator_id_53, d0_.product_status_id AS product_status_id_54, d1_.discriminator_type AS discriminator_type_55, d1_.product_id AS product_id_56, d1_.sale_type_id AS sale_type_id_57, d1_.class_category_id1 AS class_category_id1_58, d1_.class_category_id2 AS class_category_id2_59, d1_.delivery_duration_id AS delivery_duration_id_60, d1_.creator_id AS creator_id_61, d2_.discriminator_type AS discriminator_type_62, d2_.product_class_id AS product_class_id_63, d2_.creator_id AS creator_id_64, d2_.country_id AS country_id_65, d2_.pref_id AS pref_id_66, d2_.product_id AS product_id_67, d2_.rounding_type_id AS rounding_type_id_68, d3_.discriminator_type AS discriminator_type_69, d3_.product_class_id AS product_class_id_70, d3_.creator_id AS creator_id_71, d4_.discriminator_type AS discriminator_type_72, d4_.class_name_id AS class_name_id_73, d4_.creator_id AS creator_id_74, d5_.discriminator_type AS discriminator_type_75, d5_.class_name_id AS class_name_id_76, d5_.creator_id AS creator_id_77, d6_.discriminator_type AS discriminator_type_78, d6_.product_id AS product_id_79, d6_.creator_id AS creator_id_80, d7_.discriminator_type AS discriminator_type_81, d7_.product_id AS product_id_82, d7_.tag_id AS tag_id_83, d7_.creator_id AS creator_id_84 FROM dtb_product d0_ INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') LEFT JOIN dtb_tax_rule d2_ ON d1_.id = d2_.product_class_id AND d2_.discriminator_type IN ('taxrule') INNER JOIN dtb_product_stock d3_ ON d1_.id = d3_.product_class_id AND d3_.discriminator_type IN ('productstock') LEFT JOIN dtb_class_category d4_ ON d1_.class_category_id1 = d4_.id AND d4_.discriminator_type IN ('classcategory') LEFT JOIN dtb_class_category d5_ ON d1_.class_category_id2 = d5_.id AND d5_.discriminator_type IN ('classcategory') LEFT JOIN dtb_product_image d6_ ON d0_.id = d6_.product_id AND d6_.discriminator_type IN ('productimage') LEFT JOIN dtb_product_tag d7_ ON d0_.id = d7_.product_id AND d7_.discriminator_type IN ('producttag') WHERE (d0_.id IN (63, 62, 66, 65, 64, 67, 70, 69, 68) AND d1_.visible = ?) AND d0_.discriminator_type IN ('product') ORDER BY d4_.sort_no DESC, d5_.sort_no DESC, d6_.sort_no ASC&params=a:1:{i:0;b:1;}&types=a:1:{i:0;s:7:"boolean";}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:18:{i:0;a:85:{s:4:"id_0";s:2:"62";s:6:"name_1";s:84:"デイビット＆ナディア・シーブリッツクルーフ・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:258:"ワインマグ（南ア）95点。デカンター・オンラインサイト（2016年9月29日）93点。「こんなピノタージュは今までに経験したことが無いだろう」と、コメントしたニュータイプ のピノタージュ！";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2762:"<div class="productsheet__table">   <h2><small>David and Nadia Sadie Siebritskloof Pinotage</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：91 Point<br>
+ワインマグ（南ア）95点 VT:2015
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1990年初期に植えられた葡萄畑から古いフレンチ―オークで14カ月熟成。20％は全房発酵。黒スグリ、カシス、チェリーなど赤・黒系の香りだけでなくオリーブや紫の花など複雑な香り。ナチュラルな味わいだがしっかりとした葡萄本来の力強さを感じられる。ピノタージュという品種の幅を広げる新しいスタイルのピノタージュと言える。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:51:07";s:13:"update_date_8";s:19:"2022-03-26 03:27:17";s:4:"id_9";s:2:"77";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3900.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:51:07";s:14:"update_date_19";s:19:"2022-03-26 03:27:17";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"77";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 04:51:07";s:14:"update_date_31";s:19:"2022-03-26 03:27:17";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1492";s:12:"file_name_47";s:28:"1008135105_5f7e9ab961bcc.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:17";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"62";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"77";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"62";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:1;a:85:{s:4:"id_0";s:2:"63";s:6:"name_1";s:78:"デイビット＆ナディア・シーブリッツクルーフ・セミヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:357:"柑橘類、ハーブなどの香り。柔らかく豊かな酸味、凝縮した果実味の、やや濃厚な味わい。ふくよかで程良い厚みとボディ。フレッシュで果実の旨み、ブドウのナチュラルなピュアテイストを楽しめる。酸味と果実味のバランスが良く、エレガントなフィニッシュ。";s:13:"search_word_5";s:12:"セミヨン";s:11:"free_area_6";s:3227:"<div class="productsheet__table">   <h2><small>David and Nadia Sadie Siebritskloof Semillon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：92 Point<br>
+[Platter SA 2017’] 2015VT：4.5 STAR<br>
+ワインマグ（南ア）90点 VT:2016
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ワートランド・パーデボシュ地区の2箇所の花崗岩質の畑のブドウを使用。一つは1960年に植樹、もう一つは1972年に植樹されたもの。ブッシュヴァイン（株仕立て）。収穫量は2-3トン/haと極めて少量。収穫後は、全房でのスキンコンタクト7日間、天然発酵。300Ｌの古いフレンチオークで熟成。931本生産。<br>柑橘類、ハーブなどの香り。柔らかく豊かな酸味、凝縮した果実味の、やや濃厚な味わい。ふくよかで程良い厚みとボディ。フレッシュで果実の旨み、ブドウのナチュラルなピュアテイストを楽しめる。酸味と果実味のバランスが良く、エレガントなフィニッシュ。<br>シーフード、サーモン料理、バーニャカウダーなど。少量ですが入荷します。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:51:42";s:13:"update_date_8";s:19:"2023-07-25 02:27:15";s:4:"id_9";s:2:"78";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3900.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:51:42";s:14:"update_date_19";s:19:"2023-07-25 02:27:15";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"78";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 04:51:42";s:14:"update_date_31";s:19:"2023-07-25 02:27:15";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1684";s:12:"file_name_47";s:28:"1008135140_5f7e9adc4babb.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:33";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"63";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"78";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"63";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:2;a:85:{s:4:"id_0";s:2:"64";s:6:"name_1";s:54:"デイビット＆ナディア・アリスタルゴス";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"ライム、梨、桃、スパイス、ハーブ、ハチミツなどの香り。複雑で様々な風味とブドウのピュアな味わいを楽しむ事ができ、素直に美味しい。余韻は長くエレガントなフィニッシュ。";s:13:"search_word_5";s:97:"シュナンブラン,ヴィオニエ,ルーサンヌ,クラレットブランシュ,セミヨン";s:11:"free_area_6";s:3103:"<div class="productsheet__table">   <h2><small>David ＆ Nadia Aristargos</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (50％,20％,12％,8％,20％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2017’] 2015VT：5 STAR<br>
+[Tim Atkin Report 2017’] 2015VT：96 Point<br>
+[Tim Atkin Report 2016’] 2015VT：95 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+スワートランドのパールダバーグの南側斜面の12の畑のブドウを使用。ほとんどは古いブッシュヴァイン。一番古いシュナンブランは1966年に植樹。1950年代に植樹された少量のセミヨンをブレンド。古い300?のフレンチバレルで熟成。br>ライム、梨、桃、スパイス、ハーブ、ハチミツなどの香り。フレッシュで豊かな酸味と果実味。ふくよかで程良い厚みとボディを擁しているが、しっかりした酸味もあり、決して重くなく、バランス良く出来ている。複雑で様々な風味とブドウのピュアな味わいを楽しむ事ができ、素直に美味しい。余韻は長くエレガントなフィニッシュ。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:52:07";s:13:"update_date_8";s:19:"2023-11-13 12:11:51";s:4:"id_9";s:2:"79";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"5700.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:52:07";s:14:"update_date_19";s:19:"2023-11-13 12:11:51";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"79";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 04:52:07";s:14:"update_date_31";s:19:"2020-10-08 04:52:07";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1686";s:12:"file_name_47";s:28:"1008135204_5f7e9af4d8d3a.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:34";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"64";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"79";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"64";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:3;a:85:{s:4:"id_0";s:2:"65";s:6:"name_1";s:54:"デイビット＆ナディア・エルピディオス";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:216:"透明感のある綺麗なワインで優しいボディ。美しく豊かな酸味、キメ細やかで洗練された渋み。優しくなめらか、旨みも感じられ、エレガントなフィニッシュ。";s:13:"search_word_5";s:76:"シラー,カリニャン,サンソ―,グルナッシュ,ピノタージュ";s:11:"free_area_6";s:3038:"<div class="productsheet__table">   <h2><small>David & Nadia Elpidios</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (31％,39％,9％,5％,16％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：94 Point<br>
+[Tim Atkin Report 2016’] 2014VT：93 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+岩、片岩、花崗岩や鉄分豊富な土壌で、スワートランドの7箇所の畑のブドウを使用。収穫量は4-5トン/haと極めて少量。収穫後は、ステンレスタンクで全房と除茎の物を混ぜて天然発酵、トータルでスキンコンタクトは4週間。その後、ソフトにプレスし、500Ｌの古いフレンチオークに移してマロラクティック発酵＆20ヶ月熟成。<br>ラズベリー、クランベリー、スパイス、ラベンダーなどの花の香り。透明感のある綺麗なワインで優しいボディ。美しく豊かな酸味、キメ細やかで洗練された渋み。優しくなめらか、旨みも感じられ、エレガントなフィニッシュ。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:53:13";s:13:"update_date_8";s:19:"2023-11-13 12:12:49";s:4:"id_9";s:2:"80";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"5700.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:53:13";s:14:"update_date_19";s:19:"2023-11-13 12:12:49";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"80";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 04:53:13";s:14:"update_date_31";s:19:"2020-10-08 04:53:13";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1688";s:12:"file_name_47";s:28:"1008135309_5f7e9b35d1273.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:34";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"65";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"80";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"65";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:4;a:85:{s:4:"id_0";s:2:"66";s:6:"name_1";s:54:"デイビット＆ナディア・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"ライム、梨、桃、スパイス、ハーブ、ハチミツなどの香り。複雑で様々な風味とブドウのピュアな味わいを楽しむ事ができ、素直に美味しい。余韻は長くエレガントなフィニッシュ。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:2985:"<div class="productsheet__table">   <h2><small>David ＆ Nadia Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：93 Point<br>
+[Tim Atkin Report 2016’] 2014VT：93 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+スワートランドの6箇所の畑のブドウを使用。全てブッシュヴァイン（株仕立て）。ブドウの樹齢は35-49年の古木。収穫量は2-4トン/haと極めて少量。収穫後は、全房発酵、天然発酵。３００Ｌの古いフレンチオークで熟成。5120本生産。<br>梨、桃、花の香り、乾燥した土地の埃っぽい香りなど。豊かな酸味、古木＆低い収穫量から由来する凝縮した果実味。ふくよかで程良い厚みとボディ。フレッシュで果実の旨み、ブドウのナチュラルなピュアテイストを楽しめる。酸味と果実味のバランスが良く、素直に美味しく楽しめるワイン。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:53:40";s:13:"update_date_8";s:19:"2023-11-13 12:13:11";s:4:"id_9";s:2:"81";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"5700.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:53:40";s:14:"update_date_19";s:19:"2023-11-13 12:13:11";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"81";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 04:53:40";s:14:"update_date_31";s:19:"2020-10-08 04:53:40";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1690";s:12:"file_name_47";s:28:"1008135336_5f7e9b50c20cc.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:35";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"66";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"81";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"66";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:5;a:85:{s:4:"id_0";s:2:"67";s:6:"name_1";s:51:"デイビット＆ナディア・グルナッシュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:216:"グルナッシュ単一ワイン。フレッシュな酸味と細かいタンニンが綺麗なワイン。南アを代表するグルナッシュとシュナンブランの造り手、デイビット＆ナディア";s:13:"search_word_5";s:18:"グルナッシュ";s:11:"free_area_6";s:2761:"<div class="productsheet__table">   <h2><small>David ＆ Nadia Grenache</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.6％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2016’] 2015VT：94 Point<br>
+[Tim Atkin Report 2015’] 2014VT：95 Point<br>
+[Platter SA 2016’] 2014VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+色調はピノノワールのように淡く、全体の40％を全房発酵を用いテロワールにこだわっている。赤スグリ、チェリー、ザクロなどの香りから来るフレッシュ感にやさしいスパイシーさがある。全体的に柔らかい味わいだがワインの構造はしっかりしており官能的な余韻が長く続く。フレッシュな酸味ときめ細やかなタンニンが心地よい。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:54:19";s:13:"update_date_8";s:19:"2023-07-25 02:33:09";s:4:"id_9";s:2:"82";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"6300.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:54:19";s:14:"update_date_19";s:19:"2023-07-25 02:33:09";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"82";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 04:54:19";s:14:"update_date_31";s:19:"2020-10-08 04:54:19";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1692";s:12:"file_name_47";s:28:"1008135416_5f7e9b788ed56.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:35";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"67";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"82";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"67";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:6;a:85:{s:4:"id_0";s:2:"68";s:6:"name_1";s:72:"デイビット＆ナディア・プラタボス・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:147:"同社のトップレンジで単一畑シリーズ。ビオロジカル農法、不干渉主義、テロワール主義、ナチュラル製法。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3750:"<div class="productsheet__table">   <h2><small>David & Nadia Plat'bos Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：95 Point<br>
+[Platter 2019’] 2018VT：5 Ster
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+「スカリーコップ」の隣の畑で花崗岩土壌。1981年代の植樹された北北西の向きの斜面。このシュナンブランは、デイビッドナディアのシュナンブランやアリスタルゴスにも使用されている。「プラタボス」とは、アフリカーンス語で「低いブッシュヴァイン」という意味。ブッシュヴァイン（株仕立て）。収穫量は1.5トン/haと極端に少ない。収穫後は全房でプレス。冷却後、ほんの少しSO2 を添加。天然発酵後、マロラクティック発酵を経て、300Lの古いフレンチオークで熟成。1200本生産。<br>スパイス、レモン、リンゴ、柑橘類の皮、花などの香り。フレッシュで豊かな酸味、濃縮した果実の旨み。ミネラルを強く感じ、石や石灰のようなニュアンス。塩味もあり、果実味以上にミネラルを感じる。ボディは、程よくしっかりとした骨格あり。全体的には、なめらかでリッチ、綺麗な透明感のある味わい。非常に美しく、ナチュラルでピュアなテイスト。バランスも取れており、余韻も長い。この特別な風味も旨みも最後まで続き、エレガントなフィニッシュ。品種を問わず、南アフリカの白ワインとしては最高クラスの１本。<br>シーフード、様々な野菜料理、鶏肉、豚肉、中華、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:16:32";s:13:"update_date_8";s:19:"2023-07-25 02:32:35";s:4:"id_9";s:2:"83";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:8:"10100.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 05:16:32";s:14:"update_date_19";s:19:"2023-07-25 02:32:35";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"83";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 05:16:32";s:14:"update_date_31";s:19:"2023-07-25 02:32:35";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1694";s:12:"file_name_47";s:28:"1008141630_5f7ea0ae36e4c.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:35";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"68";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"83";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"68";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:7;a:85:{s:4:"id_0";s:2:"69";s:6:"name_1";s:75:"デイビット＆ナディア・ホースティン・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:147:"同社のトップレンジで単一畑シリーズ。ビオロジカル農法、不干渉主義、テロワール主義、ナチュラル製法。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3293:"<div class="productsheet__table">   <h2><small>David & Nadia Ho?-Steen Chenin blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：97 Point<br>
+[Platter 2019’] 2018VT：5 Ster
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1968年植樹の樹齢50年の古木ブドウを使用.。畑は2ヘクタール。収穫量は2トン/haと極端に少ない。土壌は、鉄分を多く含み、粘土が混ざっている。この畑は、同社の白ワインでは一番最後に収穫する畑。2月後半に収穫し、全房でプレス。冷却後、ほんの少しSO2 を添加。その後天然発酵、マロラクティック発酵を経て、300Lの古いフレンチオークで約1年熟成。2000本生産。<br>梨、リンゴ、白桃、柑橘類、干草、ドライハーブ、乾燥した土地の香りなど。豊かな酸に濃縮した果実の旨み。リッチでなめらか、落ち着いた深い味わい。ボディは、しっかりとしている。非常に美しく、ナチュラルでピュアなテイスト。綺麗で透明感のある味わい。エレガントなフィニッシュで余韻も長く、力強い。<br>シーフード、様々な野菜料理、鶏肉、豚肉、中華、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:17:01";s:13:"update_date_8";s:19:"2023-07-25 02:31:57";s:4:"id_9";s:2:"84";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:8:"10100.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 05:17:01";s:14:"update_date_19";s:19:"2023-07-25 02:31:57";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"84";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 05:17:01";s:14:"update_date_31";s:19:"2023-07-25 02:31:57";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1696";s:12:"file_name_47";s:28:"1008141659_5f7ea0cb86123.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:36";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"69";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"84";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"69";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:8;a:85:{s:4:"id_0";s:2:"70";s:6:"name_1";s:78:"デイビット＆ナディア・スカリーコップ・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:147:"同社のトップレンジで単一畑シリーズ。ビオロジカル農法、不干渉主義、テロワール主義、ナチュラル製法。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3729:"<div class="productsheet__table">   <h2><small>David & Nadia Skaliekop Steen Chenin blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：95 Point<br>
+[Platter 2019’] 2018VT：5 Ster
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+「スカリーコップ」とは、アフリカーンス語で「スカリー（頁岩）+コップ（丘）」。花崗岩の多いスワートランドの中では、珍しい頁岩の豊富な土壌。たったの1ヘクタール。1985年に植樹。ブッシュヴァイン（株仕立て）。収穫量は1.6トン/haと極端に少ない。1月下旬に収穫後は全房でプレス。冷却後、ほんの少しSO2 を添加。スカリーコップのブドウは発酵（天然発酵）するのにも時間がかかり2ヶ月かけて発酵。時間と忍耐が必要。マロラクティック発酵を経て、300Lの古いフレンチオークで熟成。1200本生産。<br>梨、スパイス、レモングラス、ナッツなどの香り。フレッシュでスッキリした酸。2017から2018年にかけては乾燥した年で、より果実味は凝縮している。頁岩土壌の由来で、他の2種よりもボディは、しっかりとしていて固いイメージ。その分、他の2種よりも開くのに時間がかかりそう。ミネラルは豊かで、フリンティ、塩味も帯びている。口あたりはリッチでなめらか、綺麗な透明感のある味わい。非常に美しく、ナチュラルでピュアなテイスト。余韻も長く、エレガントなフィニッシュ。<br>料理：シーフード、様々な野菜料理、鶏肉、豚肉、中華、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:17:30";s:13:"update_date_8";s:19:"2023-07-25 02:33:59";s:4:"id_9";s:2:"85";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:8:"10100.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 05:17:30";s:14:"update_date_19";s:19:"2023-07-25 02:33:59";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"85";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 05:17:30";s:14:"update_date_31";s:19:"2023-07-25 02:33:59";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1698";s:12:"file_name_47";s:28:"1008141728_5f7ea0e81e41d.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:36";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"70";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"85";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"70";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:9;a:85:{s:4:"id_0";s:2:"62";s:6:"name_1";s:84:"デイビット＆ナディア・シーブリッツクルーフ・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:258:"ワインマグ（南ア）95点。デカンター・オンラインサイト（2016年9月29日）93点。「こんなピノタージュは今までに経験したことが無いだろう」と、コメントしたニュータイプ のピノタージュ！";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2762:"<div class="productsheet__table">   <h2><small>David and Nadia Sadie Siebritskloof Pinotage</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：91 Point<br>
+ワインマグ（南ア）95点 VT:2015
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1990年初期に植えられた葡萄畑から古いフレンチ―オークで14カ月熟成。20％は全房発酵。黒スグリ、カシス、チェリーなど赤・黒系の香りだけでなくオリーブや紫の花など複雑な香り。ナチュラルな味わいだがしっかりとした葡萄本来の力強さを感じられる。ピノタージュという品種の幅を広げる新しいスタイルのピノタージュと言える。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:51:07";s:13:"update_date_8";s:19:"2022-03-26 03:27:17";s:4:"id_9";s:2:"77";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3900.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:51:07";s:14:"update_date_19";s:19:"2022-03-26 03:27:17";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"77";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 04:51:07";s:14:"update_date_31";s:19:"2022-03-26 03:27:17";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1493";s:12:"file_name_47";s:28:"1008135105_5f7e9ab98a456.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:17";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"62";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"77";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"62";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:10;a:85:{s:4:"id_0";s:2:"63";s:6:"name_1";s:78:"デイビット＆ナディア・シーブリッツクルーフ・セミヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:357:"柑橘類、ハーブなどの香り。柔らかく豊かな酸味、凝縮した果実味の、やや濃厚な味わい。ふくよかで程良い厚みとボディ。フレッシュで果実の旨み、ブドウのナチュラルなピュアテイストを楽しめる。酸味と果実味のバランスが良く、エレガントなフィニッシュ。";s:13:"search_word_5";s:12:"セミヨン";s:11:"free_area_6";s:3227:"<div class="productsheet__table">   <h2><small>David and Nadia Sadie Siebritskloof Semillon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：92 Point<br>
+[Platter SA 2017’] 2015VT：4.5 STAR<br>
+ワインマグ（南ア）90点 VT:2016
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ワートランド・パーデボシュ地区の2箇所の花崗岩質の畑のブドウを使用。一つは1960年に植樹、もう一つは1972年に植樹されたもの。ブッシュヴァイン（株仕立て）。収穫量は2-3トン/haと極めて少量。収穫後は、全房でのスキンコンタクト7日間、天然発酵。300Ｌの古いフレンチオークで熟成。931本生産。<br>柑橘類、ハーブなどの香り。柔らかく豊かな酸味、凝縮した果実味の、やや濃厚な味わい。ふくよかで程良い厚みとボディ。フレッシュで果実の旨み、ブドウのナチュラルなピュアテイストを楽しめる。酸味と果実味のバランスが良く、エレガントなフィニッシュ。<br>シーフード、サーモン料理、バーニャカウダーなど。少量ですが入荷します。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:51:42";s:13:"update_date_8";s:19:"2023-07-25 02:27:15";s:4:"id_9";s:2:"78";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3900.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:51:42";s:14:"update_date_19";s:19:"2023-07-25 02:27:15";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"78";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 04:51:42";s:14:"update_date_31";s:19:"2023-07-25 02:27:15";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1685";s:12:"file_name_47";s:28:"1008135140_5f7e9adc787a8.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:33";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"63";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"78";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"63";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:11;a:85:{s:4:"id_0";s:2:"64";s:6:"name_1";s:54:"デイビット＆ナディア・アリスタルゴス";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"ライム、梨、桃、スパイス、ハーブ、ハチミツなどの香り。複雑で様々な風味とブドウのピュアな味わいを楽しむ事ができ、素直に美味しい。余韻は長くエレガントなフィニッシュ。";s:13:"search_word_5";s:97:"シュナンブラン,ヴィオニエ,ルーサンヌ,クラレットブランシュ,セミヨン";s:11:"free_area_6";s:3103:"<div class="productsheet__table">   <h2><small>David ＆ Nadia Aristargos</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (50％,20％,12％,8％,20％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2017’] 2015VT：5 STAR<br>
+[Tim Atkin Report 2017’] 2015VT：96 Point<br>
+[Tim Atkin Report 2016’] 2015VT：95 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+スワートランドのパールダバーグの南側斜面の12の畑のブドウを使用。ほとんどは古いブッシュヴァイン。一番古いシュナンブランは1966年に植樹。1950年代に植樹された少量のセミヨンをブレンド。古い300?のフレンチバレルで熟成。br>ライム、梨、桃、スパイス、ハーブ、ハチミツなどの香り。フレッシュで豊かな酸味と果実味。ふくよかで程良い厚みとボディを擁しているが、しっかりした酸味もあり、決して重くなく、バランス良く出来ている。複雑で様々な風味とブドウのピュアな味わいを楽しむ事ができ、素直に美味しい。余韻は長くエレガントなフィニッシュ。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:52:07";s:13:"update_date_8";s:19:"2023-11-13 12:11:51";s:4:"id_9";s:2:"79";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"5700.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:52:07";s:14:"update_date_19";s:19:"2023-11-13 12:11:51";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"79";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 04:52:07";s:14:"update_date_31";s:19:"2020-10-08 04:52:07";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1687";s:12:"file_name_47";s:28:"1008135205_5f7e9af515125.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:34";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"64";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"79";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"64";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:12;a:85:{s:4:"id_0";s:2:"65";s:6:"name_1";s:54:"デイビット＆ナディア・エルピディオス";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:216:"透明感のある綺麗なワインで優しいボディ。美しく豊かな酸味、キメ細やかで洗練された渋み。優しくなめらか、旨みも感じられ、エレガントなフィニッシュ。";s:13:"search_word_5";s:76:"シラー,カリニャン,サンソ―,グルナッシュ,ピノタージュ";s:11:"free_area_6";s:3038:"<div class="productsheet__table">   <h2><small>David & Nadia Elpidios</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (31％,39％,9％,5％,16％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：94 Point<br>
+[Tim Atkin Report 2016’] 2014VT：93 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+岩、片岩、花崗岩や鉄分豊富な土壌で、スワートランドの7箇所の畑のブドウを使用。収穫量は4-5トン/haと極めて少量。収穫後は、ステンレスタンクで全房と除茎の物を混ぜて天然発酵、トータルでスキンコンタクトは4週間。その後、ソフトにプレスし、500Ｌの古いフレンチオークに移してマロラクティック発酵＆20ヶ月熟成。<br>ラズベリー、クランベリー、スパイス、ラベンダーなどの花の香り。透明感のある綺麗なワインで優しいボディ。美しく豊かな酸味、キメ細やかで洗練された渋み。優しくなめらか、旨みも感じられ、エレガントなフィニッシュ。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:53:13";s:13:"update_date_8";s:19:"2023-11-13 12:12:49";s:4:"id_9";s:2:"80";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"5700.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:53:13";s:14:"update_date_19";s:19:"2023-11-13 12:12:49";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"80";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 04:53:13";s:14:"update_date_31";s:19:"2020-10-08 04:53:13";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1689";s:12:"file_name_47";s:28:"1008135310_5f7e9b360cdab.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:34";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"65";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"80";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"65";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:13;a:85:{s:4:"id_0";s:2:"66";s:6:"name_1";s:54:"デイビット＆ナディア・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"ライム、梨、桃、スパイス、ハーブ、ハチミツなどの香り。複雑で様々な風味とブドウのピュアな味わいを楽しむ事ができ、素直に美味しい。余韻は長くエレガントなフィニッシュ。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:2985:"<div class="productsheet__table">   <h2><small>David ＆ Nadia Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：93 Point<br>
+[Tim Atkin Report 2016’] 2014VT：93 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+スワートランドの6箇所の畑のブドウを使用。全てブッシュヴァイン（株仕立て）。ブドウの樹齢は35-49年の古木。収穫量は2-4トン/haと極めて少量。収穫後は、全房発酵、天然発酵。３００Ｌの古いフレンチオークで熟成。5120本生産。<br>梨、桃、花の香り、乾燥した土地の埃っぽい香りなど。豊かな酸味、古木＆低い収穫量から由来する凝縮した果実味。ふくよかで程良い厚みとボディ。フレッシュで果実の旨み、ブドウのナチュラルなピュアテイストを楽しめる。酸味と果実味のバランスが良く、素直に美味しく楽しめるワイン。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:53:40";s:13:"update_date_8";s:19:"2023-11-13 12:13:11";s:4:"id_9";s:2:"81";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"5700.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:53:40";s:14:"update_date_19";s:19:"2023-11-13 12:13:11";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"81";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 04:53:40";s:14:"update_date_31";s:19:"2020-10-08 04:53:40";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1691";s:12:"file_name_47";s:28:"1008135336_5f7e9b50ec2ed.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:35";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"66";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"81";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"66";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:14;a:85:{s:4:"id_0";s:2:"67";s:6:"name_1";s:51:"デイビット＆ナディア・グルナッシュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:216:"グルナッシュ単一ワイン。フレッシュな酸味と細かいタンニンが綺麗なワイン。南アを代表するグルナッシュとシュナンブランの造り手、デイビット＆ナディア";s:13:"search_word_5";s:18:"グルナッシュ";s:11:"free_area_6";s:2761:"<div class="productsheet__table">   <h2><small>David ＆ Nadia Grenache</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.6％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2016’] 2015VT：94 Point<br>
+[Tim Atkin Report 2015’] 2014VT：95 Point<br>
+[Platter SA 2016’] 2014VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+色調はピノノワールのように淡く、全体の40％を全房発酵を用いテロワールにこだわっている。赤スグリ、チェリー、ザクロなどの香りから来るフレッシュ感にやさしいスパイシーさがある。全体的に柔らかい味わいだがワインの構造はしっかりしており官能的な余韻が長く続く。フレッシュな酸味ときめ細やかなタンニンが心地よい。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:54:19";s:13:"update_date_8";s:19:"2023-07-25 02:33:09";s:4:"id_9";s:2:"82";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"6300.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 04:54:19";s:14:"update_date_19";s:19:"2023-07-25 02:33:09";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"82";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 04:54:19";s:14:"update_date_31";s:19:"2020-10-08 04:54:19";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1693";s:12:"file_name_47";s:28:"1008135416_5f7e9b7862250.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:35";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"67";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"82";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"67";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:15;a:85:{s:4:"id_0";s:2:"68";s:6:"name_1";s:72:"デイビット＆ナディア・プラタボス・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:147:"同社のトップレンジで単一畑シリーズ。ビオロジカル農法、不干渉主義、テロワール主義、ナチュラル製法。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3750:"<div class="productsheet__table">   <h2><small>David & Nadia Plat'bos Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：95 Point<br>
+[Platter 2019’] 2018VT：5 Ster
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+「スカリーコップ」の隣の畑で花崗岩土壌。1981年代の植樹された北北西の向きの斜面。このシュナンブランは、デイビッドナディアのシュナンブランやアリスタルゴスにも使用されている。「プラタボス」とは、アフリカーンス語で「低いブッシュヴァイン」という意味。ブッシュヴァイン（株仕立て）。収穫量は1.5トン/haと極端に少ない。収穫後は全房でプレス。冷却後、ほんの少しSO2 を添加。天然発酵後、マロラクティック発酵を経て、300Lの古いフレンチオークで熟成。1200本生産。<br>スパイス、レモン、リンゴ、柑橘類の皮、花などの香り。フレッシュで豊かな酸味、濃縮した果実の旨み。ミネラルを強く感じ、石や石灰のようなニュアンス。塩味もあり、果実味以上にミネラルを感じる。ボディは、程よくしっかりとした骨格あり。全体的には、なめらかでリッチ、綺麗な透明感のある味わい。非常に美しく、ナチュラルでピュアなテイスト。バランスも取れており、余韻も長い。この特別な風味も旨みも最後まで続き、エレガントなフィニッシュ。品種を問わず、南アフリカの白ワインとしては最高クラスの１本。<br>シーフード、様々な野菜料理、鶏肉、豚肉、中華、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:16:32";s:13:"update_date_8";s:19:"2023-07-25 02:32:35";s:4:"id_9";s:2:"83";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:8:"10100.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 05:16:32";s:14:"update_date_19";s:19:"2023-07-25 02:32:35";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"83";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 05:16:32";s:14:"update_date_31";s:19:"2023-07-25 02:32:35";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1695";s:12:"file_name_47";s:28:"1008141630_5f7ea0ae63d4c.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:35";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"68";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"83";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"68";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:16;a:85:{s:4:"id_0";s:2:"69";s:6:"name_1";s:75:"デイビット＆ナディア・ホースティン・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:147:"同社のトップレンジで単一畑シリーズ。ビオロジカル農法、不干渉主義、テロワール主義、ナチュラル製法。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3293:"<div class="productsheet__table">   <h2><small>David & Nadia Ho?-Steen Chenin blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：97 Point<br>
+[Platter 2019’] 2018VT：5 Ster
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1968年植樹の樹齢50年の古木ブドウを使用.。畑は2ヘクタール。収穫量は2トン/haと極端に少ない。土壌は、鉄分を多く含み、粘土が混ざっている。この畑は、同社の白ワインでは一番最後に収穫する畑。2月後半に収穫し、全房でプレス。冷却後、ほんの少しSO2 を添加。その後天然発酵、マロラクティック発酵を経て、300Lの古いフレンチオークで約1年熟成。2000本生産。<br>梨、リンゴ、白桃、柑橘類、干草、ドライハーブ、乾燥した土地の香りなど。豊かな酸に濃縮した果実の旨み。リッチでなめらか、落ち着いた深い味わい。ボディは、しっかりとしている。非常に美しく、ナチュラルでピュアなテイスト。綺麗で透明感のある味わい。エレガントなフィニッシュで余韻も長く、力強い。<br>シーフード、様々な野菜料理、鶏肉、豚肉、中華、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:17:01";s:13:"update_date_8";s:19:"2023-07-25 02:31:57";s:4:"id_9";s:2:"84";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:8:"10100.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 05:17:01";s:14:"update_date_19";s:19:"2023-07-25 02:31:57";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"84";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 05:17:01";s:14:"update_date_31";s:19:"2023-07-25 02:31:57";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1697";s:12:"file_name_47";s:28:"1008141659_5f7ea0cbb8c1e.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:36";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"69";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"84";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"69";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:17;a:85:{s:4:"id_0";s:2:"70";s:6:"name_1";s:78:"デイビット＆ナディア・スカリーコップ・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:147:"同社のトップレンジで単一畑シリーズ。ビオロジカル農法、不干渉主義、テロワール主義、ナチュラル製法。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3729:"<div class="productsheet__table">   <h2><small>David & Nadia Skaliekop Steen Chenin blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：95 Point<br>
+[Platter 2019’] 2018VT：5 Ster
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+「スカリーコップ」とは、アフリカーンス語で「スカリー（頁岩）+コップ（丘）」。花崗岩の多いスワートランドの中では、珍しい頁岩の豊富な土壌。たったの1ヘクタール。1985年に植樹。ブッシュヴァイン（株仕立て）。収穫量は1.6トン/haと極端に少ない。1月下旬に収穫後は全房でプレス。冷却後、ほんの少しSO2 を添加。スカリーコップのブドウは発酵（天然発酵）するのにも時間がかかり2ヶ月かけて発酵。時間と忍耐が必要。マロラクティック発酵を経て、300Lの古いフレンチオークで熟成。1200本生産。<br>梨、スパイス、レモングラス、ナッツなどの香り。フレッシュでスッキリした酸。2017から2018年にかけては乾燥した年で、より果実味は凝縮している。頁岩土壌の由来で、他の2種よりもボディは、しっかりとしていて固いイメージ。その分、他の2種よりも開くのに時間がかかりそう。ミネラルは豊かで、フリンティ、塩味も帯びている。口あたりはリッチでなめらか、綺麗な透明感のある味わい。非常に美しく、ナチュラルでピュアなテイスト。余韻も長く、エレガントなフィニッシュ。<br>料理：シーフード、様々な野菜料理、鶏肉、豚肉、中華、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:17:30";s:13:"update_date_8";s:19:"2023-07-25 02:33:59";s:4:"id_9";s:2:"85";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:8:"10100.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 05:17:30";s:14:"update_date_19";s:19:"2023-07-25 02:33:59";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:2:"85";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 05:17:30";s:14:"update_date_31";s:19:"2023-07-25 02:33:59";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1699";s:12:"file_name_47";s:28:"1008141728_5f7ea0e84db52.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:36";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:2:"70";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:2:"85";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:2:"70";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}}}

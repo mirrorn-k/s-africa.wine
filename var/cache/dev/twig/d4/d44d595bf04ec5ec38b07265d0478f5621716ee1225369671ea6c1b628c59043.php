@@ -1,0 +1,2753 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* @admin/Product/product.twig */
+class __TwigTemplate_91905152318b432c001f3bed8417c3e7a21aebe6ee958f6409a2abf26d54dec7 extends \Eccube\Twig\Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'sub_title' => [$this, 'block_sub_title'],
+            'stylesheet' => [$this, 'block_stylesheet'],
+            'javascript' => [$this, 'block_javascript'],
+            'main' => [$this, 'block_main'],
+        ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 11
+        return "@admin/default_frame.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@admin/Product/product.twig"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@admin/Product/product.twig"));
+
+        // line 13
+        $context["menus"] = [0 => "product", 1 => "product_edit"];
+        // line 18
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), [0 => "@admin/Form/bootstrap_4_horizontal_layout.html.twig"], true);
+        // line 11
+        $this->parent = $this->loadTemplate("@admin/default_frame.twig", "@admin/Product/product.twig", 11);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 15
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product_registration"), "html", null, true);
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 16
+    public function block_sub_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "sub_title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "sub_title"));
+
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product_management"), "html", null, true);
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 20
+    public function block_stylesheet($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
+
+        // line 21
+        echo "    <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/fileupload/jquery.fileupload.css", "admin"), "html", null, true);
+        echo "\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 22
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/fileupload/jquery.fileupload-ui.css", "admin"), "html", null, true);
+        echo "\">
+    <link rel=\"stylesheet\" href=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css\">
+    <style>
+        #thumb div {
+            float: left;
+            margin: 4px
+        }
+
+        .ui-state-highlight {
+            height: 70px;
+            width: 70px;
+            border: dashed 1px #ccc;
+            background: #fff;
+        }
+    </style>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 39
+    public function block_javascript($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascript"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascript"));
+
+        // line 40
+        echo "    <script src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/vendor/fileupload/vendor/jquery.ui.widget.js", "admin"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 41
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/vendor/fileupload/jquery.iframe-transport.js", "admin"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 42
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/vendor/fileupload/jquery.fileupload.js", "admin"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 43
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/vendor/fileupload/jquery.fileupload-process.js", "admin"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 44
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/vendor/fileupload/jquery.fileupload-validate.js", "admin"), "html", null, true);
+        echo "\"></script>
+    <script>var bootstrapTooltip = \$.fn.tooltip.noConflict();</script>
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js\"></script>
+    <script>
+        \$.fn.tooltip = bootstrapTooltip;
+        \$(document).on('drop dragover', function(e) {
+            e.preventDefault();
+        });
+        \$(function() {
+            // Todo: fix drag&drop style
+            \$(\"#thumb\").sortable({
+                cursor: 'move',
+                opacity: 0.7,
+                placeholder: 'ui-state-highlight',
+                update: function(event, ui) {
+                    updateSortNo();
+                }
+            });
+            ";
+        // line 62
+        if (((isset($context["has_class"]) || array_key_exists("has_class", $context) ? $context["has_class"] : (function () { throw new RuntimeError('Variable "has_class" does not exist.', 62, $this->source); })()) == false)) {
+            // line 63
+            echo "            if (\$(\"#";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 63, $this->source); })()), "class", [], "any", false, false, false, 63), "stock_unlimited", [], "any", false, false, false, 63), "vars", [], "any", false, false, false, 63), "id", [], "any", false, false, false, 63), "html", null, true);
+            echo "\").prop(\"checked\")) {
+                \$(\"#";
+            // line 64
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 64, $this->source); })()), "class", [], "any", false, false, false, 64), "stock", [], "any", false, false, false, 64), "vars", [], "any", false, false, false, 64), "id", [], "any", false, false, false, 64), "html", null, true);
+            echo "\").attr(\"disabled\", \"disabled\").val('');
+            } else {
+                \$(\"#";
+            // line 66
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 66, $this->source); })()), "class", [], "any", false, false, false, 66), "stock", [], "any", false, false, false, 66), "vars", [], "any", false, false, false, 66), "id", [], "any", false, false, false, 66), "html", null, true);
+            echo "\").removeAttr(\"disabled\");
+            }
+            \$(\"#";
+            // line 68
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 68, $this->source); })()), "class", [], "any", false, false, false, 68), "stock_unlimited", [], "any", false, false, false, 68), "vars", [], "any", false, false, false, 68), "id", [], "any", false, false, false, 68), "html", null, true);
+            echo "\").on(\"click change\", function() {
+                if (\$(this).prop(\"checked\")) {
+                    \$(\"#";
+            // line 70
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 70, $this->source); })()), "class", [], "any", false, false, false, 70), "stock", [], "any", false, false, false, 70), "vars", [], "any", false, false, false, 70), "id", [], "any", false, false, false, 70), "html", null, true);
+            echo "\").attr(\"disabled\", \"disabled\").val('');
+                } else {
+                    \$(\"#";
+            // line 72
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 72, $this->source); })()), "class", [], "any", false, false, false, 72), "stock", [], "any", false, false, false, 72), "vars", [], "any", false, false, false, 72), "id", [], "any", false, false, false, 72), "html", null, true);
+            echo "\").removeAttr(\"disabled\");
+                }
+            });
+            ";
+        }
+        // line 76
+        echo "            var proto_img = '<div class=\"c-form__fileUploadThumbnail\" style=\"background-image:url(\\'__path__\\');\">' +
+                '<a class=\"delete-image\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></a>' +
+                '</div>';
+            var proto_add = '";
+        // line 79
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 79, $this->source); })()), "add_images", [], "any", false, false, false, 79), "vars", [], "any", false, false, false, 79), "prototype", [], "any", false, false, false, 79), 'widget');
+        echo "';
+            var proto_del = '";
+        // line 80
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 80, $this->source); })()), "delete_images", [], "any", false, false, false, 80), "vars", [], "any", false, false, false, 80), "prototype", [], "any", false, false, false, 80), 'widget');
+        echo "';
+            ";
+        // line 81
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 81, $this->source); })()), "images", [], "any", false, false, false, 81));
+        foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
+            // line 82
+            echo "            var \$img = \$(proto_img.replace(/__path__/g, '";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["image"], "vars", [], "any", false, false, false, 82), "value", [], "any", false, false, false, 82), "save_image"), "html", null, true);
+            echo "'));
+            var \$widget = \$('";
+            // line 83
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["image"], 'widget');
+            echo "');
+            \$widget.val('";
+            // line 84
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["image"], "vars", [], "any", false, false, false, 84), "value", [], "any", false, false, false, 84), "html", null, true);
+            echo "');
+            \$(\"#thumb\").append(\$img.append(\$widget));
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 87
+        echo "            ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 87, $this->source); })()), "add_images", [], "any", false, false, false, 87));
+        foreach ($context['_seq'] as $context["_key"] => $context["add_image"]) {
+            // line 88
+            echo "            var \$img = \$(proto_img.replace(/__path__/g, '";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["add_image"], "vars", [], "any", false, false, false, 88), "value", [], "any", false, false, false, 88), "temp_image"), "html", null, true);
+            echo "'));
+            var \$widget = \$('";
+            // line 89
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["add_image"], 'widget');
+            echo "');
+            \$widget.val('";
+            // line 90
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["add_image"], "vars", [], "any", false, false, false, 90), "value", [], "any", false, false, false, 90), "html", null, true);
+            echo "');
+            \$(\"#thumb\").append(\$img.append(\$widget));
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['add_image'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 93
+        echo "            ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 93, $this->source); })()), "delete_images", [], "any", false, false, false, 93));
+        foreach ($context['_seq'] as $context["_key"] => $context["delete_image"]) {
+            // line 94
+            echo "            \$(\"#thumb\").append('";
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["delete_image"], 'widget');
+            echo "');
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['delete_image'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 96
+        echo "            var hideThumbnail = function() {
+                if (\$(\"#thumb div\").length > 0) {
+                    \$(\"#icon_no_image\").css(\"display\", \"none\");
+                    \$('#message').html(\"";
+        // line 99
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.drag_and_drop_description"), "html", null, true);
+        echo "\");
+                } else {
+                    \$(\"#icon_no_image\").css(\"display\", \"\");
+                    \$('#message').empty();
+                }
+            };
+            // Todo: fix update sort by drag&drop
+            var updateSortNo = function() {
+                \$(\"#thumb div\").each(function(index) {
+                    \$(this).find(\".sort_no_images\").remove();
+                    filename = \$(this).find(\"input[type='hidden']\").val();
+                    \$sortNo = \$('<input type=\"hidden\" class=\"sort_no_images\" name=\"sort_no_images[]\" />');
+                    \$sortNo.val(filename + '//' + parseInt(index + 1));
+                    \$(this).append(\$sortNo);
+                });
+            };
+            hideThumbnail();
+            updateSortNo();
+            // Delete of images
+            var count_del = 0;
+            \$(\"#thumb\").on(\"click\", '.delete-image', function() {
+                var \$new_delete_image = \$(proto_del.replace(/__name__/g, count_del));
+                var thumbnail = \$(this).parents('div.c-form__fileUploadThumbnail');
+                var src = \$(thumbnail).find('input').val();
+                \$new_delete_image.val(src);
+                \$(\"#thumb\").append(\$new_delete_image);
+                \$(thumbnail).remove();
+                hideThumbnail();
+                updateSortNo();
+                count_del++;
+            });
+            var count_add = ";
+        // line 130
+        echo twig_escape_filter($this->env, _twig_default_filter(twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 130, $this->source); })()), "add_images", [], "any", false, false, false, 130)), 0), "html", null, true);
+        echo ";
+            \$('#";
+        // line 131
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 131, $this->source); })()), "product_image", [], "any", false, false, false, 131), "vars", [], "any", false, false, false, 131), "id", [], "any", false, false, false, 131), "html", null, true);
+        echo "').fileupload({
+                url: \"";
+        // line 132
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("admin_product_image_add");
+        echo "\",
+                type: \"post\",
+                sequentialUploads: true,
+                dataType: 'json',
+                dropZone: \$('#upload-zone'),
+                done: function(e, data) {
+                    \$('.progress').hide();
+                    \$.each(data.result.files, function(index, file) {
+                        var path = '";
+        // line 140
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("", "temp_image"), "html", null, true);
+        echo "' + file;
+                        var \$img = \$(proto_img.replace(/__path__/g, path));
+                        var \$new_img = \$(proto_add.replace(/__name__/g, count_add));
+                        \$new_img.val(file);
+                        \$child = \$img.append(\$new_img);
+                        \$('#thumb').append(\$child);
+                        count_add++;
+                    });
+                    hideThumbnail();
+                    updateSortNo();
+                },
+                fail: function(e, data) {
+                    alert(\"";
+        // line 152
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.upload_error"), "html", null, true);
+        echo "\");
+                },
+                always: function(e, data) {
+                    \$('.progress').hide();
+                    \$('.progress .progress-bar').width('0%');
+                },
+                start: function(e, data) {
+                    \$('.progress').show();
+                },
+                acceptFileTypes: /(\\.|\\/)(gif|jpe?g|png)\$/i,
+                maxFileSize: 10000000,
+                maxNumberOfFiles: 10,
+                progressall: function(e, data) {
+                    var progress = parseInt(data.loaded / data.total * 100, 10);
+                    \$('.progress .progress-bar').css(
+                        'width',
+                        progress + '%'
+                    );
+                },
+                processalways: function(e, data) {
+                    if (data.files.error) {
+                        alert(\"";
+        // line 173
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.upload_error"), "html", null, true);
+        echo "\");
+                    }
+                }
+            });
+            // 画像アップロード
+            \$('#file_upload').on('click', function() {
+                \$('#";
+        // line 179
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 179, $this->source); })()), "product_image", [], "any", false, false, false, 179), "vars", [], "any", false, false, false, 179), "id", [], "any", false, false, false, 179), "html", null, true);
+        echo "').click();
+            });
+
+            var mainTags = \$('#allTags');
+            var adminProductTag = \$('#admin_product_Tag');
+            \$('input', adminProductTag).each(function() {
+                if (\$(this).is(':checked')) {
+                    \$('button[data-tag-id=\"' + \$(this).val() + '\"]').removeClass('btn-outline-secondary').addClass('btn-outline-primary');
+                }
+            });
+            mainTags.on('click', 'button.btn', function() {
+                var btnTag = \$(this);
+                var tagId = btnTag.data('tag-id');
+                if (btnTag.hasClass('btn-outline-primary')) {
+                    btnTag.removeClass('btn-outline-primary').addClass('btn-outline-secondary');
+                    \$('input[value=\"' + tagId + '\"]', mainTags).prop('checked', false);
+                } else {
+                    btnTag.removeClass('btn-outline-secondary').addClass('btn-outline-primary');
+                    \$('input[value=\"' + tagId + '\"]', mainTags).prop('checked', true);
+                }
+            });
+
+            var confirmFormChange = function(form, target, modal) {
+                var returnLink = form.find('input[type=\"hidden\"][name*=\"return_link\"]'),
+                    saveBtn = modal.find('a[data-action=\"save\"]'),
+                    cancelBtn = modal.find('a[data-action=\"cancel\"]');
+                modal.on('hidden.bs.modal', function() {
+                    returnLink.val('');
+                });
+                saveBtn.on('click', function() {
+                    returnLink.val(\$(this).data('return-link'));
+                    form.submit();
+                });
+                target.on('click', function() {
+                    modal.find('.modal-body .screen-name').text(\$(this).attr('title'));
+                    modal.modal('show');
+                    saveBtn.data('return-link', \$(this).attr('href'));
+                    cancelBtn.attr('href', \$(this).attr('href'));
+                    return false;
+                });
+            };
+            confirmFormChange(\$('#form1'), \$('a[data-action=\"confirm\"]'), \$('#confirmFormChangeModal'))
+        });
+
+        // searchWordの実行
+        \$('#search-category').on('input', function () {
+            searchWord(\$(this).val(), \$('.category-li'));
+        });
+    </script>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 230
+    public function block_main($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
+
+        // line 231
+        echo "    <!-- 移動確認モーダル-->
+    <div class=\"modal fade\" id=\"confirmFormChangeModal\" tabindex=\"-1\" role=\"dialog\"
+         aria-labelledby=\"confirmFormChangeModal\" aria-hidden=\"true\">
+        <div class=\"modal-dialog\" role=\"document\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <h5 class=\"modal-title\">";
+        // line 237
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.move_to_confirm_title"), "html", null, true);
+        echo "</h5>
+                    <button class=\"close\" type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\">
+                        <span aria-hidden=\"true\">×</span>
+                    </button>
+                </div>
+                <div class=\"modal-body\">
+                    <p class=\"screen-name\"></p>
+                </div>
+                <div class=\"modal-footer\">
+                    <a class=\"btn btn-ec-conversion\" data-action=\"save\" href=\"javascript:void(0)\">
+                        ";
+        // line 247
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.move_to_confirm_save_and_move"), "html", null, true);
+        echo "
+                    </a>
+                    <a class=\"btn btn-ec-sub\" data-action=\"cancel\" href=\"javascript:void(0)\">
+                        ";
+        // line 250
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.move_to_confirm_move_only"), "html", null, true);
+        echo "
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form role=\"form\" name=\"form1\" id=\"form1\" method=\"post\" action=\"\" novalidate enctype=\"multipart/form-data\">
+        ";
+        // line 257
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 257, $this->source); })()), "_token", [], "any", false, false, false, 257), 'widget');
+        echo "
+        ";
+        // line 258
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 258, $this->source); })()), "return_link", [], "any", false, false, false, 258), 'widget');
+        echo "
+        <div class=\"c-contentsArea__cols\">
+            <div class=\"c-contentsArea__primaryCol\">
+                <div class=\"c-primaryCol\">
+                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <div class=\"d-inline-block\">
+                                    <span class=\"card-title\">
+                                        ";
+        // line 268
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product__card_title"), "html", null, true);
+        echo "
+                                    </span>
+                                    </div>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#basicConfig\" aria-expanded=\"false\"
+                                       aria-controls=\"basicConfig\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"collapse show ec-cardCollapse\" id=\"basicConfig\">
+                            <div class=\"card-body\">
+                                ";
+        // line 282
+        if (twig_get_attribute($this->env, $this->source, (isset($context["Product"]) || array_key_exists("Product", $context) ? $context["Product"] : (function () { throw new RuntimeError('Variable "Product" does not exist.', 282, $this->source); })()), "id", [], "any", false, false, false, 282)) {
+            // line 283
+            echo "                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\" title=\"";
+            // line 285
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.product_id"), "html", null, true);
+            echo "\">
+                                                <span>";
+            // line 286
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product_id"), "html", null, true);
+            echo "</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col\">
+                                            <p>";
+            // line 291
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Product"]) || array_key_exists("Product", $context) ? $context["Product"] : (function () { throw new RuntimeError('Variable "Product" does not exist.', 291, $this->source); })()), "id", [], "any", false, false, false, 291), "html", null, true);
+            echo "</p>
+                                        </div>
+                                    </div>
+                                ";
+        }
+        // line 295
+        echo "                                <div class=\"row\">
+                                    <div class=\"col-3\">
+                                        <div class=\"d-inline-block\">
+                                            <span>";
+        // line 298
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.name"), "html", null, true);
+        echo "</span>
+                                            <span class=\"badge badge-primary ml-1\">
+                                                ";
+        // line 300
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.required"), "html", null, true);
+        echo "
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class=\"col mb-2\">
+                                        ";
+        // line 305
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 305, $this->source); })()), "name", [], "any", false, false, false, 305), 'widget');
+        echo "
+                                        ";
+        // line 306
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 306, $this->source); })()), "name", [], "any", false, false, false, 306), 'errors');
+        echo "
+                                    </div>
+                                </div>
+                                ";
+        // line 309
+        if (((isset($context["has_class"]) || array_key_exists("has_class", $context) ? $context["has_class"] : (function () { throw new RuntimeError('Variable "has_class" does not exist.', 309, $this->source); })()) == false)) {
+            // line 310
+            echo "                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\" title=\"";
+            // line 312
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.sale_type"), "html", null, true);
+            echo "\">
+                                                <span>";
+            // line 313
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.sale_type"), "html", null, true);
+            echo "</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                                <span class=\"badge badge-primary ml-1\">
+                                                    ";
+            // line 316
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.required"), "html", null, true);
+            echo "
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            ";
+            // line 321
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 321, $this->source); })()), "class", [], "any", false, false, false, 321), "sale_type", [], "any", false, false, false, 321), 'widget');
+            echo "
+                                        </div>
+                                    </div>
+                                ";
+        }
+        // line 325
+        echo "                                <div class=\"row\">
+                                    <div class=\"col-3\">
+                                        <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\" title=\"";
+        // line 327
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.image"), "html", null, true);
+        echo "\">
+                                            <span>";
+        // line 328
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.image"), "html", null, true);
+        echo "</span>
+                                            <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            <br>";
+        // line 330
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.image_size"), "html", null, true);
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"col mb-2\">
+                                        <div class=\"progress\" style=\"display: none;\">
+                                            <div class=\"progress-bar progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>
+                                        </div>
+                                        <div id=\"thumb\" class=\"c-form__fileUploadThumbnails clearfix\"></div>
+                                        <p id=\"message\"></p>
+                                        <div id=\"upload-zone\" class=\"media py-5 border-ec-dashed mb-2 rounded\">
+                                            <div class=\"media-body\">
+                                                <i class=\"fa fa-cloud-upload fa-3x text-ec-lightGray mx-3 align-middle\" aria-hidden=\"true\"></i>
+                                                ";
+        // line 342
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.drag_and_drop_image_description"), "html", null, true);
+        echo "
+                                                ";
+        // line 343
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 343, $this->source); })()), "product_image", [], "any", false, false, false, 343), 'widget', ["attr" => ["accept" => "image/*", "style" => "display:none;"]]);
+        echo "
+                                                ";
+        // line 344
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 344, $this->source); })()), "product_image", [], "any", false, false, false, 344), 'errors');
+        echo "
+                                                <a class=\"btn btn-ec-regular mr-2\" onclick=\"\$('#admin_product_product_image').click()\">
+                                                    ";
+        // line 346
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.file_select"), "html", null, true);
+        echo "
+                                                </a>
+                                            </div><!-- /.media-body -->
+                                        </div><!-- /.media -->
+                                    </div>
+                                </div>
+                                <div class=\"row\">
+                                    <div class=\"col-3\">
+                                        <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                             title=\"";
+        // line 355
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.description_detail"), "html", null, true);
+        echo "\">
+                                            <span>";
+        // line 356
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.description_detail"), "html", null, true);
+        echo "</span>
+                                            <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                        </div>
+                                    </div>
+                                    <div class=\"col\">
+                                        ";
+        // line 361
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 361, $this->source); })()), "description_detail", [], "any", false, false, false, 361), 'widget', ["attr" => ["rows" => "8"]]);
+        echo "
+                                        ";
+        // line 362
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 362, $this->source); })()), "description_detail", [], "any", false, false, false, 362), 'errors');
+        echo "
+                                        <div class=\"d-inline-block mb-2\" data-toggle=\"collapse\" href=\"#addComment\"
+                                             role=\"button\" aria-expanded=\"false\" aria-controls=\"addComment\">
+                                            <a>
+                                                <i class=\"fa fa-plus-square-o font-weight-bold mr-1\"></i>
+                                                <span class=\"font-weight-bold text-ec-black\">
+                                                    ";
+        // line 368
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.description_list__add"), "html", null, true);
+        echo "
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"collapse ec-collapse\" id=\"addComment\">
+                                    <div class=\"row bg-ec-formGray pt-3 mb-2\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                                 title=\"";
+        // line 378
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.description_list"), "html", null, true);
+        echo "\">
+                                                <span>";
+        // line 379
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.description_list"), "html", null, true);
+        echo "</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-4\">
+                                            <div>
+                                                ";
+        // line 385
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 385, $this->source); })()), "description_list", [], "any", false, false, false, 385), 'widget', ["attr" => ["rows" => "4"]]);
+        echo "
+                                                ";
+        // line 386
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 386, $this->source); })()), "description_list", [], "any", false, false, false, 386), 'errors');
+        echo "
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                ";
+        // line 391
+        if (((isset($context["has_class"]) || array_key_exists("has_class", $context) ? $context["has_class"] : (function () { throw new RuntimeError('Variable "has_class" does not exist.', 391, $this->source); })()) == false)) {
+            // line 392
+            echo "                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\">
+                                                <span>";
+            // line 395
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.sale_price"), "html", null, true);
+            echo "</span>
+                                                <span class=\"badge badge-primary ml-1\">
+                                                    ";
+            // line 397
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.required"), "html", null, true);
+            echo "
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            <div>
+                                                ";
+            // line 403
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 403, $this->source); })()), "class", [], "any", false, false, false, 403), "price02", [], "any", false, false, false, 403), 'widget');
+            echo "
+                                                ";
+            // line 404
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 404, $this->source); })()), "class", [], "any", false, false, false, 404), "price02", [], "any", false, false, false, 404), 'errors');
+            echo "
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                                 title=\"";
+            // line 411
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.normal_price"), "html", null, true);
+            echo "\">
+                                                <span>";
+            // line 412
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.normal_price"), "html", null, true);
+            echo "</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            <div>
+                                                ";
+            // line 418
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 418, $this->source); })()), "class", [], "any", false, false, false, 418), "price01", [], "any", false, false, false, 418), 'widget');
+            echo "
+                                                ";
+            // line 419
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 419, $this->source); })()), "class", [], "any", false, false, false, 419), "price01", [], "any", false, false, false, 419), 'errors');
+            echo "
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\">
+                                                <span>";
+            // line 426
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.stock"), "html", null, true);
+            echo "</span>
+                                                <span class=\"badge badge-primary ml-1\">
+                                                    ";
+            // line 428
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.required"), "html", null, true);
+            echo "
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class=\"col\">
+                                            <div>
+                                                ";
+            // line 434
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 434, $this->source); })()), "class", [], "any", false, false, false, 434), "stock", [], "any", false, false, false, 434), 'widget');
+            echo "
+                                                ";
+            // line 435
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 435, $this->source); })()), "class", [], "any", false, false, false, 435), "stock", [], "any", false, false, false, 435), 'errors');
+            echo "
+                                                ";
+            // line 437
+            echo "                                                ";
+            // line 438
+            echo "                                                ";
+            // line 439
+            echo "                                                ";
+            // line 440
+            echo "                                                ";
+            // line 441
+            echo "                                                ";
+            // line 442
+            echo "                                                ";
+            // line 443
+            echo "                                                ";
+            // line 444
+            echo "                                                ";
+            // line 445
+            echo "                                                ";
+            // line 446
+            echo "                                                ";
+            // line 447
+            echo "                                                ";
+            // line 448
+            echo "                                                ";
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 448, $this->source); })()), "class", [], "any", false, false, false, 448), "stock_unlimited", [], "any", false, false, false, 448), 'widget');
+            echo "
+                                            </div>
+                                        </div>
+                                    </div>
+                                ";
+        }
+        // line 453
+        echo "                                <div class=\"row\">
+                                    <div class=\"col-3\">
+                                        <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                             title=\"";
+        // line 456
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.search_word"), "html", null, true);
+        echo "\">
+                                            <span>";
+        // line 457
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.search_word"), "html", null, true);
+        echo "</span>
+                                            <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                        </div>
+                                    </div>
+                                    <div class=\"col mb-2\">
+                                        <div>
+                                            ";
+        // line 463
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 463, $this->source); })()), "search_word", [], "any", false, false, false, 463), 'widget');
+        echo "
+                                            ";
+        // line 464
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 464, $this->source); })()), "search_word", [], "any", false, false, false, 464), 'errors');
+        echo "
+                                        </div>
+                                    </div>
+                                </div>
+
+                                ";
+        // line 469
+        if (((isset($context["has_class"]) || array_key_exists("has_class", $context) ? $context["has_class"] : (function () { throw new RuntimeError('Variable "has_class" does not exist.', 469, $this->source); })()) == false)) {
+            // line 470
+            echo "                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                                 title=\"";
+            // line 473
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.product_code"), "html", null, true);
+            echo "\">
+                                                <span>";
+            // line 474
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product_code"), "html", null, true);
+            echo "</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            <div>
+                                                ";
+            // line 480
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 480, $this->source); })()), "class", [], "any", false, false, false, 480), "code", [], "any", false, false, false, 480), 'widget');
+            echo "
+                                                ";
+            // line 481
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 481, $this->source); })()), "class", [], "any", false, false, false, 481), "code", [], "any", false, false, false, 481), 'errors');
+            echo "
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                                 title=\"";
+            // line 488
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.sale_limit"), "html", null, true);
+            echo "\">
+                                                <span>";
+            // line 489
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.sale_limit"), "html", null, true);
+            echo "</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            <div>
+                                                ";
+            // line 495
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 495, $this->source); })()), "class", [], "any", false, false, false, 495), "sale_limit", [], "any", false, false, false, 495), 'widget');
+            echo "
+                                                ";
+            // line 496
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 496, $this->source); })()), "class", [], "any", false, false, false, 496), "sale_limit", [], "any", false, false, false, 496), 'errors');
+            echo "
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                                 title=\"";
+            // line 503
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.delivery_duration"), "html", null, true);
+            echo "\">
+                                                <span>";
+            // line 504
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.delivery_duration"), "html", null, true);
+            echo "</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            <div>
+                                                ";
+            // line 510
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 510, $this->source); })()), "class", [], "any", false, false, false, 510), "delivery_duration", [], "any", false, false, false, 510), 'widget');
+            echo "
+                                                ";
+            // line 511
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 511, $this->source); })()), "class", [], "any", false, false, false, 511), "delivery_duration", [], "any", false, false, false, 511), 'errors');
+            echo "
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    ";
+            // line 516
+            if (twig_get_attribute($this->env, $this->source, (isset($context["BaseInfo"]) || array_key_exists("BaseInfo", $context) ? $context["BaseInfo"] : (function () { throw new RuntimeError('Variable "BaseInfo" does not exist.', 516, $this->source); })()), "option_product_delivery_fee", [], "any", false, false, false, 516)) {
+                // line 517
+                echo "                                        <div class=\"row\">
+                                            <div class=\"col-3\">
+                                                <div class=\"d-inline-block\">
+                                                    <span>";
+                // line 520
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.delivery_fee"), "html", null, true);
+                echo "</span>
+                                                </div>
+                                            </div>
+                                            <div class=\"col mb-2\">
+                                                <div>
+                                                    ";
+                // line 525
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 525, $this->source); })()), "class", [], "any", false, false, false, 525), "delivery_fee", [], "any", false, false, false, 525), 'widget');
+                echo "
+                                                    ";
+                // line 526
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 526, $this->source); })()), "class", [], "any", false, false, false, 526), "delivery_fee", [], "any", false, false, false, 526), 'errors');
+                echo "
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ";
+            }
+            // line 531
+            echo "                                    ";
+            if (twig_get_attribute($this->env, $this->source, (isset($context["BaseInfo"]) || array_key_exists("BaseInfo", $context) ? $context["BaseInfo"] : (function () { throw new RuntimeError('Variable "BaseInfo" does not exist.', 531, $this->source); })()), "option_product_tax_rule", [], "any", false, false, false, 531)) {
+                // line 532
+                echo "                                        <div class=\"row\">
+                                            <div class=\"col-3\">
+                                                <div class=\"d-inline-block\">
+                                                    <span>";
+                // line 535
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.tax_rate"), "html", null, true);
+                echo "</span>
+                                                </div>
+                                            </div>
+                                            <div class=\"col mb-2\">
+                                                <div>
+                                                    ";
+                // line 540
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 540, $this->source); })()), "class", [], "any", false, false, false, 540), "tax_rate", [], "any", false, false, false, 540), 'widget');
+                echo "
+                                                    ";
+                // line 541
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 541, $this->source); })()), "class", [], "any", false, false, false, 541), "tax_rate", [], "any", false, false, false, 541), 'errors');
+                echo "
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ";
+            }
+            // line 546
+            echo "                                ";
+        }
+        // line 547
+        echo "
+                                ";
+        // line 549
+        echo "                                ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 549, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["f"]) {
+            if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "vars", [], "any", false, false, false, 549), "eccube_form_options", [], "any", false, false, false, 549), "auto_render", [], "any", false, false, false, 549)) {
+                // line 550
+                echo "                                    ";
+                if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "vars", [], "any", false, false, false, 550), "eccube_form_options", [], "any", false, false, false, 550), "form_theme", [], "any", false, false, false, 550)) {
+                    // line 551
+                    echo "                                        ";
+                    $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme($context["f"], [0 => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "vars", [], "any", false, false, false, 551), "eccube_form_options", [], "any", false, false, false, 551), "form_theme", [], "any", false, false, false, 551)], true);
+                    // line 552
+                    echo "                                        ";
+                    echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["f"], 'row');
+                    echo "
+                                    ";
+                } else {
+                    // line 554
+                    echo "                                        <div class=\"row\">
+                                            <div class=\"col-3\">
+                                                <span>";
+                    // line 556
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "vars", [], "any", false, false, false, 556), "label", [], "any", false, false, false, 556)), "html", null, true);
+                    echo "</span>
+                                            </div>
+                                            <div class=\"col mb-2\">
+                                                <div>
+                                                    ";
+                    // line 560
+                    echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["f"], 'widget');
+                    echo "
+                                                    ";
+                    // line 561
+                    echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["f"], 'errors');
+                    echo "
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ";
+                }
+                // line 566
+                echo "                                ";
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['f'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 567
+        echo "
+                                ";
+        // line 568
+        if (((isset($context["has_class"]) || array_key_exists("has_class", $context) ? $context["has_class"] : (function () { throw new RuntimeError('Variable "has_class" does not exist.', 568, $this->source); })()) == false)) {
+            // line 569
+            echo "                                    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 569, $this->source); })()), "class", [], "any", false, false, false, 569));
+            foreach ($context['_seq'] as $context["_key"] => $context["f"]) {
+                if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "vars", [], "any", false, false, false, 569), "eccube_form_options", [], "any", false, false, false, 569), "auto_render", [], "any", false, false, false, 569)) {
+                    // line 570
+                    echo "                                        ";
+                    if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "vars", [], "any", false, false, false, 570), "eccube_form_options", [], "any", false, false, false, 570), "form_theme", [], "any", false, false, false, 570)) {
+                        // line 571
+                        echo "                                            ";
+                        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme($context["f"], [0 => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "vars", [], "any", false, false, false, 571), "eccube_form_options", [], "any", false, false, false, 571), "form_theme", [], "any", false, false, false, 571)], true);
+                        // line 572
+                        echo "                                            ";
+                        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["f"], 'row');
+                        echo "
+                                        ";
+                    } else {
+                        // line 574
+                        echo "                                            <div class=\"row\">
+                                                <div class=\"col-3\">
+                                                    <span>";
+                        // line 576
+                        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "vars", [], "any", false, false, false, 576), "label", [], "any", false, false, false, 576)), "html", null, true);
+                        echo "</span>
+                                                </div>
+                                                <div class=\"col mb-2\">
+                                                    <div>
+                                                        ";
+                        // line 580
+                        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["f"], 'widget');
+                        echo "
+                                                        ";
+                        // line 581
+                        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["f"], 'errors');
+                        echo "
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ";
+                    }
+                    // line 586
+                    echo "                                    ";
+                }
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['f'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 587
+            echo "                                ";
+        }
+        // line 588
+        echo "
+                            </div>
+                        </div>
+                    </div>
+                    ";
+        // line 592
+        if ( !(null === (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new RuntimeError('Variable "id" does not exist.', 592, $this->source); })()))) {
+            // line 593
+            echo "                        <div class=\"card rounded border-0 mb-4\">
+                            <div class=\"card-header\">
+                                <div class=\"row\">
+                                    <div class=\"col-8\">
+                                        <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                             title=\"";
+            // line 598
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.product_class"), "html", null, true);
+            echo "\">
+                                        <span class=\"card-title\">
+                                            ";
+            // line 600
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product_class__card_title"), "html", null, true);
+            echo "
+                                            <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class=\"col-4 text-right\">
+                                        <a data-toggle=\"collapse\" href=\"#standardConfig\" aria-expanded=\"false\"
+                                           aria-controls=\"standardConfig\">
+                                            <i class=\"fa fa-angle-up fa-lg\"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"collapse show ec-cardCollapse\" id=\"standardConfig\">
+                                <div class=\"card-body\">
+                                    ";
+            // line 615
+            if (((isset($context["has_class"]) || array_key_exists("has_class", $context) ? $context["has_class"] : (function () { throw new RuntimeError('Variable "has_class" does not exist.', 615, $this->source); })()) == true)) {
+                // line 616
+                echo "                                        <table class=\"table table-striped\">
+                                            <thead class=\"table-active\">
+                                            <th class=\"pl-3 pt-2 pb-2\">";
+                // line 618
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.class_category1__short"), "html", null, true);
+                echo "</th>
+                                            <th class=\"pt-2 pb-2\">";
+                // line 619
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.class_category2__short"), "html", null, true);
+                echo "</th>
+                                            <th class=\"pt-2 pb-2\">";
+                // line 620
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product_code__short"), "html", null, true);
+                echo "</th>
+                                            <th class=\"pt-2 pb-2\">";
+                // line 621
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.stock"), "html", null, true);
+                echo "</th>
+                                            <th class=\"pr-3 pt-2 pb-2\">";
+                // line 622
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.price"), "html", null, true);
+                echo "</th>
+                                            </thead>
+                                            <tbody>
+                                            ";
+                // line 625
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["Product"]) || array_key_exists("Product", $context) ? $context["Product"] : (function () { throw new RuntimeError('Variable "Product" does not exist.', 625, $this->source); })()), "ProductClasses", [], "any", false, false, false, 625));
+                foreach ($context['_seq'] as $context["_key"] => $context["Class"]) {
+                    // line 626
+                    echo "                                                ";
+                    if ((twig_get_attribute($this->env, $this->source, $context["Class"], "visible", [], "any", false, false, false, 626) == 1)) {
+                        // line 627
+                        echo "                                                    <tr>
+                                                        <td class=\"pl-3\">";
+                        // line 628
+                        if (twig_get_attribute($this->env, $this->source, $context["Class"], "hasClassCategory1", [], "any", false, false, false, 628)) {
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["Class"], "ClassCategory1", [], "any", false, false, false, 628), "name", [], "any", false, false, false, 628), "html", null, true);
+                        }
+                        echo "</td>
+                                                        <td>";
+                        // line 629
+                        if (twig_get_attribute($this->env, $this->source, $context["Class"], "hasClassCategory2", [], "any", false, false, false, 629)) {
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["Class"], "ClassCategory2", [], "any", false, false, false, 629), "name", [], "any", false, false, false, 629), "html", null, true);
+                        }
+                        echo "</td>
+                                                        <td>";
+                        // line 630
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Class"], "code", [], "any", false, false, false, 630), "html", null, true);
+                        echo "</td>
+                                                        <td>";
+                        // line 631
+                        if (twig_get_attribute($this->env, $this->source, $context["Class"], "stock_unlimited", [], "any", false, false, false, 631)) {
+                            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.stock_unlimited__short"), "html", null, true);
+                        } else {
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Class"], "stock", [], "any", false, false, false, 631), "html", null, true);
+                        }
+                        echo "</td>
+                                                        <td class=\"pr-3\">";
+                        // line 632
+                        echo twig_escape_filter($this->env, $this->extensions['Eccube\Twig\Extension\EccubeExtension']->getPriceFilter(twig_get_attribute($this->env, $this->source, $context["Class"], "price02", [], "any", false, false, false, 632)), "html", null, true);
+                        echo "</td>
+                                                    </tr>
+                                                ";
+                    }
+                    // line 635
+                    echo "                                            ";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['Class'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 636
+                echo "                                            </tbody>
+                                        </table>
+                                    ";
+            }
+            // line 639
+            echo "
+                                    <div class=\"d-block text-center text-center\">
+                                        <a href=\"";
+            // line 641
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_product_product_class", ["id" => (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new RuntimeError('Variable "id" does not exist.', 641, $this->source); })())]), "html", null, true);
+            echo "\" class=\"btn btn-ec-regular\" data-action=\"confirm\"
+                                           title=\"";
+            // line 642
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.move_to_confirm_message", ["%name%" => $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product_class_registration")]), "html", null, true);
+            // line 644
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product_class__confirm_of_product"), "html", null, true);
+            echo "</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ";
+        }
+        // line 650
+        echo "                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                         title=\"";
+        // line 655
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.free_area"), "html", null, true);
+        echo "\">
+                                        <span class=\"card-title\">";
+        // line 656
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.free_area__card_title"), "html", null, true);
+        echo "</span>
+                                        <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                    </div>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#freeArea\" aria-expanded=\"false\"
+                                       aria-controls=\"freeArea\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"collapse show ec-cardCollapse\" id=\"freeArea\">
+                            <div class=\"card-body\">
+                                <div class=\"row\">
+                                    <div class=\"col-3\">
+                                        <span>";
+        // line 672
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.free_area"), "html", null, true);
+        echo "</span>
+                                    </div>
+                                    <div class=\"col-9\">
+                                        <div>
+                                            ";
+        // line 676
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 676, $this->source); })()), "free_area", [], "any", false, false, false, 676), 'widget', ["id" => "wysiwyg-area", "attr" => ["rows" => "8"]]);
+        echo "
+                                            ";
+        // line 677
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 677, $this->source); })()), "free_area", [], "any", false, false, false, 677), 'errors');
+        echo "
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class=\"c-contentsArea__secondaryCol\">
+                <div class=\"c-secondaryCol\">
+                    ";
+        // line 689
+        if ( !(null === (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new RuntimeError('Variable "id" does not exist.', 689, $this->source); })()))) {
+            // line 690
+            echo "                        <div class=\"card rounded border-0 mb-4\">
+                            <div class=\"collapse show ec-cardCollapse\" id=\"preview\">
+                                <div class=\"card-body\">
+                                    <div class=\"d-block text-center\">
+                                        <a class=\"btn btn-block btn-ec-regular\"
+                                           target=\"_blank\"
+                                           href=\"";
+            // line 696
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("product_detail", ["id" => (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new RuntimeError('Variable "id" does not exist.', 696, $this->source); })())]), "html", null, true);
+            echo "\"
+                                           title=\"";
+            // line 697
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.preview"), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.preview"), "html", null, true);
+            echo "</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ";
+        }
+        // line 703
+        echo "                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <div class=\"d-inline-block\">
+                                        <span class=\"card-title\">";
+        // line 708
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.category__product_card_title"), "html", null, true);
+        echo "</span>
+                                    </div>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#category\" aria-expanded=\"false\"
+                                       aria-controls=\"category\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"collapse show ec-cardCollapse\" id=\"category\">
+                            <div class=\"card-body\">
+                                <div class=\"mb-3\">
+                                    <div class=\"form-row\">
+                                        <div class=\"col\">
+                                            <div class=\"input-group\">
+                                                <div class=\"input-group-prepend\">
+                                                    <span class=\"input-group-text\" id=\"basic-addon1\">
+                                                            <i class=\"fa fa-search\"></i>
+                                                    </span>
+                                                </div>
+                                                <input id=\"search-category\" class=\"form-control\" type=\"search\"
+                                                       placeholder=\"";
+        // line 731
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.search_category"), "html", null, true);
+        echo "\"
+                                                       aria-label=\"Search\">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                ";
+        // line 750
+        echo "
+                                <div class=\"c-directoryTree--register rounded border mb-3 p-3\">
+                                    ";
+        // line 752
+        $macros["renderMacro"] = $this;
+        // line 753
+        echo "                                    ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["TopCategories"]) || array_key_exists("TopCategories", $context) ? $context["TopCategories"] : (function () { throw new RuntimeError('Variable "TopCategories" does not exist.', 753, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["TopCategory"]) {
+            // line 754
+            echo "                                        <ul class=\"list-unstyled\">
+                                            ";
+            // line 755
+            echo twig_call_macro($macros["renderMacro"], "macro_tree", [(isset($context["ChoicedCategoryIds"]) || array_key_exists("ChoicedCategoryIds", $context) ? $context["ChoicedCategoryIds"] : (function () { throw new RuntimeError('Variable "ChoicedCategoryIds" does not exist.', 755, $this->source); })()), $context["TopCategory"], twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 755, $this->source); })()), "Category", [], "any", false, false, false, 755)], 755, $context, $this->getSourceContext());
+            echo "
+                                        </ul>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['TopCategory'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 758
+        echo "                                    ";
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 758, $this->source); })()), "Category", [], "any", false, false, false, 758), 'errors');
+        echo "
+                                </div>
+                                <div class=\"d-block text-center\">
+                                    <a class=\"btn btn-block btn-ec-regular\"
+                                       data-action=\"confirm\"
+                                       href=\"";
+        // line 763
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_product_category");
+        echo "\"
+                                       title=\"";
+        // line 764
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.move_to_confirm_message", ["%name%" => $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.category_management")]), "html", null, true);
+        // line 765
+        echo "\">";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.move_to_category"), "html", null, true);
+        echo "</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <div class=\"d-inline-block\">
+                                        <span class=\"card-title\">
+                                            ";
+        // line 776
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.tag__product_card_title"), "html", null, true);
+        echo "
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#tag\" aria-expanded=\"false\" aria-controls=\"tag\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=\"collapse show ec-cardCollapse\" id=\"tag\">
+                            <div class=\"card-body\">
+                                ";
+        // line 790
+        if ((twig_length_filter($this->env, (isset($context["Tags"]) || array_key_exists("Tags", $context) ? $context["Tags"] : (function () { throw new RuntimeError('Variable "Tags" does not exist.', 790, $this->source); })())) > 0)) {
+            // line 791
+            echo "                                    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["Tags"]) || array_key_exists("Tags", $context) ? $context["Tags"] : (function () { throw new RuntimeError('Variable "Tags" does not exist.', 791, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["Tag"]) {
+                // line 792
+                echo "                                        <div class=\"d-inline-block mb-2 mr-2\">
+                                            <button class=\"btn btn-outline-primary\" type=\"button\">";
+                // line 793
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Tag"], "name", [], "any", false, false, false, 793), "html", null, true);
+                echo "</button>
+                                        </div>
+                                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['Tag'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 796
+            echo "                                ";
+        }
+        // line 797
+        echo "
+                                <div class=\"d-block mb-3\" data-toggle=\"collapse\" href=\"#allTags\" role=\"button\"
+                                     aria-expanded=\"false\" aria-controls=\"allTags\">
+                                    <a>
+                                        <i class=\"fa fa-plus-square-o font-weight-bold mr-1\"></i>
+                                        <span class=\"font-weight-bold\">";
+        // line 802
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.save_tag"), "html", null, true);
+        echo "</span>
+                                    </a>
+                                </div>
+                                <div class=\"collapse p-3 bg-ec-lightGray mb-3 ec-collapse\" id=\"allTags\">
+                                    <div class=\"d-none\">
+                                        ";
+        // line 807
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 807, $this->source); })()), "Tag", [], "any", false, false, false, 807), 'widget');
+        echo "
+                                    </div>
+                                    ";
+        // line 809
+        if ((twig_length_filter($this->env, (isset($context["TagsList"]) || array_key_exists("TagsList", $context) ? $context["TagsList"] : (function () { throw new RuntimeError('Variable "TagsList" does not exist.', 809, $this->source); })())) > 0)) {
+            // line 810
+            echo "                                        ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["TagsList"]) || array_key_exists("TagsList", $context) ? $context["TagsList"] : (function () { throw new RuntimeError('Variable "TagsList" does not exist.', 810, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["Tag"]) {
+                // line 811
+                echo "                                            <div class=\"d-inline-block mb-2 mr-2\">
+                                                <button class=\"btn btn-outline-secondary\" type=\"button\"
+                                                        data-tag-id=\"";
+                // line 813
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Tag"], "id", [], "any", false, false, false, 813), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Tag"], "name", [], "any", false, false, false, 813), "html", null, true);
+                echo "</button>
+                                            </div>
+                                        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['Tag'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 816
+            echo "                                    ";
+        }
+        // line 817
+        echo "
+                                    <div class=\"d-block mb-3\" data-toggle=\"collapse\" href=\"#allTags\" role=\"button\"
+                                         aria-expanded=\"false\" aria-controls=\"allTags\"></div>
+                                </div>
+
+                                <div class=\"d-block text-center\">
+                                    <a href=\"";
+        // line 823
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_product_tag");
+        echo "\"
+                                       class=\"btn btn-block btn-ec-regular\"
+                                       data-action=\"confirm\"
+                                       title=\"";
+        // line 826
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.move_to_confirm_message", ["%name%" => $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.tag_management")]), "html", null, true);
+        // line 827
+        echo "\">";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.move_to_tag"), "html", null, true);
+        echo "</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <span class=\"card-title\">";
+        // line 836
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.create_date__card_title"), "html", null, true);
+        echo "</span>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#update\" aria-expanded=\"false\"
+                                       aria-controls=\"update\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"collapse show ec-cardCollapse\" id=\"update\">
+                            <div class=\"card-body\">
+                                <div class=\"row mb-2\">
+                                    <div class=\"col\">
+                                        <i class=\"fa fa-flag mr-1\"></i>
+                                        <span>";
+        // line 851
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.create_date"), "html", null, true);
+        echo "</span>
+                                    </div>
+                                    <div class=\"col\">
+                                        <span>：";
+        // line 854
+        echo twig_escape_filter($this->env, $this->extensions['Eccube\Twig\Extension\IntlExtension']->date_min($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Product"]) || array_key_exists("Product", $context) ? $context["Product"] : (function () { throw new RuntimeError('Variable "Product" does not exist.', 854, $this->source); })()), "create_date", [], "any", false, false, false, 854)), "html", null, true);
+        echo "</span>
+                                    </div>
+                                </div>
+                                <div class=\"row mb-2\">
+                                    <div class=\"col\">
+                                        <i class=\"fa fa-refresh mr-1\"></i>
+                                        <span>";
+        // line 860
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.update_date"), "html", null, true);
+        echo "</span>
+                                    </div>
+                                    <div class=\"col\">
+                                        <span>：";
+        // line 863
+        echo twig_escape_filter($this->env, $this->extensions['Eccube\Twig\Extension\IntlExtension']->date_min($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Product"]) || array_key_exists("Product", $context) ? $context["Product"] : (function () { throw new RuntimeError('Variable "Product" does not exist.', 863, $this->source); })()), "update_date", [], "any", false, false, false, 863)), "html", null, true);
+        echo "</span>
+                                    </div>
+                                </div>
+                                <div class=\"row mb-2\">
+                                    <div class=\"col\">
+                                        <i class=\"fa fa-user mr-1\"></i>
+                                        <span>";
+        // line 869
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.last_updater"), "html", null, true);
+        echo "</span>
+                                    </div>
+                                    <div class=\"col\">
+                                        <span>：";
+        // line 872
+        ((twig_get_attribute($this->env, $this->source, (isset($context["Product"]) || array_key_exists("Product", $context) ? $context["Product"] : (function () { throw new RuntimeError('Variable "Product" does not exist.', 872, $this->source); })()), "Creator", [], "any", false, false, false, 872)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["Product"]) || array_key_exists("Product", $context) ? $context["Product"] : (function () { throw new RuntimeError('Variable "Product" does not exist.', 872, $this->source); })()), "Creator", [], "any", false, false, false, 872), "name", [], "any", false, false, false, 872), "html", null, true))) : (print ("")));
+        echo "</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                         title=\"";
+        // line 883
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("tooltip.product.shop_memo"), "html", null, true);
+        echo "\">
+                                        <span class=\"card-title\">
+                                            ";
+        // line 885
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.shop_memo"), "html", null, true);
+        echo "
+                                            <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#shopMemo\" aria-expanded=\"false\"
+                                       aria-controls=\"shopMemo\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"collapse show ec-cardCollapse\" id=\"shopMemo\">
+                            <div class=\"card-body\">
+                                ";
+        // line 900
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 900, $this->source); })()), "note", [], "any", false, false, false, 900), 'widget', ["attr" => ["rows" => "8"]]);
+        echo "
+                                ";
+        // line 901
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 901, $this->source); })()), "note", [], "any", false, false, false, 901), 'errors');
+        echo "
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=\"c-conversionArea\">
+            <div class=\"c-conversionArea__container\">
+                <div class=\"row justify-content-between align-items-center\">
+                    <div class=\"col-6\">
+                        <div class=\"c-conversionArea__leftBlockItem\">
+                            <a class=\"c-baseLink\" href=\"";
+        // line 913
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_product_page", ["page_no" => ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "session", [], "any", false, true, false, 913), "get", [0 => "eccube.admin.product.search.page_no"], "method", true, true, false, 913)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "session", [], "any", false, true, false, 913), "get", [0 => "eccube.admin.product.search.page_no"], "method", false, false, false, 913), "1")) : ("1"))]), "html", null, true);
+        echo "\"
+                               data-action=\"confirm\" title=\"";
+        // line 914
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.move_to_confirm_message", ["%name%" => $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product_list")]), "html", null, true);
+        echo "\">
+                                <i class=\"fa fa-backward\" aria-hidden=\"true\"></i><span>";
+        // line 915
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.product.product_list"), "html", null, true);
+        echo "</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class=\"col-6\">
+                        <div id=\"ex-conversion-action\" class=\"row align-items-center justify-content-end\">
+                            <div class=\"col-auto\">
+                                ";
+        // line 922
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 922, $this->source); })()), "Status", [], "any", false, false, false, 922), 'widget');
+        echo "
+                                ";
+        // line 923
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 923, $this->source); })()), "Status", [], "any", false, false, false, 923), 'errors');
+        echo "
+                            </div>
+                            <div class=\"col-auto\">
+                                <button class=\"btn btn-ec-conversion px-5\" type=\"submit\">";
+        // line 926
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("admin.common.registration"), "html", null, true);
+        echo "</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 738
+    public function macro_tree($__ChoicedIds__ = null, $__Category__ = null, $__form__ = null, ...$__varargs__)
+    {
+        $macros = $this->macros;
+        $context = $this->env->mergeGlobals([
+            "ChoicedIds" => $__ChoicedIds__,
+            "Category" => $__Category__,
+            "form" => $__form__,
+            "varargs" => $__varargs__,
+        ]);
+
+        $blocks = [];
+
+        ob_start();
+        try {
+            $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+            $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "macro", "tree"));
+
+            $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+            $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "macro", "tree"));
+
+            // line 739
+            echo "                                    ";
+            $macros["selfMacro"] = $this;
+            // line 740
+            echo "                                    <li class=\"c-directoryTree--registerItem category-li\">
+                                        <input type=\"checkbox\" id=\"admin_product_category_";
+            // line 741
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Category"]) || array_key_exists("Category", $context) ? $context["Category"] : (function () { throw new RuntimeError('Variable "Category" does not exist.', 741, $this->source); })()), "id", [], "any", false, false, false, 741), "html", null, true);
+            echo "\" name=\"admin_product[Category][]\" value=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Category"]) || array_key_exists("Category", $context) ? $context["Category"] : (function () { throw new RuntimeError('Variable "Category" does not exist.', 741, $this->source); })()), "id", [], "any", false, false, false, 741), "html", null, true);
+            echo "\" ";
+            if (twig_in_filter(twig_get_attribute($this->env, $this->source, (isset($context["Category"]) || array_key_exists("Category", $context) ? $context["Category"] : (function () { throw new RuntimeError('Variable "Category" does not exist.', 741, $this->source); })()), "id", [], "any", false, false, false, 741), (isset($context["ChoicedIds"]) || array_key_exists("ChoicedIds", $context) ? $context["ChoicedIds"] : (function () { throw new RuntimeError('Variable "ChoicedIds" does not exist.', 741, $this->source); })()))) {
+                echo "checked";
+            }
+            echo ">
+                                        <label for=\"admin_product_category_";
+            // line 742
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Category"]) || array_key_exists("Category", $context) ? $context["Category"] : (function () { throw new RuntimeError('Variable "Category" does not exist.', 742, $this->source); })()), "id", [], "any", false, false, false, 742), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Category"]) || array_key_exists("Category", $context) ? $context["Category"] : (function () { throw new RuntimeError('Variable "Category" does not exist.', 742, $this->source); })()), "name", [], "any", false, false, false, 742), "html", null, true);
+            echo "</label>
+                                        <ul class=\"list-unstyled\">
+                                            ";
+            // line 744
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["Category"]) || array_key_exists("Category", $context) ? $context["Category"] : (function () { throw new RuntimeError('Variable "Category" does not exist.', 744, $this->source); })()), "children", [], "any", false, false, false, 744));
+            foreach ($context['_seq'] as $context["child"] => $context["ChildCategory"]) {
+                // line 745
+                echo "                                                ";
+                echo twig_call_macro($macros["selfMacro"], "macro_tree", [(isset($context["ChoicedIds"]) || array_key_exists("ChoicedIds", $context) ? $context["ChoicedIds"] : (function () { throw new RuntimeError('Variable "ChoicedIds" does not exist.', 745, $this->source); })()), $context["ChildCategory"], (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 745, $this->source); })())], 745, $context, $this->getSourceContext());
+                echo "
+                                            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['child'], $context['ChildCategory'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 747
+            echo "                                        </ul>
+                                    </li>
+                                ";
+            
+            $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+            
+            $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+
+            return ('' === $tmp = ob_get_contents()) ? '' : new Markup($tmp, $this->env->getCharset());
+        } finally {
+            ob_end_clean();
+        }
+    }
+
+    public function getTemplateName()
+    {
+        return "@admin/Product/product.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  1784 => 747,  1775 => 745,  1771 => 744,  1764 => 742,  1754 => 741,  1751 => 740,  1748 => 739,  1727 => 738,  1708 => 926,  1702 => 923,  1698 => 922,  1688 => 915,  1684 => 914,  1680 => 913,  1665 => 901,  1661 => 900,  1643 => 885,  1638 => 883,  1624 => 872,  1618 => 869,  1609 => 863,  1603 => 860,  1594 => 854,  1588 => 851,  1570 => 836,  1557 => 827,  1555 => 826,  1549 => 823,  1541 => 817,  1538 => 816,  1527 => 813,  1523 => 811,  1518 => 810,  1516 => 809,  1511 => 807,  1503 => 802,  1496 => 797,  1493 => 796,  1484 => 793,  1481 => 792,  1476 => 791,  1474 => 790,  1457 => 776,  1442 => 765,  1440 => 764,  1436 => 763,  1427 => 758,  1418 => 755,  1415 => 754,  1410 => 753,  1408 => 752,  1404 => 750,  1394 => 731,  1368 => 708,  1361 => 703,  1350 => 697,  1346 => 696,  1338 => 690,  1336 => 689,  1321 => 677,  1317 => 676,  1310 => 672,  1291 => 656,  1287 => 655,  1280 => 650,  1270 => 644,  1268 => 642,  1264 => 641,  1260 => 639,  1255 => 636,  1249 => 635,  1243 => 632,  1235 => 631,  1231 => 630,  1225 => 629,  1219 => 628,  1216 => 627,  1213 => 626,  1209 => 625,  1203 => 622,  1199 => 621,  1195 => 620,  1191 => 619,  1187 => 618,  1183 => 616,  1181 => 615,  1163 => 600,  1158 => 598,  1151 => 593,  1149 => 592,  1143 => 588,  1140 => 587,  1133 => 586,  1125 => 581,  1121 => 580,  1114 => 576,  1110 => 574,  1104 => 572,  1101 => 571,  1098 => 570,  1092 => 569,  1090 => 568,  1087 => 567,  1080 => 566,  1072 => 561,  1068 => 560,  1061 => 556,  1057 => 554,  1051 => 552,  1048 => 551,  1045 => 550,  1039 => 549,  1036 => 547,  1033 => 546,  1025 => 541,  1021 => 540,  1013 => 535,  1008 => 532,  1005 => 531,  997 => 526,  993 => 525,  985 => 520,  980 => 517,  978 => 516,  970 => 511,  966 => 510,  957 => 504,  953 => 503,  943 => 496,  939 => 495,  930 => 489,  926 => 488,  916 => 481,  912 => 480,  903 => 474,  899 => 473,  894 => 470,  892 => 469,  884 => 464,  880 => 463,  871 => 457,  867 => 456,  862 => 453,  853 => 448,  851 => 447,  849 => 446,  847 => 445,  845 => 444,  843 => 443,  841 => 442,  839 => 441,  837 => 440,  835 => 439,  833 => 438,  831 => 437,  827 => 435,  823 => 434,  814 => 428,  809 => 426,  799 => 419,  795 => 418,  786 => 412,  782 => 411,  772 => 404,  768 => 403,  759 => 397,  754 => 395,  749 => 392,  747 => 391,  739 => 386,  735 => 385,  726 => 379,  722 => 378,  709 => 368,  700 => 362,  696 => 361,  688 => 356,  684 => 355,  672 => 346,  667 => 344,  663 => 343,  659 => 342,  644 => 330,  639 => 328,  635 => 327,  631 => 325,  624 => 321,  616 => 316,  610 => 313,  606 => 312,  602 => 310,  600 => 309,  594 => 306,  590 => 305,  582 => 300,  577 => 298,  572 => 295,  565 => 291,  557 => 286,  553 => 285,  549 => 283,  547 => 282,  530 => 268,  517 => 258,  513 => 257,  503 => 250,  497 => 247,  484 => 237,  476 => 231,  466 => 230,  406 => 179,  397 => 173,  373 => 152,  358 => 140,  347 => 132,  343 => 131,  339 => 130,  305 => 99,  300 => 96,  291 => 94,  286 => 93,  277 => 90,  273 => 89,  268 => 88,  263 => 87,  254 => 84,  250 => 83,  245 => 82,  241 => 81,  237 => 80,  233 => 79,  228 => 76,  221 => 72,  216 => 70,  211 => 68,  206 => 66,  201 => 64,  196 => 63,  194 => 62,  173 => 44,  169 => 43,  165 => 42,  161 => 41,  156 => 40,  146 => 39,  120 => 22,  115 => 21,  105 => 20,  86 => 16,  67 => 15,  56 => 11,  54 => 18,  52 => 13,  39 => 11,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("{#
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+#}
+{% extends '@admin/default_frame.twig' %}
+
+{% set menus = ['product', 'product_edit'] %}
+
+{% block title %}{{ 'admin.product.product_registration'|trans }}{% endblock %}
+{% block sub_title %}{{ 'admin.product.product_management'|trans }}{% endblock %}
+
+{% form_theme form '@admin/Form/bootstrap_4_horizontal_layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel=\"stylesheet\" href=\"{{ asset('assets/css/fileupload/jquery.fileupload.css', 'admin') }}\">
+    <link rel=\"stylesheet\" href=\"{{ asset('assets/css/fileupload/jquery.fileupload-ui.css', 'admin') }}\">
+    <link rel=\"stylesheet\" href=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css\">
+    <style>
+        #thumb div {
+            float: left;
+            margin: 4px
+        }
+
+        .ui-state-highlight {
+            height: 70px;
+            width: 70px;
+            border: dashed 1px #ccc;
+            background: #fff;
+        }
+    </style>
+{% endblock stylesheet %}
+
+{% block javascript %}
+    <script src=\"{{ asset('assets/js/vendor/fileupload/vendor/jquery.ui.widget.js', 'admin') }}\"></script>
+    <script src=\"{{ asset('assets/js/vendor/fileupload/jquery.iframe-transport.js', 'admin') }}\"></script>
+    <script src=\"{{ asset('assets/js/vendor/fileupload/jquery.fileupload.js', 'admin') }}\"></script>
+    <script src=\"{{ asset('assets/js/vendor/fileupload/jquery.fileupload-process.js', 'admin') }}\"></script>
+    <script src=\"{{ asset('assets/js/vendor/fileupload/jquery.fileupload-validate.js', 'admin') }}\"></script>
+    <script>var bootstrapTooltip = \$.fn.tooltip.noConflict();</script>
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js\"></script>
+    <script>
+        \$.fn.tooltip = bootstrapTooltip;
+        \$(document).on('drop dragover', function(e) {
+            e.preventDefault();
+        });
+        \$(function() {
+            // Todo: fix drag&drop style
+            \$(\"#thumb\").sortable({
+                cursor: 'move',
+                opacity: 0.7,
+                placeholder: 'ui-state-highlight',
+                update: function(event, ui) {
+                    updateSortNo();
+                }
+            });
+            {% if has_class == false %}
+            if (\$(\"#{{ form.class.stock_unlimited.vars.id }}\").prop(\"checked\")) {
+                \$(\"#{{ form.class.stock.vars.id }}\").attr(\"disabled\", \"disabled\").val('');
+            } else {
+                \$(\"#{{ form.class.stock.vars.id }}\").removeAttr(\"disabled\");
+            }
+            \$(\"#{{ form.class.stock_unlimited.vars.id }}\").on(\"click change\", function() {
+                if (\$(this).prop(\"checked\")) {
+                    \$(\"#{{ form.class.stock.vars.id }}\").attr(\"disabled\", \"disabled\").val('');
+                } else {
+                    \$(\"#{{ form.class.stock.vars.id }}\").removeAttr(\"disabled\");
+                }
+            });
+            {% endif %}
+            var proto_img = '<div class=\"c-form__fileUploadThumbnail\" style=\"background-image:url(\\'__path__\\');\">' +
+                '<a class=\"delete-image\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></a>' +
+                '</div>';
+            var proto_add = '{{ form_widget(form.add_images.vars.prototype) }}';
+            var proto_del = '{{ form_widget(form.delete_images.vars.prototype) }}';
+            {% for image in form.images %}
+            var \$img = \$(proto_img.replace(/__path__/g, '{{ asset(image.vars.value, 'save_image') }}'));
+            var \$widget = \$('{{ form_widget(image) }}');
+            \$widget.val('{{ image.vars.value }}');
+            \$(\"#thumb\").append(\$img.append(\$widget));
+            {% endfor %}
+            {% for add_image in form.add_images %}
+            var \$img = \$(proto_img.replace(/__path__/g, '{{ asset(add_image.vars.value, 'temp_image') }}'));
+            var \$widget = \$('{{ form_widget(add_image) }}');
+            \$widget.val('{{ add_image.vars.value }}');
+            \$(\"#thumb\").append(\$img.append(\$widget));
+            {% endfor %}
+            {% for delete_image in form.delete_images %}
+            \$(\"#thumb\").append('{{ form_widget(delete_image) }}');
+            {% endfor %}
+            var hideThumbnail = function() {
+                if (\$(\"#thumb div\").length > 0) {
+                    \$(\"#icon_no_image\").css(\"display\", \"none\");
+                    \$('#message').html(\"{{ 'admin.common.drag_and_drop_description'|trans }}\");
+                } else {
+                    \$(\"#icon_no_image\").css(\"display\", \"\");
+                    \$('#message').empty();
+                }
+            };
+            // Todo: fix update sort by drag&drop
+            var updateSortNo = function() {
+                \$(\"#thumb div\").each(function(index) {
+                    \$(this).find(\".sort_no_images\").remove();
+                    filename = \$(this).find(\"input[type='hidden']\").val();
+                    \$sortNo = \$('<input type=\"hidden\" class=\"sort_no_images\" name=\"sort_no_images[]\" />');
+                    \$sortNo.val(filename + '//' + parseInt(index + 1));
+                    \$(this).append(\$sortNo);
+                });
+            };
+            hideThumbnail();
+            updateSortNo();
+            // Delete of images
+            var count_del = 0;
+            \$(\"#thumb\").on(\"click\", '.delete-image', function() {
+                var \$new_delete_image = \$(proto_del.replace(/__name__/g, count_del));
+                var thumbnail = \$(this).parents('div.c-form__fileUploadThumbnail');
+                var src = \$(thumbnail).find('input').val();
+                \$new_delete_image.val(src);
+                \$(\"#thumb\").append(\$new_delete_image);
+                \$(thumbnail).remove();
+                hideThumbnail();
+                updateSortNo();
+                count_del++;
+            });
+            var count_add = {{ form.add_images|length|default(0) }};
+            \$('#{{ form.product_image.vars.id }}').fileupload({
+                url: \"{{ url('admin_product_image_add') }}\",
+                type: \"post\",
+                sequentialUploads: true,
+                dataType: 'json',
+                dropZone: \$('#upload-zone'),
+                done: function(e, data) {
+                    \$('.progress').hide();
+                    \$.each(data.result.files, function(index, file) {
+                        var path = '{{ asset('', 'temp_image') }}' + file;
+                        var \$img = \$(proto_img.replace(/__path__/g, path));
+                        var \$new_img = \$(proto_add.replace(/__name__/g, count_add));
+                        \$new_img.val(file);
+                        \$child = \$img.append(\$new_img);
+                        \$('#thumb').append(\$child);
+                        count_add++;
+                    });
+                    hideThumbnail();
+                    updateSortNo();
+                },
+                fail: function(e, data) {
+                    alert(\"{{ 'admin.common.upload_error'|trans }}\");
+                },
+                always: function(e, data) {
+                    \$('.progress').hide();
+                    \$('.progress .progress-bar').width('0%');
+                },
+                start: function(e, data) {
+                    \$('.progress').show();
+                },
+                acceptFileTypes: /(\\.|\\/)(gif|jpe?g|png)\$/i,
+                maxFileSize: 10000000,
+                maxNumberOfFiles: 10,
+                progressall: function(e, data) {
+                    var progress = parseInt(data.loaded / data.total * 100, 10);
+                    \$('.progress .progress-bar').css(
+                        'width',
+                        progress + '%'
+                    );
+                },
+                processalways: function(e, data) {
+                    if (data.files.error) {
+                        alert(\"{{ 'admin.common.upload_error'|trans }}\");
+                    }
+                }
+            });
+            // 画像アップロード
+            \$('#file_upload').on('click', function() {
+                \$('#{{ form.product_image.vars.id }}').click();
+            });
+
+            var mainTags = \$('#allTags');
+            var adminProductTag = \$('#admin_product_Tag');
+            \$('input', adminProductTag).each(function() {
+                if (\$(this).is(':checked')) {
+                    \$('button[data-tag-id=\"' + \$(this).val() + '\"]').removeClass('btn-outline-secondary').addClass('btn-outline-primary');
+                }
+            });
+            mainTags.on('click', 'button.btn', function() {
+                var btnTag = \$(this);
+                var tagId = btnTag.data('tag-id');
+                if (btnTag.hasClass('btn-outline-primary')) {
+                    btnTag.removeClass('btn-outline-primary').addClass('btn-outline-secondary');
+                    \$('input[value=\"' + tagId + '\"]', mainTags).prop('checked', false);
+                } else {
+                    btnTag.removeClass('btn-outline-secondary').addClass('btn-outline-primary');
+                    \$('input[value=\"' + tagId + '\"]', mainTags).prop('checked', true);
+                }
+            });
+
+            var confirmFormChange = function(form, target, modal) {
+                var returnLink = form.find('input[type=\"hidden\"][name*=\"return_link\"]'),
+                    saveBtn = modal.find('a[data-action=\"save\"]'),
+                    cancelBtn = modal.find('a[data-action=\"cancel\"]');
+                modal.on('hidden.bs.modal', function() {
+                    returnLink.val('');
+                });
+                saveBtn.on('click', function() {
+                    returnLink.val(\$(this).data('return-link'));
+                    form.submit();
+                });
+                target.on('click', function() {
+                    modal.find('.modal-body .screen-name').text(\$(this).attr('title'));
+                    modal.modal('show');
+                    saveBtn.data('return-link', \$(this).attr('href'));
+                    cancelBtn.attr('href', \$(this).attr('href'));
+                    return false;
+                });
+            };
+            confirmFormChange(\$('#form1'), \$('a[data-action=\"confirm\"]'), \$('#confirmFormChangeModal'))
+        });
+
+        // searchWordの実行
+        \$('#search-category').on('input', function () {
+            searchWord(\$(this).val(), \$('.category-li'));
+        });
+    </script>
+{% endblock javascript %}
+
+{% block main %}
+    <!-- 移動確認モーダル-->
+    <div class=\"modal fade\" id=\"confirmFormChangeModal\" tabindex=\"-1\" role=\"dialog\"
+         aria-labelledby=\"confirmFormChangeModal\" aria-hidden=\"true\">
+        <div class=\"modal-dialog\" role=\"document\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <h5 class=\"modal-title\">{{ 'admin.common.move_to_confirm_title'|trans }}</h5>
+                    <button class=\"close\" type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\">
+                        <span aria-hidden=\"true\">×</span>
+                    </button>
+                </div>
+                <div class=\"modal-body\">
+                    <p class=\"screen-name\"></p>
+                </div>
+                <div class=\"modal-footer\">
+                    <a class=\"btn btn-ec-conversion\" data-action=\"save\" href=\"javascript:void(0)\">
+                        {{ 'admin.common.move_to_confirm_save_and_move'|trans }}
+                    </a>
+                    <a class=\"btn btn-ec-sub\" data-action=\"cancel\" href=\"javascript:void(0)\">
+                        {{ 'admin.common.move_to_confirm_move_only'|trans }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form role=\"form\" name=\"form1\" id=\"form1\" method=\"post\" action=\"\" novalidate enctype=\"multipart/form-data\">
+        {{ form_widget(form._token) }}
+        {{ form_widget(form.return_link) }}
+        <div class=\"c-contentsArea__cols\">
+            <div class=\"c-contentsArea__primaryCol\">
+                <div class=\"c-primaryCol\">
+                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <div class=\"d-inline-block\">
+                                    <span class=\"card-title\">
+                                        {{ 'admin.product.product__card_title'|trans }}
+                                    </span>
+                                    </div>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#basicConfig\" aria-expanded=\"false\"
+                                       aria-controls=\"basicConfig\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"collapse show ec-cardCollapse\" id=\"basicConfig\">
+                            <div class=\"card-body\">
+                                {% if Product.id %}
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\" title=\"{{ 'tooltip.product.product_id'|trans }}\">
+                                                <span>{{ 'admin.product.product_id'|trans }}</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col\">
+                                            <p>{{ Product.id }}</p>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                <div class=\"row\">
+                                    <div class=\"col-3\">
+                                        <div class=\"d-inline-block\">
+                                            <span>{{ 'admin.product.name'|trans }}</span>
+                                            <span class=\"badge badge-primary ml-1\">
+                                                {{ 'admin.common.required'|trans }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class=\"col mb-2\">
+                                        {{ form_widget(form.name) }}
+                                        {{ form_errors(form.name) }}
+                                    </div>
+                                </div>
+                                {% if has_class == false %}
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\" title=\"{{ 'tooltip.product.sale_type'|trans }}\">
+                                                <span>{{ 'admin.product.sale_type'|trans }}</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                                <span class=\"badge badge-primary ml-1\">
+                                                    {{ 'admin.common.required'|trans }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            {{ form_widget(form.class.sale_type) }}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                <div class=\"row\">
+                                    <div class=\"col-3\">
+                                        <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\" title=\"{{ 'tooltip.product.image'|trans }}\">
+                                            <span>{{ 'admin.product.image'|trans }}</span>
+                                            <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            <br>{{ 'admin.product.image_size'|trans }}
+                                        </div>
+                                    </div>
+                                    <div class=\"col mb-2\">
+                                        <div class=\"progress\" style=\"display: none;\">
+                                            <div class=\"progress-bar progress-bar-striped progress-bar-animated\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>
+                                        </div>
+                                        <div id=\"thumb\" class=\"c-form__fileUploadThumbnails clearfix\"></div>
+                                        <p id=\"message\"></p>
+                                        <div id=\"upload-zone\" class=\"media py-5 border-ec-dashed mb-2 rounded\">
+                                            <div class=\"media-body\">
+                                                <i class=\"fa fa-cloud-upload fa-3x text-ec-lightGray mx-3 align-middle\" aria-hidden=\"true\"></i>
+                                                {{ 'admin.common.drag_and_drop_image_description'|trans }}
+                                                {{ form_widget(form.product_image, { attr : { accept : 'image/*', style : 'display:none;' } }) }}
+                                                {{ form_errors(form.product_image) }}
+                                                <a class=\"btn btn-ec-regular mr-2\" onclick=\"\$('#admin_product_product_image').click()\">
+                                                    {{ 'admin.common.file_select'|trans }}
+                                                </a>
+                                            </div><!-- /.media-body -->
+                                        </div><!-- /.media -->
+                                    </div>
+                                </div>
+                                <div class=\"row\">
+                                    <div class=\"col-3\">
+                                        <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                             title=\"{{ 'tooltip.product.description_detail'|trans }}\">
+                                            <span>{{ 'admin.product.description_detail'|trans }}</span>
+                                            <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                        </div>
+                                    </div>
+                                    <div class=\"col\">
+                                        {{ form_widget(form.description_detail, { attr : { rows : \"8\"} }) }}
+                                        {{ form_errors(form.description_detail) }}
+                                        <div class=\"d-inline-block mb-2\" data-toggle=\"collapse\" href=\"#addComment\"
+                                             role=\"button\" aria-expanded=\"false\" aria-controls=\"addComment\">
+                                            <a>
+                                                <i class=\"fa fa-plus-square-o font-weight-bold mr-1\"></i>
+                                                <span class=\"font-weight-bold text-ec-black\">
+                                                    {{ 'admin.product.description_list__add'|trans }}
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=\"collapse ec-collapse\" id=\"addComment\">
+                                    <div class=\"row bg-ec-formGray pt-3 mb-2\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                                 title=\"{{ 'tooltip.product.description_list'|trans }}\">
+                                                <span>{{ 'admin.product.description_list'|trans }}</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-4\">
+                                            <div>
+                                                {{ form_widget(form.description_list, { attr : { rows : \"4\"} }) }}
+                                                {{ form_errors(form.description_list) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% if has_class == false %}
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\">
+                                                <span>{{ 'admin.product.sale_price'|trans }}</span>
+                                                <span class=\"badge badge-primary ml-1\">
+                                                    {{ 'admin.common.required'|trans }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            <div>
+                                                {{ form_widget(form.class.price02) }}
+                                                {{ form_errors(form.class.price02) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                                 title=\"{{ 'tooltip.product.normal_price'|trans }}\">
+                                                <span>{{ 'admin.product.normal_price'|trans }}</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            <div>
+                                                {{ form_widget(form.class.price01) }}
+                                                {{ form_errors(form.class.price01) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\">
+                                                <span>{{ 'admin.product.stock'|trans }}</span>
+                                                <span class=\"badge badge-primary ml-1\">
+                                                    {{ 'admin.common.required'|trans }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class=\"col\">
+                                            <div>
+                                                {{ form_widget(form.class.stock) }}
+                                                {{ form_errors(form.class.stock) }}
+                                                {# TODO: form_layoutの調整 #}
+                                                {#<div class=\"form-check mb-2\">#}
+                                                {#<input class=\"form-check-input\"#}
+                                                {#id=\"{{ form.class.stock_unlimited.vars.id }}\"#}
+                                                {#name=\"{{ form.class.stock_unlimited.vars.full_name }}\"#}
+                                                {#type=\"checkbox\"#}
+                                                {#value=\"{{ form.class.stock_unlimited.vars.value }}\">#}
+                                                {#<label class=\"form-check-label\"#}
+                                                {#for=\"{{ form.class.stock_unlimited.vars.id }}\">#}
+                                                {#{{ 'admin.product.product.stock_unlimited'|trans }}#}
+                                                {#</label>#}
+                                                {#</div>#}
+                                                {{ form_widget(form.class.stock_unlimited) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                <div class=\"row\">
+                                    <div class=\"col-3\">
+                                        <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                             title=\"{{ 'tooltip.product.search_word'|trans }}\">
+                                            <span>{{ 'admin.product.search_word'|trans }}</span>
+                                            <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                        </div>
+                                    </div>
+                                    <div class=\"col mb-2\">
+                                        <div>
+                                            {{ form_widget(form.search_word) }}
+                                            {{ form_errors(form.search_word) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% if has_class == false %}
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                                 title=\"{{ 'tooltip.product.product_code'|trans }}\">
+                                                <span>{{ 'admin.product.product_code'|trans }}</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            <div>
+                                                {{ form_widget(form.class.code) }}
+                                                {{ form_errors(form.class.code) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                                 title=\"{{ 'tooltip.product.sale_limit'|trans }}\">
+                                                <span>{{ 'admin.product.sale_limit'|trans }}</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            <div>
+                                                {{ form_widget(form.class.sale_limit) }}
+                                                {{ form_errors(form.class.sale_limit) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=\"row\">
+                                        <div class=\"col-3\">
+                                            <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                                 title=\"{{ 'tooltip.product.delivery_duration'|trans }}\">
+                                                <span>{{ 'admin.product.delivery_duration'|trans }}</span>
+                                                <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                            </div>
+                                        </div>
+                                        <div class=\"col mb-2\">
+                                            <div>
+                                                {{ form_widget(form.class.delivery_duration) }}
+                                                {{ form_errors(form.class.delivery_duration) }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% if BaseInfo.option_product_delivery_fee %}
+                                        <div class=\"row\">
+                                            <div class=\"col-3\">
+                                                <div class=\"d-inline-block\">
+                                                    <span>{{ 'admin.product.delivery_fee'|trans }}</span>
+                                                </div>
+                                            </div>
+                                            <div class=\"col mb-2\">
+                                                <div>
+                                                    {{ form_widget(form.class.delivery_fee) }}
+                                                    {{ form_errors(form.class.delivery_fee) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                    {% if BaseInfo.option_product_tax_rule %}
+                                        <div class=\"row\">
+                                            <div class=\"col-3\">
+                                                <div class=\"d-inline-block\">
+                                                    <span>{{ 'admin.product.tax_rate'|trans }}</span>
+                                                </div>
+                                            </div>
+                                            <div class=\"col mb-2\">
+                                                <div>
+                                                    {{ form_widget(form.class.tax_rate) }}
+                                                    {{ form_errors(form.class.tax_rate) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+
+                                {# エンティティ拡張の自動出力 #}
+                                {% for f in form if f.vars.eccube_form_options.auto_render %}
+                                    {% if f.vars.eccube_form_options.form_theme %}
+                                        {% form_theme f f.vars.eccube_form_options.form_theme %}
+                                        {{ form_row(f) }}
+                                    {% else %}
+                                        <div class=\"row\">
+                                            <div class=\"col-3\">
+                                                <span>{{ f.vars.label|trans }}</span>
+                                            </div>
+                                            <div class=\"col mb-2\">
+                                                <div>
+                                                    {{ form_widget(f) }}
+                                                    {{ form_errors(f) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if has_class == false %}
+                                    {% for f in form.class if f.vars.eccube_form_options.auto_render %}
+                                        {% if f.vars.eccube_form_options.form_theme %}
+                                            {% form_theme f f.vars.eccube_form_options.form_theme %}
+                                            {{ form_row(f) }}
+                                        {% else %}
+                                            <div class=\"row\">
+                                                <div class=\"col-3\">
+                                                    <span>{{ f.vars.label|trans }}</span>
+                                                </div>
+                                                <div class=\"col mb-2\">
+                                                    <div>
+                                                        {{ form_widget(f) }}
+                                                        {{ form_errors(f) }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    </div>
+                    {% if id is not null %}
+                        <div class=\"card rounded border-0 mb-4\">
+                            <div class=\"card-header\">
+                                <div class=\"row\">
+                                    <div class=\"col-8\">
+                                        <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                             title=\"{{ 'tooltip.product.product_class'|trans }}\">
+                                        <span class=\"card-title\">
+                                            {{ 'admin.product.product_class__card_title'|trans }}
+                                            <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class=\"col-4 text-right\">
+                                        <a data-toggle=\"collapse\" href=\"#standardConfig\" aria-expanded=\"false\"
+                                           aria-controls=\"standardConfig\">
+                                            <i class=\"fa fa-angle-up fa-lg\"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"collapse show ec-cardCollapse\" id=\"standardConfig\">
+                                <div class=\"card-body\">
+                                    {% if has_class == true %}
+                                        <table class=\"table table-striped\">
+                                            <thead class=\"table-active\">
+                                            <th class=\"pl-3 pt-2 pb-2\">{{ 'admin.product.class_category1__short'|trans }}</th>
+                                            <th class=\"pt-2 pb-2\">{{ 'admin.product.class_category2__short'|trans }}</th>
+                                            <th class=\"pt-2 pb-2\">{{ 'admin.product.product_code__short'|trans }}</th>
+                                            <th class=\"pt-2 pb-2\">{{ 'admin.product.stock'|trans }}</th>
+                                            <th class=\"pr-3 pt-2 pb-2\">{{ 'admin.product.price'|trans }}</th>
+                                            </thead>
+                                            <tbody>
+                                            {% for Class in Product.ProductClasses %}
+                                                {% if Class.visible == 1 %}
+                                                    <tr>
+                                                        <td class=\"pl-3\">{% if Class.hasClassCategory1 %}{{ Class.ClassCategory1.name }}{% endif %}</td>
+                                                        <td>{% if Class.hasClassCategory2 %}{{ Class.ClassCategory2.name }}{% endif %}</td>
+                                                        <td>{{ Class.code }}</td>
+                                                        <td>{% if Class.stock_unlimited %}{{ 'admin.product.stock_unlimited__short'|trans }}{% else %}{{ Class.stock }}{% endif %}</td>
+                                                        <td class=\"pr-3\">{{ Class.price02|price }}</td>
+                                                    </tr>
+                                                {% endif %}
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    {% endif %}
+
+                                    <div class=\"d-block text-center text-center\">
+                                        <a href=\"{{ path('admin_product_product_class', { 'id' : id }) }}\" class=\"btn btn-ec-regular\" data-action=\"confirm\"
+                                           title=\"{{ 'admin.common.move_to_confirm_message'|trans({
+                                               '%name%' : 'admin.product.product_class_registration'|trans
+                                           }) }}\">{{ 'admin.product.product_class__confirm_of_product'|trans }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                         title=\"{{ 'tooltip.product.free_area'|trans }}\">
+                                        <span class=\"card-title\">{{ 'admin.product.free_area__card_title'|trans }}</span>
+                                        <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                    </div>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#freeArea\" aria-expanded=\"false\"
+                                       aria-controls=\"freeArea\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"collapse show ec-cardCollapse\" id=\"freeArea\">
+                            <div class=\"card-body\">
+                                <div class=\"row\">
+                                    <div class=\"col-3\">
+                                        <span>{{ 'admin.product.free_area'|trans }}</span>
+                                    </div>
+                                    <div class=\"col-9\">
+                                        <div>
+                                            {{ form_widget(form.free_area, {id: 'wysiwyg-area', attr : { rows : \"8\"} }) }}
+                                            {{ form_errors(form.free_area) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class=\"c-contentsArea__secondaryCol\">
+                <div class=\"c-secondaryCol\">
+                    {% if id is not null %}
+                        <div class=\"card rounded border-0 mb-4\">
+                            <div class=\"collapse show ec-cardCollapse\" id=\"preview\">
+                                <div class=\"card-body\">
+                                    <div class=\"d-block text-center\">
+                                        <a class=\"btn btn-block btn-ec-regular\"
+                                           target=\"_blank\"
+                                           href=\"{{ url('product_detail', {id:id}) }}\"
+                                           title=\"{{ 'admin.product.preview'|trans }}\">{{ 'admin.product.preview'|trans }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <div class=\"d-inline-block\">
+                                        <span class=\"card-title\">{{ 'admin.product.category__product_card_title'|trans }}</span>
+                                    </div>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#category\" aria-expanded=\"false\"
+                                       aria-controls=\"category\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"collapse show ec-cardCollapse\" id=\"category\">
+                            <div class=\"card-body\">
+                                <div class=\"mb-3\">
+                                    <div class=\"form-row\">
+                                        <div class=\"col\">
+                                            <div class=\"input-group\">
+                                                <div class=\"input-group-prepend\">
+                                                    <span class=\"input-group-text\" id=\"basic-addon1\">
+                                                            <i class=\"fa fa-search\"></i>
+                                                    </span>
+                                                </div>
+                                                <input id=\"search-category\" class=\"form-control\" type=\"search\"
+                                                       placeholder=\"{{ 'admin.product.search_category'|trans }}\"
+                                                       aria-label=\"Search\">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% macro tree(ChoicedIds, Category, form) %}
+                                    {% import _self as selfMacro %}
+                                    <li class=\"c-directoryTree--registerItem category-li\">
+                                        <input type=\"checkbox\" id=\"admin_product_category_{{ Category.id }}\" name=\"admin_product[Category][]\" value=\"{{ Category.id }}\" {% if Category.id in ChoicedIds %}checked{% endif %}>
+                                        <label for=\"admin_product_category_{{ Category.id }}\">{{ Category.name }}</label>
+                                        <ul class=\"list-unstyled\">
+                                            {% for child,ChildCategory in Category.children %}
+                                                {{ selfMacro.tree(ChoicedIds, ChildCategory, form) }}
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% endmacro %}
+
+                                <div class=\"c-directoryTree--register rounded border mb-3 p-3\">
+                                    {% import _self as renderMacro %}
+                                    {% for TopCategory in TopCategories %}
+                                        <ul class=\"list-unstyled\">
+                                            {{ renderMacro.tree(ChoicedCategoryIds, TopCategory, form.Category) }}
+                                        </ul>
+                                    {% endfor %}
+                                    {{ form_errors(form.Category) }}
+                                </div>
+                                <div class=\"d-block text-center\">
+                                    <a class=\"btn btn-block btn-ec-regular\"
+                                       data-action=\"confirm\"
+                                       href=\"{{ path('admin_product_category') }}\"
+                                       title=\"{{ 'admin.common.move_to_confirm_message'|trans({
+                                           '%name%' : 'admin.product.category_management'|trans}) }}\">{{ 'admin.product.move_to_category'|trans }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <div class=\"d-inline-block\">
+                                        <span class=\"card-title\">
+                                            {{ 'admin.product.tag__product_card_title'|trans }}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#tag\" aria-expanded=\"false\" aria-controls=\"tag\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=\"collapse show ec-cardCollapse\" id=\"tag\">
+                            <div class=\"card-body\">
+                                {% if(Tags|length > 0) %}
+                                    {% for Tag in Tags %}
+                                        <div class=\"d-inline-block mb-2 mr-2\">
+                                            <button class=\"btn btn-outline-primary\" type=\"button\">{{ Tag.name }}</button>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+
+                                <div class=\"d-block mb-3\" data-toggle=\"collapse\" href=\"#allTags\" role=\"button\"
+                                     aria-expanded=\"false\" aria-controls=\"allTags\">
+                                    <a>
+                                        <i class=\"fa fa-plus-square-o font-weight-bold mr-1\"></i>
+                                        <span class=\"font-weight-bold\">{{ 'admin.product.save_tag'|trans }}</span>
+                                    </a>
+                                </div>
+                                <div class=\"collapse p-3 bg-ec-lightGray mb-3 ec-collapse\" id=\"allTags\">
+                                    <div class=\"d-none\">
+                                        {{ form_widget(form.Tag) }}
+                                    </div>
+                                    {% if(TagsList|length > 0) %}
+                                        {% for Tag in TagsList %}
+                                            <div class=\"d-inline-block mb-2 mr-2\">
+                                                <button class=\"btn btn-outline-secondary\" type=\"button\"
+                                                        data-tag-id=\"{{ Tag.id }}\">{{ Tag.name }}</button>
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+
+                                    <div class=\"d-block mb-3\" data-toggle=\"collapse\" href=\"#allTags\" role=\"button\"
+                                         aria-expanded=\"false\" aria-controls=\"allTags\"></div>
+                                </div>
+
+                                <div class=\"d-block text-center\">
+                                    <a href=\"{{ path('admin_product_tag') }}\"
+                                       class=\"btn btn-block btn-ec-regular\"
+                                       data-action=\"confirm\"
+                                       title=\"{{ 'admin.common.move_to_confirm_message'|trans({
+                                           '%name%' : 'admin.product.tag_management'|trans }) }}\">{{ 'admin.product.move_to_tag'|trans }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <span class=\"card-title\">{{ 'admin.product.create_date__card_title'|trans }}</span>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#update\" aria-expanded=\"false\"
+                                       aria-controls=\"update\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"collapse show ec-cardCollapse\" id=\"update\">
+                            <div class=\"card-body\">
+                                <div class=\"row mb-2\">
+                                    <div class=\"col\">
+                                        <i class=\"fa fa-flag mr-1\"></i>
+                                        <span>{{ 'admin.common.create_date'|trans }}</span>
+                                    </div>
+                                    <div class=\"col\">
+                                        <span>：{{ Product.create_date|date_min }}</span>
+                                    </div>
+                                </div>
+                                <div class=\"row mb-2\">
+                                    <div class=\"col\">
+                                        <i class=\"fa fa-refresh mr-1\"></i>
+                                        <span>{{ 'admin.common.update_date'|trans }}</span>
+                                    </div>
+                                    <div class=\"col\">
+                                        <span>：{{ Product.update_date|date_min }}</span>
+                                    </div>
+                                </div>
+                                <div class=\"row mb-2\">
+                                    <div class=\"col\">
+                                        <i class=\"fa fa-user mr-1\"></i>
+                                        <span>{{ 'admin.common.last_updater'|trans }}</span>
+                                    </div>
+                                    <div class=\"col\">
+                                        <span>：{{ Product.Creator ? Product.Creator.name }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=\"card rounded border-0 mb-4\">
+                        <div class=\"card-header\">
+                            <div class=\"row\">
+                                <div class=\"col-8\">
+                                    <div class=\"d-inline-block\" data-tooltip=\"true\" data-placement=\"top\"
+                                         title=\"{{ 'tooltip.product.shop_memo'|trans }}\">
+                                        <span class=\"card-title\">
+                                            {{ 'admin.common.shop_memo'|trans }}
+                                            <i class=\"fa fa-question-circle fa-lg ml-1\"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class=\"col-4 text-right\">
+                                    <a data-toggle=\"collapse\" href=\"#shopMemo\" aria-expanded=\"false\"
+                                       aria-controls=\"shopMemo\">
+                                        <i class=\"fa fa-angle-up fa-lg\"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"collapse show ec-cardCollapse\" id=\"shopMemo\">
+                            <div class=\"card-body\">
+                                {{ form_widget(form.note, { attr : { rows : \"8\"} }) }}
+                                {{ form_errors(form.note) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=\"c-conversionArea\">
+            <div class=\"c-conversionArea__container\">
+                <div class=\"row justify-content-between align-items-center\">
+                    <div class=\"col-6\">
+                        <div class=\"c-conversionArea__leftBlockItem\">
+                            <a class=\"c-baseLink\" href=\"{{ path('admin_product_page', { page_no : app.session.get('eccube.admin.product.search.page_no')|default('1') } ) }}\"
+                               data-action=\"confirm\" title=\"{{ 'admin.common.move_to_confirm_message'|trans({'%name%' : 'admin.product.product_list'|trans }) }}\">
+                                <i class=\"fa fa-backward\" aria-hidden=\"true\"></i><span>{{ 'admin.product.product_list'|trans }}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class=\"col-6\">
+                        <div id=\"ex-conversion-action\" class=\"row align-items-center justify-content-end\">
+                            <div class=\"col-auto\">
+                                {{ form_widget(form.Status) }}
+                                {{ form_errors(form.Status) }}
+                            </div>
+                            <div class=\"col-auto\">
+                                <button class=\"btn btn-ec-conversion px-5\" type=\"submit\">{{ 'admin.common.registration'|trans }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+", "@admin/Product/product.twig", "/home/anotherworld/www/s-africa.wine/src/Eccube/Resource/template/admin/Product/product.twig");
+    }
+}

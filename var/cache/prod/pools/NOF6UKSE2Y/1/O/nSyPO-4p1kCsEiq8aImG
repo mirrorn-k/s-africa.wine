@@ -1,0 +1,1162 @@
+1754853827
+%255B885b116840e1959d7893782214a6922727619504%255D%255B1%255D
+a:1:{s:1297:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:21;}i:1;a:17:{i:0;i:77;i:1;i:76;i:2;i:80;i:3;i:79;i:4;i:78;i:5;i:83;i:6;i:82;i:7;i:81;i:8;i:84;i:9;i:87;i:10;i:86;i:11;i:85;i:12;i:88;i:13;i:95;i:14;i:93;i:15;i:89;i:16;i:90;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:17:{i:0;a:13:{s:4:"id_0";s:2:"77";s:6:"name_1";s:69:"ブーケンハーツクルーフ・ウルフトラップ・レッド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:198:"ウルフトラップの特徴であるジューシー＆フルーティで、リッチな味わい。濃いワインだが、全体的にスムーズでなめらか、ほんのり甘みもある。";s:13:"search_word_5";s:50:"シラー,ムールヴェードル,ヴィオニエ";s:11:"free_area_6";s:3484:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof The Wolftrap Red</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウエスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (91％,8％,1％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2017’] 2016VT：90 Point／Silver<br>
+[Tim Atkin Report 2016’] 2015VT：89 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+2018年はより高い割合のシラーをブレンド。スミレと熟したプラムの香りが特徴です。また、フレッシュなストロベリーやチェリーなどの豊かな香りでほんのりスパイシー。優しい酸味でしっかりした骨格、渋みも少なく、ウルフトラップの特徴であるジューシー＆フルーティで、リッチな味わい。濃いワインだが、全体的にスムーズでなめらか、ほんのり甘みもある。ついつい飲んでしまい飲みすぎに注意！価格に対してのコストパフォーマンスが高く、世界中で数多く販売されています。<br>焼肉、ローストビーフ、焼き鳥、ソーセージ、パスタなど。<br>
+<br>
+過去の謎と伝説を思い出すワイン<br>
+18世紀頃ヨーロッパの植民者達がブーケンハーツクルーフのあるフランシュック谷に住み始めた。彼らは当時、山にオオカミが住んでいると信じて「ウルフトラップ（狼のワナ）」を仕掛けたが、実際にはオオカミは居なかったという話からこのワインに名付けられた。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:42:28";s:13:"update_date_8";s:19:"2023-11-13 12:44:40";s:6:"sclr_9";s:7:"1600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"76";s:6:"name_1";s:78:"ブーケンハーツクルーフ・ザ・ウルフトラップ・ホワイト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:345:"アーモンド、りんごの花、スパイスなどの豊な香り。やさしい酸味、凝縮した果実味、なめらかでコクのある味わい。それぞれの品種の要素がこのワインを複雑な面白いワインに仕上げている。オークの風味もあり、フィニッシュはクリーンで余韻も長い。";s:13:"search_word_5";s:65:"ヴィオニエ,シュナンブラン,グルナッシュブラン";s:11:"free_area_6";s:3386:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof The Wolftrap White</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／フランシュック</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (38％,32％,30％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.8％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2017’] 2016VT：87 Point／Bronze<br>
+[Platter SA 2020’] 2018VT：4 STAR<br>
+[Platter SA 2017’] 2015VT：4 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+それぞれの品種で発酵。シュナンブランとグルナッシュブランはフレンチオークを使用して熟成。その後ブレンド。濾過して瓶詰。アーモンド、りんごの花、スパイスなどの豊な香り。やさしい酸味、凝縮した果実味、なめらかでコクのある味わい。それぞれの品種の要素がこのワインを複雑な面白いワインに仕上げている。オークの風味もあり、フィニッシュはクリーンで余韻も長い。<br>お勧め料理：シーフード、パスタ、中華料理、アジア料理など。<br>
+<br>
+過去の謎と伝説を思い出すワイン<br>
+18世紀頃ヨーロッパの植民者達がブーケンハーツクルーフのあるフランシュック谷に住み始めた。彼らは当時、山にオオカミが住んでいると信じて「ウルフトラップ（狼のワナ）」を仕掛けたが、実際にはオオカミは居なかったという話からこのワインに名付けられた。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:42:04";s:13:"update_date_8";s:19:"2023-11-13 12:43:19";s:6:"sclr_9";s:7:"1600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"80";s:6:"name_1";s:96:"ブーケンハーツクルーフ・ポークパインリッジ・ソーヴィニヨンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:262:"リンゴの花、メロン、パパイヤなど、トロピカルフルーツを思わせる香りに、活き活きとした爽やかな酸味。フレッシュで、 クリスピーなバランスの良い仕上がり。程よい厚みとやさしい余韻。";s:13:"search_word_5";s:30:"ソーヴィニヨンブラン";s:11:"free_area_6";s:3049:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Porcupine Ridge Sauvignon Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} </td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2017’] 2016VT：85 Point／Commended<br>
+[Decanter World Wine Awards 2016’] 2015VT：86 Point／Bronze
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ロバートソン、ステレンボッシュ産のブドウを主に使用。リンゴの花、メロン、パパイヤなど、トロピカルフルーツを思わせる香りに、活き活きとした爽やかな酸味。フレッシュで、 クリスピーなバランスの良い仕上がり。程よい厚みとやさしい余韻。<br>サラダ、シーフードのマリネ、お寿司など。<br>2009年ヴィンテージは、2009年11月28日のジャンシス・ロビンソンのサイトで「絶対お勧めの世界の白ワイン77本」の1本に選出される。<br>
+日々 愛用されるテーブルワインをテーマに、畑の人気者 ハリネズミをモチーフとしている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:43:57";s:13:"update_date_8";s:19:"2023-11-13 12:45:02";s:6:"sclr_9";s:7:"1800.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"79";s:6:"name_1";s:87:"ブーケンハーツクルーフ・ポークパインリッジ・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:165:"暖かい南国フルーツの風味と乾燥したスワートランドらしいドライなテイスト、チョーキーなミネラルが表現されている。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3209:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Porcupine Ridge Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2022</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2020’] 2018VT：3.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+2019年は日中も暑すぎず、夜は冷涼な気温で理想的なコンディションだった。発酵、熟成を経てブレンド。フレッシュなライム、グリーンメロン、パッションフルーツ、グアヴァ、パイナップル、カリン、グリーンイチジクなど複雑な香り。フレッシュで柔らかな酸味、フルーティな果実味、程よく厚みのあるボディがバランスが良く出来ている。暖かい南国フルーツの風味と乾燥したスワートランドらしいドライなテイスト、チョーキーなミネラルが表現されている。もちろんブーケンハーツクルーフらしい、コストパフォーマンスに優れたワインに仕上がっている。<br>シーフード、鶏肉、豚肉、中華・アジア系料理など。<br>
+日々 愛用されるテーブルワインをテーマに、畑の人気者 ハリネズミをモチーフとしている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:43:22";s:13:"update_date_8";s:19:"2023-11-13 12:44:02";s:6:"sclr_9";s:7:"1800.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:2:"78";s:6:"name_1";s:81:"ブーケンハーツクルーフ・ポークパインリッジ・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:237:"レモン、ライム、グレープフルーツ、パイナップルなどの香りに、少しクリーミーな風味もある。フレッシュで柔らかな酸、フルーティな果実味で程良くしっかりしたボディ。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3378:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Porcupine Ridge Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウエスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2020’] 2019VT：3.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+2019年は比較的冷涼。2018年は乾燥し水不足だったがある程度回復。その分、ブドウはよりライムの風味が出ている。ブドウは、ステレンボシュ、ブリードクルーフ、ロバートソンの地区のブドウを使用。ステンレスタンクで低温発酵。一部はオーク樽使用。それぞれに澱が入ったまま３ヵ月熟成してブレンド。<br>レモン、ライム、グレープフルーツ、パイナップルなどの香りに、少しクリーミーな風味もある。フレッシュで柔らかな酸、フルーティな果実味で程良くしっかりしたボディ。ジューシーでフレッシュなレモンなどの柑橘類や青リンゴなどの風味が豊かで最後まで続く。余韻は長くドライなフィニッシュ。<br>シーフード、カルパッチョ、バーニャカウダー、白身魚のソテー、クリームパスタ、アジア系料理など幅広い料理に合わせやすい。<br>
+日々 愛用されるテーブルワインをテーマに、畑の人気者 ハリネズミをモチーフとしている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:42:54";s:13:"update_date_8";s:19:"2023-11-13 12:43:47";s:6:"sclr_9";s:7:"1800.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:2:"83";s:6:"name_1";s:75:"ブーケンハーツクルーフ・ポークパインリッジ・シラー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:189:"スミレ、ブラックチェリーなど、しっかりとした香りに白コショウの風味。比較的豊な酸とジューシーでなめらか、フルーティな口あたり。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:3208:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Porcupine Ridge Syrah</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} </td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2018’] 2017VT：88 Point／Bronze<br>
+[Decanter World Wine Awards 2017’] 2016VT：92 Point／Silver<br>
+[Tim Atkin Report 2019’] 2018VT：89 Point<br>
+[Platter SA 2020’] 2018VT：3.5 STAR<br>
+[Sakura Awards 2017’] 2015VT：Gold
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+スワートランド地区の灌漑なしの畑のブドウを使用。製造は出来るだけ手を加えないミニマリスト的アプローチ。ステンレスタンクで発酵後、果実味を表現する為に古いフレンチオークで熟成。<br>スミレ、ブラックチェリーなど、しっかりとした香りに白コショウの風味。比較的豊な酸とジューシーでなめらか、フルーティな口あたり。細やかで適度な渋みを伴い、ワインの重さも程よく感じる。全体にエレガントで複雑味もあり、バランス良くまとまっている。<br>
+日々 愛用されるテーブルワインをテーマに、畑の人気者 ハリネズミをモチーフとしている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:48:33";s:13:"update_date_8";s:19:"2023-11-13 12:42:26";s:6:"sclr_9";s:7:"2200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:2:"82";s:6:"name_1";s:78:"ブーケンハーツクルーフ・ポークパインリッジ・カベルネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:186:"鮮やかなルビーレッド、プルーン、イチジク、トリュフ、オークの香り。柔らかな酸味、豊な果実味、適度な渋みと、なめらかな味わい。";s:13:"search_word_5";s:34:"カベルネ,カベルネフラン";s:11:"free_area_6";s:3089:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Porcupine Ridge Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／コースタルリージョン</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} </td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2017’] 2015VT：86 Point／Bronze<br>
+[Platter SA 2020’] 2018VT：3.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステレンボッシュ・ヘルダーバーグ地区のブドウを主に使用。ステンレスタンクで発酵後、3分の2をフレンチオークで、残りはステンレスタンクで熟成。少量のカベルネフランをブレンドし、繊細な香がワインに与えられる<br>。鮮やかなルビーレッド、プルーン、イチジク、トリュフ、オークの香り。柔らかな酸味、豊な果実味、適度な渋みと、なめらかな味わい。程よくしっかりとしたボディでバランス良く出来ている。<br>ビーフシチュー、ラム、トマトを使った肉料理など。<br>
+日々 愛用されるテーブルワインをテーマに、畑の人気者 ハリネズミをモチーフとしている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:44:50";s:13:"update_date_8";s:19:"2023-11-13 12:42:13";s:6:"sclr_9";s:7:"2200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:7;a:13:{s:4:"id_0";s:2:"81";s:6:"name_1";s:72:"ブーケンハーツクルーフ・ポークパインリッジ・ロゼ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:270:"ピンクグレープフルーツ、スイカ、ザクロ、ライム、チェリー、ピンクペッパーなどの香り。フレッシュな酸、フルーティで程よくしっかりしたボディ、酸と果実味のバランスが良く心地良いワイン。";s:13:"search_word_5";s:22:"シラー,サンソー";s:11:"free_area_6";s:3160:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Porcupine Ridge Rose</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} </td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>限定品
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+フレッシュで活き活きとしたフルーティなロゼをイメージして比較的若い樹齢のブドウをメインに使用。セニエ式。収穫後、冷却、ステンレスタンクで発酵＆熟成。明るい透明感のあるサーモンピンク。<br>ピンクグレープフルーツ、スイカ、ザクロ、ライム、チェリー、ピンクペッパーなどの香り。フレッシュな酸、フルーティで程よくしっかりしたボディ、酸と果実味のバランスが良く心地良いワイン。余韻は長くドライなフィニッシュ。爽やかでフルーティ、春、夏、アウトドア、テラスなどで楽しみたい。<br>サーモン、シーフードのマリネ、ギョウザ、春巻き、中華料理、鶏肉料理、サラダ、アジア系料理など。<br>
+日々 愛用されるテーブルワインをテーマに、畑の人気者 ハリネズミをモチーフとしている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:44:27";s:13:"update_date_8";s:19:"2023-11-13 12:44:23";s:6:"sclr_9";s:7:"2200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:8;a:13:{s:4:"id_0";s:2:"84";s:6:"name_1";s:72:"ブーケンハーツクルーフ・ザ・チョコレートブロック";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:165:"熟したプラム、ブラックチェリー、赤系果実、黒系果実、ブラックオリーブ、ココア、ミント、スパイスなど複雑な香り。";s:13:"search_word_5";s:106:"シラー,グルナッシュ・ノワール,サンソ―,カベルネソーヴィニョン,ヴィオニエ";s:11:"free_area_6";s:3762:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof The Chocolate Block</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (69％,13％,9％,8％,1％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：92 Point<br>
+[Tim Atkin Report 2018’] 2017VT：93 Point<br>
+[Platter SA 2020’] 2018VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+3年連続で乾燥した年が続き、収穫のタイミングが難しかったが、結果的には凝縮し良いバランスのブドウが採れた。畑はスレート土壌と花崗岩でボディとミネラルを与える。グルナッシュは600Lの樽で熟成することでフレッシュな果実の風味を維持するようにした。カベルネソーヴィニョンはフレンチオークの新樽で熟成。その他の品種は2年目、3年目のフレンチオークと2500Lの大樽で熟成。トータルの熟成期間は12か月。2236樽をセレクトして瓶詰め。<br>熟したプラム、ブラックチェリー、赤系果実、黒系果実、ブラックオリーブ、ココア、ミント、スパイスなど複雑な香り。フレッシュで心地良い酸味、凝縮した豊かな果実味、渋みは細やかで洗練されている。しっかりしたボディで、リッチでなめらかなタッチ。複雑でそれぞれの品種がバランス良く調和された優れたワイン。余韻も長く、綺麗にまとまっている。<br>シラーは濃厚な果実味とスパイスの風味を、グルナッシュは繊細で洗練されたピュアな果実味を、サンソーはフローラルで熟したストロベリーの風味を、カベルネソーヴィニョンはしっかりした渋みと骨格をワインに与えている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:49:00";s:13:"update_date_8";s:19:"2023-11-13 12:42:51";s:6:"sclr_9";s:7:"5400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:9;a:13:{s:4:"id_0";s:2:"87";s:6:"name_1";s:56:"ブーケンハーツクルーフ・セミヨン 2017年";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:323:"ブドウは、フランシュックの3箇所の畑から収穫している、1つは、南アで最も古い畑の1つ、1902年に植樹された沖積土壌。2つ目は収穫量の低い1936年の植樹された畑、3つ目に1942年に植樹されたブッシュヴァイン（株仕立て）のブドウを使用。";s:13:"search_word_5";s:64:"セミヨン,マスカット・オブ・アレキサンドリア";s:11:"free_area_6";s:3916:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Semillon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／フランシュック</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (98％,2％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.1％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：94 Point<br>
+[Tim Atkin Report 2018’] 2016VT：93 Point<br>
+[Platter SA 2020’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ブドウは、フランシュックの3箇所の畑から収穫している、1つは、南アで最も古い畑の1つ、1902年に植樹された沖積土壌。2つ目は収穫量の低い1936年の植樹された畑、3つ目に1942年に植樹されたブッシュヴァイン（株仕立て）のブドウを使用。2017年は、2年続きの乾燥した年で、収穫量は減ったが、凝縮し、リッチでしっかりしたボディのセミヨンを造るのに理想的なブドウが育った。このような古い畑のブドウを使用することにより、複雑で、しっかりした骨格と信じられないほど長い熟成ポテンシャルのあるワインになる。発酵はフレンチオーク（全体の2/3）と卵形のコンクリートタンク（残り1/3）、マスカットはアンフォラで全房で天然発酵、その後14ヶ月熟成（新樽80％使用）。<br>オレンジの花、柑橘類、オレンジ、桃、ハチミツ、レモングラスなどの香り。フレッシュで心地良い酸味、凝縮し豊かな果実味。白桃、オレンジ、レモン、ジンジャーなどの風味。スムーズで、なめらか、リッチな味わい。ふくよかで厚みのあるしっかりした骨格のあるボディ。<br>古木のブドウから造られる特別なセミヨンで、南アフリカの中でも稀有で貴重な存在。「これぞブーケンハーツの７つの椅子ワイン！」という堂々たる風格のある素晴らしいセミヨンなので、必ず一度は飲んでおきたい。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:50:10";s:13:"update_date_8";s:19:"2023-07-25 03:34:50";s:6:"sclr_9";s:7:"5600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:10;a:13:{s:4:"id_0";s:2:"86";s:6:"name_1";s:56:"ブーケンハーツクルーフ・セミヨン 2016年";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:265:"天才醸造家マーク・ケント氏が作る「7つの椅子」のラベルのワイン。毎年のヴィンテージを集めるコレクター達が世界中に存在するほどの人気、かつ超入手困難な逸品。世界完全割当の超限定品。";s:13:"search_word_5";s:64:"セミヨン,マスカット・オブ・アレキサンドリア";s:11:"free_area_6";s:3368:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Semillon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／フランシュック</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (98~99％,1~2％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.67％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：94 Point<br>
+[Tim Atkin Report 2016’] 2014VT：94 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+セミヨン種としては、南アフリカで最も古い樹齢の１つとされている1902年植樹のブドウと、フランシュック地区の1936年と1942年に植樹されたブッシュヴァイン（株仕立て）の３カ所から使用。古い樹齢のブドウは、収穫量が少なく、濃厚で複雑、しっかりした骨格をもたらす。ブドウは房ごとプレスし、樽と卵型のコンクリートタンクで天然発酵。その後は低温で14カ月熟成。その間SO2は入れない。マロラクティックも無し。1-2％のマスカット・オブ・アレキサンドリアをブレンド。<br>繊細でエレガントなグレープフルーツ、カモミール、リンゴの花、スパイスなどの香り。柔らかくなめらかな酸味、濃厚で凝縮した果実味、太い骨格のあるボディ。黄桃、梨、グリーンイチジクなどの豊かな風味が広がり、酸味とのバランスも良い。フィニッシュは長く、複雑、スパイス感もある。<br>飲み頃は2020-2018年頃。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:49:44";s:13:"update_date_8";s:19:"2023-07-25 03:42:45";s:6:"sclr_9";s:7:"5600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:11;a:13:{s:4:"id_0";s:2:"85";s:6:"name_1";s:72:"ブーケンハーツクルーフ・ノーブルレイトハーベスト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:237:"フランシュックの川に面した1997年に植樹された自社畑のオーガニック認証のある1ブロックのブドウを使用。ノーブルレイトハーベストは、毎年1樽のみ作られる貴重なワイン。";s:13:"search_word_5";s:12:"セミヨン";s:11:"free_area_6";s:2929:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Noble Late Harvest</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／フランシュック</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>375ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2016VT：95 Point<br>
+[Platter SA 2020’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+フランシュックの川に面した1997年に植樹された自社畑のオーガニック認証のある1ブロックのブドウを使用。ノーブルレイトハーベストは、毎年1樽のみ作られる貴重なワイン。遅摘み貴腐ブドウを新樽のフレンチオークで発酵、30ヶ月熟成。<br>アプリコットやパイナップル、クリーム・ブリュレ、シナモンなどの香り。酸味と甘さのバランスが良く、コクがあり、蜂蜜のような濃厚でリッチな味わい。オークの風味もあり、ゴージャスなワインに仕上がっている。ソーテルヌ・スタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:49:23";s:13:"update_date_8";s:19:"2023-11-13 12:41:01";s:6:"sclr_9";s:7:"5700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:12;a:13:{s:4:"id_0";s:2:"88";s:6:"name_1";s:81:"ブーケンハーツクルーフ・カップ・マリティム・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:109:"南アフリカ・トップ生産者の1つ、ブーケンハーツクルーフ社の新プロジェクト。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:4370:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Cap Maritime Cahrdonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／アッパーヘメルアンアード</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.80％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2018’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+アッパーヘメルアンアードの畑のブドウをフランシュックの本社まで運んで製造。ブドウの選果後、全房でプレスし、60％はフレンチオークの新樽で、残りは卵形のコンクリートタンクで天然発酵。マロラクティック発酵を経て、時々軽くバトナージュをしながら14ヶ月熟成してブレンド。レモン、グレープフルーツなどの柑橘類、桃、メロンなどの果実にヴァニラなどのスパイスやクリーミーな香り。柔らかく豊かな酸、やや太く厚みのある骨格とボディ、ふくよかさを持ち、ミネラルは強く感じる。口あたりはなめらかで綺麗にまとまっている。洗練され、調和の取れたエレガントなワイン。余韻は長く、最後まで心地良いレモンのようなフレッシュな風味が最後まで続く。数年から5年後の熟成が楽しみ。<br>シーフード、鶏肉、豚肉、レモンバターソースの料理など。<br>
+<br>
+南アフリカ・トップ生産者の1つ、ブーケンハーツクルーフ社の新プロジェクト。本拠地フランシュック、カベルネソーヴィニョンの銘醸地ステレンボシュ、乾燥し秀逸なシラーを産出するスワートランドを次々に傘下に治めてきたリーダー、マーク・ケントが次に狙ったのは、南アフリカを代表するシャルドネとピノノワールを産出するヘメルアンアードだった。<br>畑は、アッパーヘメルアンアードに38haを購入。南アフリカの栽培家の第一人者ロサ・クルーガーが栽培をコンサルしている。そして2015年、醸造家にシャルドネとピノノワールで有名なケープ・シャムニからゴトフリード・モカを迎え入れ、マークのプロジェクトは着々と進んでいる。<br>マークは、「ピノノワールはまだ自分も作ったことが無かった品種。ゴトフリードは、自分にはない素晴らしい才能の持ち主。」と語っている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:50:31";s:13:"update_date_8";s:19:"2022-03-26 03:47:03";s:6:"sclr_9";s:7:"7100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:13;a:13:{s:4:"id_0";s:2:"95";s:6:"name_1";s:83:"ブーケンハーツクルーフ・ステレンボッシュ・カベルネ 2019年";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:180:"カシス、ブラックチェリー、黒系果実、鉛筆の芯、ハーブ、スパイスなどの香り。フレッシュで心地良い酸味、凝縮し豊かな果実味。";s:13:"search_word_5";s:55:"カベルネソーヴィニョン,カベルネフラン";s:11:"free_area_6";s:3667:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Stellenbosch Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (94％,6％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml未満</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：94 Point<br>
+[Tim Atkin Report 2018’] 2016VT：93 Point<br>
+[Platter SA 2020’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+畑はステレンボシュ、ヘルダーバーグ地区の北西向き斜面。土壌は花崗岩、砂岩、コーヒークリップ（鉄分の多い花崗岩で赤ワインにミネラルとエレガンスを与える）。17年は乾燥し、暖かい年で、ブドウの生育は小さく、その分ブドウの風味は凝縮している。収穫後は、ステンレスタンクで発酵、パンプオーバー、225Ｌのフレンチオークに移し、マロラクティック発酵を経て18ヶ月熟成（新樽60％）。<br>カシス、ブラックチェリー、黒系果実、鉛筆の芯、ハーブ、スパイスなどの香り。フレッシュで心地良い酸味、凝縮し豊かな果実味。渋みは細やかで洗練されているがしっかりと感じる。スッキリとタイトでフォーカスされたボディ、なめらかでシルキー。余韻は長く、フィニッシュはドライでエレガントにまとまり、ブルーベリーやフレッシュな青葉のような風味を感じる。少量のカベルネフランがアクセントになり、このワインにフレッシュさとエレガントさを加えている。酸味、果実味、ボディのバランスが良く、気持ちの良い非常に美しいカベルネに仕上がっている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:53:57";s:13:"update_date_8";s:19:"2023-07-25 03:34:22";s:6:"sclr_9";s:7:"8100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:14;a:13:{s:4:"id_0";s:2:"93";s:6:"name_1";s:80:"ブーケンハーツクルーフ・フランシュック・カベルネ 2018年";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:285:"カシス、ブラックチェリー、ブルーベリー、ハーブ、スパイスなどの香り。心地良い酸味、凝縮し豊かな果実味。渋みは細やかでなめらか。柔らかくふくよかなボディで深みがあり、リッチでシルキーなタッチ。";s:13:"search_word_5";s:34:"カベルネ,カベルネフラン";s:11:"free_area_6";s:3414:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Franschhoek Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／フランシュック</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (90％,10％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：94 Point<br>
+[Tim Atkin Report 2018’]2016VT：93 Point<br>
+[Platter SA 2020’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+畑はフランシュックに4箇所あり、南西向き斜面。土壌は花崗岩の上に砂岩ロームの層。2017年は2015年に続く良い年で、しっかりとした渋みと骨格、酸味をワインに与えることとなった。収穫後は、コンクリートタンクで発酵、パンプオーバー、225Ｌのフレンチオークに移し、マロラクティック発酵を経て18ヶ月熟成（新樽85％）。<br>カシス、ブラックチェリー、ブルーベリー、ハーブ、スパイスなどの香り。心地良い酸味、凝縮し豊かな果実味。渋みは細やかでなめらか。柔らかくふくよかなボディで深みがあり、リッチでシルキーなタッチ。余韻は長く、果実の風味豊かで爽やかなフィニッシュ。少量のカベルネフランがアクセントになり、このワインにフレッシュさとエレガントさを加えている。酸味、果実味、ボディのバランスが良く、気持ちの良い柔らかなカベルネに仕上がっている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:52:59";s:13:"update_date_8";s:19:"2023-07-25 03:40:53";s:6:"sclr_9";s:7:"8100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:15;a:13:{s:4:"id_0";s:2:"89";s:6:"name_1";s:84:"ブーケンハーツクルーフ・カップ・マリティム・ピノノワール";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:109:"南アフリカ・トップ生産者の1つ、ブーケンハーツクルーフ社の新プロジェクト。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:4300:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Cap Maritime Pinot Noir</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／アッパーヘメルアンアード</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.40％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2018’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+アッパーヘメルアンアードの畑のブドウをフランシュックの本社まで運んで製造。ブドウの選果後、一部は除茎し、残りは全房で天然発酵。バスケットプレスにてプレス後、225Lのフレンチオークの古樽に移し、マロラクティック発酵を経て、16ヶ月熟成してブレンド。チェリー、赤系果実、熟した果実、香水、オーク樽やスパイスなど複雑で豊かな香り。<br>優しく心地良い酸味、ミネラルを感じ、ボディはなめらかで中庸。渋みは細やかでピュアで豊かなブドウの風味を楽しめる。バランスの取れた美しいクラシックなスタイル。余韻は長く、明るくて活き活きとしたフレッシュな風味はフィニッシュまで続く。ヴィンテージを重ねていくごとに今後の成長を期待したい。<br>鶏肉、鴨肉、ジビエ、ローストビーフなど。<br>
+<br>
+南アフリカ・トップ生産者の1つ、ブーケンハーツクルーフ社の新プロジェクト。本拠地フランシュック、カベルネソーヴィニョンの銘醸地ステレンボシュ、乾燥し秀逸なシラーを産出するスワートランドを次々に傘下に治めてきたリーダー、マーク・ケントが次に狙ったのは、南アフリカを代表するシャルドネとピノノワールを産出するヘメルアンアードだった。<br>畑は、アッパーヘメルアンアードに38haを購入。南アフリカの栽培家の第一人者ロサ・クルーガーが栽培をコンサルしている。そして2015年、醸造家にシャルドネとピノノワールで有名なケープ・シャムニからゴトフリード・モカを迎え入れ、マークのプロジェクトは着々と進んでいる。<br>マークは、「ピノノワールはまだ自分も作ったことが無かった品種。ゴトフリードは、自分にはない素晴らしい才能の持ち主。」と語っている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:50:55";s:13:"update_date_8";s:19:"2023-11-13 12:40:19";s:6:"sclr_9";s:7:"8600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:16;a:13:{s:4:"id_0";s:2:"90";s:6:"name_1";s:53:"ブーケンハーツクルーフ・シラー 2016年";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:265:"天才醸造家マーク・ケント氏が作る「7つの椅子」のラベルのワイン。毎年のヴィンテージを集めるコレクター達が世界中に存在するほどの人気、かつ超入手困難な逸品。世界完全割当の超限定品。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:3312:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Syrah</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：95 Point<br>
+[Tim Atkin Report 2017’] 2015VT：96 Point<br>
+[Tim Atkin Report 2016’] 2014VT：95 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+スワートランド産シラー100％。ブドウは2カ所の畑から収穫。スワートランド地区（ポルセレインバーグ80％とゴールドマイン20％）のブドウを使用している。それぞれの地区ごとに特徴が違い、ワインがより複雑な味わいになっている。ブドウは部分的に除茎し、チューリップ型のコンクリートタンクで天然発酵。発酵後は、2500Ｌの大樽と600Ｌの樽で18カ月熟成。<br>黒系ベリー、ブラックオリーブ、スミレ、スパイス、黒コショウなどの香り。柔らかくなめらかな酸味、濃厚で凝縮した果実味、細やかでしっかりした渋み、シルキーで洗練された綺麗なワイン。余韻は長く、フィニッシュはコショウ、クローブ、ナツメグなどのスパイスも感じる。バランスの良い、極めて秀逸でエレガントなローヌ・スタイルのワイン。<br>飲み頃は2020-2018年頃。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:51:16";s:13:"update_date_8";s:19:"2023-11-13 12:41:34";s:6:"sclr_9";s:7:"9300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

@@ -1,0 +1,13 @@
+{% block gmo_epsilon_conveni_form_confirm %}
+<script>
+$(function() {
+    $('div.ec-rectHeading h2').each(function() {
+        if($(this).html() == 'お支払方法') {
+            $(this).closest('.ec-orderPayment').after($('#gmo_epsilon_conveni'))
+        }
+    });
+})</script>
+<div id="gmo_epsilon_conveni">
+{{ form_widget(form.convenience, { type: 'hidden' }) }}
+</div>
+{% endblock %}

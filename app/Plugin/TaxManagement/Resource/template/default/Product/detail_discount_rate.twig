@@ -1,0 +1,70 @@
+{# 通常価格 #}
+{% if Product.hasProductClass -%}
+    <div class="ec-productRole__priceRegular">
+        {% if Product.getPrice01Min is not null and Product.getPrice01IncTaxMin == Product.getPrice01IncTaxMax %}
+            <span class="ec-productRole__priceRegularPrice">{{ '通常価格'|trans }}：<span class="price01-default">{{ Product.getPrice01IncTaxMin|price }}</span></span>
+            <span class="ec-productRole__priceRegularTax">{{ '税込'|trans }}</span>
+        {% elseif Product.getPrice01Min is not null and Product.getPrice01Max is not null %}
+            <span class="ec-productRole__priceRegularPrice">{{ '通常価格'|trans }}：<span class="price01-default">{{ Product.getPrice01IncTaxMin|price }} ～ {{ Product.getPrice01IncTaxMax|price }}</span></span>
+            <span class="ec-productRole__priceRegularTax">{{ '税込'|trans }}</span>
+        {% endif %}
+    </div>
+{% else %}
+    {% if Product.getPrice01Max is not null %}
+        <span class="ec-productRole__priceRegularPrice">{{ '通常価格'|trans }}：{{ Product.getPrice01IncTaxMin|price }}</span>
+        <span class="ec-productRole__priceRegularTax">{{ '税込'|trans }}</span>
+    {% endif %}
+{% endif %}
+{# 販売価格 #}
+<div class="ec-productRole__price">
+    {# 税抜き価格 #}
+    <div class="ec-price">
+    {% if TaxManagementConfig.isIncludeTaxFlag is not null and TaxManagementConfig.isIncludeTaxFlag == false -%}
+        {% if Product.hasProductClass -%}
+            {% if Product.getPrice02Min == Product.getPrice02Max %}
+                <span class="ec-price__price price02-default-no-tax">{{ Product.getPrice02Max|price }}</span>
+                <span class="ec-price__tax ec-price__price price02-default">({{ Product.getPrice02IncTaxMin|price }}{{ '税込'|trans }})</span>
+            {% else %}
+                <span class="ec-price__price price02-default-no-tax">{{ Product.getPrice02Min|price }} ～ {{ Product.getPrice02Max|price }} </span>
+                <span class="ec-price__tax ec-price__price price02-default">({{ Product.getPrice02IncTaxMin|price }} ～ {{ Product.getPrice02IncTaxMax|price }}{{ '税込'|trans }})</span>
+            {% endif %}
+        {% else -%}
+            <span class="ec-price__price price02-default-no-tax">{{ Product.getPrice02Min|price }}</span>
+            <span class="ec-price__tax ec-price__price price02-default">({{ Product.getPrice02IncTaxMin|price }}{{ '税込'|trans }})</span>
+        {% endif -%}
+    {% else -%}
+        {% if Product.hasProductClass -%}
+            {% if Product.getPrice02Min == Product.getPrice02Max %}
+                <span class="ec-price__price price02-default">{{ Product.getPrice02IncTaxMin|price }}</span>
+                <span class="ec-price__tax">{{ '税込'|trans }}</span>
+            {% else %}
+                <span class="ec-price__price price02-default">{{ Product.getPrice02IncTaxMin|price }} ～ {{ Product.getPrice02IncTaxMax|price }}</span>
+                <span class="ec-price__tax">{{ '税込'|trans }}</span>
+            {% endif %}
+        {% else -%}
+            <span class="ec-price__price price02-default">{{ Product.getPrice02IncTaxMin|price }}</span>
+            <span class="ec-price__tax">{{ '税込'|trans }}</span>
+        {% endif -%}
+    {% endif -%}
+    <!--割引率-->
+    {% if Product.discountRateMin is not null and Product.discountRateMin > 0 %}
+    {# 割引率0以下or100以上の場合表示しない #}
+        {% if Product.hasProductClass -%}
+            {% if Product.discountRateMin == Product.discountRateMax %}
+            <span class="price_off" style="font-size: 80%; display: inline-block; background: #DE5D50; line-height: 1; color: #FFF; margin-top: 3px; border-radius: 5px; vertical-align: top; padding: 5px; font-weight: bold;">
+            {{ Product.discountRateMin }}%OFF
+            </span>
+            {% else %}
+            <span class="price_off" style="font-size: 80%; display: inline-block; background: #DE5D50; line-height: 1; color: #FFF; margin-top: 3px; border-radius: 5px; vertical-align: top; padding: 5px; font-weight: bold;">
+            {{ Product.discountRateMin }}% ～ {{ Product.discountRateMax }}%OFF
+            </span>
+            {% endif %}
+        {% else -%}
+            <span class="price_off" style="font-size: 80%; display: inline-block; background: #DE5D50; line-height: 1; color: #FFF; margin-top: 3px; border-radius: 5px; vertical-align: top; padding: 5px; font-weight: bold;">
+            {{ Product.discountRateMin }}%OFF
+            </span>
+        {% endif %}
+    {% endif %}
+    </div>
+</div>
+{# 商品コード #}

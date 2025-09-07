@@ -1,0 +1,730 @@
+1754860473
+%255B05cdeb3d09c5084baac3bc9971d0bd3593c4150c%255D%255B1%255D
+a:1:{s:1292:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:45;}i:1;a:15:{i:0;i:140;i:1;i:139;i:2;i:142;i:3;i:141;i:4;i:215;i:5;i:214;i:6;i:213;i:7;i:146;i:8;i:145;i:9;i:144;i:10;i:143;i:11;i:148;i:12;i:149;i:13;i:147;i:14;i:150;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:15:{i:0;a:13:{s:4:"id_0";s:3:"140";s:6:"name_1";s:69:"ステラー・オーガニックス・リブアリトル・レッド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:162:"「オーガニックだからと言って品質に妥協はない」柔らかい酸味と程よい渋みで飲み飽きしにくいタイプのワインです。";s:13:"search_word_5";s:12:"シラーズ";s:11:"free_area_6";s:2510:"<div class="productsheet__table">   <h2><small>Stellar Organics Live a little Red</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／オリファンツリバー</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>250ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+柔らかい酸味と程よい渋み。フルーティで全体的になめらかな口当たりで飲み易く、飲み飽きしにくいタイプのワインです。安くて美味しいOrganicワインを探している人にお薦め。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 07:55:59";s:13:"update_date_8";s:19:"2023-11-13 12:28:56";s:6:"sclr_9";s:6:"780.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"139";s:6:"name_1";s:72:"ステラー・オーガニックス・リブアリトル・ホワイト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:189:"「オーガニックだからと言って品質に妥協はない」ライムやグレープフルーツなどの柑橘系の香りに、爽やかな酸味とフルーティな味わい。";s:13:"search_word_5";s:52:"シュナンブラン,ソーヴィニヨンブラン";s:11:"free_area_6";s:2505:"<div class="productsheet__table">   <h2><small>Stellar Organics Live a little White</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／オリファンツリバー</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (85％,15％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>250ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ライムやグレープフルーツなどの柑橘系の香りに、爽やかな酸味とフルーティな味わいが心地良く、ボディは比較的しっかりしています。安くて美味しいOrganicワインを探している人にお薦めです。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 07:55:11";s:13:"update_date_8";s:19:"2024-12-24 04:51:53";s:6:"sclr_9";s:6:"780.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"142";s:6:"name_1";s:109:"ステラー・オーガニック・ムーンライト・シュナンブラン&ソーヴィニヨンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:261:"「オーガニックだからと言って品質に妥協はない」ライムやグレープフルーツなどの柑橘系の香りに、爽やかな酸味とフルーティな味わいが心地良い。適度なコクとボディも魅力のワインです。";s:13:"search_word_5";s:52:"シュナンブラン,ソーヴィニヨンブラン";s:11:"free_area_6";s:2495:"<div class="productsheet__table">   <h2><small>Stellar Organics Moonlight Chenin Blanc&Sauvignon Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (85％,15％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ライムやグレープフルーツなどの柑橘系の香りに、爽やかな酸味とフルーティな味わいが心地良い。適度なコクとボディも魅力のワインです。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 07:56:59";s:13:"update_date_8";s:19:"2023-11-13 12:30:08";s:6:"sclr_9";s:7:"1400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"141";s:6:"name_1";s:84:"ステラー・オーガニックス・ムーンライト・シラーズ＆メルロ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:285:"「オーガニックだからと言って品質に妥協はない」そのポリシーのもとに作られた。柔らかい酸味と程よい渋み。フルーティで全体的になめらかな口当たりで飲み易い。適度なコクとボディも魅力のワインです。";s:13:"search_word_5";s:22:"シラーズ,メルロ";s:11:"free_area_6";s:2414:"<div class="productsheet__table">   <h2><small>Stellar Organics Moonlight Shiraz Merlot</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (85％,15％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+柔らかい酸味と程よい渋み。フルーティで全体的になめらかな口当たりで飲み易い。適度なコクとボディも魅力のワインです。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 07:56:34";s:13:"update_date_8";s:19:"2023-11-13 12:29:53";s:6:"sclr_9";s:7:"1400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:3:"215";s:6:"name_1";s:108:"ステラー・ランニングダック・オーガニック＆酸化防止剤無添加・セミスイート";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:360:"「オーガニックで酸化防止剤無添加だからと言って品質に妥協はない！」そのポリシーのもとに作られた。レモンとバラ、マスカットの香り。透明感がありフレッシュな口当たりから徐々に柑橘類、ライチの風味が訪れ、最後にブドウ由来の優しい甘みが広がります。";s:13:"search_word_5";N;s:11:"free_area_6";N;s:13:"create_date_7";s:19:"2022-02-10 10:32:10";s:13:"update_date_8";s:19:"2024-08-14 08:10:53";s:6:"sclr_9";s:7:"1500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:3:"214";s:6:"name_1";s:105:"ステラー・ランニングダック・オーガニック＆酸化防止剤無添加・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:249:"「オーガニックで酸化防止剤無添加だからと言って品質に妥協はない！」そのポリシーのもとに作られた。メロン、柑橘系などの香り。爽やかな酸味にフレッシュな果実味が心地よい。";s:13:"search_word_5";N;s:11:"free_area_6";N;s:13:"create_date_7";s:19:"2022-02-10 10:19:55";s:13:"update_date_8";s:19:"2025-08-07 09:24:12";s:6:"sclr_9";s:7:"1500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:3:"213";s:6:"name_1";s:99:"ステラー・ランニングダック・オーガニック＆酸化防止剤無添加・メルロ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:339:"「オーガニックで酸化防止剤無添加だからと言って品質に妥協はない！」そのポリシーのもとに作られた。ブルーベリー、ダークチョコレートなどの香り。優しい柔らかな酸、程よい骨格のボディ。口当たりはやさしく、ジューシーで心地よい味わい。";s:13:"search_word_5";N;s:11:"free_area_6";N;s:13:"create_date_7";s:19:"2022-02-10 10:13:54";s:13:"update_date_8";s:19:"2024-08-14 07:35:25";s:6:"sclr_9";s:7:"1500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:7;a:13:{s:4:"id_0";s:3:"146";s:6:"name_1";s:102:"ステラー・ランニングダック・オーガニック＆酸化防止剤無添加・ホワイト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:282:"「オーガニックで酸化防止剤無添加だからと言って品質に妥協はない！」そのポリシーのもとに作られた。なめらかで、酸とのバランスも心地良く、優しい口あたりで飲みやすい。クリスピーなフィニッシュ。";s:13:"search_word_5";s:18:"コロンパール";s:11:"free_area_6";s:2835:"<div class="productsheet__table">   <h2><small>Stellar Running Duck Non Sulpher Added White</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13％未満／残糖 4.0g/L</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／スクリュー</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2022</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、酸化防止剤無添加、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステンレスタンクで発酵、熟成。ボトリングの際に窒素ガスを注入して酸化を防いでいる。グレープフルーツ、ピーチなどの香り。優しい柔らかな酸とボディ。フレッシュでフルーティ、ジューシーな味わい。なめらかで、酸とのバランスも心地良く、優しい口あたりで飲みやすい。クリスピーなフィニッシュ。<br>シーフード、鶏肉・豚肉料理、和食、寿司、アジア系料理、中華料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:00:24";s:13:"update_date_8";s:19:"2023-11-13 12:33:09";s:6:"sclr_9";s:7:"1500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:8;a:13:{s:4:"id_0";s:3:"145";s:6:"name_1";s:108:"ステラー・ランニングダック・オーガニック＆酸化防止剤無添加・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:336:"「オーガニックで酸化防止剤無添加だからと言って品質に妥協はない！」そのポリシーのもとに作られた。チェリー、プラム、タバコなどの香り。優しい柔らかな酸とボディ。フレッシュで赤系果実やプラムなどのフルーティでジューシーな味わい。";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2862:"<div class="productsheet__table">   <h2><small>Stellar Running Duck Non Sulpher Added Pinotage</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満／残糖 2.5g/L</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／スクリュー</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Ultra Vulalue Challenge 2018’] 2018VT：Gold
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステンレスタンクで発酵、熟成。ボトリングの際に窒素ガスを注入して酸化を防いでいる。<br>チェリー、プラム、タバコなどの香り。優しい柔らかな酸とボディ。フレッシュで赤系果実やプラムなどのフルーティでジューシーな味わい。渋みは程よい程度で、軽快でなめらか、優しい口あたりで飲みやすい。<br>ローストビーフ、ローストポーク、赤身の牛肉、チーズカレー、スパイス系料理、アジア系料理、中華料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 07:58:30";s:13:"update_date_8";s:19:"2023-11-13 12:31:20";s:6:"sclr_9";s:7:"1500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:9;a:13:{s:4:"id_0";s:3:"144";s:6:"name_1";s:102:"ステラー・ランニングダック・オーガニック＆酸化防止剤無添加・シラーズ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:327:"「オーガニックで酸化防止剤無添加だからと言って品質に妥協はない！」そのポリシーのもとに作られた。フレッシュで赤や黒系果実、ブラックオリーブなどの風味のフルーティでジューシーな味わい。渋みは程よい程度で、軽快でなめらか。";s:13:"search_word_5";s:12:"シラーズ";s:11:"free_area_6";s:2952:"<div class="productsheet__table">   <h2><small>Stellar Running Duck Non Sulpher Added Shiraz</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満／残糖 3.0g/L</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／スクリュー</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Ultra Vulalue Challenge 2018’] 2018VT：Gold<br>
+[Real Wine Guide 2019’] 2017VT：旨安大賞
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステンレスタンクで発酵、熟成。ボトリングの際に窒素ガスを注入して酸化を防いでいる。<br>ダークチェリー、ブラックオリーブ、プラム、スパイス、コショーなどの香り。優しい柔らかな酸とボディ。フレッシュで赤や黒系果実、ブラックオリーブなどの風味のフルーティでジューシーな味わい。渋みは程よい程度で、軽快でなめらか、優しい口あたりで飲みやすい。<br>スペアリブ、ローストチキン、タンドリーチキンやラム、スパイス系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 07:57:51";s:13:"update_date_8";s:19:"2024-01-10 22:26:04";s:6:"sclr_9";s:7:"1500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:10;a:13:{s:4:"id_0";s:3:"143";s:6:"name_1";s:102:"ステラー・ランニングダック・オーガニック＆酸化防止剤無添加・カベルネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:351:"「オーガニックで酸化防止剤無添加だからと言って品質に妥協はない！」そのポリシーのもとに作られた。ダークチェリー、ローストした赤ピーマン、ヴァニラなどの香り。優しい柔らかな酸とボディ。フレッシュで黒系果実の風味のフルーティでジューシー。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";N;s:13:"create_date_7";s:19:"2020-10-30 07:57:25";s:13:"update_date_8";s:19:"2025-08-07 09:25:21";s:6:"sclr_9";s:7:"1500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:11;a:13:{s:4:"id_0";s:3:"148";s:6:"name_1";s:81:"ステラー・オーガニックス・リバーズエンド・ピノノワール";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:282:"オリファンツリヴァー小地区クーケナップの川沿いの畑から高品質な有機ピノノワールを丁寧に収獲。甘いチェリーやキャンディ、森の土などの香り。しっかりとした果実味があり、フレッシュ＆フルーティ。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:2690:"<div class="productsheet__table">   <h2><small>Stellar Organics River‘s End Pinot Noir</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／クーケナップ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+オリファンツリヴァー小地区クーケナップの川沿いの畑から高品質な有機ピノノワールを丁寧に収獲。ステンレスタンクで発酵後、熟成。甘いチェリーやキャンディ、森の土などの香り。しっかりとした果実味があり、フレッシュ＆フルーティ。繊細なタンニン、なめらかでエレガントなフィニッシュ。<br>豚ロース、鴨ロースト、キノコ類など。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:01:31";s:13:"update_date_8";s:19:"2023-11-13 12:35:13";s:6:"sclr_9";s:7:"2300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:12;a:13:{s:4:"id_0";s:3:"149";s:6:"name_1";s:69:"ステラー・オーガニックス・ロゼ・スパークリング";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:198:"フレッシュ＆フルーティでクラシックなシャンパーニの風味。優しいスムーズな泡で飲みやすい。エレガントで赤い果実を思わせるフィニッシュ。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:2718:"<div class="productsheet__table">   <h2><small>Stellar Organics Rose Sparkling</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステンレスタンクで発酵後、ブレンドし。柑橘類や酵母の香り。フレッシュ＆フルーティでクラシックなシャンパーニの風味。優しいスムーズな泡で飲みやすい。エレガントで赤い果実を思わせるフィニッシュ。<br>カナペなどの前菜、ソフトチーズ、伊勢海老、スパイシーなアジア料理など。リーズナブルで美味しいオーガニックワインを探している人に特にお薦め。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:02:08";s:13:"update_date_8";s:19:"2023-11-13 12:35:49";s:6:"sclr_9";s:7:"2500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:13;a:13:{s:4:"id_0";s:3:"147";s:6:"name_1";s:60:"ステラー・オーガニックス・スパークリング";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:273:"「オーガニックだからと言って品質に妥協はない」グレープフルーツやライムの香り。フレッシュで爽やか、優しい酸味と柔らかい泡が心地良く飲みやすいスパークリング。程良くしっかりしたボディ。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:2916:"<div class="productsheet__table">   <h2><small>Stellar Organics Sparkling</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>オーガニック、フェアトレード
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+グレープフルーツやライムの香り。フレッシュで爽やか、優しい酸味と柔らかい泡が心地良く飲みやすいスパークリング。程良くしっかりしたボディで、辛すぎず、心地良い酸味とスムーズでほんのりナッツやビスケットのような風味も感じるフィニッシュ。<br>お勧め料理は前菜、牡蠣（カキ）、寿司、天ぷらなど幅広く。<br>オーガニックで、フェアトレードで、リーズナブルで、フルーティで、スイスイ飲めるスパークリングワイン。リーズナブルで美味しいオーガニックワインを探している人に特にお薦め。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:00:49";s:13:"update_date_8";s:19:"2024-12-24 05:16:26";s:6:"sclr_9";s:7:"2500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:14;a:13:{s:4:"id_0";s:3:"150";s:6:"name_1";s:45:"ステラー・ヘブン・オン・アース";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:195:"「オーガニックだからと言って品質に妥協はない」藁とルイボスティーの葉の上で葡萄を乾燥させて造る至極のデザートワイン。「地上の天国」";s:13:"search_word_5";s:39:"ミュスカドアレキサンドリア";s:11:"free_area_6";s:2829:"<div class="productsheet__table">   <h2><small>Stellar Heaven on Earth Natural Sweet</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／オリファンツリバー</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>10.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>375ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2017’] 5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+藁と南アフリカのお茶ルイボスティの上でぶどうを乾燥させた後に破砕、圧搾、樽での発酵して造られた南アフリカ産デザートワイン。 ハチミツやルイボスティの甘い香り。とても上品で、高級感のある黄金色はなめらかで濃厚な甘さ。この甘さがとても上品で高貴な余韻をもたらします。まさに「ヘブンオンアース」地上の楽園。<br>デザートとして楽しまれても良いですし、バニラアイスクリームなどにかけるのもお勧めです。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:02:42";s:13:"update_date_8";s:19:"2023-11-13 12:30:37";s:6:"sclr_9";s:7:"2600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

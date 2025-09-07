@@ -1,0 +1,12 @@
+									{% if Product.discountRateMin is not null and Product.discountRateMin > 0%}
+									{# 割引率0以下or100以上の場合表示しない #}
+										{% if Product.hasProductClass -%}
+											{% if Product.discountRateMin == Product.discountRateMax %}
+											<span class="price_off ec-font-bold">({{ Product.discountRateMin }}%OFF)</span>
+											{% else %}
+											<span class="price_off ec-font-bold show">({{ Product.discountRateMin }}% ～ {{ Product.discountRateMax }}%OFF)</span>
+											{% endif %}
+										{% else -%}
+											<span class="price_off ec-font-bold">({{ Product.discountRateMin }}%OFF)</span>
+										{% endif %}
+									{% endif %}

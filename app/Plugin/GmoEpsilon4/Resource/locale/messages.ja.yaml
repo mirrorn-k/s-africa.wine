@@ -1,0 +1,32 @@
+# flash messages
+gmo_epsilon.admin.save.success: 登録しました。
+gmo_epsilon.admin.save.failed: 登録に失敗しました。
+
+# twig
+gmo_epsilon.admin.config.title: イプシロン決済プラグイン
+gmo_epsilon.admin.config.sub_title: プラグイン設定
+gmo_epsilon.admin.config.header: 設定
+gmo_epsilon.admin.config.save: 登録
+gmo_epsilon.admin.config.required: 必須
+gmo_epsilon.admin.config.back: プラグイン一覧
+gmo_epsilon.admin.config.contract_code: 契約コード
+gmo_epsilon.admin.config.destination_url: 接続先URL
+gmo_epsilon.admin.config.info_conf_url: 情報確認URL
+gmo_epsilon.admin.config.ssl_version: SSLバージョン選択
+gmo_epsilon.admin.config.use_payment: 利用決済方法
+gmo_epsilon.admin.config.use_convenience: 利用コンビニ
+gmo_epsilon.admin.config.access_block: 不正アクセスブロック機能
+gmo_epsilon.admin.config.access_block_message: 不正アクセスブロック機能は「クレジットカード決済」「登録済みのクレジットカードで決済」を対象とした機能です。<br>下記で設定したアクセス頻度の上限を超えた場合は設定したブロック時間分、クレジットカード情報入力ページへのアクセスをブロックします。<br>不正アクセス対象外としたいIPアドレスはホワイトリストにて設定が可能です。
+gmo_epsilon.admin.config.block_mode: ブロックモード
+gmo_epsilon.admin.config.access_frequency: アクセス頻度
+gmo_epsilon.admin.config.access_frequency_message_1: 秒間に
+gmo_epsilon.admin.config.access_frequency_message_2: 回アクセスされた場合ブロックする
+gmo_epsilon.admin.config.block_time: ブロック時間
+gmo_epsilon.admin.config.block_time_message: 秒
+gmo_epsilon.admin.config.white_list: ホワイトリスト
+gmo_epsilon.admin.config.white_list_message: ※カンマ区切りで複数指定可
+
+gmo_epsilon.front.shopping.use_conveni_unselected: 利用コンビニを選択してください。
+gmo_epsilon.front.shopping.use_conveni_not_fount: 選択できる利用コンビニがありません。
+
+gmo_epsilon.front.shopping.error: システムエラーが発生しました。

@@ -1,0 +1,206 @@
+1754856456
+%255Bc71efc9eb393f287cb8cdac6c7ac76fa9b842416%255D%255B1%255D
+a:1:{s:1163:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:18;}i:1;a:3:{i:0;i:51;i:1;i:52;i:2;i:53;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:3:{i:0;a:13:{s:4:"id_0";s:2:"51";s:6:"name_1";s:48:"クローヌ・ボレアリス・ブリュット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:247:"ビスケットや桃のような香りを持ち、上品でクリーミーな口あたり。フィニッシュは爽やか。持続性のある綺麗で柔らかな泡。 酸化防止剤無添加なので健康志向な方にオススメです。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:3428:"<div class="productsheet__table">   <h2><small>Krone Borealis Brut</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (72％,28％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2017VT：89 Point<br>
+[Sakura Awards 2017’] 2015VT：Gold<br>
+1995年、2004年の南アフリカ・ダイナーズクラブ最優秀ワイン醸造家に選ばれる。2000年、2001年にエアー・フランス・クラシック・トロフィ大会のスパークリング部門（シャンパーニュ製法）で金賞。「憎らしいほど極めてオリジナルのシャンパーニュに近い」と評される。
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+生産量84,000本。涼しい夜間と早朝に手摘みする。フリーラン・ジュース（1トンあたりで約500リットル）のみを使用。ステンレスタンクで低温発酵。その後マロラクティック発酵（ＭＬＦ）。瓶詰め後、地下セラーで瓶内2次発酵（約3ヶ月）。そのまま熟成。手動による動瓶（ルミュアージュ）。<br>ビスケットや桃のような香りを持ち、上品でクリーミーな口あたり。フィニッシュは爽やか。持続性のある綺麗で柔らかな泡。シャンパーニュと間違うような香りと品質は泡ファンに是非飲んでもらいたい。<br>シャンパーニュ・ファンにも満足できるリーズナブルな本格派スパークリング。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:28:04";s:13:"update_date_8";s:19:"2023-11-13 13:07:11";s:6:"sclr_9";s:7:"3100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"52";s:6:"name_1";s:51:"クローヌ・ロゼ・キュベ・ブリュット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:256:"持続性のある綺麗で柔らかな泡。シャンパーニュと間違うような香りと品質は泡ファンに是非飲んでもらいたいスパークリングです。 酸化防止剤無添加なので健康志向な方にオススメです。";s:13:"search_word_5";s:34:"ピノノワール,シャルドネ";s:11:"free_area_6";s:3289:"<div class="productsheet__table">   <h2><small>Krone Rose Cuvee Brut</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (74％,26％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：89 Point<br>
+2015プラッター（南ア）4星。2006年9月&12月で「ロゼ・スパークリングでは南アフリカでもベスト＆ワールドクラスに匹敵する」と高い評価を得る。ワインメーカーのニッキーは1995年、2004年に南アフリカ・ダイナーズクラブ最優秀ワイン醸造家に選ばれる。白のスパークリング（クローヌ・ボレアリス・ブリュット）は2000年、2001年にエアー・フランス・クラシック・トロフィ大会のスパークリング部門（シャンパーニュ製法）で金賞。「憎らしいほど極めてオリジナルのシャンパーニュに近い」と評される。
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ナチュラルな淡いサーモンピンク色。細かで持続的な泡。フレッシュ＆爽やかな赤りんごやベリー系の豊かな香り。繊細で華やか、ややクリーミーでエレガントなスパークリング。 雑誌Dressに掲載されました。
+<img src="{{ asset('/html/user_data/upload/img/Dress_Krone.jpg') }}" alt="雑誌Dress" >
+
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:28:34";s:13:"update_date_8";s:19:"2023-07-25 04:21:42";s:6:"sclr_9";s:7:"4200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"53";s:6:"name_1";s:75:"クローヌ・ＭＣＣ・カイマンスハット・ブランドブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:324:"柑橘類の花や皮、リンゴ、レモンなど、爽やかな香り。スッキリとした爽やかで綺麗な酸、持続的で細やかな心地良いスムーズな泡。程よい厚みとボディ、ドライでシャープなフィニッシュ。僅かにトーストした香りも感じることが出来る。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3874:"<div class="productsheet__table">   <h2><small>Krone MCC Kaaimansgat Blanc de Blancs</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／トゥルバッハ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2016VT：89 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+2016年は暑く、乾燥した年だった。しかし、幸いにもカイマンスハットの畑は、オーバーバーグの冷涼地域、エランズクルーフ地区の冬は雪に覆われるような標高700mの高地冷涼な所で、あまり影響を受けなかった。ここは、普段は昼が暑くても夜は冷え、ブドウがゆっくり育つので、酸のしっかりした完熟ブドウで、pHの低い、MCCにパーフェクトなブドウが育つ。<br>2016年はブドウは2015年より小さく、上質であった。シャルドネは2/19の夜間に収穫し、最高のブドウを収穫できた。<br>シャルドネは樹齢31年。灌漑なし。全房でプレスし、フリーランジュース（500L/トン）のみ使用。天然発酵で6ヶ月。発酵樽は2500Ｌの大樽。瓶内2次発酵は、地下室の冷涼な貯蔵庫で3年熟成後デゴルジュマン。その際２ｇ/Ｌのドサージュ以外何も入れない。<br>柑橘類の花や皮、リンゴ、レモンなど、爽やかな香り。スッキリとした爽やかで綺麗な酸、持続的で細やかな心地良いスムーズな泡。程よい厚みとボディ、ドライでシャープなフィニッシュ。僅かにトーストした香りも感じることが出来る。冷涼な地域を感じさせる豊かな酸のフレッシュさ、ドライで洗練された上品な泡は、今飲んで美味しく、10年以上熟成するものと思われる。<br>シーフード、スモークサーモン、ホタテ、牡蠣、生ハム、天ぷら他様々な料理に幅広く合いやすい。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:31:31";s:13:"update_date_8";s:19:"2023-11-13 13:07:27";s:6:"sclr_9";s:8:"10400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

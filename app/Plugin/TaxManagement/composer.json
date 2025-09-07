@@ -1,0 +1,1 @@
+{"name":"ec-cube\/TaxManagement","version":"1.0.0","type":"eccube-plugin","require":{"ec-cube\/plugin-installer":"~0.0.7"},"extra":{"code":"TaxManagement","id":2074}}

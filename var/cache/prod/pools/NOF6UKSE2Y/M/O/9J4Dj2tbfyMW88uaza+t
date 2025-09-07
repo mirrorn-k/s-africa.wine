@@ -1,0 +1,603 @@
+1754863506
+%255B29424a0bf6ccb5a66b19bda60755d6a25f699d1f%255D%255B1%255D
+a:1:{s:1214:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:7;}i:1;a:9:{i:0;i:178;i:1;i:4;i:2;i:5;i:3;i:7;i:4;i:6;i:5;i:128;i:6;i:58;i:7;i:60;i:8;i:59;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:9:{i:0;a:13:{s:4:"id_0";s:3:"178";s:6:"name_1";s:69:"ステレンラスト・シュナンブラン・スパークリング";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:261:"青リンゴ、ライム、柑橘類など、フレッシュな果実の香り。爽やかで優しい酸味、フルーティで柔らかな泡。ふくよかで、ほんのりリッチ、ライムや柑橘類などの風味も豊かで心地良いワイン。";s:13:"search_word_5";s:73:"シュナンブラン,マスカット・オブ・アレキサンドリア";s:11:"free_area_6";s:3170:"<div class="productsheet__table">   <h2><small>Stellenrust Chenin Blanc Sparkling Brut</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>シャルマ方式
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリー・ヒルズの風化した花崗岩質の畑で15-32年のブッシュヴァイン・シュナンブランと、同じボタラリー・ヒルズの花崗岩質のマスカット・オブ・アレキサンドリアのブッシュヴァインのブドウを使用。<br>朝早くに収穫。ブドウは全房で優しくプレス。ステンレスタンクで発酵し、3ヶ月熟成。シャルマ方式でタンク内二次発酵。ボトリング前にマスカット・オブ・アレキサンドリアをブレンド。青リンゴ、ライム、柑橘類など、フレッシュな果実の香り。爽やかで優しい酸味、フルーティで柔らかな泡。ふくよかで、ほんのりリッチ、ライムや柑橘類などの風味も豊かで心地良いワイン。<br>南アフリカを代表するシュナンブランの生産者、ステレンラスト社のグッドバリューなスパークリング。<br>生カキ、シーフード、スパイス料理、サラダ、パスタなど。
+</div>";s:13:"create_date_7";s:19:"2020-11-19 04:52:37";s:13:"update_date_8";s:19:"2023-07-25 02:17:54";s:6:"sclr_9";s:7:"2400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:1:"4";s:6:"name_1";s:75:"ステレンラスト・オールドブッシュヴァイン・サンソー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:279:"ストロベリー、レッドチェリー、赤系果実、熟した果実、森の土、優しいオークの香り。柔らかな酸とボディ、渋みは優しく細やか。フルーティでシルキー、ピノノワールのような透明感ある綺麗なワイン。";s:13:"search_word_5";s:12:"サンソー";s:11:"free_area_6";s:3242:"<div class="productsheet__table">   <h2><small>Stellenrust Old bushvine Cinsault</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>-
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリー・ヒルズの風化した花崗岩質の畑で1964年に植樹。2日間コールドマセラシオン後、ブドウの皮と一緒にローヌとボルドーの酵母を使ってコンクリートのオープンタンクで発酵。ブドウの皮と一緒にステンレスタンクに移し7-10日漬け込み、マロラクティック発酵を経て、フレンチオークに移して16ヶ月熟成（新樽10％、残りは2-3年目の樽）。<br>ストロベリー、レッドチェリー、赤系果実、熟した果実、森の土、優しいオークの香り。柔らかな酸とボディ、渋みは優しく細やか。フルーティでシルキー、ピノノワールのような透明感ある綺麗なワイン。古木のブドウ由来の優しい口あたりでエレガントなスタイル。<br>日々飲みたい軽快な心地の良いワイン。15度前後くらいの気持ち冷やして提供するのが良いと思います。<br>焼鳥、和食、焼きそば、中華料理、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-09-26 06:39:27";s:13:"update_date_8";s:19:"2023-11-13 11:31:10";s:6:"sclr_9";s:7:"3000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:1:"5";s:6:"name_1";s:99:"ステレンラスト・シュナン・ド・ミュスカ・ノーブルレイト・ハーベスト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:353:"ボタラリー・ヒルズのシュナンブランのブッシュヴァインの畑は樹齢51年以上。マスカットオブアレキサンドリアは樹齢71年以上。1928年創業時のオリジナル・ラベルを採用し、昔のことを忘れないようにしている。また自社の一番古い畑のブドウを使用している。";s:13:"search_word_5";s:73:"シュナンブラン,マスカット・オブ・アレキサンドリア";s:11:"free_area_6";s:3754:"<div class="productsheet__table">   <h2><small>Stellenrust Chenin D' Muscat Noble Late Harvest</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>10.9％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>375ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2016VT：4.5 STAR<br>
+[Tim Atkin Report 2018’] 2016VT：94 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリー・ヒルズのシュナンブランのブッシュヴァインの畑は樹齢51年以上。マスカットオブアレキサンドリアは樹齢71年以上。シュナンブランは4月からの霧（きり）により貴腐菌が付着する。マスカットオブアレキサンドリアは、ブドウが完熟後、人工的にブドウの房の上の茎をペンチで曲げて、ブドウに水分を行きにくくすることによってドライレーズン状にしていく。<br>5月下旬の寒い夜に収穫。破砕後、一部スキンコンタクト、果汁は古いオーク樽に入り2-3週間かけて、それぞれの品種ごとに分けて天然発酵。12か月熟成しブレンド。<br>香り、風味ともにアプリコットを強く感じる。他にもハチミツ、熟したトロピカルフルーツ、キャンディなどの香り。豊かな酸、凝縮した果実味、リッチでなめらか、濃厚な味。甘いハチミツのような味わいですが、しっかりした酸味もあり、後口に甘味が残らずバランス良く出来ている。最後にほんのりスパイスの感じもある。<br>南アフリカを代表するシュナンブラン生産者のステレンラストだからこそ作れる樹齢の古いブドウの濃縮感たっぷりのスペシャルなデザートワイン。<br>チーズ、ベイクドチーズケーキ、焼きプリン、焼菓子など。
+</div>";s:13:"create_date_7";s:19:"2020-09-26 06:43:26";s:13:"update_date_8";s:19:"2023-11-13 11:37:19";s:6:"sclr_9";s:7:"3100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:1:"7";s:6:"name_1";s:75:"ステレンラスト・バレルファーメンティド・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:306:"開けたてはフレッシュなレモンや柑橘類、白桃などの香り。徐々に温度が上がってくると熟した果実、トーストしたアーモンドなどの香りも現れる。活き活きとした豊かな酸、程よい中庸なボディ、なめらかでリッチな味わい。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3940:"<div class="productsheet__table">   <h2><small>Stellenrust Barrel Fermented Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2020’] 2018VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリー・ヒルズの冷涼なブロックの畑（石灰質土壌）のブドウを使用。破砕後、SO2を入れずに8時間スキンコンタクト。ブドウジュースはフレンチオークに移して3ヶ月かけて天然発酵。澱が入ったまま熟成（トータル12ヶ月）。新樽使用30％。残りは2-4年目の樽使用。<br>開けたてはフレッシュなレモンや柑橘類、白桃などの香り。徐々に温度が上がってくると熟した果実、トーストしたアーモンドなどの香りも現れる。活き活きとした豊かな酸、程よい中庸なボディ、なめらかでリッチな味わい。フレッシュ＆フルーティ、濃厚な果実味がしっかりした酸に支えられ、バランス良くまとまっている。<br>この完熟ブドウの糖度の高い果実の甘みと酸のコントラストが、何処にも無いステレンラストの白ワインのスタイルであり面白い点。<br>開けたてはフレッシュで、温度が上がってくると果実の甘みや濃厚さが表れ、更に果実味が落ち着いてくると、ミネラルの要素が強く感じられるようになり、時間の経過とともに1つのワインで3種類のワインを楽しめるような幅広く多面的な要素を持っている。ステレンラストのワインは面白い。<br>キーワードは、「酸」、「完熟ブドウの甘さ」、「ミネラル」。<br>シーフード、鴨のコンフィ、バーニャカウダー、レモンバターソース、クリームソース、熟したチーズ、スモークチーズ、中華、アジア系料理、スパイス料理など。
+</div>";s:13:"create_date_7";s:19:"2020-09-26 06:46:49";s:13:"update_date_8";s:19:"2023-11-13 11:38:28";s:6:"sclr_9";s:7:"3300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:1:"6";s:6:"name_1";s:66:"ステレンラスト・ＭＣＣ・ロゼ・スパークリング";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:275:"2015世界スパークリングワイン・チャレンジ（英国）でドンペリニョン2005、クリスタル2006などを制し1位。2012年ロンドンオリンピックに採用されたワイナリー「ステレンラスト」のスパークリングワイン。";s:13:"search_word_5";s:59:"カベルネフラン,シャルドネ,シュナンブラン";s:11:"free_area_6";s:3570:"<div class="productsheet__table">   <h2><small>Stellenrust Sparkling</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}(62%,19%,19%)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>2015年世界スパークリングワインチャレンジで第１位<br>
+サクラアワード2016 シルバー受賞<br>
+2012年ロンドン・オリンピックに採用されたワイナリー<br>
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+クレマン・ド・ロワールのスタイルで、ロワール品種を使用した瓶内２次発酵。シュナンブランは樹齢32年のブッシュヴァイン（株仕立て。ボタラリー地区）、シャルドネは10年（ボタラリー地区）、カベルネフランは16年の樹齢（ヘルダーバーグ地区）。シュナンブランはステンレスタンクで天然発酵後、澱が入ったまま7ヶ月熟成。シャルドネとカベルネフランは3＆4年目のフレンチオークで天然発酵後、7ヶ月熟成し、ブレンド。瓶内２次発酵後は、澱引き（おりびき：デゴルジュマン）前に18カ月熟成。 打栓後、更に３ヶ月してから出荷。<br>リンゴ、レモン、桃、チェリー、レッドベリーなどの香り。爽やかなスッキリした酸味、キメ細かく、綺麗でスムーズな泡が長く続く上品なスパークリング。薄い綺麗なピンク色。<br>受賞・評価：2015世界スパークリングワイン・チャレンジ（英国）でドンペリニョン2005、クリスタル2006などを制し1位。（出典：http://www.topwinesa.com/?p=4419）
+</div>";s:13:"create_date_7";s:19:"2020-09-26 06:45:55";s:13:"update_date_8";s:19:"2023-11-13 11:37:54";s:6:"sclr_9";s:7:"3300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:3:"128";s:6:"name_1";s:84:"ステレンラスト・オールドブッシュヴァイン・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:258:"綺麗な酸が心地良く、まるで高級シャルドネを思わすようなエレガントなワイン。南アフリカを代表するシュナンブランの生産者、ステレンラスト社の「さすが！」と言える素晴らしい逸品。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3461:"<div class="productsheet__table">   <h2><small>Stellenrust Old Bush Vine Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.6％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>限定商品
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリー・ヒルズの風化した花崗岩質の畑。樹齢41年。斜面は北東向きで、それにより朝方に柔らかい日光が当たり、低温でゆっくりブドウが生育する冷涼な畑。結果として、活き活きとした酸のあるワインに仕上がる。<br>早朝に収穫。１晩スキンコンタク後、ブドウジュースは4-6年目の古い225Lのフレンチオークに入れて5ヶ月かけて天然発酵。その後熟成し、トータルで7ヶ月樽に入っている。ライム、柑橘類、黄桃、梨などの香り。活き活きとした豊かな酸、程よい中庸なボディ、なめらかでリッチな味わい。フレッシュ＆フルーティで、古い樹齢の濃厚な果実味がしっかりした酸に支えられ、上手くまとまっている。綺麗な酸が心地良く、まるで高級シャルドネを思わすようなエレガントなワイン。<br>南アフリカを代表するシュナンブランの生産者、ステレンラスト社の「さすが！」と言える素晴らしい逸品。<br>シーフード、フォアグラ、鴨のコンフィ、レモンバター、クリームソース、濃厚チーズ、中華、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:25:37";s:13:"update_date_8";s:19:"2023-07-25 02:22:47";s:6:"sclr_9";s:7:"3400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:2:"58";s:6:"name_1";s:96:"ステレンラスト・アーティソンズ・アプレンティス・ホワイトサンソー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:286:"ステレンラストの若手醸造家、ヘルマンが、このワインで2019年南アフリカ最優秀若手醸造家に選ばれたアイテム。「白いサンソー」という珍しさだけでなく、純粋に白ワインとしても十分に秀逸な美しいワイン。";s:13:"search_word_5";s:12:"サンソー";s:11:"free_area_6";s:3871:"<div class="productsheet__table">   <h2><small>Stellenrust Artisons Apprentice White Cinsault</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2017VT：4.5 STAR<br>
+[Tim Atkin Report 2019’] 2017VT：92 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステレンラストの若手醸造家、ヘルマンが、このワインで2019年南アフリカ最優秀若手醸造家に選ばれたアイテム。ボタラリー・ヒルズの畑で1964年に植樹。分解した花崗岩土壌。サンソーの中に、突然変異で白や薄いピンク色になったブドウだけを収穫。全房で伝統的なバスケットプレスで優しく圧搾。色が着く前のフリーランジュース（一番搾り）のみを225Ｌの４年目のフレンチオークに移して天然発酵、そのまま９ヶ月熟成。新樽使用30％。残りは2-4年目の樽使用。生産量150ケースのみの限定品。<br>アプリコット、梨、白桃、キャンディ、アーモンド、白い花などの香り。豊かな酸、程よい中庸なボディ、なめらかでリッチな味わい。フレッシュ＆フルーティ、濃厚な果実味がしっかりした酸に支えられ、バランス良くまとまっている。<br>他のステレンラストの白ワインと同じく、完熟ブドウの糖度の高い果実の甘みと酸のコントラストが、何処にも無いステレンラストらしい面白さを表現している。美しいエレガントなワインで、ピュアなブドウジュースの味を楽しめる。「白いサンソー」という珍しさだけでなく、純粋に白ワインとしても十分に秀逸な美しいワイン。<br>サーモン、グリルした魚、シーフード、バーニャカウダー、野菜料理、レモンバターソースなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:37:43";s:13:"update_date_8";s:19:"2023-11-13 11:39:14";s:6:"sclr_9";s:7:"3800.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:7;a:13:{s:4:"id_0";s:2:"60";s:6:"name_1";s:84:"ステレンラスト・アーティソンズ・アフターエイト・シラーズ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:190:"4つのブロックが重なる僅か0.2haしかない小さなブロックのブドウを使用。このブロックは、周囲の4つのブロックの香りが全て混在している。";s:13:"search_word_5";s:12:"シラーズ";s:11:"free_area_6";s:3873:"<div class="productsheet__table">   <h2><small>Stellenrust Artisons After Eight Shiraz</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2018VT：4.5 STAR<br>
+[Tim Atkin Report 2019’] 2016VT：90 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリーヒルズのユーカリの木の横にある３ha畑で樹齢19年。その中に黒コショウの香りがするブロック（写真参照。黒の円内）、スミレの香りがするブロック（紫の円内）、ブルーベリーの香りがするブロック（青の円内）、ミントの香りがするブロック（緑の円内）があり、その4つのブロックが重なる僅か0.2haしかない小さなブロック（黄色部分）のブドウを使用。このブロックは、周囲の4つのブロックの香りが全て混在していて、とても興味深く、特別貴重なブロック。収穫後、26％は全房で発酵。重力を利用したドリップ式でワインを抽出。プレスの際、８％程度のフレッシュなブドウの茎をバスケットプレスに入れて一緒にプレス。その後フレンチオークでマロラクティック発酵を経て18か月熟成。新樽50％使用、残りは古樽。このワイン用の小さな特別な区画のブドウからスミレ、黒コショウ、ブルーベリー、ミントの４つの香りが混在する面白いシラーズ。<br>フレッシュな酸、厚みのあるボディ、なめらかでリッチな味わい。濃厚な果実味がしっかりした酸に支えられ、バランス良く綺麗にまとまっている。余韻も長い。シュナンブランで有名なステレンラストの中で、ソフトプレスによって出来た綺麗で上品なシラーズ。<br>ラムや牛肉のステーキに黒コショウなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:46:31";s:13:"update_date_8";s:19:"2023-11-13 11:42:52";s:6:"sclr_9";s:7:"4600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:8;a:13:{s:4:"id_0";s:2:"59";s:6:"name_1";s:90:"ステレンラスト・アーティソンズ・マザーシップ・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:375:"完熟ブドウの糖度の高い果実の甘みと酸のコントラストが、何処にも無いステレンラストらしい面白さを表現している。酸が効いて美しくエレガント、濃厚さとボディ、ステレンラストのフラグシップ品種であるシュナンブランの総決算のような最高レベルに仕上げられた１本。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3444:"<div class="productsheet__table">   <h2><small>Stellenrust Artisons Mothership Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2018VT：5 STAR<br>
+[Tim Atkin Report 2019’] 2018VT：95 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリー・ヒルズのブッシュヴァインの畑で1964年に植樹。分解した花崗岩土壌。収穫後、6-12時間スキンコンタクト。その後、大樽とコンクリートの卵型タンクで天然発酵、そのまま12ヶ月熟成しブレンド。<br>白桃、梨、キャンディなどの香り。豊かな酸、厚みのあるボディ、なめらかでリッチな味わい。フレッシュ＆フルーティ、濃厚な果実味がしっかりした酸に支えられ、バランス良くまとまっている。余韻も長い。他のステレンラストの白ワインと同じく、完熟ブドウの糖度の高い果実の甘みと酸のコントラストが、何処にも無いステレンラストらしい面白さを表現している。<br>酸が効いて美しくエレガント、濃厚さとボディ、ステレンラストのフラグシップ品種であるシュナンブランの総決算のような最高レベルに仕上げられた１本。限定品。<br>シーフード、グリルした魚、クリームソース、タイのグリーンカレー、スパイス料理、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:41:29";s:13:"update_date_8";s:19:"2023-11-13 11:40:03";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

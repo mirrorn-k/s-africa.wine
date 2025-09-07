@@ -1,0 +1,138 @@
+1754853236
+%255B69e35e10665842c3d5d2fe9258f7e0e29627c735%255D%255B1%255D
+a:1:{s:1154:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:13;}i:1;a:2:{i:0;i:20;i:1;i:21;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:2:{i:0;a:13:{s:4:"id_0";s:2:"20";s:6:"name_1";s:42:"ウォーターフォード・カベルネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:198:"スタイリッシュでエレガントなカベルネ。全てがバランス良く、なめらかでシルキーな口あたり。余韻も長いくモダンかつクラシックなスタイル。";s:13:"search_word_5";s:65:"カベルネソーヴィニヨン,メルロ,カベルネフラン";s:11:"free_area_6";s:2785:"<div class="productsheet__table">   <h2><small>Warterford Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2016VT：94 Point<br>
+[Tim Atkin Report 2018’] 2015VT：95 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+色は濃く、柔らかな酸味、濃厚でしっかりしたボディで、非常にキメ細やかな上品な渋み。<br>12年ビンテージより柔らかいタンニン。ソフトでシルキーな味わい。余韻も長くモダンかつクラシックな両面スタイルを持ち合わせている。<br>とにかくスタイリッシュでエレガントなこれまで出会ってきた南アフリカの赤ワインの中でも最高クラス。申し分の無い1本。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:53:56";s:13:"update_date_8";s:19:"2023-11-13 11:59:26";s:6:"sclr_9";s:7:"7400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"21";s:6:"name_1";s:45:"ウォーターフォード・ザ・ジェム";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:219:"ウォーターフォードのオーナーのニックネームから名付けられたフラグシップ（トップワイン）。限定品。箱入りで全ての箱にシリアル・ナンバーが入っている。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3190:"<div class="productsheet__table">   <h2><small>Warterford The Jem</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}42％・シラーズ20％・メルロ14％・ムールヴェードル4％・カベルネフラン11％・プティヴェルド3％・サンジョベーゼ3％・バルベラ3％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.03％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2012</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2012VT：95 Point<br>
+[Tim Atkin Report 2016’] 2012VT：95 Point<br>
+[Platter SA 2017’] 2010VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステンレスタンクとフレンチオークで発酵後、225Lのフレンチオークで19カ月熟成（新樽使用は３分の１。残りは２年目と３年目の樽使用）。 <br>カシス、スパイス、タバコ、鉛筆の芯など、複雑な香り。なめらかで柔らかな酸味、豊かな果実味と渋み、しっかり厚みのあるボディで、なめらかで綺麗にまとまっている。濃厚かつエレガントなワイン。<br>ヴィンテージから10-15年。同社のオーナーのニックネームから名付けられたフラグシップ（限定品）。箱入りで全ての箱にシリアル・ナンバーが入っている。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:54:19";s:13:"update_date_8";s:19:"2023-11-13 11:59:59";s:6:"sclr_9";s:8:"19500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

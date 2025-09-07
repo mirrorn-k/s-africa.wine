@@ -1,0 +1,141 @@
+1754758023
+%255Bba5aa6d49c5226e4ac4660d447c790a2f89bd39a%255D%255B1%255D
+a:1:{s:1181:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:4:{i:0;i:27;i:1;i:36;i:2;i:47;i:3;i:35;}i:1;a:2:{i:0;i:21;i:1;i:28;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:2:{i:0;a:13:{s:4:"id_0";s:2:"21";s:6:"name_1";s:45:"ウォーターフォード・ザ・ジェム";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:219:"ウォーターフォードのオーナーのニックネームから名付けられたフラグシップ（トップワイン）。限定品。箱入りで全ての箱にシリアル・ナンバーが入っている。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3190:"<div class="productsheet__table">   <h2><small>Warterford The Jem</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}42％・シラーズ20％・メルロ14％・ムールヴェードル4％・カベルネフラン11％・プティヴェルド3％・サンジョベーゼ3％・バルベラ3％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.03％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2012</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2012VT：95 Point<br>
+[Tim Atkin Report 2016’] 2012VT：95 Point<br>
+[Platter SA 2017’] 2010VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステンレスタンクとフレンチオークで発酵後、225Lのフレンチオークで19カ月熟成（新樽使用は３分の１。残りは２年目と３年目の樽使用）。 <br>カシス、スパイス、タバコ、鉛筆の芯など、複雑な香り。なめらかで柔らかな酸味、豊かな果実味と渋み、しっかり厚みのあるボディで、なめらかで綺麗にまとまっている。濃厚かつエレガントなワイン。<br>ヴィンテージから10-15年。同社のオーナーのニックネームから名付けられたフラグシップ（限定品）。箱入りで全ての箱にシリアル・ナンバーが入っている。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:54:19";s:13:"update_date_8";s:19:"2023-11-13 11:59:59";s:6:"sclr_9";s:8:"19500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"28";s:6:"name_1";s:63:"カノンコップ・ブラックラベル・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:225:"プラム、ブラックチェリーなどの赤い果実の香りに香水やスパイスなどの香り。柔らかく滑らかな酸が後口まで続く。凝縮した濃厚な果実味、太くしっかりした骨格。";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:3051:"<div class="productsheet__table">
+	<h2><small>Kanonkop Black Label Pinotage</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>15.0％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2020</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2017VT：96 Point<br>
+				[Tim Atkin Report 2018’] 2016VT：96 Point<br>
+				[Tim Atkin Report 2017’] 2015VT：96 Point<br>
+				[Platter SA 2020’] 2017VT：5.0 STAR
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	樹齢62年のブッシュヴァイン（株仕立て）。灌漑なし。収穫量2.8トン/ha。収穫後はオープンなコンクリートタンクで発酵。２時間おきにピジャージュで攪拌（かくはん）。3.5日後、圧搾し、ジュースのみを採取。100％フレンチオークの新樽で１８カ月熟成。<br>プラム、ブラックチェリーなどの赤い果実の香りに香水やスパイスなどの香り。柔らかく滑らかな酸が後口まで続く。凝縮した濃厚な果実味、太くしっかりした骨格。力強さと、シルキーでなめらかな口あたり、渋みは細やかでしっかりと最後まで続く。余韻は長く、ドライなフィニッシュ。カノンコップのフラグシップにふさわしい品格を感じさせる。実際には、ワインはまだ若く、飲み頃はまだ先で、デカンタージュしてから飲むことを勧める。<br>牛肉、羊肉など赤い肉の料理。スパイシーなアジア料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:59:13";s:13:"update_date_8";s:19:"2023-11-13 11:08:28";s:6:"sclr_9";s:8:"35000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

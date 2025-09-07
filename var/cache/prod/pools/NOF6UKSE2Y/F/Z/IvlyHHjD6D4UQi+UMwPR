@@ -1,0 +1,12 @@
+1754885415
+eccube_entity_news%255Beccube_entity_news_eccube.entity.news_32%255D%255B1%255D
+O:35:"Doctrine\ORM\Cache\EntityCacheEntry":2:{s:4:"data";a:10:{s:2:"id";i:32;s:12:"publish_date";O:8:"DateTime":3:{s:4:"date";s:26:"2022-05-29 14:02:00.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:10:"Asia/Tokyo";}s:5:"title";s:162:"元女子サッカー日本代表の丸山桂里奈さんがご主人である元サッカー日本代表本並健治氏と一緒に毎日飲んでいるワイン";s:11:"description";s:738:"▼TBSテレビ
+「クイズ THE違和感」
+で紹介されました！
+元女子サッカー日本代表の丸山桂里奈さんが登場、そこで、ご主人である元サッカー日本代表本並健治氏と一緒に毎日飲んでいるワインとして紹介されたワインに、放映直後からご注文を頂いています！
+
+本並さんが、ウルフ トラップ レッドのボトルを手に持ち
+『僕、これ好きで毎日飲んでる。』
+とコメント。丸山さんも横で深く頷いていました！
+
+夫婦そろって日本代表を務めた世界を知っているカップルが、何度も飲みたい＆お勧めするとくれば、気にならずにいられませんよね！";s:3:"url";s:40:"https://s-africa.wine/products/detail/77";s:11:"link_method";b:0;s:11:"create_date";O:8:"DateTime":3:{s:4:"date";s:26:"2022-05-29 14:06:41.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:10:"Asia/Tokyo";}s:11:"update_date";O:8:"DateTime":3:{s:4:"date";s:26:"2022-05-29 14:06:41.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:10:"Asia/Tokyo";}s:7:"visible";b:1;s:10:"creator_id";i:1;}s:5:"class";s:18:"Eccube\Entity\News";}

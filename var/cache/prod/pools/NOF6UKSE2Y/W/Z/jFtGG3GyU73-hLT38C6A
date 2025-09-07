@@ -1,0 +1,1366 @@
+1754691731
+%255B985f415aec0e942efb51ccd142595ae0ad71dabb%255D%255B1%255D
+a:1:{s:1367:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:5:{i:0;i:28;i:1;i:38;i:2;i:55;i:3;i:56;i:4;i:37;}i:1;a:20:{i:0;i:29;i:1;i:30;i:2;i:13;i:3;i:169;i:4;i:75;i:5;i:59;i:6;i:33;i:7;i:87;i:8;i:86;i:9;i:85;i:10;i:66;i:11;i:64;i:12;i:39;i:13;i:121;i:14;i:88;i:15;i:135;i:16;i:70;i:17;i:69;i:18;i:68;i:19;i:203;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:20:{i:0;a:13:{s:4:"id_0";s:2:"29";s:6:"name_1";s:30:"キアモント・テラッセ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:327:"同社のセカンド・レンジ。テラッセとは、ステレンボシュ山脈にある畑の名前から命名。花、ナッツ、レモングラス、バタースコッチなどの香り。フレッシュで綺麗な酸、凝縮した果実味、やや濃厚でなめらか、クリーミーでリッチな味わい。";s:13:"search_word_5";s:116:"シュナンブラン,ソーヴィニヨンブラン,シャルドネ,ヴィオニエ,マルサンヌ,ルーサンヌ";s:11:"free_area_6";s:3537:"<div class="productsheet__table">   <h2><small>Keermont Terrasse</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (55％,21％,14％,5％,3％,2％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Parker Wine Advocate] 2015VT：94 Point<br>
+[Parker Wine Advocate] 2014VT：94 Point<br>
+[Tim Atkin Report 2018’] 2016VT：93 Point<br>
+[Tim Atkin Report 2017’] 2015VT：93 Point<br>
+[Tim Atkin Report 2016’] 2014VT：94 Point<br>
+[Platter SA 2016’] 2014VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1971年に植樹された「リバーサイド」と呼ばれる畑のシュナンブラン（樹齢49年）が主になっている白のブレンド。発酵は中古のフレンチオークの天然発酵。後、澱（おり）が入ったまま12ヶ月熟成（シュール・リー製法）。一部ステンレスタンクで発酵、熟成させた物をブレンド。濾過せずに瓶詰め。<br>花、ナッツ、レモングラス、バタースコッチなどの香り。<br>フレッシュで綺麗な酸、凝縮した果実味、やや濃厚でなめらか、クリーミーでリッチな味わい。熟した柑橘類、洋ナシなどの風味。余韻は長くドライなフィニッシュ。様々な品種の風味と味わいが複雑に絡み合い、このワインを面白くしている。<br>2017年のヴィンテージでは、若いリバーサイドのブドウ園からマルサンヌとルーサンヌのが少量ブレンドされておりワインに丸みとボリュームを与えている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:35:30";s:13:"update_date_8";s:19:"2023-11-13 12:05:44";s:6:"sclr_9";s:7:"4000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"30";s:6:"name_1";s:45:"キアモント・フルーフォンティン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:294:"「フルーフォンテイン」は、「花の咲く場所」という意味。草を刈った時の香り、ドライアプリコット、柑橘類などの香り。優しい酸味、濃厚で凝縮したハチミツ、梨、柑橘類、アーモンドなどの風味が口中に広がる。";s:13:"search_word_5";s:30:"ソーヴィニヨンブラン";s:11:"free_area_6";s:3442:"<div class="productsheet__table">   <h2><small>Keermont Fleurfontein</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>375ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：92 Point<br>
+[Tim Atkin Report 2018’] 2017VT：93 Point<br>
+[Platter SA 2020’] 2018VT：4 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ブドウは2005年に植樹されたもので、樹齢15年。収穫の２，３週間前にブドウの茎を曲げることによって、水分がブドウに行きにくくなり、自然に乾燥、干しブドウのようになっていく。ハンガリーオークとフレンチオークに入れ天然発酵。そのまま18ヶ月熟成。ろ過せずに手作業で瓶詰め。生産量3500本。<br>ピュアなイエローゴールド、草を刈った時の香り、キウイフルーツ、ドライアプリコット、柑橘類やヘーゼルナッツなどの香り。優しい酸味、濃厚で凝縮したハチミツ、梨、柑橘類、アーモンドなどの風味が口中に広がる。比較的ボリューミーなワインで、酸と甘みのバランスも良い。ほんのりと新樽の香りも感じ、複雑性もあり、エレガントに仕上がっている。<br>少し塩味のあるタッチで、長く凝縮した濃厚な味わいはが最後まで続く。良く冷やしてそのままでも楽しめる。<br>ブルーチーズ、ハード系チーズなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:36:04";s:13:"update_date_8";s:19:"2023-11-13 12:05:22";s:6:"sclr_9";s:7:"4300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"13";s:6:"name_1";s:33:"アリステア・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:231:"桃、洋ナシ、オレンジ、柑橘類、ヴァニラなどの香り。フレッシュで豊かな酸味、綺麗で雑味の無いジュース。優しくリッチ、ふくよかで、なめらか、シルキーなタッチ。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3545:"<div class="productsheet__table">   <h2><small>Aristea Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>	[Tim Atkin Report 2019’] 2018VT：93 Point<br>
+[Tim Atkin Report 2018’] 2017VT：93 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+5度の低温室で1日置く。全体の半分を全房でプレス。残りは除梗してプレス。ジュースの30％は、フレンチオークに移され天然発酵。残りは人工酵母を入れてフレンチオークで発酵、熟成。全ての樽でマロラクティック発酵を経て11ヵ月熟成。新樽使用40％、2年目樽30％、3年目樽30％。熟成中は時々バトナージュ。生産量4800本。<br>桃、洋ナシ、オレンジ、柑橘類、ヴァニラなどの香り。フレッシュで豊かな酸味、綺麗で雑味の無いジュース。優しくリッチ、ふくよかで、なめらか、シルキーなタッチ。柑橘類やトロピカルフルーツの複雑な風味に、オーク由来のヴァニラ、スパイスなど風味が良いアクセントになっている。<br>最初から最後まで爽やかで上品な酸味がこのワインを支え、ゴージャスだけど派手すぎない、クラシックでエレガントなスタイルに仕上げている。<br>オレンジやグレープフルーツ他柑橘類の入ったサラダ、白身魚のソテーや鶏肉、牛肉料理にレモンを絞って、またはレモンバターソースで。その他、クリームソースなど。　
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:34:15";s:13:"update_date_8";s:19:"2023-07-25 04:18:37";s:6:"sclr_9";s:7:"4600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"169";s:6:"name_1";s:42:"ライナカ・リザーブ・ホワイト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:326:"リザーブ・ホワイトには、最上のブドウのみを使用。収穫後は全房でプレス。その後、300Lのフレンチオークで天然発酵（95％は新樽、5％は2年目の樽）。そのまま澱が入ったまま12か月熟成。その後、ステンレスタンクに移して更に4か月熟成。";s:13:"search_word_5";s:30:"ソーヴィニョンブラン";s:11:"free_area_6";s:3322:"<div class="productsheet__table">   <h2><small>Reyneke Reserve White</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>商品特徴：</th>
+            <td>ビオディナミ</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：96 Point<br>
+[Platter SA 2020’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+リザーブ・ホワイトには、最上のブドウのみを使用。収穫後は全房でプレス。その後、300Lのフレンチオークで天然発酵（95％は新樽、5％は2年目の樽）。そのまま澱が入ったまま12か月熟成。その後、ステンレスタンクに移して更に4か月熟成。飲み頃は2018-2023年。<br>フレッシュで、リンゴ、花、柑橘類の皮、火打石を擦ったような活き活きとした香り。比較的ふくよかで豊かな酸、凝縮した濃厚な果実味で複雑味を帯びている。口あたりは、なめらかで、ほんのりクリーミー。ボディは太くしっかりした骨格。全体のバランスも良く、余韻も長い。南アフリカでは少ない樽熟成した秀逸なソーヴィニョンブランの一つ。<br>サーモン、シーフードマリネ、クリーム系パスタ、蒸し鶏、コンソメスープなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:14:16";s:13:"update_date_8";s:19:"2023-07-25 03:49:31";s:6:"sclr_9";s:7:"4650.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:2:"75";s:6:"name_1";s:54:"ハーテンバーグ・エレノア・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:333:"ハーテンバーグ社のシャルドネのフラグシップ。「エレノア」とは、1948-1977年にハーテンバーグのオーナーだったフィンレーソン家族の奥さんの名前から取った。彼女は、強くて決断力のある、落ち着いた、品の良い素晴らしい人格の女性でした。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3512:"<div class="productsheet__table">   <h2><small>Hartenberg Eleanor Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：95 Point<br>
+[Platter SA 2018’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+発酵後は、228Ｌのフレンチオークで13ヶ月熟成。新樽25％、２年目樽50％、３年目の樽25％使用。柑橘類、トロピカルフルーツ、トーストしたオーク、ブリオッシュなどの香り。比較的豊かな酸味と果実味、ボディのバランスが良く、味わいはリッチでほんのりクリーミー。なめらかで上質な口あたり。余韻も長く、ワンランク上のゴージャスでエレガントなワインに仕上がっている。いわゆるステレンボシュらしい口あたりの良い果実味とバランスの取れたシャルドネ。過去最高のヴィンテージで、ステレンボシュ及び南アフリカを代表するトップ・シャルドネの1本。<br>シーフード料理、グラタン、リゾット、パスタ、クリームソースなどの料理。<br>
+<br>
+オーガニック農業。ハーテンバーグ社のシャルドネのフラグシップ。「エレノア」とは、1948-1977年にハーテンバーグのオーナーだったフィンレーソン家族の奥さんの名前から取った。彼女は、強くて決断力のある、落ち着いた、品の良い素晴らしい人格の女性でした。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:23:05";s:13:"update_date_8";s:19:"2023-07-25 02:13:59";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:2:"59";s:6:"name_1";s:90:"ステレンラスト・アーティソンズ・マザーシップ・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:375:"完熟ブドウの糖度の高い果実の甘みと酸のコントラストが、何処にも無いステレンラストらしい面白さを表現している。酸が効いて美しくエレガント、濃厚さとボディ、ステレンラストのフラグシップ品種であるシュナンブランの総決算のような最高レベルに仕上げられた１本。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3444:"<div class="productsheet__table">   <h2><small>Stellenrust Artisons Mothership Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2018VT：5 STAR<br>
+[Tim Atkin Report 2019’] 2018VT：95 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリー・ヒルズのブッシュヴァインの畑で1964年に植樹。分解した花崗岩土壌。収穫後、6-12時間スキンコンタクト。その後、大樽とコンクリートの卵型タンクで天然発酵、そのまま12ヶ月熟成しブレンド。<br>白桃、梨、キャンディなどの香り。豊かな酸、厚みのあるボディ、なめらかでリッチな味わい。フレッシュ＆フルーティ、濃厚な果実味がしっかりした酸に支えられ、バランス良くまとまっている。余韻も長い。他のステレンラストの白ワインと同じく、完熟ブドウの糖度の高い果実の甘みと酸のコントラストが、何処にも無いステレンラストらしい面白さを表現している。<br>酸が効いて美しくエレガント、濃厚さとボディ、ステレンラストのフラグシップ品種であるシュナンブランの総決算のような最高レベルに仕上げられた１本。限定品。<br>シーフード、グリルした魚、クリームソース、タイのグリーンカレー、スパイス料理、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:41:29";s:13:"update_date_8";s:19:"2023-11-13 11:40:03";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:2:"33";s:6:"name_1";s:60:"キアモント・リバーサイド・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:195:"柑橘類の花、ナッツ、レモングラス、桃、アプリコットなどの香り。活き活きとした豊かでフレッシュな酸、しっかりとしたふくよかなボディ。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3480:"<div class="productsheet__table">   <h2><small>Keermont Riverside Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2017VT：95 Point<br>
+[Platter SA 2018’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1971年に植樹されたキアモントで最も古い畑。標高は250ｍ。土壌は、砂岩質で粘土が混ざった赤土のローム。キアモントにとって、2017年はブドウの成長にとっては良い年で健康的なブドウを収穫することが出来た。収穫後は優しくナチュラルにオープンタンクで発酵、その後は500Lの新樽と中古のフレンチオークで20ヶ月熟成。濾過なしで手作業で瓶詰め。3792本生産。<br>柑橘類の花、ナッツ、レモングラス、桃、アプリコットなどの香り。活き活きとした豊かでフレッシュな酸、しっかりとしたふくよかなボディ。熟した柑橘類や桃などの豊かな風味、気持ちの良い酸味は最後まで続く。フルーティでクリーン、滑らかでエレガントなフィニッシュ。南アフリカのトップ・シュナンブランに相応しい素晴らしい1本。<br>料理：シーフード、パスタ、クリームソースを使った料理、バーニャカウダー、和食、中華、アジア系料理、スパイスを使った料理、野菜料理など幅広く合う。
+
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:42:04";s:13:"update_date_8";s:19:"2023-11-13 12:03:58";s:6:"sclr_9";s:7:"5400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:7;a:13:{s:4:"id_0";s:2:"87";s:6:"name_1";s:56:"ブーケンハーツクルーフ・セミヨン 2017年";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:323:"ブドウは、フランシュックの3箇所の畑から収穫している、1つは、南アで最も古い畑の1つ、1902年に植樹された沖積土壌。2つ目は収穫量の低い1936年の植樹された畑、3つ目に1942年に植樹されたブッシュヴァイン（株仕立て）のブドウを使用。";s:13:"search_word_5";s:64:"セミヨン,マスカット・オブ・アレキサンドリア";s:11:"free_area_6";s:3916:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Semillon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／フランシュック</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (98％,2％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.1％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：94 Point<br>
+[Tim Atkin Report 2018’] 2016VT：93 Point<br>
+[Platter SA 2020’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ブドウは、フランシュックの3箇所の畑から収穫している、1つは、南アで最も古い畑の1つ、1902年に植樹された沖積土壌。2つ目は収穫量の低い1936年の植樹された畑、3つ目に1942年に植樹されたブッシュヴァイン（株仕立て）のブドウを使用。2017年は、2年続きの乾燥した年で、収穫量は減ったが、凝縮し、リッチでしっかりしたボディのセミヨンを造るのに理想的なブドウが育った。このような古い畑のブドウを使用することにより、複雑で、しっかりした骨格と信じられないほど長い熟成ポテンシャルのあるワインになる。発酵はフレンチオーク（全体の2/3）と卵形のコンクリートタンク（残り1/3）、マスカットはアンフォラで全房で天然発酵、その後14ヶ月熟成（新樽80％使用）。<br>オレンジの花、柑橘類、オレンジ、桃、ハチミツ、レモングラスなどの香り。フレッシュで心地良い酸味、凝縮し豊かな果実味。白桃、オレンジ、レモン、ジンジャーなどの風味。スムーズで、なめらか、リッチな味わい。ふくよかで厚みのあるしっかりした骨格のあるボディ。<br>古木のブドウから造られる特別なセミヨンで、南アフリカの中でも稀有で貴重な存在。「これぞブーケンハーツの７つの椅子ワイン！」という堂々たる風格のある素晴らしいセミヨンなので、必ず一度は飲んでおきたい。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:50:10";s:13:"update_date_8";s:19:"2023-07-25 03:34:50";s:6:"sclr_9";s:7:"5600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:8;a:13:{s:4:"id_0";s:2:"86";s:6:"name_1";s:56:"ブーケンハーツクルーフ・セミヨン 2016年";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:265:"天才醸造家マーク・ケント氏が作る「7つの椅子」のラベルのワイン。毎年のヴィンテージを集めるコレクター達が世界中に存在するほどの人気、かつ超入手困難な逸品。世界完全割当の超限定品。";s:13:"search_word_5";s:64:"セミヨン,マスカット・オブ・アレキサンドリア";s:11:"free_area_6";s:3368:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Semillon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／フランシュック</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (98~99％,1~2％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.67％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：94 Point<br>
+[Tim Atkin Report 2016’] 2014VT：94 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+セミヨン種としては、南アフリカで最も古い樹齢の１つとされている1902年植樹のブドウと、フランシュック地区の1936年と1942年に植樹されたブッシュヴァイン（株仕立て）の３カ所から使用。古い樹齢のブドウは、収穫量が少なく、濃厚で複雑、しっかりした骨格をもたらす。ブドウは房ごとプレスし、樽と卵型のコンクリートタンクで天然発酵。その後は低温で14カ月熟成。その間SO2は入れない。マロラクティックも無し。1-2％のマスカット・オブ・アレキサンドリアをブレンド。<br>繊細でエレガントなグレープフルーツ、カモミール、リンゴの花、スパイスなどの香り。柔らかくなめらかな酸味、濃厚で凝縮した果実味、太い骨格のあるボディ。黄桃、梨、グリーンイチジクなどの豊かな風味が広がり、酸味とのバランスも良い。フィニッシュは長く、複雑、スパイス感もある。<br>飲み頃は2020-2018年頃。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:49:44";s:13:"update_date_8";s:19:"2023-07-25 03:42:45";s:6:"sclr_9";s:7:"5600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:9;a:13:{s:4:"id_0";s:2:"85";s:6:"name_1";s:72:"ブーケンハーツクルーフ・ノーブルレイトハーベスト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:237:"フランシュックの川に面した1997年に植樹された自社畑のオーガニック認証のある1ブロックのブドウを使用。ノーブルレイトハーベストは、毎年1樽のみ作られる貴重なワイン。";s:13:"search_word_5";s:12:"セミヨン";s:11:"free_area_6";s:2929:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Noble Late Harvest</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／フランシュック</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>375ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2016VT：95 Point<br>
+[Platter SA 2020’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+フランシュックの川に面した1997年に植樹された自社畑のオーガニック認証のある1ブロックのブドウを使用。ノーブルレイトハーベストは、毎年1樽のみ作られる貴重なワイン。遅摘み貴腐ブドウを新樽のフレンチオークで発酵、30ヶ月熟成。<br>アプリコットやパイナップル、クリーム・ブリュレ、シナモンなどの香り。酸味と甘さのバランスが良く、コクがあり、蜂蜜のような濃厚でリッチな味わい。オークの風味もあり、ゴージャスなワインに仕上がっている。ソーテルヌ・スタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:49:23";s:13:"update_date_8";s:19:"2023-11-13 12:41:01";s:6:"sclr_9";s:7:"5700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:10;a:13:{s:4:"id_0";s:2:"66";s:6:"name_1";s:54:"デイビット＆ナディア・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"ライム、梨、桃、スパイス、ハーブ、ハチミツなどの香り。複雑で様々な風味とブドウのピュアな味わいを楽しむ事ができ、素直に美味しい。余韻は長くエレガントなフィニッシュ。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:2985:"<div class="productsheet__table">   <h2><small>David ＆ Nadia Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：93 Point<br>
+[Tim Atkin Report 2016’] 2014VT：93 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+スワートランドの6箇所の畑のブドウを使用。全てブッシュヴァイン（株仕立て）。ブドウの樹齢は35-49年の古木。収穫量は2-4トン/haと極めて少量。収穫後は、全房発酵、天然発酵。３００Ｌの古いフレンチオークで熟成。5120本生産。<br>梨、桃、花の香り、乾燥した土地の埃っぽい香りなど。豊かな酸味、古木＆低い収穫量から由来する凝縮した果実味。ふくよかで程良い厚みとボディ。フレッシュで果実の旨み、ブドウのナチュラルなピュアテイストを楽しめる。酸味と果実味のバランスが良く、素直に美味しく楽しめるワイン。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:53:40";s:13:"update_date_8";s:19:"2023-11-13 12:13:11";s:6:"sclr_9";s:7:"5700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:11;a:13:{s:4:"id_0";s:2:"64";s:6:"name_1";s:54:"デイビット＆ナディア・アリスタルゴス";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"ライム、梨、桃、スパイス、ハーブ、ハチミツなどの香り。複雑で様々な風味とブドウのピュアな味わいを楽しむ事ができ、素直に美味しい。余韻は長くエレガントなフィニッシュ。";s:13:"search_word_5";s:97:"シュナンブラン,ヴィオニエ,ルーサンヌ,クラレットブランシュ,セミヨン";s:11:"free_area_6";s:3103:"<div class="productsheet__table">   <h2><small>David ＆ Nadia Aristargos</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (50％,20％,12％,8％,20％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2017’] 2015VT：5 STAR<br>
+[Tim Atkin Report 2017’] 2015VT：96 Point<br>
+[Tim Atkin Report 2016’] 2015VT：95 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+スワートランドのパールダバーグの南側斜面の12の畑のブドウを使用。ほとんどは古いブッシュヴァイン。一番古いシュナンブランは1966年に植樹。1950年代に植樹された少量のセミヨンをブレンド。古い300?のフレンチバレルで熟成。br>ライム、梨、桃、スパイス、ハーブ、ハチミツなどの香り。フレッシュで豊かな酸味と果実味。ふくよかで程良い厚みとボディを擁しているが、しっかりした酸味もあり、決して重くなく、バランス良く出来ている。複雑で様々な風味とブドウのピュアな味わいを楽しむ事ができ、素直に美味しい。余韻は長くエレガントなフィニッシュ。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:52:07";s:13:"update_date_8";s:19:"2023-11-13 12:11:51";s:6:"sclr_9";s:7:"5700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:12;a:13:{s:4:"id_0";s:2:"39";s:6:"name_1";s:75:"キャサリン・マーシャル・シュナンブラン・アンフォラ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:270:"熟した白桃、梨、白い花、ハーブなどの香り。熟成すると、アーモンドペースト、ベイクドアップル、スパイスなどの香りも現れる。爽やかで穏やかな酸味、なめらかで、ややふくよかな厚みもある。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:4518:"<div class="productsheet__table">   <h2><small>Catherine Marshall Chenin Blanc amphora</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：93 Point<br>
+[Platter SA 2021’] 2019VT：5 STAR<br>
+[Platter SA 2020’] 2018VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+メインはエルギンの単一畑のブドウを使用。畑は冷涼な南から南東斜面でブドウは2.2ｍｘ1.2ｍ間隔で栽培されている。このブドウからフリンティで控えめなクラシックなワインになる。また一部はステレンラストのボタラリー地区の古いブッシュヴァインのブドウを使用。このブドウはフレッシュで濃厚なネクタリンの風味を持ち、ワインを複雑にしている。収穫は3月上旬に行われた。選果の後、プレス。フリーランジュースを使用。ステンレスタンクで12度で2日間冷却し、アンフォラの壷に移して天然発酵。発酵後は、一部は500Lのフレンチオークに入れてマロラクティック発酵を経て11ヶ月熟成。メインのアンフォラは、マロラクティック発酵は行わず、フレッシュでクリスピーな感じをキープしている。こちらも同じく11ヶ月熟成し、両方をブレンドして瓶詰め。<br>若い時は熟した梨や桃、白い花、ハーブなどの香り。熟成すると、アーモンドペースト、焼きリンゴ、スパイスなどの香りも現れる。<br>フレッシュな酸味、ピュアでフルーティ、優しい口当たり。なめらかで、ややふくよかな厚みもある。フレッシュ＆ピュアな味わいが魅力的で複雑味もある。バランスも良くエレガントに仕上がっている。<br>樽無しのフレッシュなだけのシュナンブランでもなく、樽熟成したオーク風味のある濃厚なタイプでもない、素焼きのアンフォラによってフレッシュ＆フルーティ、ピュアな味を楽しめる要素と、まるでオーク樽で熟成させたような空気に触れたふくよかさの両方の要素を持ち合わせている。他にはないユニーク性を表現し、かつ完成度の高いワインに仕上げていることがキャサリンのセンスであり才能なのだろう。<br>サーモン、ホタテ、魚のグリル、寿司、天ぷら、アジア系料理、鶏肉料理、エビのリゾットなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:50:54";s:13:"update_date_8";s:19:"2023-11-13 12:23:35";s:6:"sclr_9";s:7:"5700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:13;a:13:{s:4:"id_0";s:3:"121";s:6:"name_1";s:36:"アタラクシア・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:219:"グレープフルーツ、白桃、熟した梨、ナッツなどの香り。ミネラル分が豊かでしっかりした酸味、骨格のハッキリしたボディ、凝縮した果実味で、力強さもある。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3611:"<div class="productsheet__table">   <h2><small>Ataraxia Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウォーカーベイ・ヘメル・アン・アード・リッジ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>	[Parker Wine Advocate] 2015VT：93 Point<br>
+[Tim Atkin Report 2019’] 2017VT：95 Point<br>
+[Tim Atkin Report 2017’] 2016VT：96 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+生産量：4366ケース（６入り）栽培・製造：冷涼なケープ・サウスコースト、ハマナスの海の近くのヘメル・アン・アード・リッジ小地区の畑で栽培。畑は頁岩土壌で、粘土質、石の混ざった肥沃でない土地。冷涼気候の為、ブドウのハンギング・タイムが長く、果実味が凝縮する。３月始めの２週間の早朝の涼しい時間に収穫。<br>セラー内では、テロワールを忠実に表現する為に、出来るだけ人の手を加えないミニマリスト的アプローチで製法。<br>100％ブルゴーニュから買い付けた225Lのフレンチオークで発酵＆熟成10ヶ月（新樽21％、2年目樽79％）。<br>グレープフルーツ、白桃、熟した梨、ナッツなどの香り。ミネラル分が豊かでしっかりした酸味、骨格のハッキリしたボディ、凝縮した果実味で、力強さもある。味わいは、複雑でやや濃厚、なめらかでクリーミー。酸味と果実味、ボディ、全てにおいてバランス良くエレガントにまとまっている。ゴージャスかつスタイリッシュ、余韻も長く、クラシックなスタイルのワイン。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 06:48:35";s:13:"update_date_8";s:19:"2023-11-13 12:18:07";s:6:"sclr_9";s:7:"6000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:14;a:13:{s:4:"id_0";s:2:"88";s:6:"name_1";s:81:"ブーケンハーツクルーフ・カップ・マリティム・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:109:"南アフリカ・トップ生産者の1つ、ブーケンハーツクルーフ社の新プロジェクト。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:4370:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Cap Maritime Cahrdonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／アッパーヘメルアンアード</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.80％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2018’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+アッパーヘメルアンアードの畑のブドウをフランシュックの本社まで運んで製造。ブドウの選果後、全房でプレスし、60％はフレンチオークの新樽で、残りは卵形のコンクリートタンクで天然発酵。マロラクティック発酵を経て、時々軽くバトナージュをしながら14ヶ月熟成してブレンド。レモン、グレープフルーツなどの柑橘類、桃、メロンなどの果実にヴァニラなどのスパイスやクリーミーな香り。柔らかく豊かな酸、やや太く厚みのある骨格とボディ、ふくよかさを持ち、ミネラルは強く感じる。口あたりはなめらかで綺麗にまとまっている。洗練され、調和の取れたエレガントなワイン。余韻は長く、最後まで心地良いレモンのようなフレッシュな風味が最後まで続く。数年から5年後の熟成が楽しみ。<br>シーフード、鶏肉、豚肉、レモンバターソースの料理など。<br>
+<br>
+南アフリカ・トップ生産者の1つ、ブーケンハーツクルーフ社の新プロジェクト。本拠地フランシュック、カベルネソーヴィニョンの銘醸地ステレンボシュ、乾燥し秀逸なシラーを産出するスワートランドを次々に傘下に治めてきたリーダー、マーク・ケントが次に狙ったのは、南アフリカを代表するシャルドネとピノノワールを産出するヘメルアンアードだった。<br>畑は、アッパーヘメルアンアードに38haを購入。南アフリカの栽培家の第一人者ロサ・クルーガーが栽培をコンサルしている。そして2015年、醸造家にシャルドネとピノノワールで有名なケープ・シャムニからゴトフリード・モカを迎え入れ、マークのプロジェクトは着々と進んでいる。<br>マークは、「ピノノワールはまだ自分も作ったことが無かった品種。ゴトフリードは、自分にはない素晴らしい才能の持ち主。」と語っている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:50:31";s:13:"update_date_8";s:19:"2022-03-26 03:47:03";s:6:"sclr_9";s:7:"7100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:15;a:13:{s:4:"id_0";s:3:"135";s:6:"name_1";s:69:"ポールクルーバー・セブンフラッグス・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:309:"バターを塗ったトースト、ブリオッシュ、柑橘類、オレンジや柑橘類の花の香り、ヴァニラやアーモンド・フレークなどの香り。フレッシュで綺麗な酸、凝縮した果実味、ふくよかで厚みのあるボディ。余韻は長く、エレガント。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:4369:"<div class="productsheet__table">   <h2><small>Paul Cluver Seven Frags Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／エルギン</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} </td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.6%未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2020’] 2018VT：97 Point／ Platinum<br>
+[Decanter World Wine Awards 2017’] 2016VT：95 Point／Platinum-Best in Show<br>
+[Tim Atkin Report 2019’] 2018VT：96 Point<br>
+[Tim Atkin Report 2017’] 2016VT：95 Point<br>
+[Parker Wine Advocate] 2014VT：95 Point<br>
+[Platter SA 2020’] 2018VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+樹齢、植樹は1987年（エルギンでも最も古い）-2018年（最も若い）。セブンフラッグス用のブドウは、最も古い樹齢の２つの畑（＝エルギンで最も古いシャルドネ）の分を使用。土壌は主に頁岩で、その下には粘土が広がっている。畑は、東向き斜面、南東向き斜面、南南西向き斜面にある。標高は280-350ｍ。収穫は冷涼な夜中に行われ、よりフレッシュなブドウを使用している。ブドウは手摘みで収穫。収穫日は2/16-3/11。セブンフラッグス・シャルドネのブドウは、1987年に植樹したブドウを3/10-11に収穫した。幸い、エルギンでは夜間、非常に涼しい気温を保てた。フレンチオークで100％天然発酵。新樽28％。残りは2-3年目の樽を使用。発酵後は澱が入ったまま９ヶ月熟成。10％のみマロラクティック発酵。試飲後、ベストな樽のみをブレンドして瓶詰め。<br>バターを塗ったトースト、ブリオッシュ、柑橘類、オレンジや柑橘類の花の香り、最後にヴァニラやルビーグレープフルーツの香りが続く。フレッシュかつ豊かで綺麗な酸、凝縮した果実味、ふくよかで厚みのあるボディ。洗練された、なめらかで美しい味わいはフィニッシュまで続く。余韻は長く、しっかりした酸味が最初から最後まで果実味を支え、エレガントに仕上がっている。クラシックなブルゴーニュ（シャサーニュ的=ニール・マーティン評価）スタイル。南アフリカ最高のシャルドネの１本。<br>ヴィンテージ+10年。<br>魚介類、サーモン、ホタテ、カキ、鶏肉、鴨肉、豚肉、クリームパスタ、グラタン、など。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:38:03";s:13:"update_date_8";s:19:"2023-06-26 02:30:32";s:6:"sclr_9";s:7:"8500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:16;a:13:{s:4:"id_0";s:2:"70";s:6:"name_1";s:78:"デイビット＆ナディア・スカリーコップ・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:147:"同社のトップレンジで単一畑シリーズ。ビオロジカル農法、不干渉主義、テロワール主義、ナチュラル製法。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3729:"<div class="productsheet__table">   <h2><small>David & Nadia Skaliekop Steen Chenin blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：95 Point<br>
+[Platter 2019’] 2018VT：5 Ster
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+「スカリーコップ」とは、アフリカーンス語で「スカリー（頁岩）+コップ（丘）」。花崗岩の多いスワートランドの中では、珍しい頁岩の豊富な土壌。たったの1ヘクタール。1985年に植樹。ブッシュヴァイン（株仕立て）。収穫量は1.6トン/haと極端に少ない。1月下旬に収穫後は全房でプレス。冷却後、ほんの少しSO2 を添加。スカリーコップのブドウは発酵（天然発酵）するのにも時間がかかり2ヶ月かけて発酵。時間と忍耐が必要。マロラクティック発酵を経て、300Lの古いフレンチオークで熟成。1200本生産。<br>梨、スパイス、レモングラス、ナッツなどの香り。フレッシュでスッキリした酸。2017から2018年にかけては乾燥した年で、より果実味は凝縮している。頁岩土壌の由来で、他の2種よりもボディは、しっかりとしていて固いイメージ。その分、他の2種よりも開くのに時間がかかりそう。ミネラルは豊かで、フリンティ、塩味も帯びている。口あたりはリッチでなめらか、綺麗な透明感のある味わい。非常に美しく、ナチュラルでピュアなテイスト。余韻も長く、エレガントなフィニッシュ。<br>料理：シーフード、様々な野菜料理、鶏肉、豚肉、中華、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:17:30";s:13:"update_date_8";s:19:"2023-07-25 02:33:59";s:6:"sclr_9";s:8:"10100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:17;a:13:{s:4:"id_0";s:2:"69";s:6:"name_1";s:75:"デイビット＆ナディア・ホースティン・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:147:"同社のトップレンジで単一畑シリーズ。ビオロジカル農法、不干渉主義、テロワール主義、ナチュラル製法。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3293:"<div class="productsheet__table">   <h2><small>David & Nadia Ho?-Steen Chenin blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：97 Point<br>
+[Platter 2019’] 2018VT：5 Ster
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1968年植樹の樹齢50年の古木ブドウを使用.。畑は2ヘクタール。収穫量は2トン/haと極端に少ない。土壌は、鉄分を多く含み、粘土が混ざっている。この畑は、同社の白ワインでは一番最後に収穫する畑。2月後半に収穫し、全房でプレス。冷却後、ほんの少しSO2 を添加。その後天然発酵、マロラクティック発酵を経て、300Lの古いフレンチオークで約1年熟成。2000本生産。<br>梨、リンゴ、白桃、柑橘類、干草、ドライハーブ、乾燥した土地の香りなど。豊かな酸に濃縮した果実の旨み。リッチでなめらか、落ち着いた深い味わい。ボディは、しっかりとしている。非常に美しく、ナチュラルでピュアなテイスト。綺麗で透明感のある味わい。エレガントなフィニッシュで余韻も長く、力強い。<br>シーフード、様々な野菜料理、鶏肉、豚肉、中華、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:17:01";s:13:"update_date_8";s:19:"2023-07-25 02:31:57";s:6:"sclr_9";s:8:"10100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:18;a:13:{s:4:"id_0";s:2:"68";s:6:"name_1";s:72:"デイビット＆ナディア・プラタボス・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:147:"同社のトップレンジで単一畑シリーズ。ビオロジカル農法、不干渉主義、テロワール主義、ナチュラル製法。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3750:"<div class="productsheet__table">   <h2><small>David & Nadia Plat'bos Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：95 Point<br>
+[Platter 2019’] 2018VT：5 Ster
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+「スカリーコップ」の隣の畑で花崗岩土壌。1981年代の植樹された北北西の向きの斜面。このシュナンブランは、デイビッドナディアのシュナンブランやアリスタルゴスにも使用されている。「プラタボス」とは、アフリカーンス語で「低いブッシュヴァイン」という意味。ブッシュヴァイン（株仕立て）。収穫量は1.5トン/haと極端に少ない。収穫後は全房でプレス。冷却後、ほんの少しSO2 を添加。天然発酵後、マロラクティック発酵を経て、300Lの古いフレンチオークで熟成。1200本生産。<br>スパイス、レモン、リンゴ、柑橘類の皮、花などの香り。フレッシュで豊かな酸味、濃縮した果実の旨み。ミネラルを強く感じ、石や石灰のようなニュアンス。塩味もあり、果実味以上にミネラルを感じる。ボディは、程よくしっかりとした骨格あり。全体的には、なめらかでリッチ、綺麗な透明感のある味わい。非常に美しく、ナチュラルでピュアなテイスト。バランスも取れており、余韻も長い。この特別な風味も旨みも最後まで続き、エレガントなフィニッシュ。品種を問わず、南アフリカの白ワインとしては最高クラスの１本。<br>シーフード、様々な野菜料理、鶏肉、豚肉、中華、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:16:32";s:13:"update_date_8";s:19:"2023-07-25 02:32:35";s:6:"sclr_9";s:8:"10100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:19;a:13:{s:4:"id_0";s:3:"203";s:6:"name_1";s:72:"ラーツ・イーデン・ハイデンシティ・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:84:"単一畑、蜜植栽培。ラーツのフラグシップ・シュナンブラン。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3599:"<div class="productsheet__table">   <h2><small>Raats Eden High Density Single Vineyard Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／蝋（ろう）キャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：95 Point<br>
+[Tim Atkin Report 2017’] 2016VT：95 Point<br>
+[Platter SA 2018’] 2016VT：5 STAR<br>
+[Platter SA 2017’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+0.6haの畑で2トン/haと極小。土壌は花崗岩。ラーツの蜜植栽培（1haあたり8000本で1ｘ1.2ｍ間隔で植えている。通常は3000-4000本/ha。）。蜜植にすることによって、ブドウの木が互いに競争し、強いブドウが生育する。２月初旬に収穫。その後、全房でプレス。そのまま300Lのフレンチオークで天然発酵、熟成10ヶ月。<br>ライム、青リンゴ、桃、パイナップル、僅かにジンジャー、白コショウ、花やハチミツ、ローストしたナッツなどの香り。フレッシュで綺麗な酸とミネラルを強く感じ、濃厚で凝縮した果実味。味わいはなめらかで綺麗、複雑味もある。ボディは中庸。余韻は長く、エレガントなフィニッシュで、ジンジャーなどのスパイス感もある。南アフリカを代表する特別なシュナンブランの1本。<br>牡蠣（カキ）、帆立貝他、シーフード、ローストポーク、ソーセージ、中華料理、スパイシーなアジア系料理、ベイクドアップル（デザート）など幅広い料理に合わせやすい。
+</div>";s:13:"create_date_7";s:19:"2021-01-19 02:19:32";s:13:"update_date_8";s:19:"2023-11-13 12:54:50";s:6:"sclr_9";s:8:"10200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

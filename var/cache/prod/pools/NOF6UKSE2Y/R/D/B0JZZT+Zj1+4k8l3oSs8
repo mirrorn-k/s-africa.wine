@@ -1,0 +1,456 @@
+1754733909
+%255Bd15a8d2710456119073926deea9013d5ad937e95%255D%255B1%255D
+a:1:{s:1292:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:76;}i:1;a:15:{i:0;i:182;i:1;i:196;i:2;i:200;i:3;i:199;i:4;i:198;i:5;i:197;i:6;i:195;i:7;i:194;i:8;i:188;i:9;i:190;i:10;i:180;i:11;i:193;i:12;i:192;i:13;i:189;i:14;i:201;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:15:{i:0;a:13:{s:4:"id_0";s:3:"182";s:6:"name_1";s:90:"【ナイフ別売】ラギオール アン オブラック ソムリエナイフ名入れ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:123:"贈り物に、自分への記念に。世界に一つだけのオリジナルソムリエナイフはいかがですか。";s:13:"search_word_5";N;s:11:"free_area_6";s:4998:"<div class="ec-productRole__description">    <h4>フォントＡ</h4>
+    <img src="{{ asset('/html/user_data/upload/img/products/font_aa.jpg') }}" width="245"><br>
+    <span>名入れイメージ</span><img src="{{ asset('/html/user_data/upload/img/products/font_d_img.jpg') }}" width="150">
+</div>
+
+<div class="ec-productRole__description">
+    <h4>フォントＢ</h4>
+    <img src="{{ asset('/html/user_data/upload/img/products/fontb.jpg') }}" width="245"><br>
+    <span>名入れイメージ</span><img src="{{ asset('/html/user_data/upload/img/products/font_a_img.jpg') }}" width="150">
+</div>
+<div class="ec-productRole__description">
+    <h4>フォントＣ</h4>
+    <img src="{{ asset('/html/user_data/upload/img/products/font_c.jpg') }}" width="245"><br>
+    <span>名入れイメージ</span><img src="{{ asset('/html/user_data/upload/img/products/font_c_img.jpg') }}" width="150">
+</div>
+
+<div class="ec-productRole__description">
+    <h4>フォントＤ</h4>
+    <img src="{{ asset('/html/user_data/upload/img/products/font_b.jpg') }}" width="245"><br>
+    <span>名入れイメージ</span><img src="{{ asset('/html/user_data/upload/img/products/font_b_img.jpg') }}" width="150">
+</div>
+<div class="ec-productRole__description">
+    <a href="{{ asset('/html/user_data/upload/img/products/name_font.pdf') }}" target="_blank">→名入れフォントをじっくり確認したい方はこちらをダウンロードください</a><br><br><br>
+    <h4>オリジナル</h4>
+    <p>ロゴやマークの名入れも可能です。<br>
+        ご希望のお客様はIllustratorにて作成した<br>
+        アウトライン化されたデータ（.ai、.eps)<br>
+        又は解像度の高い.jpgデータを別途メールにてご送付下さい。<br>
+        ※画像により名入れできない場合もございます。</p>
+</div>
+<div class="ec-productRole__description">
+    <img src="{{ asset('/html/user_data/upload/img/products/aubrac.jpg') }}" alt="ラギオール アン オブラック">
+</div>
+
+<div class="ec-productRole__description">
+    <ol>
+        <li>名入れしたいソムリエナイフを選び、買い物カゴ　に入れます。<br>(現在、名入れはラギオール アン オブラックに限らせていただいております)</li>
+        <li>本ページ下部より、「ソムリエナイフ名入れ」を買い物カゴに入れます。</li>
+        <li>注文画面へ進み、配送先やお支払い方法をお選び下さい。<br>※名入れソムリエナイフは代引きでのお届けができませんのでご了承ください。</li>
+        <li>「ご注文内容の確認」の画面の最下部にある「備考欄」に、上記より選んだフォントと、名入れ内容を記入し、「注文する」のボタンを押してください。</li>
+        <li>ご注文は完了です。弊社より自動返信の後、担当者より確認のメールを差し上げますのでご確認ください。</li>
+    </ol>
+    　※名入れ商品のお届けは、【　ご注文後　約１〜２ヶ月　】でのお届けとなります。
+</div>
+<div class="ec-productRole__description">
+    ■お届けについて
+    <ul>
+        <li>【ご注文後約１〜２ヶ月】でのお届けとなります。お支払方法は、【弊社でのご入金確認日より約１〜２ヶ月後のお届け】となりますのでご了承下さい。</li>
+        <li>原則、他の商品との同送は承っておりません。その他の商品と同時にご注文いただきました場合は、商品の名入れが出来次第、全て合わせての出荷とさせていただきます。</li>
+    </ul>
+    ■お支払いについて<br>
+    <ul>
+        <li>銀行振込みの場合、【ご入金の確認が出来次第、名入れ手配】となりますのでご注意ください。
+        </li>
+    </ul>
+    ■名入れ内容について
+    <ul>
+        <li>名入れできる文字数は約10文字です。<br>それ以上になりますと、文字が小さくなり潰れてしまうことがございます。<br>オリジナルロゴをご希望される場合も、ロゴによってキレイに名入れできない場合がございます。その場合は別途ご相談させていただきます。
+        </li>
+        <li>ソムリエナイフのフック部分への名入れとなります。<br>ラギオール アン オブラックの商品に限らせていただきます。<br>（商品の加工上、一部名入れができないものがございます）。
+        </li>
+        <li>ロゴやマーク、イラスト、写真などは、商標権や肖像権などそれぞれ固有の権利によって保護されています。<br>従いまして、第３者による不当な商用利用目的などはもちろんのこと、正当な権利所有者の承諾を得られていない場合はお取り扱いできません。</li>
+    </ul>
+</div>";s:13:"create_date_7";s:19:"2020-12-16 08:44:22";s:13:"update_date_8";s:19:"2022-06-14 23:47:44";s:6:"sclr_9";s:7:"2500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"196";s:6:"name_1";s:54:"ラギオール アン オブラック ステンレス";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:123:"シンプルでスタイリッシュなオールステンレス。変色や水にも強いのでお手入れしやすい！";s:13:"search_word_5";N;s:11:"free_area_6";s:1353:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:25:48";s:13:"update_date_8";s:19:"2022-04-03 03:10:38";s:6:"sclr_9";s:8:"28130.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"200";s:6:"name_1";s:63:"ラギオール アン オブラック ブライヤーウッド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:236:"南欧産のブライヤーウッドは、たばこのパイプに使われる素材。手に持った感触を楽しむアイテムとして共通の心地よさがあります。
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1382:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>ブライヤーウッド、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:36:20";s:13:"update_date_8";s:19:"2022-04-03 03:13:07";s:6:"sclr_9";s:8:"34920.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"199";s:6:"name_1";s:60:"ラギオール アン オブラック マーシュマロウ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:302:"ヴィヴィッドな模様が斬新で美しいハンドル明るく、クリアな赤色、マーブルのような模様がおしゃれなハンドル。 他にはない、人とは違う目をひく素材で、目立ち度もお墨付き！
+
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1370:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>アクリル、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:33:39";s:13:"update_date_8";s:19:"2022-04-03 03:13:36";s:6:"sclr_9";s:8:"34920.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:3:"198";s:6:"name_1";s:74:"ラギオール アン オブラック エボニーウッド(黒檀の木)";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:170:"高級家具に使われる「黒檀」。使い込むほど黒光りする木目の重厚感を楽しめます。
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1364:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>黒檀、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:31:48";s:13:"update_date_8";s:19:"2022-04-03 03:13:56";s:6:"sclr_9";s:8:"34920.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:3:"197";s:6:"name_1";s:48:"ラギオール アン オブラック オーク";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:232:"ワインとゆかりのあるオークを素材でつくりました。材質が堅く、ワイン用の樽として使われる樫（カシ）を使用しております。
+
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1367:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>オーク、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:30:40";s:13:"update_date_8";s:19:"2022-04-03 03:12:14";s:6:"sclr_9";s:8:"34920.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:3:"195";s:6:"name_1";s:48:"ラギオール アン オブラック ホーン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:450:"オブラック地方の特産品「オブラック牛」の角でつくりました。牛角独特の色の混じりが、個性としてお楽しみ頂けます。
+
+牛角で作られており１本１本が織りなす天然のデザインをお楽しみください。
+
+裏表でも柄が違います。一期一会となるアナタだけのオリジナルをご堪能ください。
+
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1382:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>オブラック牛の角、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:23:31";s:13:"update_date_8";s:19:"2022-04-03 03:11:01";s:6:"sclr_9";s:8:"34920.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:7;a:13:{s:4:"id_0";s:3:"194";s:6:"name_1";s:57:"ラギオール アン オブラック バッファロー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:378:"根強い人気のバッファロー。美しい黒のつややかな光沢をお楽しみください。ラギオールナイフの定番であるバッファローの角は、一本一本個性があります。
+そして裏表でも柄が違います。一期一会となるオリジナルをご堪能ください。
+
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1382:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>バッファローの角、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:17:46";s:13:"update_date_8";s:19:"2022-04-03 03:15:05";s:6:"sclr_9";s:8:"34920.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:8;a:13:{s:4:"id_0";s:3:"188";s:6:"name_1";s:69:"ラギオール アン オブラック オスピス・ド・ボーヌ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:424:"ワイン競売や、ブルゴーニュワインのブランドとして有名なオスピス・ド・ボーヌ。 シンボルである慈善施設の屋根をモチーフにし、欧州ではボーヌでのみ販売されるモデル。 寄せ木の色の組み合わせ１つ１つ異なります。
+１本１本、そして裏表でも柄が違います。一期一会となるオリジナルをご堪能ください。";s:13:"search_word_5";N;s:11:"free_area_6";s:1403:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>スタミナウッド、ボックスウッド、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:03:18";s:13:"update_date_8";s:19:"2022-04-03 03:14:19";s:6:"sclr_9";s:8:"35890.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:9;a:13:{s:4:"id_0";s:3:"190";s:6:"name_1";s:60:"ラギオール アン オブラック キャメルボーン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:262:"ピンクと紫のグラデーションが美しい一本。キャメルボーン＝らくだの骨をボディにあしらい、美しいグラデーションに着色したソムリエナイフです。
+
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1379:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>キャメルボーン、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:10:38";s:13:"update_date_8";s:19:"2022-04-03 03:10:12";s:6:"sclr_9";s:8:"43650.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:10;a:13:{s:4:"id_0";s:3:"180";s:6:"name_1";s:69:"ラギオール アン オブラック シカモアバイオレット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:252:"高級家具やヴァイオリンにも使用される高級木材「シカモア」。 淡い紫色のカラーコーティングがきめの細かい木目を美しく引き立てています。
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1370:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>シカモア、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2020-12-07 07:16:11";s:13:"update_date_8";s:19:"2022-04-03 03:14:46";s:6:"sclr_9";s:8:"43650.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:11;a:13:{s:4:"id_0";s:3:"193";s:6:"name_1";s:54:"ラギオール アン オブラック マラカイト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:508:"深く鮮やかな緑色、独特の縞模様が特徴のマラカイト。日本では「孔雀石」と呼ばれています。 古代エジプトでは、粉末にしてアイシャドーとしても使用されており、あのクレオパトラも使ったとか。 強いヒーリング効果を持つパワーストーンとしても人気があり、体力の回復・ストレスの緩和・浄化作用が あるといわれています。
+
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1388:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>マラカイト（孔雀石）、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:15:30";s:13:"update_date_8";s:19:"2022-04-03 03:11:22";s:6:"sclr_9";s:8:"48500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:12;a:13:{s:4:"id_0";s:3:"192";s:6:"name_1";s:48:"ラギオール アン オブラック ラリマ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:660:"美しい海のような色合いで、世界的に人気のあるパワーストーン「ラリマ」。 カリブ海周辺で産出されるペクトライトという鉱物の一種。 愛と平和の象徴といわれ、カリブ海のイルカのイメージから「ドルフィンストーン」とも呼ばれています。 感情を鎮め平穏な気持ちにさせる、協力しあいつながりを維持させる、などの効果があるといわれています。
+１本１本、そして裏表でも柄が違います。一期一会となるオリジナルをご堪能ください。
+
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1376:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>ラリマ（石）、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:14:08";s:13:"update_date_8";s:19:"2022-04-03 03:11:47";s:6:"sclr_9";s:8:"48500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:13;a:13:{s:4:"id_0";s:3:"189";s:6:"name_1";s:54:"ラギオール アン オブラック ターコイズ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:467:"ボディ部分には、鮮やなスカイブルーが美しいターコイズ(トルコ石)が使用されております。
+ターコイズは、成功祈願・邪気払いなどに効果があるとされ、古代より世界各地で大切に扱われてきました。晴れ渡る大空のような美しい水色は、持っているだけで気分を華やか、かつ穏やかにしてくれます。
+
+※色・柄・模様のご指定はできません。";s:13:"search_word_5";N;s:11:"free_area_6";s:1391:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>ターコイズ（トルコ石）、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:06:48";s:13:"update_date_8";s:19:"2022-04-03 03:09:39";s:6:"sclr_9";s:8:"48500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:14;a:13:{s:4:"id_0";s:3:"201";s:6:"name_1";s:51:"ラギオール アン オブラック シルバー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:289:"全世界限定生産３００本！ 一生モノのソムリエナイフです。純銀製のボディーとスティールの刃部のコンビネーションは宝飾品ともいえるクオリティ。世界限定品の証としてシリアルナンバーが刻印されています。";s:13:"search_word_5";N;s:11:"free_area_6";s:1341:"<div class="productsheet__table">
+    <table>
+        <tr>
+            <th>本体サイズ：</th>
+            <td>120×28×15mm（収納時）
+            </td>
+        </tr>
+        <tr>
+            <th>梱包サイズ：</th>
+            <td>153×70×30mm</td>
+        </tr>
+        <tr>
+            <th>素材：</th>
+            <td>純銀製、ステンレス</td>
+        </tr>
+        <tr>
+            <th>ネーム入れ：</th>
+            <td>有料で彫刻可能<br><a href="https://s-africa.wine/products/detail/182" style="text-decoration:underline;">ご希望の方はこちらをご覧ください</a></td>
+        </tr>
+        <tr>
+            <th>パッケージ：</th>
+            <td>黒箱無くなり次第木箱になります（予告なく変更する場合がございます）</td>
+        </tr>
+    </table>
+</div>
+<div class="ec-productRole__description"><a href="https://s-africa.wine/products/list?category_id=76"><img src="{{ asset('/html/user_data/upload/img/products/lea2.jpg') }}" alt="ラギオール アン オブラック" ></a><br><br>『ラギオール アン オブラック』の製品は、希少な動物や自然素材を使用し、手作りで製作しております。１つ１つ柄や模様、色調が異なりますが、製品の貴重な個性としてお楽しみ下さい。
+</div>";s:13:"create_date_7";s:19:"2021-01-17 06:37:27";s:13:"update_date_8";s:19:"2022-04-03 03:12:37";s:6:"sclr_9";s:9:"106700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

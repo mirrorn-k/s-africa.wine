@@ -1,0 +1,56 @@
+
+<script>
+    $(function() {
+        var eccube_copy = window.eccube;
+        var discountRate = {{ Product.discountRatesJson | raw}};
+        price02IncTax = $('#form1').parent().find('.price02-default').first();
+        price02NoTax = $('#form1').parent().find('.price02-default-no-tax').first();
+        priceOff = $('#form1').parent().find('.price_off').first();
+        price02NoTaxOrigin = price02NoTax.text();
+        priceOffOrigin = priceOff.text();
+        {% if form.classcategory_id2 is defined %}
+        $('#form1').on('change', 'select[name=classcategory_id2], select[name=classcategory_id1]', function() {
+            classcategory_id01 = $('#form1').find('select[name=classcategory_id1]').val();
+            classcategory_id02 = $('#form1').find('select[name=classcategory_id2]').val();
+            if(classcategory_id01 && classcategory_id01 !== '__unselected' && classcategory_id02 && classcategory_id02 !== '__unselected') {
+                classcategory_discountRate = discountRate[classcategory_id01]['#'+classcategory_id02];
+                {% if TaxManagementConfig.isIncludeTaxFlag is not null and TaxManagementConfig.isIncludeTaxFlag == false %}
+                classcategory = eccube_copy.classCategories[classcategory_id01]['#'+classcategory_id02];
+                price02NoTax.text('￥'+classcategory.price02);
+                price02IncTax.text('(' + price02IncTax.text() + '税込)');
+                {% endif %}
+                if(classcategory_discountRate.discount_rate > 0) {
+                    priceOff.removeClass('hidden');
+                    priceOff.text(classcategory_discountRate.discount_rate + '%OFF');
+                } else {
+                    priceOff.addClass('hidden');
+                }
+            } else {
+                price02NoTax.text(price02NoTaxOrigin);
+                priceOff.text(priceOffOrigin);
+            }
+        })
+        {% elseif form.classcategory_id1 is defined %}
+        $('#form1').find('select[name=classcategory_id1]').on('change', function() {
+            classcategory_id01 = $('#form1').find('select[name=classcategory_id1]').val();
+            if(classcategory_id01 && classcategory_id01 !== '__unselected') {
+                classcategory_discountRate = discountRate[classcategory_id01]['#'];
+                {% if TaxManagementConfig.isIncludeTaxFlag is not null and TaxManagementConfig.isIncludeTaxFlag == false %}
+                classcategory = eccube_copy.classCategories[classcategory_id01]['#'];
+                price02NoTax.text('￥'+classcategory.price02);
+                price02IncTax.text('(' + price02IncTax.text() + '税込)');
+                {% endif %}
+                if(classcategory_discountRate.discount_rate > 0) {
+                    priceOff.removeClass('hidden');
+                    priceOff.text(classcategory_discountRate.discount_rate + '%OFF');
+                } else {
+                    priceOff.addClass('hidden');
+                }
+            } else {
+                price02NoTax.text(price02NoTaxOrigin);
+                priceOff.text(priceOffOrigin);
+            }
+        })
+        {% endif %}
+    });
+</script>

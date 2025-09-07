@@ -1,0 +1,54 @@
+id	title	description	google product category	link	image link	condition	availability	price	gtin	brand	mpn	identifier_exists
+185	“魅せる”ワインセラー ファンヴィーノ ブリリアント70【最大収納70本】(BU-258) L(左ヒンジ右取手)	【日本初上陸】ー魅せるーディスプレイセラー	ホーム・ガーデン > キッチン・ダイニング > キッチン家電 > ワインセラー	https://s-africa.wine/products/detail/185	https://s-africa.wine/html/upload/save_image/0117134656_6003c1407fb8c.jpg	new	in_stock	297000 JPY		CAPEWINE		no
+184	“魅せる”ワインセラー ファンヴィーノ ブリリアント70【最大収納70本】(BU-258) R(右ヒンジ左取手)	【日本初上陸】ー魅せるーディスプレイセラー	ホーム・ガーデン > キッチン・ダイニング > キッチン家電 > ワインセラー	https://s-africa.wine/products/detail/184	https://s-africa.wine/html/upload/save_image/0117133846_6003bf56933cd.jpg	new	in_stock	297000 JPY		CAPEWINE		no
+183	“魅せる”ワインセラー ファンヴィーノ ブリリアント40【最大収納40本】(BU-138) L(左ヒンジ右取手)	【グッドデザイン賞 2020年度受賞】ー魅せるーディスプレイセラー	ホーム・ガーデン > キッチン・ダイニング > キッチン家電 > ワインセラー	https://s-africa.wine/products/detail/183	https://s-africa.wine/html/upload/save_image/0117133452_6003be6c5adb8.jpg	new	in_stock	196900 JPY		CAPEWINE		no
+179	“魅せる”ワインセラー ファンヴィーノ ブリリアント40【最大収納40本】(BU-138) R(右ヒンジ左取手)	【グッドデザイン賞 2020年度受賞】ー魅せるーディスプレイセラー	ホーム・ガーデン > キッチン・ダイニング > キッチン家電 > ワインセラー	https://s-africa.wine/products/detail/179	https://s-africa.wine/html/upload/save_image/1207175719_5fcdee6f2035e.jpg	new	in_stock	196900 JPY		CAPEWINE		no
+187	“魅せる”ワインセラー ファンヴィーノ ブリリアント143【最大収納143本】(BU-468) L(左ヒンジ右取手)	【日本初上陸】ー魅せるーディスプレイセラー	ホーム・ガーデン > キッチン・ダイニング > キッチン家電 > ワインセラー	https://s-africa.wine/products/detail/187	https://s-africa.wine/html/upload/save_image/0117135352_6003c2e0a122a.jpg	new	in_stock	522500 JPY		CAPEWINE		no
+186	“魅せる”ワインセラー ファンヴィーノ ブリリアント143【最大収納143本】(BU-468) R(右ヒンジ左取手)	【日本初上陸】ー魅せるーディスプレイセラー	ホーム・ガーデン > キッチン・ダイニング > キッチン家電 > ワインセラー	https://s-africa.wine/products/detail/186	https://s-africa.wine/html/upload/save_image/0117134856_6003c1b893cbe.jpg	new	in_stock	522500 JPY		CAPEWINE		no
+182	ラギオール アン オブラック ソムリエナイフ名入れ	贈り物に、自分への記念に。世界に一つだけのオリジナルソムリエナイフはいかがですか。	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/182	https://s-africa.wine/html/upload/save_image/0116155415_60028d9724d86.jpg	new	in_stock	2200 JPY		CAPEWINE		no
+180	ラギオール アン オブラック シカモアバイオレット	"高級家具やヴァイオリンにも使用される高級木材「シカモア」。 淡い紫色のカラーコーティングがきめの細かい木目を美しく引き立てています。
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/180	https://s-africa.wine/html/upload/save_image/1207173311_5fcde8c76e213.jpg	new	in_stock	35200 JPY		CAPEWINE		no
+188	ラギオール アン オブラック オスピス・ド・ボーヌ	"ワイン競売や、ブルゴーニュワインのブランドとして有名なオスピス・ド・ボーヌ。 シンボルである慈善施設の屋根をモチーフにし、欧州ではボーヌでのみ販売されるモデル。 寄せ木の色の組み合わせ１つ１つ異なります。
+１本１本、そして裏表でも柄が違います。一期一会となるオリジナルをご堪能ください。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/188	https://s-africa.wine/html/upload/save_image/0117150423_6003d367e3fb2.jpg	new	in_stock	35200 JPY		CAPEWINE		no
+189	ラギオール アン オブラック ターコイズ	"ボディ部分には、鮮やなスカイブルーが美しいターコイズ(トルコ石)が使用されております。
+ターコイズは、成功祈願・邪気払いなどに効果があるとされ、古代より世界各地で大切に扱われてきました。晴れ渡る大空のような美しい水色は、持っているだけで気分を華やか、かつ穏やかにしてくれます。
+
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/189	https://s-africa.wine/html/upload/save_image/0117150908_6003d484cd36a.jpg	new	in_stock	38500 JPY		CAPEWINE		no
+198	ラギオール アン オブラック エボニーウッド(黒檀の木)	"高級家具に使われる「黒檀」。使い込むほど黒光りする木目の重厚感を楽しめます。
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/198	https://s-africa.wine/html/upload/save_image/0117153226_6003d9fa7ef92.jpg	new	in_stock	28600 JPY		CAPEWINE		no
+199	ラギオール アン オブラック マーシュマロウ	"ヴィヴィッドな模様が斬新で美しいハンドル明るく、クリアな赤色、マーブルのような模様がおしゃれなハンドル。 他にはない、人とは違う目をひく素材で、目立ち度もお墨付き！
+
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/199	https://s-africa.wine/html/upload/save_image/0117153355_6003da53f339d.jpg	new	in_stock	28600 JPY		CAPEWINE		no
+200	ラギオール アン オブラック ブライヤーウッド	"南欧産のブライヤーウッドは、パイプに使われる素材。手に持った感触を楽しむアイテムとして共通の心地よさがあります。
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/200	https://s-africa.wine/html/upload/save_image/0117153635_6003daf3a9b98.jpg	new	in_stock	28600 JPY		CAPEWINE		no
+201	ラギオール アン オブラック シルバー	全世界限定生産３００本！ 一生モノのソムリエナイフです。純銀製のボディーとスティールの刃部のコンビネーションは宝飾品ともいえるクオリティ。世界限定品の証としてシリアルナンバーが刻印されています。	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/201	https://s-africa.wine/html/upload/save_image/0117153819_6003db5b0db38.jpg	new	in_stock	99000 JPY		CAPEWINE		no
+191	ラギオール アン オブラック ブルーメープル	"渋い青～紺～黒のカラーコーティングで、シックな雰囲気に仕上げています。家具・楽器材にも多く使用されるメープル（カエデの木）。渋い青～紺～黒のカラーコーティングで、シックな雰囲気に仕上げています。
+
+１本１本、そして裏表でも柄が違います。一期一会となるオリジナルをご堪能ください。
+
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/191	https://s-africa.wine/html/upload/save_image/0117151344_6003d598ae972.jpg	new	in_stock	35200 JPY		CAPEWINE		no
+192	ラギオール アン オブラック ラリマ	"美しい海のような色合いで、世界的に人気のあるパワーストーン「ラリマ」。 カリブ海周辺で産出されるペクトライトという鉱物の一種。 愛と平和の象徴といわれ、カリブ海のイルカのイメージから「ドルフィンストーン」とも呼ばれています。 感情を鎮め平穏な気持ちにさせる、協力しあいつながりを維持させる、などの効果があるといわれています。
+１本１本、そして裏表でも柄が違います。一期一会となるオリジナルをご堪能ください。
+
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/192	https://s-africa.wine/html/upload/save_image/0117151436_6003d5cca6cf3.jpg	new	in_stock	38500 JPY		CAPEWINE		no
+193	ラギオール アン オブラック マラカイト	"深く鮮やかな緑色、独特の縞模様が特徴のマラカイト。日本では「孔雀石」と呼ばれています。 古代エジプトでは、粉末にしてアイシャドーとしても使用されており、あのクレオパトラも使ったとか。 強いヒーリング効果を持つパワーストーンとしても人気があり、体力の回復・ストレスの緩和・浄化作用が あるといわれています。
+
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/193	https://s-africa.wine/html/upload/save_image/0117151547_6003d613b23d1.jpg	new	in_stock	38500 JPY		CAPEWINE		no
+195	ラギオール アン オブラック ホーン	"オブラック地方の特産品「オブラック牛」の角でつくりました。牛角独特の色の混じりが、個性としてお楽しみ頂けます。
+
+牛角で作られており１本１本が織りなす天然のデザインをお楽しみください。
+
+裏表でも柄が違います。一期一会となるアナタだけのオリジナルをご堪能ください。
+
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/195	https://s-africa.wine/html/upload/save_image/0117152425_6003d819ab68c.jpg	new	in_stock	28600 JPY		CAPEWINE		no
+196	ラギオール アン オブラック ステンレス	シンプルでスタイリッシュなオールステンレス。変色や水にも強いのでお手入れしやすい！	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/196	https://s-africa.wine/html/upload/save_image/0117152912_6003d938e6781.jpg	new	in_stock	25300 JPY		CAPEWINE		no
+197	ラギオール アン オブラック オーク	"ワインとゆかりのあるオークを素材でつくりました。材質が堅く、ワイン用の樽として使われる樫（カシ）を使用しております。
+
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/197	https://s-africa.wine/html/upload/save_image/0117153123_6003d9bbd79aa.jpg	new	in_stock	28600 JPY		CAPEWINE		no
+190	ラギオール アン オブラック キャメルボーン	"ピンクと紫のグラデーションが美しい一本。キャメルボーン＝らくだの骨をボディにあしらい、美しいグラデーションに着色したソムリエナイフです。
+
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/190	https://s-africa.wine/html/upload/save_image/0117151125_6003d50d2a8a4.jpg	new	out_of_stock	35200 JPY		CAPEWINE		no
+194	ラギオール アン オブラック バッファロー	"根強い人気のバッファロー。美しい黒のつややかな光沢をお楽しみください。ラギオールナイフの定番であるバッファローの角は、一本一本個性があります。
+そして裏表でも柄が違います。一期一会となるオリジナルをご堪能ください。
+
+※色・柄・模様のご指定はできません。"	ホーム・ガーデン > キッチン・ダイニング > バー用品 > コルク抜き	https://s-africa.wine/products/detail/194	https://s-africa.wine/html/upload/save_image/0117151829_6003d6b59feb0.jpg	new	out_of_stock	28600 JPY		CAPEWINE		no

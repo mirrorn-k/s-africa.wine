@@ -1,0 +1,168 @@
+{% extends '@admin/default_frame.twig' %}
+
+{% set menus = ['store', 'plugin', 'plugin_list'] %}
+
+{% block title %}{{ 'gmo_epsilon.admin.config.title'|trans }}{% endblock %}
+{% block sub_title %}{{ 'gmo_epsilon.admin.config.sub_title'|trans }}{% endblock %}
+
+{% form_theme form '@admin/Form/bootstrap_4_horizontal_layout.html.twig' %}
+
+{% block stylesheet %}
+
+{% endblock stylesheet %}
+
+{% block main %}
+
+    <form role="form" method="post">
+
+        {{ form_widget(form._token) }}
+        <div class="c-contentsArea__cols">
+            <div class="c-contentsArea__primaryCol">
+                <div class="c-primaryCol">
+                    <div class="card rounded border-0 mb-4">
+                        <div class="card-header"><span>{{ 'gmo_epsilon.admin.config.header'|trans }}</span></div>
+                        <!-- /.box-header -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3"><span>{{ 'gmo_epsilon.admin.config.contract_code'|trans }}</span><span class="badge badge-primary ml-1">{{ 'gmo_epsilon.admin.config.required'|trans }}</span></div>
+                                <div class="col mb-2">
+                                    {{ form_widget(form.contract_code) }}
+                                    {{ form_errors(form.contract_code) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3"><span>{{ 'gmo_epsilon.admin.config.destination_url'|trans }}</span><span class="badge badge-primary ml-1">{{ 'gmo_epsilon.admin.config.required'|trans }}</span></div>
+                                <div class="col mb-2">
+                                    {{ form_widget(form.destination_url) }}
+                                    {{ form_errors(form.destination_url) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3"><span>{{ 'gmo_epsilon.admin.config.info_conf_url'|trans }}</span><span class="badge badge-primary ml-1">{{ 'gmo_epsilon.admin.config.required'|trans }}</span></div>
+                                <div class="col mb-2">
+                                    {{ form_widget(form.info_conf_url) }}
+                                    {{ form_errors(form.info_conf_url) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3"><span>{{ 'gmo_epsilon.admin.config.ssl_version'|trans }}</span><span class="badge badge-primary ml-1">{{ 'gmo_epsilon.admin.config.required'|trans }}</span></div>
+                                <div class="col mb-2">
+                                    {{ form_widget(form.ssl_version) }}
+                                    {{ form_errors(form.ssl_version) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3"><span>{{ 'gmo_epsilon.admin.config.use_payment'|trans }}</span><span class="badge badge-primary ml-1">{{ 'gmo_epsilon.admin.config.required'|trans }}</span></div>
+                                <div class="col mb-2">
+                                    {{ form_widget(form.use_payment) }}
+                                    {{ form_errors(form.use_payment) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3"><span>{{ 'gmo_epsilon.admin.config.use_convenience'|trans }}</span></div>
+                                <div class="col mb-2">
+                                    {{ form_widget(form.use_convenience) }}
+                                    {{ form_errors(form.use_convenience) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-header"><span>{{ 'gmo_epsilon.admin.config.access_block'|trans }}</span></div>
+                        <div class="card-body">
+                            <span>{{ 'gmo_epsilon.admin.config.access_block_message'|trans|raw }}</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3"><span>{{ 'gmo_epsilon.admin.config.block_mode'|trans }}</span><span class="badge badge-primary ml-1">{{ 'gmo_epsilon.admin.config.required'|trans }}</span></div>
+                                <div class="col mb-2">
+                                    {{ form_widget(form.block_mode) }}
+                                    {{ form_errors(form.block_mode) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3"><span>{{ 'gmo_epsilon.admin.config.access_frequency'|trans }}</span></div>
+                                <div class="col mb-2">
+                                    <div class="row justify-content-start">
+                                        <div class="col-2">
+                                            {{ form_widget(form.access_frequency_time) }}
+                                        </div>
+                                        <div class="col-auto text-center">
+                                            {{ 'gmo_epsilon.admin.config.access_frequency_message_1'|trans }}
+                                        </div>
+                                        <div class="col-2">
+                                            {{ form_widget(form.access_frequency) }}
+                                        </div>
+                                        <div class="col-auto text-center">
+                                            {{ 'gmo_epsilon.admin.config.access_frequency_message_2'|trans }}
+                                        </div>
+                                        {{ form_errors(form.access_frequency) }}
+                                        {{ form_errors(form.access_frequency_time) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3"><span>{{ 'gmo_epsilon.admin.config.block_time'|trans }}</span></div>
+                                <div class="col-2">
+                                    {{ form_widget(form.block_time) }}
+                                    {{ form_errors(form.block_time) }}
+                                </div>
+                                <div class="col-auto text-left">
+                                    <span>{{ 'gmo_epsilon.admin.config.block_time_message'|trans }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3"><span>{{ 'gmo_epsilon.admin.config.white_list'|trans }}</span></div>
+                                <div class="col mb-2">
+                                    {{ form_widget(form.white_list) }}
+                                    {{ form_errors(form.white_list) }}
+                                    <span>{{ 'gmo_epsilon.admin.config.white_list_message'|trans }}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-conversionArea">
+            <div class="c-conversionArea__container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-6">
+                        <div class="c-conversionArea__leftBlockItem">
+                            <a class="c-baseLink"
+                               href="{{ url('admin_store_plugin') }}">
+                                <i class="fa fa-backward" aria-hidden="true"></i>
+                                <span>{{ 'gmo_epsilon.admin.config.back'|trans }}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row align-items-center justify-content-end">
+                            <div class="col-auto">
+                                <button class="btn btn-ec-conversion px-5"
+                                        type="submit">{{ 'gmo_epsilon.admin.config.save'|trans }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

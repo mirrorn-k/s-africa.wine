@@ -1,0 +1,1293 @@
+1754692162
+%255Bf1d62be79b01ff79caec74289e648a73573059f8%255D%255B1%255D
+a:1:{s:3986:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, d1_.id AS id_9, d1_.product_code AS product_code_10, d1_.stock AS stock_11, d1_.stock_unlimited AS stock_unlimited_12, d1_.sale_limit AS sale_limit_13, d1_.price01 AS price01_14, d1_.price02 AS price02_15, d1_.delivery_fee AS delivery_fee_16, d1_.visible AS visible_17, d1_.create_date AS create_date_18, d1_.update_date AS update_date_19, d1_.currency_code AS currency_code_20, d1_.point_rate AS point_rate_21, d2_.id AS id_22, d2_.tax_rate AS tax_rate_23, d2_.tax_adjust AS tax_adjust_24, d2_.apply_date AS apply_date_25, d2_.create_date AS create_date_26, d2_.update_date AS update_date_27, d3_.id AS id_28, d3_.stock AS stock_29, d3_.create_date AS create_date_30, d3_.update_date AS update_date_31, d4_.id AS id_32, d4_.backend_name AS backend_name_33, d4_.name AS name_34, d4_.sort_no AS sort_no_35, d4_.visible AS visible_36, d4_.create_date AS create_date_37, d4_.update_date AS update_date_38, d5_.id AS id_39, d5_.backend_name AS backend_name_40, d5_.name AS name_41, d5_.sort_no AS sort_no_42, d5_.visible AS visible_43, d5_.create_date AS create_date_44, d5_.update_date AS update_date_45, d6_.id AS id_46, d6_.file_name AS file_name_47, d6_.sort_no AS sort_no_48, d6_.create_date AS create_date_49, d7_.id AS id_50, d7_.create_date AS create_date_51, d0_.discriminator_type AS discriminator_type_52, d0_.creator_id AS creator_id_53, d0_.product_status_id AS product_status_id_54, d1_.discriminator_type AS discriminator_type_55, d1_.product_id AS product_id_56, d1_.sale_type_id AS sale_type_id_57, d1_.class_category_id1 AS class_category_id1_58, d1_.class_category_id2 AS class_category_id2_59, d1_.delivery_duration_id AS delivery_duration_id_60, d1_.creator_id AS creator_id_61, d2_.discriminator_type AS discriminator_type_62, d2_.product_class_id AS product_class_id_63, d2_.creator_id AS creator_id_64, d2_.country_id AS country_id_65, d2_.pref_id AS pref_id_66, d2_.product_id AS product_id_67, d2_.rounding_type_id AS rounding_type_id_68, d3_.discriminator_type AS discriminator_type_69, d3_.product_class_id AS product_class_id_70, d3_.creator_id AS creator_id_71, d4_.discriminator_type AS discriminator_type_72, d4_.class_name_id AS class_name_id_73, d4_.creator_id AS creator_id_74, d5_.discriminator_type AS discriminator_type_75, d5_.class_name_id AS class_name_id_76, d5_.creator_id AS creator_id_77, d6_.discriminator_type AS discriminator_type_78, d6_.product_id AS product_id_79, d6_.creator_id AS creator_id_80, d7_.discriminator_type AS discriminator_type_81, d7_.product_id AS product_id_82, d7_.tag_id AS tag_id_83, d7_.creator_id AS creator_id_84 FROM dtb_product d0_ INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') LEFT JOIN dtb_tax_rule d2_ ON d1_.id = d2_.product_class_id AND d2_.discriminator_type IN ('taxrule') INNER JOIN dtb_product_stock d3_ ON d1_.id = d3_.product_class_id AND d3_.discriminator_type IN ('productstock') LEFT JOIN dtb_class_category d4_ ON d1_.class_category_id1 = d4_.id AND d4_.discriminator_type IN ('classcategory') LEFT JOIN dtb_class_category d5_ ON d1_.class_category_id2 = d5_.id AND d5_.discriminator_type IN ('classcategory') LEFT JOIN dtb_product_image d6_ ON d0_.id = d6_.product_id AND d6_.discriminator_type IN ('productimage') LEFT JOIN dtb_product_tag d7_ ON d0_.id = d7_.product_id AND d7_.discriminator_type IN ('producttag') WHERE (d0_.id IN (111, 112, 117, 113, 116, 115, 114, 118, 119, 138) AND d1_.visible = ?) AND d0_.discriminator_type IN ('product') ORDER BY d4_.sort_no DESC, d5_.sort_no DESC, d6_.sort_no ASC&params=a:1:{i:0;b:1;}&types=a:1:{i:0;s:7:"boolean";}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:20:{i:0;a:85:{s:4:"id_0";s:3:"111";s:6:"name_1";s:33:"ロングリッジ・エミリー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:291:"熟したグアバ、パイナップル、キウイ、青リンゴ、ストロベリーなどのフレッシュで豊かな香り。爽やかで豊かな酸、フルーティで優しいボディ。酸味と果実味とのバランスが良く、気持ちの良いやや辛口のワイン。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:3531:"<div class="productsheet__table">   <h2><small>Longridge Emily</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウエスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2017VT：90 Point<br>
+[Platter SA 2018’] 2017VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+樽熟成していないシャルドネと、ほんの少しだけ樽熟成させたエルギン産のピノノワールを混ぜている。両方のブドウとも全房でプレス、天然発酵、熟成。熟したグアバ、パイナップル、キウイ、青リンゴ、ストロベリーなどのフレッシュで豊かな香り。爽やかで豊かな酸、フルーティで優しいボディ。酸味と果実味とのバランスが良く、気持ちの良いやや辛口のワイン。余韻も長く、ワイン単体でも楽しめる。<br>シーフードのカルパッチョやマリネ、サラダなど爽やかな料理と。
+<br><br>
+オーガニック。同社の中では南アフリカで最も売れているワイン。イギリス人女性のエミリーは、南アフリカのボーア（イギリス対オランダ）戦争（1899-1902年）時代に、敵であるオランダ人兵士に対しても人種の壁を越えて献身的に介護した。戦後、南アフリカでは彼女の勇気ある行動を称えた。この商品は、そんな勇気ある彼女を忘れないために作った商品。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:08:23";s:13:"update_date_8";s:19:"2023-11-13 12:59:27";s:4:"id_9";s:3:"126";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"2500.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:08:23";s:14:"update_date_19";s:19:"2023-11-13 12:59:27";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"126";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:08:23";s:14:"update_date_31";s:19:"2020-10-08 06:08:23";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1441";s:12:"file_name_47";s:28:"1008150821_5f7eacd5a1faf.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:14";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"111";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"126";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"111";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:1;a:85:{s:4:"id_0";s:3:"112";s:6:"name_1";s:63:"ロングリッジ・オーガニック・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:288:"オーガニック＆ビオディナミワイン。メロン、白桃、濃厚な柑橘類、ライム、香水、ナッツなど、複雑で豊かな香り。フレッシュな酸、優しくふくよかなボディ、全体のバランスも取れていて、なめらかな味わい。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3328:"<div class="productsheet__table">   <h2><small>Longridge Organic Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：92 Point<br>
+[Platter SA 2017’] 2015VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステレンボシュ地区で最も冷涼なヘルダーバーグ山脈の麓の斜面。この地区は大西洋のフォルス湾から冷涼な風が吹いてきて、夜も冷える。その結果、ブドウはゆっくりと生長し、自然に酸がしっかりと含まれる。ブドウは全房で天然発酵。発酵はフレンチオークで10-14日、時々バトナージュ。そのまま11ヶ月熟成（新樽と中古樽）。無ろ過で瓶詰め。無濾過で自然な醸造方法で製造しているので酒石などが発生する場合がありますが無害です。<br>メロン、白桃、濃厚な柑橘類、ライム、香水、ナッツなど、複雑で豊かな香り。フレッシュな酸、優しくふくよかなボディ、全体のバランスも取れていて、なめらかな味わい。フレッシュ＆フルーティな、シンプルに素直に美味しく楽しめる。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:08:48";s:13:"update_date_8";s:19:"2023-11-13 12:57:26";s:4:"id_9";s:3:"127";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"2900.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:08:48";s:14:"update_date_19";s:19:"2023-11-13 12:57:26";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"127";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:08:48";s:14:"update_date_31";s:19:"2020-10-08 06:08:48";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1443";s:12:"file_name_47";s:28:"1008150845_5f7eaced4ebac.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:14";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"112";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"127";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"112";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:2;a:85:{s:4:"id_0";s:3:"113";s:6:"name_1";s:36:"ロングリッジ・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:258:"柑橘類やライム、洋ナシなどの香り。フレッシュで豊かな酸、ボディは中庸、ドライでクラシックなスタイル。酸と果実味のバランスが良く、フレッシュな風味は最後まで続き、余韻も長い。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3195:"<div class="productsheet__table">   <h2><small>Longridge Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満／残糖 2.2g/L</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：93 Point<br>
+[Platter SA 2018’] 2016VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。全房でプレス。ステンレスタンクで天然発酵後、マロラクティック発酵を経て、フレンチオークに移して熟成12ヵ月。最初の6-9か月はSO2はほとんど使用しない。<br>柑橘類やライム、洋ナシなどの香り。フレッシュで豊かな酸、ボディは中庸、ドライでクラシックなスタイル。酸と果実味のバランスが良く、フレッシュな風味は最後まで続き、余韻も長い。ステレンボシュ地区では最も冷涼なヘルダーバーグらしいナチュラルな酸のバランスが取れた素晴らしいシャルドネ。<br>シーフードのグリルやマリネ、パスタ、クリームソースを使った料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:09:18";s:13:"update_date_8";s:19:"2023-11-13 12:57:44";s:4:"id_9";s:3:"128";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3300.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:09:18";s:14:"update_date_19";s:19:"2023-11-13 12:57:44";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"128";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:09:18";s:14:"update_date_31";s:19:"2020-10-08 06:09:18";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1445";s:12:"file_name_47";s:28:"1008150913_5f7ead095efba.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:14";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"113";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"128";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"113";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:3;a:85:{s:4:"id_0";s:3:"114";s:6:"name_1";s:39:"ロングリッジ・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:315:"メーカーは、ピノノワールに近いイメージを持っている。スパイス、カシス、熟したベリー、砂糖漬けのオレンジピール、ルイボス、スモーキーなど様々な複雑な香り。程よく豊かな酸、柔らかくジューシーな渋みの少ないタンニン。";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:3365:"<div class="productsheet__table">   <h2><small>Longridge Pinotage</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2017VT：92 Point<br>
+[Tim Atkin Report 2017’] 2016VT：93 Point<br>
+[Platter SA 2017’] 2015VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステレンボシュ地区で最も冷涼なヘルダーバーグ山脈の麓の斜面。この地区は大西洋のフォルス湾から冷涼な風が吹いてきて、夜も冷える。その結果、ブドウはゆっくりと生長し、自然に酸がしっかりと含まれる。ブドウは手摘み後、選果、箱型の発酵タンクとステンレスタンクで7日間の天然発酵。その後は、フレンチオークで16ヶ月熟成（新樽と中古樽）。無濾過で自然な醸造方法で製造しているので酒石などが発生する場合がありますが無害です。メーカーは、ピノノワールに近いイメージを持っている。<br>スパイス、カシス、熟したベリー、砂糖漬けのオレンジピール、ルイボス、スモーキーなど様々な複雑な香り。程よく豊かな酸、柔らかくジューシーな渋みの少ないタンニン。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:09:44";s:13:"update_date_8";s:19:"2023-11-13 12:58:00";s:4:"id_9";s:3:"129";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3500.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:09:44";s:14:"update_date_19";s:19:"2023-11-13 12:58:00";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"129";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:09:44";s:14:"update_date_31";s:19:"2020-10-08 06:09:44";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1447";s:12:"file_name_47";s:28:"1008150942_5f7ead26a293d.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"114";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"129";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"114";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:4;a:85:{s:4:"id_0";s:3:"115";s:6:"name_1";s:30:"ロングリッジ・メルロ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:159:"ステレンボシュ地区では最も冷涼なヘルダーバーグらしい酸とのバランスが取れた優しいタッチの素晴らしいメルロ。";s:13:"search_word_5";s:9:"メルロ";s:11:"free_area_6";s:3244:"<div class="productsheet__table">   <h2><small>Longridge Merlot</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15.0％未満／残糖 2.1g/L</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018／コルク</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：89 Point<br>
+[Tim Atkin Report 2017’] 2015VT：93 Point<br>
+[Platter SA 2018’] 2016VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。ステンレスタンクで天然発酵後、プレス。その後フレンチオークに移して熟成26ヵ月。<br>プラム、赤系果実、熟したストロベリー、ダークチョコレート、ココア、杉などの香り。フレッシュで豊かな酸、ボディは中庸、優しくて心地良い渋み。酸と果実味のバランスが良く、ドライでなめらかな味わい。ステレンボシュ地区では最も冷涼なヘルダーバーグらしい酸とのバランスが取れた優しいタッチの素晴らしいメルロ。<br>牛ステーキ、ローストビーフなどの牛肉料理、羊のロースト、ピーマン・ししとうなど苦味のある野菜や根野菜のグリル、など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:10:19";s:13:"update_date_8";s:19:"2023-11-13 12:58:17";s:4:"id_9";s:3:"130";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3500.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:10:19";s:14:"update_date_19";s:19:"2023-11-13 12:58:17";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"130";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:10:19";s:14:"update_date_31";s:19:"2020-10-08 06:10:19";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1449";s:12:"file_name_47";s:28:"1008151017_5f7ead49114e9.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"115";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"130";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"115";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:5;a:85:{s:4:"id_0";s:3:"116";s:6:"name_1";s:54:"ロングリッジ・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:321:"赤系果実、ダークチェリー、タバコなどの香り。フレッシュで豊かな酸、ボディは中庸、優しくて心地良い渋み。酸と果実味のバランスが良く、ドライでなめらかな味わい。繊細でシルキーなタッチ、全体にエレガントにまとまっている。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3271:"<div class="productsheet__table">   <h2><small>Longridge Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満／残糖 1.8g/L</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019／コルク</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2015VT：93 Point<br>
+[Tim Atkin Report 2017’] 2014VT：92 Point<br>
+[Platter SA 2018’] 2015VT：3.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。ベストのブドウのみを選果。ステンレスタンクで天然発酵後、プレス。その後フレンチオークに移して熟成22-24ヵ月。<br>赤系果実、ダークチェリー、タバコなどの香り。フレッシュで豊かな酸、ボディは中庸、優しくて心地良い渋み。酸と果実味のバランスが良く、ドライでなめらかな味わい。繊細でシルキーなタッチ、全体にエレガントにまとまっている。ステレンボシュ地区では最も冷涼なヘルダーバーグらしい酸とのバランスが取れた優しいなめらかなスタイルのカベルネ。提供する前にデカンタをお薦めする。<br>ローストビーフ、牛ステーキ、和食など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:10:46";s:13:"update_date_8";s:19:"2023-11-13 12:58:38";s:4:"id_9";s:3:"131";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3500.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:10:46";s:14:"update_date_19";s:19:"2023-11-13 12:58:38";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"131";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:10:46";s:14:"update_date_31";s:19:"2020-10-08 06:10:46";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1451";s:12:"file_name_47";s:28:"1008151043_5f7ead637de97.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"116";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"131";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"116";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:6;a:85:{s:4:"id_0";s:3:"117";s:6:"name_1";s:39:"キュベ・リカ・ピノノワール";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:258:"冷涼地区エルギンのテロワールを表現するため、ミニマム・アプローチの不干渉主義でオーガニック農法で育てられたシングル畑のブドウを使用。ブドウは小さなオープンタンクで天然発酵。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:3317:"<div class="productsheet__table">   <h2><small>Jasper Raats Cuivee Rika Pinot Noir</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：91 Point<br>
+[Platter SA 2017’] 2014VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+冷涼地区エルギンのテロワールを表現するため、ミニマム・アプローチの不干渉主義でオーガニック農法で育てられたシングル畑のブドウを使用。ブドウは小さなオープンタンクで天然発酵。その後は、フレンチオークで11ヶ月熟成（新樽と中古樽）。無濾過で自然な醸造方法で製造しているので酒石などが発生する場合がありますが無害です。熟した赤系ベリー、ジューシーなストロベリー、スパイスなどの香り。優しく柔らかな酸、細やかな渋み、優しいボディで、クラシック＆エレガントなスタイル。なめらかで飲みやすいフルーティなワイン。<br>
+醸造家 ジャスパー・ラーツのオリジナルブランドです。 葡萄はエルギンの買い葡萄でオーガニック。ビオディナミ製法。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:11:10";s:13:"update_date_8";s:19:"2022-03-26 07:04:51";s:4:"id_9";s:3:"132";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3250.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:11:10";s:14:"update_date_19";s:19:"2022-03-26 07:04:51";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"132";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:11:10";s:14:"update_date_31";s:19:"2020-10-08 06:11:10";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1453";s:12:"file_name_47";s:28:"1008151108_5f7ead7c43ca0.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"117";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"132";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"117";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:7;a:85:{s:4:"id_0";s:3:"118";s:6:"name_1";s:78:"ロングリッジ・ドリフォンティン・ソーヴィニヨンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:150:"ロングリッジの特別な小さな区画のソーヴィニョンブラン。「ドリフォンテイン」とは、３つの泉を意味する。";s:13:"search_word_5";s:30:"ソーヴィニヨンブラン";s:11:"free_area_6";s:3309:"<div class="productsheet__table">   <h2><small>Longridge Driefontein Sauvignon Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：94 Point<br>
+[Platter SA 2018’] 2016VT：4 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ロングリッジの特別な小さな区画のソーヴィニョンブラン。樹齢8-12年。天然発酵後、フレンチオークで10ヶ月熟成。「ドリフォンテイン」とは、３つの泉を意味する。<br>熟したトロピカルフルーツ、桃、梨などの香り。豊かな酸味と果実味。ミネラルも感じる。ボディは中庸。味わいはなめらかでふくよか。ブドウの旨みが感じられる柔らかいフルーティなワイン。ソーヴィニョンブラン独特の青さは少なく、ブラインドで飲むとソーヴィニョンブランっぽくない？感じもある。フィニッシュは爽やかで余韻も長い。フレンチオークで熟成させた面白いソーヴィニョンブラン。<br>生牡蠣、シーフードのマリネやグリル、パスタ、前菜からメイン料理まで幅広く。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:15:14";s:13:"update_date_8";s:19:"2023-07-25 04:06:51";s:4:"id_9";s:3:"133";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3900.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:15:14";s:14:"update_date_19";s:19:"2023-07-25 04:06:51";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"133";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:15:14";s:14:"update_date_31";s:19:"2020-10-08 06:15:14";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1455";s:12:"file_name_47";s:28:"1008151512_5f7eae704582d.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"118";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"133";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"118";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:8;a:85:{s:4:"id_0";s:3:"119";s:6:"name_1";s:54:"ロングリッジ・デイプレック・サンソー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:194:"1974年に植樹された灌漑無しのブッシュヴァイン（株仕立て）。古い樹齢の為、収穫量は自然に減る。天然発酵後、フレンチオークで9か月熟成。";s:13:"search_word_5";s:12:"サンソー";s:11:"free_area_6";s:3306:"<div class="productsheet__table">   <h2><small>Longridge Die Plek Cinsault</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.3％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：92 Point<br>
+[Platter SA 2018’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1974年に植樹された灌漑無しのブッシュヴァイン（株仕立て）。古い樹齢の為、収穫量は自然に減る。天然発酵後、フレンチオークで9か月熟成。ろ過も冷却もしてないので、自然な無害の澱が発生することもあります。<br>ラズベリー、アロマティックな花の香り、軽いオークの香りなど。フレッシュで豊かな酸、ミディアムボディ、繊細で、熟したストロベリーやチェリー、スパイスの風味。渋みはソフトで心地良い。酸と果実味のバランスが良く、ドライで優しい味わい。繊細でシルキーなタッチ、全体にエレガントにまとまっている。ステレンボシュ地区では最も冷涼なヘルダーバーグらしい酸とのバランスが取れた優れたサンソー。<br>和食、アジア料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:15:37";s:13:"update_date_8";s:19:"2023-07-25 04:02:05";s:4:"id_9";s:3:"134";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"6300.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:15:37";s:14:"update_date_19";s:19:"2023-07-25 04:02:05";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"134";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 06:15:37";s:14:"update_date_31";s:19:"2023-07-25 04:02:05";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1457";s:12:"file_name_47";s:28:"1008151535_5f7eae87e7e3d.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"119";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"134";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"119";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:9;a:85:{s:4:"id_0";s:3:"138";s:6:"name_1";s:63:"ロングリッジ・オースティン・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:274:"「オースティン」とは、アフリカーンス語でシュナンブランを意味する。最上のコンディションの時のみ生産される。、一度は試してもらいたい、南アフリカを代表する素晴らしいシュナンブランの1本。";s:13:"search_word_5";N;s:11:"free_area_6";s:1233:"「オースティン」とは、アフリカーンス語でシュナンブランを意味する。最上のコンディションの時のみ生産される。畑は0.6haで、樹齢は約36年の単一畑。収穫量は自然に少なくなる畑で3トン（19ｈL)/ha。全房でプレス。フレンチオークで天然発酵後、熟成11-12ヵ月。フランス、ロワール地方のブーブレのデミセック・スタイル。トーストしたマーマレード、パイナップル、ライム、ハチミツなどの香り。フレッシュで豊かな酸、ボディは中庸、トロピカルフルーツやヴァニラの風味。ナチュラルで豊かな酸味は最後まで続き、丁度良い残糖感とのバランスがパーフェクトで心地良い。余韻も長く、エレガント。スパイシーな料理など、幅広く様々な料理と合わせてみたい、ポテンシャルの高いシュナンブラン。決してリーズナブルとは言えない価格だが、一度は試してもらいたい、南アフリカを代表する素晴らしいシュナンブランの1本。カレー、スパイシー料理、中華やアジア料理、寿司やワサビとの相性も良い。";s:13:"create_date_7";s:19:"2020-10-15 07:40:24";s:13:"update_date_8";s:19:"2023-11-13 12:56:45";s:4:"id_9";s:3:"153";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"8800.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-15 07:40:24";s:14:"update_date_19";s:19:"2023-11-13 12:56:45";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"153";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-15 07:40:24";s:14:"update_date_31";s:19:"2023-07-25 04:07:24";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1459";s:12:"file_name_47";s:28:"1015164017_5f87fce1067bf.jpg";s:10:"sort_no_48";s:1:"1";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"138";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"153";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"138";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:10;a:85:{s:4:"id_0";s:3:"111";s:6:"name_1";s:33:"ロングリッジ・エミリー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:291:"熟したグアバ、パイナップル、キウイ、青リンゴ、ストロベリーなどのフレッシュで豊かな香り。爽やかで豊かな酸、フルーティで優しいボディ。酸味と果実味とのバランスが良く、気持ちの良いやや辛口のワイン。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:3531:"<div class="productsheet__table">   <h2><small>Longridge Emily</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウエスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2017VT：90 Point<br>
+[Platter SA 2018’] 2017VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+樽熟成していないシャルドネと、ほんの少しだけ樽熟成させたエルギン産のピノノワールを混ぜている。両方のブドウとも全房でプレス、天然発酵、熟成。熟したグアバ、パイナップル、キウイ、青リンゴ、ストロベリーなどのフレッシュで豊かな香り。爽やかで豊かな酸、フルーティで優しいボディ。酸味と果実味とのバランスが良く、気持ちの良いやや辛口のワイン。余韻も長く、ワイン単体でも楽しめる。<br>シーフードのカルパッチョやマリネ、サラダなど爽やかな料理と。
+<br><br>
+オーガニック。同社の中では南アフリカで最も売れているワイン。イギリス人女性のエミリーは、南アフリカのボーア（イギリス対オランダ）戦争（1899-1902年）時代に、敵であるオランダ人兵士に対しても人種の壁を越えて献身的に介護した。戦後、南アフリカでは彼女の勇気ある行動を称えた。この商品は、そんな勇気ある彼女を忘れないために作った商品。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:08:23";s:13:"update_date_8";s:19:"2023-11-13 12:59:27";s:4:"id_9";s:3:"126";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"2500.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:08:23";s:14:"update_date_19";s:19:"2023-11-13 12:59:27";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"126";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:08:23";s:14:"update_date_31";s:19:"2020-10-08 06:08:23";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1442";s:12:"file_name_47";s:28:"1008150821_5f7eacd5d06ff.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:14";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"111";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"126";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"111";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:11;a:85:{s:4:"id_0";s:3:"112";s:6:"name_1";s:63:"ロングリッジ・オーガニック・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:288:"オーガニック＆ビオディナミワイン。メロン、白桃、濃厚な柑橘類、ライム、香水、ナッツなど、複雑で豊かな香り。フレッシュな酸、優しくふくよかなボディ、全体のバランスも取れていて、なめらかな味わい。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3328:"<div class="productsheet__table">   <h2><small>Longridge Organic Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：92 Point<br>
+[Platter SA 2017’] 2015VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステレンボシュ地区で最も冷涼なヘルダーバーグ山脈の麓の斜面。この地区は大西洋のフォルス湾から冷涼な風が吹いてきて、夜も冷える。その結果、ブドウはゆっくりと生長し、自然に酸がしっかりと含まれる。ブドウは全房で天然発酵。発酵はフレンチオークで10-14日、時々バトナージュ。そのまま11ヶ月熟成（新樽と中古樽）。無ろ過で瓶詰め。無濾過で自然な醸造方法で製造しているので酒石などが発生する場合がありますが無害です。<br>メロン、白桃、濃厚な柑橘類、ライム、香水、ナッツなど、複雑で豊かな香り。フレッシュな酸、優しくふくよかなボディ、全体のバランスも取れていて、なめらかな味わい。フレッシュ＆フルーティな、シンプルに素直に美味しく楽しめる。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:08:48";s:13:"update_date_8";s:19:"2023-11-13 12:57:26";s:4:"id_9";s:3:"127";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"2900.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:08:48";s:14:"update_date_19";s:19:"2023-11-13 12:57:26";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"127";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:08:48";s:14:"update_date_31";s:19:"2020-10-08 06:08:48";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1444";s:12:"file_name_47";s:28:"1008150845_5f7eaced791dc.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:14";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"112";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"127";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"112";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:12;a:85:{s:4:"id_0";s:3:"113";s:6:"name_1";s:36:"ロングリッジ・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:258:"柑橘類やライム、洋ナシなどの香り。フレッシュで豊かな酸、ボディは中庸、ドライでクラシックなスタイル。酸と果実味のバランスが良く、フレッシュな風味は最後まで続き、余韻も長い。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3195:"<div class="productsheet__table">   <h2><small>Longridge Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満／残糖 2.2g/L</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：93 Point<br>
+[Platter SA 2018’] 2016VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。全房でプレス。ステンレスタンクで天然発酵後、マロラクティック発酵を経て、フレンチオークに移して熟成12ヵ月。最初の6-9か月はSO2はほとんど使用しない。<br>柑橘類やライム、洋ナシなどの香り。フレッシュで豊かな酸、ボディは中庸、ドライでクラシックなスタイル。酸と果実味のバランスが良く、フレッシュな風味は最後まで続き、余韻も長い。ステレンボシュ地区では最も冷涼なヘルダーバーグらしいナチュラルな酸のバランスが取れた素晴らしいシャルドネ。<br>シーフードのグリルやマリネ、パスタ、クリームソースを使った料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:09:18";s:13:"update_date_8";s:19:"2023-11-13 12:57:44";s:4:"id_9";s:3:"128";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3300.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:09:18";s:14:"update_date_19";s:19:"2023-11-13 12:57:44";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"128";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:09:18";s:14:"update_date_31";s:19:"2020-10-08 06:09:18";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1446";s:12:"file_name_47";s:28:"1008150913_5f7ead093523c.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:14";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"113";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"128";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"113";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:13;a:85:{s:4:"id_0";s:3:"114";s:6:"name_1";s:39:"ロングリッジ・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:315:"メーカーは、ピノノワールに近いイメージを持っている。スパイス、カシス、熟したベリー、砂糖漬けのオレンジピール、ルイボス、スモーキーなど様々な複雑な香り。程よく豊かな酸、柔らかくジューシーな渋みの少ないタンニン。";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:3365:"<div class="productsheet__table">   <h2><small>Longridge Pinotage</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2017VT：92 Point<br>
+[Tim Atkin Report 2017’] 2016VT：93 Point<br>
+[Platter SA 2017’] 2015VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステレンボシュ地区で最も冷涼なヘルダーバーグ山脈の麓の斜面。この地区は大西洋のフォルス湾から冷涼な風が吹いてきて、夜も冷える。その結果、ブドウはゆっくりと生長し、自然に酸がしっかりと含まれる。ブドウは手摘み後、選果、箱型の発酵タンクとステンレスタンクで7日間の天然発酵。その後は、フレンチオークで16ヶ月熟成（新樽と中古樽）。無濾過で自然な醸造方法で製造しているので酒石などが発生する場合がありますが無害です。メーカーは、ピノノワールに近いイメージを持っている。<br>スパイス、カシス、熟したベリー、砂糖漬けのオレンジピール、ルイボス、スモーキーなど様々な複雑な香り。程よく豊かな酸、柔らかくジューシーな渋みの少ないタンニン。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:09:44";s:13:"update_date_8";s:19:"2023-11-13 12:58:00";s:4:"id_9";s:3:"129";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3500.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:09:44";s:14:"update_date_19";s:19:"2023-11-13 12:58:00";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"129";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:09:44";s:14:"update_date_31";s:19:"2020-10-08 06:09:44";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1448";s:12:"file_name_47";s:28:"1008150942_5f7ead26cd948.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"114";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"129";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"114";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:14;a:85:{s:4:"id_0";s:3:"115";s:6:"name_1";s:30:"ロングリッジ・メルロ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:159:"ステレンボシュ地区では最も冷涼なヘルダーバーグらしい酸とのバランスが取れた優しいタッチの素晴らしいメルロ。";s:13:"search_word_5";s:9:"メルロ";s:11:"free_area_6";s:3244:"<div class="productsheet__table">   <h2><small>Longridge Merlot</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15.0％未満／残糖 2.1g/L</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018／コルク</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：89 Point<br>
+[Tim Atkin Report 2017’] 2015VT：93 Point<br>
+[Platter SA 2018’] 2016VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。ステンレスタンクで天然発酵後、プレス。その後フレンチオークに移して熟成26ヵ月。<br>プラム、赤系果実、熟したストロベリー、ダークチョコレート、ココア、杉などの香り。フレッシュで豊かな酸、ボディは中庸、優しくて心地良い渋み。酸と果実味のバランスが良く、ドライでなめらかな味わい。ステレンボシュ地区では最も冷涼なヘルダーバーグらしい酸とのバランスが取れた優しいタッチの素晴らしいメルロ。<br>牛ステーキ、ローストビーフなどの牛肉料理、羊のロースト、ピーマン・ししとうなど苦味のある野菜や根野菜のグリル、など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:10:19";s:13:"update_date_8";s:19:"2023-11-13 12:58:17";s:4:"id_9";s:3:"130";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3500.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:10:19";s:14:"update_date_19";s:19:"2023-11-13 12:58:17";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"130";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:10:19";s:14:"update_date_31";s:19:"2020-10-08 06:10:19";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1450";s:12:"file_name_47";s:28:"1008151017_5f7ead49426b7.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"115";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"130";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"115";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:15;a:85:{s:4:"id_0";s:3:"116";s:6:"name_1";s:54:"ロングリッジ・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:321:"赤系果実、ダークチェリー、タバコなどの香り。フレッシュで豊かな酸、ボディは中庸、優しくて心地良い渋み。酸と果実味のバランスが良く、ドライでなめらかな味わい。繊細でシルキーなタッチ、全体にエレガントにまとまっている。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3271:"<div class="productsheet__table">   <h2><small>Longridge Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満／残糖 1.8g/L</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019／コルク</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2015VT：93 Point<br>
+[Tim Atkin Report 2017’] 2014VT：92 Point<br>
+[Platter SA 2018’] 2015VT：3.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。ベストのブドウのみを選果。ステンレスタンクで天然発酵後、プレス。その後フレンチオークに移して熟成22-24ヵ月。<br>赤系果実、ダークチェリー、タバコなどの香り。フレッシュで豊かな酸、ボディは中庸、優しくて心地良い渋み。酸と果実味のバランスが良く、ドライでなめらかな味わい。繊細でシルキーなタッチ、全体にエレガントにまとまっている。ステレンボシュ地区では最も冷涼なヘルダーバーグらしい酸とのバランスが取れた優しいなめらかなスタイルのカベルネ。提供する前にデカンタをお薦めする。<br>ローストビーフ、牛ステーキ、和食など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:10:46";s:13:"update_date_8";s:19:"2023-11-13 12:58:38";s:4:"id_9";s:3:"131";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3500.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:10:46";s:14:"update_date_19";s:19:"2023-11-13 12:58:38";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"131";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:10:46";s:14:"update_date_31";s:19:"2020-10-08 06:10:46";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1452";s:12:"file_name_47";s:28:"1008151043_5f7ead63a840a.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"116";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"131";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"116";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:16;a:85:{s:4:"id_0";s:3:"117";s:6:"name_1";s:39:"キュベ・リカ・ピノノワール";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:258:"冷涼地区エルギンのテロワールを表現するため、ミニマム・アプローチの不干渉主義でオーガニック農法で育てられたシングル畑のブドウを使用。ブドウは小さなオープンタンクで天然発酵。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:3317:"<div class="productsheet__table">   <h2><small>Jasper Raats Cuivee Rika Pinot Noir</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：91 Point<br>
+[Platter SA 2017’] 2014VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+冷涼地区エルギンのテロワールを表現するため、ミニマム・アプローチの不干渉主義でオーガニック農法で育てられたシングル畑のブドウを使用。ブドウは小さなオープンタンクで天然発酵。その後は、フレンチオークで11ヶ月熟成（新樽と中古樽）。無濾過で自然な醸造方法で製造しているので酒石などが発生する場合がありますが無害です。熟した赤系ベリー、ジューシーなストロベリー、スパイスなどの香り。優しく柔らかな酸、細やかな渋み、優しいボディで、クラシック＆エレガントなスタイル。なめらかで飲みやすいフルーティなワイン。<br>
+醸造家 ジャスパー・ラーツのオリジナルブランドです。 葡萄はエルギンの買い葡萄でオーガニック。ビオディナミ製法。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:11:10";s:13:"update_date_8";s:19:"2022-03-26 07:04:51";s:4:"id_9";s:3:"132";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3250.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:11:10";s:14:"update_date_19";s:19:"2022-03-26 07:04:51";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"132";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:11:10";s:14:"update_date_31";s:19:"2020-10-08 06:11:10";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1454";s:12:"file_name_47";s:28:"1008151108_5f7ead7c7354d.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"117";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"132";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"117";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:17;a:85:{s:4:"id_0";s:3:"118";s:6:"name_1";s:78:"ロングリッジ・ドリフォンティン・ソーヴィニヨンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:150:"ロングリッジの特別な小さな区画のソーヴィニョンブラン。「ドリフォンテイン」とは、３つの泉を意味する。";s:13:"search_word_5";s:30:"ソーヴィニヨンブラン";s:11:"free_area_6";s:3309:"<div class="productsheet__table">   <h2><small>Longridge Driefontein Sauvignon Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：94 Point<br>
+[Platter SA 2018’] 2016VT：4 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ロングリッジの特別な小さな区画のソーヴィニョンブラン。樹齢8-12年。天然発酵後、フレンチオークで10ヶ月熟成。「ドリフォンテイン」とは、３つの泉を意味する。<br>熟したトロピカルフルーツ、桃、梨などの香り。豊かな酸味と果実味。ミネラルも感じる。ボディは中庸。味わいはなめらかでふくよか。ブドウの旨みが感じられる柔らかいフルーティなワイン。ソーヴィニョンブラン独特の青さは少なく、ブラインドで飲むとソーヴィニョンブランっぽくない？感じもある。フィニッシュは爽やかで余韻も長い。フレンチオークで熟成させた面白いソーヴィニョンブラン。<br>生牡蠣、シーフードのマリネやグリル、パスタ、前菜からメイン料理まで幅広く。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:15:14";s:13:"update_date_8";s:19:"2023-07-25 04:06:51";s:4:"id_9";s:3:"133";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"3900.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:15:14";s:14:"update_date_19";s:19:"2023-07-25 04:06:51";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"133";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-08 06:15:14";s:14:"update_date_31";s:19:"2020-10-08 06:15:14";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1456";s:12:"file_name_47";s:28:"1008151512_5f7eae70766e1.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"118";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"133";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"118";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:18;a:85:{s:4:"id_0";s:3:"119";s:6:"name_1";s:54:"ロングリッジ・デイプレック・サンソー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:194:"1974年に植樹された灌漑無しのブッシュヴァイン（株仕立て）。古い樹齢の為、収穫量は自然に減る。天然発酵後、フレンチオークで9か月熟成。";s:13:"search_word_5";s:12:"サンソー";s:11:"free_area_6";s:3306:"<div class="productsheet__table">   <h2><small>Longridge Die Plek Cinsault</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.3％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック＆ビオディナミ生産者</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：92 Point<br>
+[Platter SA 2018’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+1974年に植樹された灌漑無しのブッシュヴァイン（株仕立て）。古い樹齢の為、収穫量は自然に減る。天然発酵後、フレンチオークで9か月熟成。ろ過も冷却もしてないので、自然な無害の澱が発生することもあります。<br>ラズベリー、アロマティックな花の香り、軽いオークの香りなど。フレッシュで豊かな酸、ミディアムボディ、繊細で、熟したストロベリーやチェリー、スパイスの風味。渋みはソフトで心地良い。酸と果実味のバランスが良く、ドライで優しい味わい。繊細でシルキーなタッチ、全体にエレガントにまとまっている。ステレンボシュ地区では最も冷涼なヘルダーバーグらしい酸とのバランスが取れた優れたサンソー。<br>和食、アジア料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:15:37";s:13:"update_date_8";s:19:"2023-07-25 04:02:05";s:4:"id_9";s:3:"134";s:15:"product_code_10";N;s:8:"stock_11";s:1:"0";s:18:"stock_unlimited_12";s:1:"0";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"6300.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-08 06:15:37";s:14:"update_date_19";s:19:"2023-07-25 04:02:05";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"134";s:8:"stock_29";s:1:"0";s:14:"create_date_30";s:19:"2020-10-08 06:15:37";s:14:"update_date_31";s:19:"2023-07-25 04:02:05";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1458";s:12:"file_name_47";s:28:"1008151536_5f7eae881fef0.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"119";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"134";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"119";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}i:19;a:85:{s:4:"id_0";s:3:"138";s:6:"name_1";s:63:"ロングリッジ・オースティン・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:274:"「オースティン」とは、アフリカーンス語でシュナンブランを意味する。最上のコンディションの時のみ生産される。、一度は試してもらいたい、南アフリカを代表する素晴らしいシュナンブランの1本。";s:13:"search_word_5";N;s:11:"free_area_6";s:1233:"「オースティン」とは、アフリカーンス語でシュナンブランを意味する。最上のコンディションの時のみ生産される。畑は0.6haで、樹齢は約36年の単一畑。収穫量は自然に少なくなる畑で3トン（19ｈL)/ha。全房でプレス。フレンチオークで天然発酵後、熟成11-12ヵ月。フランス、ロワール地方のブーブレのデミセック・スタイル。トーストしたマーマレード、パイナップル、ライム、ハチミツなどの香り。フレッシュで豊かな酸、ボディは中庸、トロピカルフルーツやヴァニラの風味。ナチュラルで豊かな酸味は最後まで続き、丁度良い残糖感とのバランスがパーフェクトで心地良い。余韻も長く、エレガント。スパイシーな料理など、幅広く様々な料理と合わせてみたい、ポテンシャルの高いシュナンブラン。決してリーズナブルとは言えない価格だが、一度は試してもらいたい、南アフリカを代表する素晴らしいシュナンブランの1本。カレー、スパイシー料理、中華やアジア料理、寿司やワサビとの相性も良い。";s:13:"create_date_7";s:19:"2020-10-15 07:40:24";s:13:"update_date_8";s:19:"2023-11-13 12:56:45";s:4:"id_9";s:3:"153";s:15:"product_code_10";N;s:8:"stock_11";N;s:18:"stock_unlimited_12";s:1:"1";s:13:"sale_limit_13";N;s:10:"price01_14";N;s:10:"price02_15";s:7:"8800.00";s:15:"delivery_fee_16";N;s:10:"visible_17";s:1:"1";s:14:"create_date_18";s:19:"2020-10-15 07:40:24";s:14:"update_date_19";s:19:"2023-11-13 12:56:45";s:16:"currency_code_20";s:3:"JPY";s:13:"point_rate_21";N;s:5:"id_22";N;s:11:"tax_rate_23";N;s:13:"tax_adjust_24";N;s:13:"apply_date_25";N;s:14:"create_date_26";N;s:14:"update_date_27";N;s:5:"id_28";s:3:"153";s:8:"stock_29";N;s:14:"create_date_30";s:19:"2020-10-15 07:40:24";s:14:"update_date_31";s:19:"2023-07-25 04:07:24";s:5:"id_32";N;s:15:"backend_name_33";N;s:7:"name_34";N;s:10:"sort_no_35";N;s:10:"visible_36";N;s:14:"create_date_37";N;s:14:"update_date_38";N;s:5:"id_39";N;s:15:"backend_name_40";N;s:7:"name_41";N;s:10:"sort_no_42";N;s:10:"visible_43";N;s:14:"create_date_44";N;s:14:"update_date_45";N;s:5:"id_46";s:4:"1460";s:12:"file_name_47";s:28:"1015164016_5f87fce0cb17a.jpg";s:10:"sort_no_48";s:1:"2";s:14:"create_date_49";s:19:"2021-03-06 07:18:15";s:5:"id_50";N;s:14:"create_date_51";N;s:21:"discriminator_type_52";s:7:"product";s:13:"creator_id_53";s:1:"1";s:20:"product_status_id_54";s:1:"1";s:21:"discriminator_type_55";s:12:"productclass";s:13:"product_id_56";s:3:"138";s:15:"sale_type_id_57";s:1:"1";s:21:"class_category_id1_58";N;s:21:"class_category_id2_59";N;s:23:"delivery_duration_id_60";s:1:"3";s:13:"creator_id_61";s:1:"1";s:21:"discriminator_type_62";N;s:19:"product_class_id_63";N;s:13:"creator_id_64";N;s:13:"country_id_65";N;s:10:"pref_id_66";N;s:13:"product_id_67";N;s:19:"rounding_type_id_68";N;s:21:"discriminator_type_69";s:12:"productstock";s:19:"product_class_id_70";s:3:"153";s:13:"creator_id_71";s:1:"1";s:21:"discriminator_type_72";N;s:16:"class_name_id_73";N;s:13:"creator_id_74";N;s:21:"discriminator_type_75";N;s:16:"class_name_id_76";N;s:13:"creator_id_77";N;s:21:"discriminator_type_78";s:12:"productimage";s:13:"product_id_79";s:3:"138";s:13:"creator_id_80";s:1:"1";s:21:"discriminator_type_81";N;s:13:"product_id_82";N;s:9:"tag_id_83";N;s:13:"creator_id_84";N;}}}

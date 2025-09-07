@@ -1,0 +1,250 @@
+1754873535
+%255Bd7ce1b3a940eaf0eff03e7a9fdd2bcdcb129cdde%255D%255B1%255D
+a:1:{s:1216:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:53;}i:1;a:8:{i:0;i:208;i:1;i:210;i:2;i:209;i:3;i:211;i:4;i:204;i:5;i:181;i:6;i:205;i:7;i:206;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:8:{i:0;a:13:{s:4:"id_0";s:3:"208";s:6:"name_1";s:38:"【セレクト3】お得3本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:172:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1185:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト</td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>赤ワイン、白ワイン、スパークリングワイン</td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>3本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。
+</div>";s:13:"create_date_7";s:19:"2021-08-25 23:53:18";s:13:"update_date_8";s:19:"2021-08-29 14:17:29";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"210";s:6:"name_1";s:86:"【セレクト3】バイヤー厳選　白ワイン大好きセット　3本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:172:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1109:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト</td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>白ワイン</td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>3本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。
+</div>";s:13:"create_date_7";s:19:"2021-08-25 23:55:40";s:13:"update_date_8";s:19:"2021-08-27 02:39:15";s:6:"sclr_9";s:7:"6000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"209";s:6:"name_1";s:86:"【セレクト3】バイヤー厳選　赤ワイン大好きセット　3本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:172:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1137:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト</td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>赤ワイン</td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>3本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。
+</div>";s:13:"create_date_7";s:19:"2021-08-25 23:54:04";s:13:"update_date_8";s:19:"2021-08-27 02:39:05";s:6:"sclr_9";s:7:"6000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"211";s:6:"name_1";s:104:"【セレクト3】バイヤー厳選　スパークリングワイン大好きセット　3本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:172:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1155:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト</td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>スパークリングワイン</td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>3本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを3本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。
+</div>";s:13:"create_date_7";s:19:"2021-08-25 23:56:33";s:13:"update_date_8";s:19:"2021-08-27 02:39:27";s:6:"sclr_9";s:7:"7000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:3:"204";s:6:"name_1";s:56:"【 セレクト 6 】 バイヤー厳選６本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:174:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを６本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1720:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>赤ワイン > フルボディ / ミディアムボディ　白ワイン > 辛口
+            </td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>6本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを６本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+尚、備考欄に赤、白ワインの希望本数が無い場合は赤白各3本にてセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。<br>
+<br>
+（過去のご依頼例）<br>
+・赤4本、白2本でピノタージュとソーヴィニヨンブランを１本入れてほしい<br>
+・白6本でお願いします。内１本スパークリングワインを入れてください。<br>
+・赤5本、白1本でお願いします。<br>
+・すべて赤のフルボディで！ などなど
+</div>";s:13:"create_date_7";s:19:"2021-01-20 10:47:05";s:13:"update_date_8";s:19:"2021-08-29 14:17:14";s:6:"sclr_9";s:8:"10000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:3:"181";s:6:"name_1";s:72:"【 セレクト 5 】辛口スパークリングワイン 5本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:76:"辛口スパークリングワインを5本セットでお届けします。";s:13:"search_word_5";N;s:11:"free_area_6";s:641:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>スパークリング > 白 > 辛口
+            </td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>5本/各750ml</td>
+        </tr>
+    </table>
+</div>";s:13:"create_date_7";s:19:"2020-12-08 09:01:14";s:13:"update_date_8";s:19:"2021-04-14 08:42:17";s:6:"sclr_9";s:8:"15000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:3:"205";s:6:"name_1";s:56:"【 セレクト 6 】 バイヤー厳選６本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:174:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを６本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1720:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>赤ワイン > フルボディ / ミディアムボディ　白ワイン > 辛口
+            </td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>6本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを６本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+尚、備考欄に赤、白ワインの希望本数が無い場合は赤白各3本にてセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。<br>
+<br>
+（過去のご依頼例）<br>
+・赤4本、白2本でピノタージュとソーヴィニヨンブランを１本入れてほしい<br>
+・白6本でお願いします。内１本スパークリングワインを入れてください。<br>
+・赤5本、白1本でお願いします。<br>
+・すべて赤のフルボディで！ などなど
+</div>";s:13:"create_date_7";s:19:"2021-01-20 10:49:34";s:13:"update_date_8";s:19:"2021-04-14 08:42:46";s:6:"sclr_9";s:8:"20000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:7;a:13:{s:4:"id_0";s:3:"206";s:6:"name_1";s:56:"【 セレクト 6 】 バイヤー厳選６本セット";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:174:"当バイヤーがワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを６本セレクトさせていただきます。";s:13:"search_word_5";N;s:11:"free_area_6";s:1720:"<div class="productsheet__table">    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>取扱いワイナリーからセレクト
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>赤ワイン > フルボディ / ミディアムボディ　白ワイン > 辛口
+            </td>
+        </tr>
+        <tr>
+            <th>商品：</th>
+            <td>取扱商品からセレクト</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>6本/各750ml</td>
+        </tr>
+    </table>
+</div>
+
+<div class="ec-productRole__description">
+ワインの状態、飲み頃（ヴィンテージ）を重視し、ご注文ごとに旬のオススメを６本セレクトさせていただきます。<br>
+好みや、品種の希望がある場合はご注文の際に備考欄に記入願います。ご希望に沿ったワインをセレクトいたします。<br>
+尚、備考欄に赤、白ワインの希望本数が無い場合は赤白各3本にてセレクトいたします。<br>
+備考欄は購入手続きページ「お届け希望日」「お届け時間帯」の下にございます。こちらへ記入ください。<br>
+<br>
+（過去のご依頼例）<br>
+・赤4本、白2本でピノタージュとソーヴィニヨンブランを１本入れてほしい<br>
+・白6本でお願いします。内１本スパークリングワインを入れてください。<br>
+・赤5本、白1本でお願いします。<br>
+・すべて赤のフルボディで！ などなど
+</div>";s:13:"create_date_7";s:19:"2021-01-20 10:55:04";s:13:"update_date_8";s:19:"2021-04-14 08:42:53";s:6:"sclr_9";s:8:"30000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

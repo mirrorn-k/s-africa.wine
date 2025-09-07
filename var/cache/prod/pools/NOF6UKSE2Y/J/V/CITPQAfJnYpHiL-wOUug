@@ -1,0 +1,274 @@
+1754869919
+%255B6f166cc24347ce12bfa0645371bec33bb8f20afd%255D%255B1%255D
+a:1:{s:1176:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:23;}i:1;a:4:{i:0;i:103;i:1;i:104;i:2;i:105;i:3;i:106;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:4:{i:0;a:13:{s:4:"id_0";s:3:"103";s:6:"name_1";s:72:"ラステンバーグ・ステレンボッシュ・ストローワイン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"干しブドウ、ハチミツ、グリーンマンゴ、熟した黄桃、マーマレード、オレンジの皮、トロピカルフルーツなどの香り。柔らかな酸、凝縮し、濃厚でハチミツのようななめらかな味。";s:13:"search_word_5";s:53:"シュナンブラン,ヴィオニエ,クルシェン";s:11:"free_area_6";s:3254:"<div class="productsheet__table">   <h2><small>Rustenberg Straw Wine</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (67％,17％,16％)（ケープリースリング）</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>10％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>375ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>2017年ヴェリタス 銀賞
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+畑の土壌は、砂岩、ローム、花崗岩。灌漑はしている畑としていない畑の両方。収穫は2017年2-3月。収穫後、藁（わら）の上で4週間日陰干し。ステンレスタンクで発酵、熟成。<br>干しブドウ、ハチミツ、グリーンマンゴ、熟した黄桃、マーマレード、オレンジの皮、トロピカルフルーツなどの香り。柔らかな酸、凝縮し、濃厚でハチミツのようななめらかな味。フレッシュで優しい酸味と濃厚な甘みのバランスが良く、美味しく飲みやすいように仕上がっている。2017年ヴィンテージも良く、熟成のポテンシャルあり。<br>ブルーチーズ、バニラアイス、チーズケーキ、フルーツタルトなど。そのまま飲んでも、氷を浮かべても、「大人のカキ氷」のようなシロップとして、辛口のスパークリングと混ぜて飲んでも美味しい。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:03:01";s:13:"update_date_8";s:19:"2021-09-03 00:33:28";s:6:"sclr_9";s:7:"2000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"104";s:6:"name_1";s:51:"ラステンバーグ・プチヴェルド・ロゼ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:186:"ストロベリー、クランベリー、レッドチェリーなど赤系果実の香り。爽やかで優しい酸味、フルーティでなめらかな口当たりのやや辛口。";s:13:"search_word_5";s:18:"プチヴェルド";s:11:"free_area_6";s:2983:"<div class="productsheet__table">   <h2><small>Rustenberg Petit Verdot Rose</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>プチヴェルド100％のロゼは世界的にも珍しい。
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+土壌は花崗岩。収穫は2月。収穫後、除梗しプレス。ステンレスタンクで発酵、熟成。ストロベリー、クランベリー、レッドチェリーなど赤系果実の香り。爽やかで優しい酸味、フルーティでなめらかな口当たりのやや辛口。フレッシュな優しい酸味と心地良い甘味のバランスが良く気持ちの良いワインに仕上がっている。ワインの初心者にとっても飲みやすいワインとして提案できる。春夏に少し冷やし気味でワインだけでも楽しめる。<br>酸味/甘味/スパイスの効いたエビチリ、酢豚、麻婆豆腐などの中華料理やアジア系料理などにもよく合う。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:03:25";s:13:"update_date_8";s:19:"2022-03-26 05:44:11";s:6:"sclr_9";s:7:"2300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"105";s:6:"name_1";s:57:"ラステンバーグ・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:201:"カシス、プラム、ベリー系の豊かな香り。綺麗な酸味。渋みは細やかで柔らかい。やや濃厚な果実味で、きめ細やかでシルキーななめらかな味わい。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3337:"<div class="productsheet__table">   <h2><small>Rustenberg Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>2013VT：15’デカンタ・ワールド・ワインアワード銅賞<br>
+2013VT：15’インターナショナルワインチャレンジ 銀賞<br>
+[Sakura Awards 2016’] 2014VT：Gold
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+カシス、プラム、ベリー系の豊かな香り。綺麗な酸味。渋みは細やかで柔らかい。やや濃厚な果実味で、きめ細やかでシルキーななめらかな味わい。オーク樽の風味は、程良い程度。むしろ果実の旨みを楽しめる。ボディは比較的しっかりしていて、余韻は長い。エレガントで落ち着いたクラシックなボルドースタイルのカベルネ。高騰するボルドーワインの代わりとして提案できるアイテム。<br>
+2013年1-2月は冷涼で、ブドウは通常よりゆっくり成長。結果として、香り豊かで濃縮したブドウを収穫することが出来た。収穫は手摘みで2013年3-4月。ステンレスタンクで発酵。<br>
+225Lのフレンチオークに移して、16ヶ月熟成（新樽20％、2年目樽43％、3年目樽37％）。<br>牛肉、ステーキ、ビーフシチュー、羊肉など。　
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:03:52";s:13:"update_date_8";s:19:"2023-11-13 12:51:02";s:6:"sclr_9";s:7:"2700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"106";s:6:"name_1";s:66:"ラステンバーグ・ステレンボッシュ・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:256:"1682年設立の南アフリカの代表的な名門ワイナリーの一つ。アプリコット、オレンジの皮、柑橘類などの香り。豊かで活き活きとした酸味。繊細で綺麗、なめらかでややクリーミーな味わい。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3123:"<div class="productsheet__table">   <h2><small>Rustenberg Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2020’] 2019VT：92 Point<br>
+[Decanter World Wine Awards 2020’] 2019VT：92 Point／Silver<br>
+[Decanter World Wine Awards 2019’] 2017VT：91 Point／Silver<br>
+[Sakura Awards 2016’] 2014VT：Gold
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+樹齢15-30年、ブドウはかなり厳選している。畑は標高300-450ｍにあり、冷涼で酸のしっかりしたブドウが育つ。早朝の涼しい時間にブドウを全て手摘みで収穫。収穫後、ステンレスタンクで冷却後、300Lのフレンチオーク（新樽40％、2年目の樽60％）で天然発酵。12ヶ月の熟成を経て瓶詰め。<br>アプリコット、オレンジの皮、柑橘類などの香り。豊かで活き活きとした酸味。繊細で綺麗、なめらかでややクリーミーな味わい。程良いボリューム感もあるエレガント系ワイン。<br>シーフード料理、クリームソースやバターを使った料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:04:53";s:13:"update_date_8";s:19:"2023-11-13 12:50:21";s:6:"sclr_9";s:7:"3600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

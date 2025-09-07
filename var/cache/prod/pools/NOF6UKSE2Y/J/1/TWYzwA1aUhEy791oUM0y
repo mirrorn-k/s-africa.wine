@@ -1,0 +1,273 @@
+1754762407
+%255B1d0ce7f7bae27cff2be466058e4045f4e6e17b95%255D%255B1%255D
+a:1:{s:1171:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:10;}i:1;a:4:{i:0;i:8;i:1;i:9;i:2;i:121;i:3;i:10;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:4:{i:0;a:13:{s:4:"id_0";s:1:"8";s:6:"name_1";s:51:"アタラクシア・ソーヴィニヨンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:276:"パッションフルーツ、柑橘類、メロン、ハーブなどの香り。活き活きとした豊かな酸、太く厚みのあるボディ、凝縮した果実味とミネラルの要素を強く感じ、バランス良く、エレガントに仕上がっている。";s:13:"search_word_5";s:30:"ソーヴィニヨンブラン";s:11:"free_area_6";s:3142:"<div class="productsheet__table">   <h2><small>Ataraxia Sauvignon Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウォーカーベイ・ヘメル・アン・アード・リッジ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：92 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。ステンレスタンクで発酵し、熟成。パッションフルーツ、柑橘類、メロン、ハーブなどの香り。活き活きとした豊かな酸、太く厚みのあるボディ、凝縮した果実味とミネラルの要素を強く感じ、バランス良く、エレガントに仕上がっている。<br>南アフリカの他の地域や生産者では感じない、アタラクシアらしいテロワールを忠実に表現した独特の個性を感じさせる。しっかりした酸味と果実味、ボディと豊かなミネラルは、どの要素もキャッチーで、誰にも分かりやすいアタラクシアの魅力。他にない魅力溢れる素晴らしいソーヴィニョンブラン。<br>シーフード、サーモン、白身魚、鶏肉料理、クリームソースの料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:23:08";s:13:"update_date_8";s:19:"2023-11-13 12:17:26";s:6:"sclr_9";s:7:"3500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:1:"9";s:6:"name_1";s:36:"アタラクシア・セレニティ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"セレニティはヴィンテージが変わるたびに醸造家のケヴィンが新たなチャレンジをしている。無論、品質には妥協無し。フレッシュで豊かな果実味、繊細でエレガント。余韻は長い。";s:13:"search_word_5";s:50:"ピノノワール,サンソー,ピノタージュ";s:11:"free_area_6";s:4793:"<div class="productsheet__table">   <h2><small>Ataraxia Serenity</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}(60%,30%,10%)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.3％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>	[Tim Atkin Report 2020’] 2018VT：93 Point<br>
+[Tim Atkin Report 2019’] 2017VT：92 Point<br>
+[Parker Wine Advocate] 2015VT：91 Point<br>
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ブドウの生育期間のほとんどは非常に乾燥した年だったが、収穫前の数ヵ月は温暖な気温だった。乾燥した気候によりブドウの粒は小さく凝縮し、絶妙なバランスと洗練されたブドウが出来た。ブドウは、その地域のテロワールの魅力を表現することを目的に、畑での収穫時から厳選している。<br>このワインは、ピノノワールとサンソー、冷涼地域で育ったピノタージュという正に南アフリカらしいブドウ品種の親子ブレンドで、優しいスタイルのワインに仕上げています。このワインで大切なことは、どのような品種の構成で出来ているということではなく、ワインのスタイルにあります。ブドウの品種というのは、あくまでもテロワールを表現する手段であって、ワインそのものを表現するものではないという考えです。<br>収穫後は3品種ともオープンタンクに入れ、7-10日間のコールドマセラシオンを経て発酵。発酵後は品種ごとにプレスして225Lのフレンチオークでマロラクティック発酵を経て11ヵ月熟成（新樽20％、2年目樽80％）。ブレンドして瓶詰。醸造家ケヴィンが、このワインは、主張するようなタイプのワインではなく、優しく「ささやく」ようなスタイルのワインと表現している。<br>彼は、このワインは、ボルドーブレンドでもなく、ローヌブレンドでもない、これこそがピノタージュとその親品種をブレンドした真の南アフリカらしいブレンドと呼んでいる。実際このワインは、抑制的で落ち着き、緊張感もあり、非常に友好的で、面白く、魅力的である。レッドベリー、赤系果実、スパイスなど、繊細かつ活き活きとした豊かな香り。優しく心地良い酸、なめらかでチャーミングな果実味とミネラル。 洗練された渋み、柔らかいボディ、バランス良く、エレガント。三つの品種がケヴィンのセンスによって見事に調和しチャーミングなワインに仕上がっている。個性的かつストーリー的にも面白いワイン。<br>料理：鶏肉、鴨肉、豚肉、牛肉、ジビエ、和食、焼鳥、オイスターソースを使った中華料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:30:40";s:13:"update_date_8";s:19:"2023-11-13 12:17:47";s:6:"sclr_9";s:7:"5100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"121";s:6:"name_1";s:36:"アタラクシア・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:219:"グレープフルーツ、白桃、熟した梨、ナッツなどの香り。ミネラル分が豊かでしっかりした酸味、骨格のハッキリしたボディ、凝縮した果実味で、力強さもある。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3611:"<div class="productsheet__table">   <h2><small>Ataraxia Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウォーカーベイ・ヘメル・アン・アード・リッジ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>	[Parker Wine Advocate] 2015VT：93 Point<br>
+[Tim Atkin Report 2019’] 2017VT：95 Point<br>
+[Tim Atkin Report 2017’] 2016VT：96 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+生産量：4366ケース（６入り）栽培・製造：冷涼なケープ・サウスコースト、ハマナスの海の近くのヘメル・アン・アード・リッジ小地区の畑で栽培。畑は頁岩土壌で、粘土質、石の混ざった肥沃でない土地。冷涼気候の為、ブドウのハンギング・タイムが長く、果実味が凝縮する。３月始めの２週間の早朝の涼しい時間に収穫。<br>セラー内では、テロワールを忠実に表現する為に、出来るだけ人の手を加えないミニマリスト的アプローチで製法。<br>100％ブルゴーニュから買い付けた225Lのフレンチオークで発酵＆熟成10ヶ月（新樽21％、2年目樽79％）。<br>グレープフルーツ、白桃、熟した梨、ナッツなどの香り。ミネラル分が豊かでしっかりした酸味、骨格のハッキリしたボディ、凝縮した果実味で、力強さもある。味わいは、複雑でやや濃厚、なめらかでクリーミー。酸味と果実味、ボディ、全てにおいてバランス良くエレガントにまとまっている。ゴージャスかつスタイリッシュ、余韻も長く、クラシックなスタイルのワイン。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 06:48:35";s:13:"update_date_8";s:19:"2023-11-13 12:18:07";s:6:"sclr_9";s:7:"6000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"10";s:6:"name_1";s:39:"アタラクシア・ピノノワール";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:213:"豊かでしっかりした酸味、骨格のハッキリしたボディ。フレッシュで、とてもきれいな、ピュアでチャーミングなブドウの味わい。渋みは細やかで心地良い。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:3303:"<div class="productsheet__table">   <h2><small>Ataraxia Pinot Noir</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウォーカーベイ・ヘメル・アン・アード・リッジ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.2％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Parker Wine Advocate] 2015VT：92 Point<br>
+[Tim Atkin Report 2019’] 2017VT：90 Point<br>
+[Tim Atkin Report 2018’] 2016VT：89 Point<br>
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+収穫後、発酵前に10日間のコールドマセラシオン。オープンタンクでの22日間の発酵（最高で28度）。発酵中は、１日２回のパンチダウンを行う。その後プレスされ、225Lのフレンチオークに移して100％マロラクティック発酵。そのまま11ヶ月熟成（新樽21％）。<br>美しくきれいなルビー色。<br>チェリー、ザクロ、森の土、スパイスや新樽などの香り。豊かでしっかりした酸味、骨格のハッキリしたボディ。フレッシュで、とてもきれいな、ピュアでチャーミングなブドウの味わい。渋みは細やかで心地良い。きれいで洗練された酸味が全体を美しく、エレガントにまとめている。<br>みずみずしく透明感のあるきれいなワインで深みもあり、優美で官能的。スタイリッシュでエレガントなフィニッシュ。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:31:39";s:13:"update_date_8";s:19:"2023-11-13 12:18:33";s:6:"sclr_9";s:7:"6500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

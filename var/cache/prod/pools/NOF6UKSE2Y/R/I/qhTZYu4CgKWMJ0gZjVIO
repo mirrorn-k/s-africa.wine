@@ -1,0 +1,477 @@
+1754858382
+%255B053dfb3e9ac9768e92114451ad6c063d43d0227c%255D%255B1%255D
+a:1:{s:1206:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:24;}i:1;a:7:{i:0;i:107;i:1;i:137;i:2;i:136;i:3;i:108;i:4;i:109;i:5;i:203;i:6;i:110;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:7:{i:0;a:13:{s:4:"id_0";s:3:"107";s:6:"name_1";s:51:"ラーツ・オリジナル・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:314:"「シュナンブラン・キング」のラーツの原点を知ることが出来るワインであり、かつ、南アフリカの樽無しシュナンブランとしては、同国トップランクの1本として、南アフリカのシュナンブランを知る上では、避けては通れない1本。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3693:"<div class="productsheet__table">   <h2><small>Raats Original Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2017VT：90 Point<br>
+[Platter SA 2018’] 2016VT：5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+樹齢約35年。収穫量：7-8トン/ha。製造土壌は花崗岩とテーブルマウンテン砂岩。畑は垣根式とブッシュヴァイン（株仕立て）。灌漑も有りと無しの畑。収穫後、土壌の違いによって別々にステンレスタンクで発酵。花崗岩土壌はワインにライムやミネラルを与え、砂岩土壌は、トロピカルで、しっかりした骨格を与える。樽は使わず、そのまま澱が入ったまま6ヶ月熟成。ヴィンテージ+2-4年。<br>リンゴ、パイナップル、メロン、ライムなどの香り。古木から由来する凝縮したブドウのフレッシュでフルーティな風味が豊かで、柑橘系の風味もある。オーク樽は使用していないが、古木由来の厚みのあるしっかりしたボディが特徴的で、力強い。余韻も長く、エレガント。「シュナンブラン・キング」のラーツの原点を知ることが出来るワインであり、かつ、南アフリカの樽無しシュナンブランとしては、同国トップランクの1本として、南アフリカのシュナンブランを知る上では、避けては通れない1本。<br>和食、洋食、中華、アジア系料理など幅広い料理に合わせやすい。カレー、スパイシーな料理、寿司、生ガキ、エビ、イカなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:06:04";s:13:"update_date_8";s:19:"2023-11-13 12:51:45";s:6:"sclr_9";s:7:"3500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"137";s:6:"name_1";s:73:"Bヴィントナーズ・ブラック・ブリーム・ピノノワール";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:455:"南アフリカを代表するトップ・メーカーの1つ、ラーツのオーナー兼醸造家のブルーワーが、従兄のガヴィンと一緒に2015年に立ち上げたブランド。レッドチェリー、ラズベリー、ストロベリー、ダークフルーツ、スミレ、土、シナモン、クローブ、スパイス、紅茶などの香り。豊かでフレッシュな酸味、優しいタッチのミディアムボディ。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:3196:"<div class="productsheet__table">   <h2><small>B Vintners Black Bream Pinot Noir</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウォーカーベイ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>2015VT：ワインスペクテーター93点
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+収穫量：6-8トン/ha。畑は海に近く、標高も３５０mの所にあり、冷涼な気候。土壌は石灰岩質。このような土壌、海に近いロケーション、標高の高さ、これらのコンディションにより高品質なピノノワールが誕生した。発酵後は、フレンチオークで熟成。ヴィンテージ+5-8年。Bヴィントナーズのユニークな地域の畑シリーズ。<br>ブラック・ブリームの名前の由来は、南アフリカの国魚（National Fish, "Galjoen")の別名で、この魚は近づくのが危険な波の洗いサンゴ礁の浅瀬に生息している。いわゆる天然の要害のような場所で、魚にとっては天国のような所。このブラックブリームの畑もアクセスの悪い、秘境のような所で、マイクロクライメート（微細気候）により、この地域独特のテロワールを表現している。<br>鶏肉、鴨肉、豚肉、マッシュルームを使った料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:39:39";s:13:"update_date_8";s:19:"2021-03-06 07:14:10";s:6:"sclr_9";s:7:"4400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"136";s:6:"name_1";s:51:"ラーツ・ドロマイト・カベルネフラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:405:"ダーク＆レッドチェリー、ダークベリー、花、スパイス、ハーブなどの香り。豊かな酸味、ミディアムからフルボディ、シンプルなスタイルで、果実の風味がそのままにピュアに感じられる。フィニッシュに向かってなめらかでソフトな口あたり。渋みは細やかでしっかり。余韻も長く、エレガント。";s:13:"search_word_5";s:37:"カベルネフラン,マルベック";s:11:"free_area_6";s:3167:"<div class="productsheet__table">   <h2><small>Raats Dolomite Cabernet Franc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (95％,5％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：92 Point<br>
+[Platter SA 2017’] 2015VT：4 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+樹齢7-20年。6-8トン/ha。土壌は苦灰石/白雲石花崗岩（酸、フレッシュ、ミネラリーなフィニッシュを与える）。収穫後は5日間冷却。発酵後、バスケットプレスを経て、ステンレスタンクでマロラクティック発酵。その後300Lの3-5年目(3/1ずつ）の中古のフレンチオークで14ヶ月熟成（新樽なし）。ヴィンテージ+2-5年。<br>ダーク＆レッドチェリー、ダークベリー、花、スパイス、ハーブなどの香り。豊かな酸味、ミディアムからフルボディ、シンプルなスタイルで、果実の風味がそのままにピュアに感じられる。フィニッシュに向かってなめらかでソフトな口あたり。渋みは細やかでしっかり。余韻も長く、エレガント。<br>豚肉、ジビエ、羊肉、ハードチーズなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:39:06";s:13:"update_date_8";s:19:"2023-11-13 12:52:40";s:6:"sclr_9";s:7:"4700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"108";s:6:"name_1";s:58:"Bヴィントナーズ・リベルテ・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:221:"南アフリカを代表するトップ・メーカーの1つ、ラーツのオーナー兼醸造家のブルーワーが、従兄のガヴィンと一緒に2015年に立ち上げたブランド。Ｂヴィントナーズ";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2983:"<div class="productsheet__table">   <h2><small>B Vintners Liberte Pinotage</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：93 Point<br>
+[Platter SA 2019’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+海に近い高地の古い樹齢の畑のブドウを使用。不干渉主義アプローチ。フレッシュなチェリー、ブルーベリー、ドライハーブ、スパイス、カカオ、コーヒーなどの香り。しっかりと豊かな酸味、凝縮した果実味、程良い渋み、複雑で、フレッシュなブドウの味を最大限かつ洗練された形で表現し、なめらかでエレガントに仕上げている。濃厚で重いタイプのピノタージュとは違う、ソフトでピノノワールのニュアンスもあるクラシックなスタイル。改めてピノタージュという品種の幅を広げ、その魅力を伝えることができる1本。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:06:26";s:13:"update_date_8";s:19:"2022-03-26 06:58:55";s:6:"sclr_9";s:7:"5300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:3:"109";s:6:"name_1";s:51:"ラーツ・ファミリー・カベルネフラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:199:"南アフリカのカベルネフラン１００％で作ったワインとしては最高峰の1本。フランスのシャトー・シュバルブランにも匹敵すると評価されている。";s:13:"search_word_5";s:21:"カベルネフラン";s:11:"free_area_6";s:3233:"<div class="productsheet__table">   <h2><small>Raats Family Cabernet Franc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：93 Point<br>
+[Tim Atkin Report 2016’] 2013VT：93 Point<br>
+2015南アフリカ・トップ100ワイン選出。2015ジョン・プラッター（南ア）4.5星。ワインアドヴォケート（2014年10月号）で91点。クリスチャン・イーズ95点（2014年10月）。<br>
+2011VT：2014ジョン・プラッター（南ア）5星。パーカー92点（2013年10月）。ワインスペクテーター90点（2014年1月）、ワイン・エンスジアスト90点など多数。
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ブラックベリー、カシス、チェリー、オークやスパイスなど、複雑な香り。豊かな酸味、濃厚でジューシー、キメ細やかでなめらか、フィニッシュに向かってブルーベリー、シナモン、ダークチョコレートなどの風味も感じられる。渋みは細やかでしっかり。余韻も長く、綺麗でエレガントなワイン。<br>
+お勧め料理：牛肉のカルパッチョ、マグロの刺身、ローストビーフ、羊肉など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:06:48";s:13:"update_date_8";s:19:"2023-11-13 12:52:07";s:6:"sclr_9";s:7:"9100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:3:"203";s:6:"name_1";s:72:"ラーツ・イーデン・ハイデンシティ・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:84:"単一畑、蜜植栽培。ラーツのフラグシップ・シュナンブラン。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:3599:"<div class="productsheet__table">   <h2><small>Raats Eden High Density Single Vineyard Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／蝋（ろう）キャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：95 Point<br>
+[Tim Atkin Report 2017’] 2016VT：95 Point<br>
+[Platter SA 2018’] 2016VT：5 STAR<br>
+[Platter SA 2017’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+0.6haの畑で2トン/haと極小。土壌は花崗岩。ラーツの蜜植栽培（1haあたり8000本で1ｘ1.2ｍ間隔で植えている。通常は3000-4000本/ha。）。蜜植にすることによって、ブドウの木が互いに競争し、強いブドウが生育する。２月初旬に収穫。その後、全房でプレス。そのまま300Lのフレンチオークで天然発酵、熟成10ヶ月。<br>ライム、青リンゴ、桃、パイナップル、僅かにジンジャー、白コショウ、花やハチミツ、ローストしたナッツなどの香り。フレッシュで綺麗な酸とミネラルを強く感じ、濃厚で凝縮した果実味。味わいはなめらかで綺麗、複雑味もある。ボディは中庸。余韻は長く、エレガントなフィニッシュで、ジンジャーなどのスパイス感もある。南アフリカを代表する特別なシュナンブランの1本。<br>牡蠣（カキ）、帆立貝他、シーフード、ローストポーク、ソーセージ、中華料理、スパイシーなアジア系料理、ベイクドアップル（デザート）など幅広い料理に合わせやすい。
+</div>";s:13:"create_date_7";s:19:"2021-01-19 02:19:32";s:13:"update_date_8";s:19:"2023-11-13 12:54:50";s:6:"sclr_9";s:8:"10200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:3:"110";s:6:"name_1";s:39:"ラーツ・ＭＲ（エムアール）";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:135:"ラーツのフラグシップ（旗艦商品）。南アフリカを代表するワールドクラスワイン。贈答用に最適。";s:13:"search_word_5";s:100:"カベルネフラン,カベルネソーヴィニョン,マルベック,プチヴェルド,メルロ";s:11:"free_area_6";s:3158:"<div class="productsheet__table">   <h2><small>Raats MR</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (30％,43％,10％,6％,11％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：96 Point<br>
+2013VT：パーカー94P。2012VT：2015ジョン・プラッター（南ア）4.5星。ワインアドヴォケート（パーカーポイント2014年10月号）で96点。ティム・アトキン95点（2014年7月）。<br>
+2014SAWI（南アフリカ・ベストワイン）97点（2014年6月）で、最高得点ワインの一つに選ばれる、など多数。
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+濃く深いルビー色。ブラックチェリー、ブラックベリー、カシス、シナモン、ダークチョコレートなど、複雑かつ濃厚な香り。豊かな酸味、濃厚でジューシー、しっかりとした太いボディでも、ワインはキメ細やかでなめらか、5つの品種が綺麗に調和している。渋みは細やかでしっかり。果実の風味がいつまでも長く口中に広がり、エレガントなフィニッシュ。南アフリカを代表するワールドクラスワイン。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:07:14";s:13:"update_date_8";s:19:"2023-11-13 12:53:20";s:6:"sclr_9";s:8:"18900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

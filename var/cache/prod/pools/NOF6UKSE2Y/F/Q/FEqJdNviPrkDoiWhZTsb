@@ -1,0 +1,421 @@
+1754870549
+%255B5ffe6c72583adae629d47dffb973a80575785717%255D%255B1%255D
+a:1:{s:1191:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:12;}i:1;a:6:{i:0;i:122;i:1;i:16;i:2;i:15;i:3;i:17;i:4;i:19;i:5;i:18;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:6:{i:0;a:13:{s:4:"id_0";s:3:"122";s:6:"name_1";s:90:"ウォータークルーフ・ピーコック・ワイルドファーメント・シラー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:360:"少量のＳＯ２以外何も使用しない不干渉主義な製法。チェリー、プラム、スパイスなどの香り。フレッシュで豊かな酸味、ジューシーな果実味は酸とのバランスが良く、シルキーで綺麗なワインに仕上がっている。そのままでも美味しく、料理とのマッチングも良い。";s:13:"search_word_5";s:12:"シラーズ";s:11:"free_area_6";s:2984:"<div class="productsheet__table">   <h2><small>Peacock Wild Ferment Syrah</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>-
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+周辺の畑で、収穫量の少ない良質のブドウを購入。収穫後は除梗せず、ソフトにプレス。600Lの古いフレンチオークと、大きな古いオークカスクで天然発酵＆熟成6ヶ月。軽くフィルターをして瓶詰め。少量のSO2以外何も使用しない不干渉主義な製法。<br>チェリー、プラム、スパイスなどの香り。フレッシュで豊かな酸味、ジューシーな果実味は酸とのバランスが良く、シルキーで綺麗なワインに仕上がっている。そのままでも美味しく、料理とのマッチングも良い。不干渉主義。<br>ピーコックという名は、ウォータークルーフの敷地内および周辺にはクジャクが生息していることから名付けられた。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 06:55:21";s:13:"update_date_8";s:19:"2023-11-13 12:20:05";s:6:"sclr_9";s:7:"1700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"16";s:6:"name_1";s:111:"ウォータークルーフ・ピーコック・ワイルドファーメント・ソーヴィニヨンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:297:"少量のSo2以外何も使用しない不干渉主義な製法。。ピーマン、ライムなどの香り。フレッシュで豊かな酸味、ふくよかでなめらか、複雑味と伸びがあり余韻まで続く。そのままでも美味しく、料理とのマッチングも良い。";s:13:"search_word_5";s:30:"ソーヴィニヨンブラン";s:11:"free_area_6";s:3074:"<div class="productsheet__table">   <h2><small>Peacock Wild Ferment Sauvignon Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>	少量のSo2以外何も使用しない不干渉主義な製法。</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>-
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+周辺の畑で、収穫量の少ない良質のブドウを購入。収穫後は除梗せず、ソフトにプレス。フリーランジュース（一番搾り）のみ使用。６ヶ月かけてゆっくりと天然発酵＆更に１ヶ月熟成。少量のＳＯ２以外何も使用しない不干渉主義な製法。<br>ピーマン、ライムなどの香り。フレッシュで豊かな酸味、ふくよかでなめらか、複雑味と伸びがあり余韻まで続く。そのままでも美味しく、料理とのマッチングも良い。<br>不干渉主義。ピーコックという名は、ウォータークルーフの敷地内および周辺にはクジャクが生息していることから名付けられた。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:36:39";s:13:"update_date_8";s:19:"2023-11-13 12:21:31";s:6:"sclr_9";s:7:"1700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"15";s:6:"name_1";s:93:"ウォータークルーフ・ピーコック・ワイルドファーメント・カベルネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:236:"少量のSo２以外何も使用しない不干渉主義な製法。赤系ベリー、カシス、カカオなどの香り。フレッシュで豊かな酸味、細やかな渋みがワインに溶けこみ、なめらかな味わい。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3134:"<div class="productsheet__table">   <h2><small>Peacock Wild Ferment Cabernet Sauvinon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>少量のSo2以外何も使用しない不干渉主義な製法。</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>-
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+周辺の畑で、収穫量の少ない良質のブドウを購入。収穫後は除梗せず、ソフトにプレス。600L古いフレンチオークと、大きな古いオークカスクで天然発酵＆熟成6ヶ月。軽くフィルターをして瓶詰め。少量のＳＯ２以外何も使用しない不干渉主義な製法。<br>赤系ベリー、カシス、カカオなどの香り。フレッシュで豊かな酸味、細やかな渋みがワインに溶けこみ、なめらかな味わい。程良い柔らかなボディ。そのままでも美味しく、料理とのマッチングも良い。不干渉主義。<br>ピーコックという名は、ウォータークルーフの敷地内および周辺にはクジャクが生息していることから名付けられた。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:36:03";s:13:"update_date_8";s:19:"2023-11-13 12:20:42";s:6:"sclr_9";s:7:"1700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"17";s:6:"name_1";s:81:"ウォータークルーフ・シリアスリークール・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:273:"農薬は使用せず、ビオディナミを採用。フィニッシュまで豊かで活き活きとした酸味を感じ、フレッシュかつエレガントなスタイル。ワイン全体に冷涼感を感じ、果実と程良いボディのバランスも良い。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:4014:"<div class="productsheet__table">   <h2><small>Waterkloof Seriously Cool Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／エルギン</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>ビオディナミ</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2016VT：90 Point<br>
+[Tim Atkin Report 2016’] 2015VT：92 Point<br>
+[Platter SA 2017’] 2015VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+例年と比べても冷涼で乾燥した年。その結果多くの地域では水不足の為にブドウの収穫量が減った。幸いウォータークルーフでは、地中の根が6ｍにも伸びており、地中深くの水分を確保し、厳しい気候に耐えることができた（一般的には、他の生産者の根は1m程度）。畑はステレンボシュ・ヘルダーバーグ地区の海に近い冷涼エリアにあり、樹齢30-40年のブッシュヴァイン（株仕立て）。その結果、ハンギングタイムが長く、しっかりした酸と凝縮した果実味の上質なブドウを収穫することができる。<br>収穫量は4トン/haと、かなりの低収量。収穫後は除梗せず、伝統的なバスケットプレスで優しく圧搾。24時間の鎮静のあと、コンクリートの卵型の発酵タンクと古い600Lの樽に移して6か月かけて天然発酵＆熟成。少量のSO2以外何も使用しない不干渉主義な製法。軽くろ過して瓶詰。<br>梨、僅かにトーストの香り。フレッシュ＆フルーティなスタイル。古木＆ブッシュヴァインからの由来であろう程良い厚みと熟した果実感もある。フィニッシュまで豊かで活き活きとした酸味を感じ、フレッシュかつエレガントなスタイル。ワイン全体に冷涼感を感じ、果実と程良いボディのバランスも良い。<br>熟成ポテンシャル：ヴィンテージ+3年。和食、寿司、カルパッチョ、野菜料理、魚介類など
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:37:17";s:13:"update_date_8";s:19:"2023-11-13 12:21:13";s:6:"sclr_9";s:7:"3400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:2:"19";s:6:"name_1";s:78:"ウォータークルーフ・アストライオス・ピノノワール・MCC";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:234:"チェリー、花、ハーブ、スパイス、焼きリンゴなどの香り。フレッシュで豊かな酸味、優しいボディで、泡は綺麗でキメ細やか。心地良い爽やかなワインで上品なスタイル。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:3067:"<div class="productsheet__table">   <h2><small>Waterkloof Astraeus Pinot Noir MCC</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／エルギン</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2018’] 4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+冷涼地区エルギンよりオーガニックブドウを購入。土壌はテーブルマウンテン砂岩。この土は、ワインにミネラル分を与える。ブドウは全房でバスケット・プレス。600Lの古樽で天然発酵。その後、澱が入ったまま9ヶ月熟成。その後、瓶内で2次発酵後11ヶ月熟成。デゴルジュマン（澱引き）後、更に7ヶ月熟成して出荷。<br>料理：前菜、和食、寿司、サーモン、シーフード、アジア系料理など。<br>チェリー、花、ハーブ、スパイス、焼きリンゴなどの香り。フレッシュで豊かな酸味、優しいボディで、泡は綺麗でキメ細やか。心地良い爽やかなワインで上品なスタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:52:25";s:13:"update_date_8";s:19:"2023-11-13 12:20:58";s:6:"sclr_9";s:7:"4250.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:2:"18";s:6:"name_1";s:75:"ウォータークルーフ・アストライオス・シャルドネ・MCC";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:243:"フレッシュで豊かな酸味、程よいボディ。泡は綺麗でキメ細やか。リッチで複雑な面もある。フィニッシュはドライで爽やか。全体には心地良い爽やかなワインで上品なスタイル。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3093:"<div class="productsheet__table">   <h2><small>Waterkloof Astraeus Chardon Reserve Brut</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／エルギン</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>NV</td>
+        </tr>
+        <tr>
+            <th>特徴：</th>
+            <td>オーガニック</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2018’] 4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+涼地区エルギンよりオーガニックブドウを購入。土壌はテーブルマウンテン砂岩。この土は、ワインにミネラル分を与える。ブドウは全房でバスケット・プレス。600Lの古樽で天然発酵。その後、澱が入ったまま9ヶ月熟成。その後、瓶内で2次発酵後2年熟成。デゴルジュマン（澱引き）後、更に6ヶ月熟成して出荷。<br>ワインに複雑味を加えるために、2009ヴィンテージのシャルドネMCCを15％混ぜている。<br>フレッシュで豊かな酸味、程よいボディ。泡は綺麗でキメ細やか。リッチで複雑な面もある。フィニッシュはドライで爽やか。全体には心地良い爽やかなワインで上品なスタイル。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:51:50";s:13:"update_date_8";s:19:"2023-11-13 12:20:28";s:6:"sclr_9";s:7:"4250.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

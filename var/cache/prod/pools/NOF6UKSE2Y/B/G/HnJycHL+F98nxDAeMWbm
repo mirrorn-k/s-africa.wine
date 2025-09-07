@@ -1,0 +1,135 @@
+1754871860
+%255B87ec685ecc3896de99b00431de9f748df36e8065%255D%255B1%255D
+a:1:{s:1155:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:9;}i:1;a:2:{i:0;i:132;i:1;i:131;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:2:{i:0;a:13:{s:4:"id_0";s:3:"132";s:6:"name_1";s:51:"ニュービギニングス・シュナンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:403:"南アフリカ史上初の黒人生産ワイン「ニュービギニングス 新しはじまり」フレッシュな酸、フルーティでなめらかな口あたりで、ほんのりクリーミー。飲みやすく、心地良いワインでバランス良い。青リンゴやグレープフルーツ、ミネラルの風味も感じ、トロピカルフルーツの風味が最後まで続く。";s:13:"search_word_5";s:21:"シュナンブラン";s:11:"free_area_6";s:2894:"<div class="productsheet__table">   <h2><small>New Beginnings Chenin Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>-
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステンレスタンクで発酵後、熟成（一部樽使用）。トロピカルフルーツ、熟したライチ、洋ナシ、パイナップル、ライム、青リンゴ、白い花などの香り。フレッシュな酸、フルーティでなめらかな口あたりで、ほんのりクリーミー。飲みやすく、心地良いワインでバランス良い。青リンゴやグレープフルーツ、ミネラルの風味も感じ、トロピカルフルーツの風味が最後まで続く。<br>グリルした魚、シーフード、鶏肉、ローストした鴨、サラダ、様々な野菜料理、スパイスを使用するアジア系料理、キッシュ、山羊のチーズなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:33:11";s:13:"update_date_8";s:19:"2023-11-13 12:38:08";s:6:"sclr_9";s:7:"2200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"131";s:6:"name_1";s:48:"ニュービギニングス・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:439:"南アフリカ史上初の黒人生産ワイン「ニュービギニングス 新しはじまり」ラズベリー、チェリー、プラム、熟した赤系果実、シナモンなどの香り。フレッシュで優しい酸味、フルーティな果実味、渋みは程よく、なめらかな味わいで飲みやすい。酸味、果実味のバランスが良い。余韻も長く、赤系果実の風味が最後まで続く。";s:13:"search_word_5";s:28:"ピノタージュ,メルロ";s:11:"free_area_6";s:2933:"<div class="productsheet__table">   <h2><small>New Beginnings Pinotage</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}(86%,14%)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>-
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステンレスタンクで発酵後、熟成。ラズベリー、チェリー、プラム、熟した赤系果実、シナモンなどの香り。フレッシュで優しい酸味、フルーティな果実味、渋みは程よく、なめらかな味わいで飲みやすい。酸味、果実味のバランスが良い。余韻も長く、赤系果実の風味が最後まで続く。ソフト＆ジューシーな幅広い層に好まれるピノタージュ。<br>様々な肉料理、ジビエ、スペアリブ、スパイス料理、カレーライスにチーズのせ、ラザニア、トマト料理（ピザ、パスタ他）、ローストした野菜、ハンバーガー、デザートのチョコレートやガトーショコラなど
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:32:37";s:13:"update_date_8";s:19:"2023-11-13 12:37:52";s:6:"sclr_9";s:7:"2200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

@@ -1,0 +1,28 @@
+{% block gmo_epsilon_conveni_form %}
+<script>
+$(function() {
+    $('div.ec-rectHeading h2').each(function() {
+        if($(this).html() == 'お支払方法') {
+            $(this).closest('.ec-orderPayment').after($('#gmo_epsilon_conveni'))
+        }
+    });
+})</script>
+
+<div class="ec-orderPayment" id="gmo_epsilon_conveni">
+    <div class="ec-rectHeading">
+        <h2>コンビニ選択</h2>
+    </div>
+
+    <div class="ec-radio">
+        {% for child in form.convenience %}
+            <div style="display: block;">
+                {{ form_widget(child) }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="ec-input {{ has_errors(form.Payment) ? ' error' }}">{{ form_errors(form.Payment) }}</div>
+
+
+ </div>
+
+{% endblock %}

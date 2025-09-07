@@ -1,0 +1,1366 @@
+1754691550
+%255B0bd40196c5899b8add37005b55fe358e3e46e530%255D%255B1%255D
+a:1:{s:1329:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:35;}i:1;a:20:{i:0;i:60;i:1;i:14;i:2;i:32;i:3;i:108;i:4;i:84;i:5;i:65;i:6;i:159;i:7;i:57;i:8;i:40;i:9;i:67;i:10;i:34;i:11;i:41;i:12;i:10;i:13;i:36;i:14;i:35;i:15;i:50;i:16;i:20;i:17;i:27;i:18;i:26;i:19;i:95;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:20:{i:0;a:13:{s:4:"id_0";s:2:"60";s:6:"name_1";s:84:"ステレンラスト・アーティソンズ・アフターエイト・シラーズ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:190:"4つのブロックが重なる僅か0.2haしかない小さなブロックのブドウを使用。このブロックは、周囲の4つのブロックの香りが全て混在している。";s:13:"search_word_5";s:12:"シラーズ";s:11:"free_area_6";s:3873:"<div class="productsheet__table">   <h2><small>Stellenrust Artisons After Eight Shiraz</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2019’] 2018VT：4.5 STAR<br>
+[Tim Atkin Report 2019’] 2016VT：90 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ボタラリーヒルズのユーカリの木の横にある３ha畑で樹齢19年。その中に黒コショウの香りがするブロック（写真参照。黒の円内）、スミレの香りがするブロック（紫の円内）、ブルーベリーの香りがするブロック（青の円内）、ミントの香りがするブロック（緑の円内）があり、その4つのブロックが重なる僅か0.2haしかない小さなブロック（黄色部分）のブドウを使用。このブロックは、周囲の4つのブロックの香りが全て混在していて、とても興味深く、特別貴重なブロック。収穫後、26％は全房で発酵。重力を利用したドリップ式でワインを抽出。プレスの際、８％程度のフレッシュなブドウの茎をバスケットプレスに入れて一緒にプレス。その後フレンチオークでマロラクティック発酵を経て18か月熟成。新樽50％使用、残りは古樽。このワイン用の小さな特別な区画のブドウからスミレ、黒コショウ、ブルーベリー、ミントの４つの香りが混在する面白いシラーズ。<br>フレッシュな酸、厚みのあるボディ、なめらかでリッチな味わい。濃厚な果実味がしっかりした酸に支えられ、バランス良く綺麗にまとまっている。余韻も長い。シュナンブランで有名なステレンラストの中で、ソフトプレスによって出来た綺麗で上品なシラーズ。<br>ラムや牛肉のステーキに黒コショウなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:46:31";s:13:"update_date_8";s:19:"2023-11-13 11:42:52";s:6:"sclr_9";s:7:"4600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"14";s:6:"name_1";s:51:"アリステア・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:384:"ブラックチェリー、プラム、熟した黒系果実などの香り。フレッシュで豊かな酸味、綺麗で雑味の無いジュース。キメ細やかで上品な渋みに引き締まったボディ。優しくなめらか、シルキーなタッチ。パワフルで大きなワインではなく、スタイリッシュで控え目感のある上品なワイン。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3546:"<div class="productsheet__table">   <h2><small>Aristea Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：92 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+5度の低温室で1日置く。除梗、破砕後、オープンタンクで25度で6日間発酵。その間、1日に4−6回パンチダウン。その後ソフトプレスしフレンチオークに移され、マロラクティック発酵を経て18ヵ月熟成。新樽、2年目樽、3年目樽はそれぞれ1/3ずつ使用。生産量4000本。<br>ブラックチェリー、プラム、熟した黒系果実などの香り。フレッシュで豊かな酸味、綺麗で雑味の無いジュース。キメ細やかで上品な渋みに引き締まったボディ。優しくなめらか、シルキーなタッチ。パワフルで大きなワインではなく、スタイリッシュで控え目感のある上品なワイン。オーク由来のシナモンやスパイスの風味も加わり、酸味と果実味、ボディと渋み、それぞれが主張し過ぎずパーフェクトに調和している。<br>何もブレンドされず、カベルネソーヴィニョン100％の単一ワインとしては、かなりの上質。このワインからマシューのこだわりと技術の高さを感じ取れる。エレガントで何も申し分がない。<br>上品な肉料理と合わせたいフードワイン。赤身の牛肉や羊肉、デザートではガトーショコラなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:34:47";s:13:"update_date_8";s:19:"2022-03-26 02:08:30";s:6:"sclr_9";s:7:"4800.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"32";s:6:"name_1";s:57:"キアモント・エステートリザーブ・レッド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:336:"熟したチェリーやベリー、野いちご、フィンボスなどハーブやスパイスなどの香り。柔らかく心地良い酸味、なめらかでキメ細やかでしっかりした渋み。柔らかく程良いボディ。繊細で美しいエレガントなワイン。フィニッシュはドライで長く続く。";s:13:"search_word_5";s:110:"メルロ,カベルネソーヴィニヨン,カベルネフラン,プチヴェルド,マルベック,シラー";s:11:"free_area_6";s:3412:"<div class="productsheet__table">   <h2><small>Keermont Estate Reserve Red</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}(32％,47％,16％,12％,6％,2％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2013</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2014VT：93 Point<br>
+[Tim Atkin Report 2017’] 2012VT：91 Point<br>
+[Platter SA 2018’] 2013VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+土壌は、粘土が混ざった砂岩や花崗岩。畑はステレンボシュ山脈とヘルダーバーグ山脈の間の標高250-400ｍ。畑の斜面は北東や西向き。7週間かけて105トンのブドウを収穫。ブドウは優しくナチュラルにオープンタンクで発酵、その後はフレンチオークで22ヶ月熟成（新樽20％）。濾過なしで手作業で瓶詰め。<br>熟成ポテンシャル：ヴィンテージ+10-15年。<br>料理：牛ステーキ他、様々な肉料理など。<br>熟したチェリーやベリー、野いちご、フィンボスなどハーブやスパイスなどの香り。柔らかく心地良い酸味、なめらかでキメ細やかでしっかりした渋み。柔らかく程良いボディ。繊細で美しいエレガントなワイン。フィニッシュはドライで長く続く。<br>キアモントらしい酸味とキメの細やかさ、エレガントなスタイルが伝わってくる素晴らしいボルドースタイルのブレンド。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:41:28";s:13:"update_date_8";s:19:"2023-07-25 01:59:51";s:6:"sclr_9";s:7:"4900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"108";s:6:"name_1";s:58:"Bヴィントナーズ・リベルテ・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:221:"南アフリカを代表するトップ・メーカーの1つ、ラーツのオーナー兼醸造家のブルーワーが、従兄のガヴィンと一緒に2015年に立ち上げたブランド。Ｂヴィントナーズ";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2983:"<div class="productsheet__table">   <h2><small>B Vintners Liberte Pinotage</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：93 Point<br>
+[Platter SA 2019’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+海に近い高地の古い樹齢の畑のブドウを使用。不干渉主義アプローチ。フレッシュなチェリー、ブルーベリー、ドライハーブ、スパイス、カカオ、コーヒーなどの香り。しっかりと豊かな酸味、凝縮した果実味、程良い渋み、複雑で、フレッシュなブドウの味を最大限かつ洗練された形で表現し、なめらかでエレガントに仕上げている。濃厚で重いタイプのピノタージュとは違う、ソフトでピノノワールのニュアンスもあるクラシックなスタイル。改めてピノタージュという品種の幅を広げ、その魅力を伝えることができる1本。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:06:26";s:13:"update_date_8";s:19:"2022-03-26 06:58:55";s:6:"sclr_9";s:7:"5300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:2:"84";s:6:"name_1";s:72:"ブーケンハーツクルーフ・ザ・チョコレートブロック";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:165:"熟したプラム、ブラックチェリー、赤系果実、黒系果実、ブラックオリーブ、ココア、ミント、スパイスなど複雑な香り。";s:13:"search_word_5";s:106:"シラー,グルナッシュ・ノワール,サンソ―,カベルネソーヴィニョン,ヴィオニエ";s:11:"free_area_6";s:3762:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof The Chocolate Block</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (69％,13％,9％,8％,1％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>11％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：92 Point<br>
+[Tim Atkin Report 2018’] 2017VT：93 Point<br>
+[Platter SA 2020’] 2018VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+3年連続で乾燥した年が続き、収穫のタイミングが難しかったが、結果的には凝縮し良いバランスのブドウが採れた。畑はスレート土壌と花崗岩でボディとミネラルを与える。グルナッシュは600Lの樽で熟成することでフレッシュな果実の風味を維持するようにした。カベルネソーヴィニョンはフレンチオークの新樽で熟成。その他の品種は2年目、3年目のフレンチオークと2500Lの大樽で熟成。トータルの熟成期間は12か月。2236樽をセレクトして瓶詰め。<br>熟したプラム、ブラックチェリー、赤系果実、黒系果実、ブラックオリーブ、ココア、ミント、スパイスなど複雑な香り。フレッシュで心地良い酸味、凝縮した豊かな果実味、渋みは細やかで洗練されている。しっかりしたボディで、リッチでなめらかなタッチ。複雑でそれぞれの品種がバランス良く調和された優れたワイン。余韻も長く、綺麗にまとまっている。<br>シラーは濃厚な果実味とスパイスの風味を、グルナッシュは繊細で洗練されたピュアな果実味を、サンソーはフローラルで熟したストロベリーの風味を、カベルネソーヴィニョンはしっかりした渋みと骨格をワインに与えている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:49:00";s:13:"update_date_8";s:19:"2023-11-13 12:42:51";s:6:"sclr_9";s:7:"5400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:2:"65";s:6:"name_1";s:54:"デイビット＆ナディア・エルピディオス";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:216:"透明感のある綺麗なワインで優しいボディ。美しく豊かな酸味、キメ細やかで洗練された渋み。優しくなめらか、旨みも感じられ、エレガントなフィニッシュ。";s:13:"search_word_5";s:76:"シラー,カリニャン,サンソ―,グルナッシュ,ピノタージュ";s:11:"free_area_6";s:3038:"<div class="productsheet__table">   <h2><small>David & Nadia Elpidios</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (31％,39％,9％,5％,16％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：94 Point<br>
+[Tim Atkin Report 2016’] 2014VT：93 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+岩、片岩、花崗岩や鉄分豊富な土壌で、スワートランドの7箇所の畑のブドウを使用。収穫量は4-5トン/haと極めて少量。収穫後は、ステンレスタンクで全房と除茎の物を混ぜて天然発酵、トータルでスキンコンタクトは4週間。その後、ソフトにプレスし、500Ｌの古いフレンチオークに移してマロラクティック発酵＆20ヶ月熟成。<br>ラズベリー、クランベリー、スパイス、ラベンダーなどの花の香り。透明感のある綺麗なワインで優しいボディ。美しく豊かな酸味、キメ細やかで洗練された渋み。優しくなめらか、旨みも感じられ、エレガントなフィニッシュ。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:53:13";s:13:"update_date_8";s:19:"2023-11-13 12:12:49";s:6:"sclr_9";s:7:"5700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:3:"159";s:6:"name_1";s:72:"ベリンガム・バーナード・バスケットプレス・シラー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:220:"天然発酵、フレンチオークで１2ヶ月熟成。プラム、赤系ベリー、様々なスパイス、オークの香り。柔らかな酸味、凝縮した濃厚な果実味、しっかりと太いボディ。";s:13:"search_word_5";s:28:"シラーズ,ヴィオニエ";s:11:"free_area_6";s:2923:"<div class="productsheet__table">   <h2><small>Bellingham Basket Press Syrah</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (98％,2％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2014</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2015VT：91 Point<br>
+[Tim Atkin Report 2016’] 2014VT：90 Point<br>
+[Decanter World Wine Awards 2018’] 2015VT：94 Point／Silver<br>
+[Decanter World Wine Awards 2017’] 2015VT：92 Point／Silver<br>
+[Decanter World Wine Awards 2016’] 2014VT：85 Point／Commended<br>
+[Platter SA 2016’] 2013VT：5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+天然発酵、フレンチオークで１2ヶ月熟成。プラム、赤系ベリー、様々なスパイス、オークの香り。柔らかな酸味、凝縮した濃厚な果実味、しっかりと太いボディ。重心は下にあり、本格的なフルボディタイプ。パワフル系だが、一方でフルーティでなめらか。美しくエレガントなワイン。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:08:18";s:13:"update_date_8";s:19:"2023-11-13 12:47:39";s:6:"sclr_9";s:7:"5800.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:7;a:13:{s:4:"id_0";s:2:"57";s:6:"name_1";s:48:"コンスタンシア・グレン・ファイブ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:315:"「これぞ、フラッグシップ」と言わんばかりの威風堂々とした存在感を漂わせている。タンニンはしっかりしていても、あくまでも細やかでスムーズ、丸みを帯びた骨格は、エレガントで綺麗なコンスタンシアらしさを表現している。";s:13:"search_word_5";s:97:"カベルネソーヴィニョン,カベルネフラン,メルロ,プチベルド,マルベック";s:11:"free_area_6";s:3603:"<div class="productsheet__table">   <h2><small>Constantia Glen Fives</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／コンスタンシア</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (30％,29％,23％,12％,6％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2019’] 2015VT：97 Point／Platinum<br>
+[Tim Atkin Report 2018’] 2014VT：95 Point<br>
+[Platter SA 2018’] 2014VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+早朝の涼しい時間に収穫。それぞれの品種ごとに発酵、225Ｌのフレンチオークで18ヵ月熟成。新樽80％使用。2年目樽20％使用。軽くフィルターして瓶詰。更に瓶熟成を3年してからリリース。生産量24,000本。<br>赤系、黒系の果実、熟した果実、ジューシーなプラム、湿った土、鉛筆の芯、ハーブやスパイスなどの香り。柔らかい酸味、凝縮し深みのある果実味、しっかりした骨格とボディを兼ね備え、渋みは細やかで洗練されている。味わいはリッチでなめらか、フレッシュな酸味とミネラル、果実味、ボディ、全ての要素が見事に調和し、「これぞ、フラッグシップ」と言わんばかりの威風堂々とした存在感を漂わせている。タンニンはしっかりしていても、あくまでも細やかでスムーズ、丸みを帯びた骨格は、エレガントで綺麗なコンスンシアらしさを表現している。今でも楽しめるが、熟成しても楽しめるタイプなので、是非セラーに入れて欲しい。<br>ラムチョップ、ローストポーク、マッシュルームのリゾットなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:35:23";s:13:"update_date_8";s:19:"2023-11-13 12:26:37";s:6:"sclr_9";s:7:"5900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:8;a:13:{s:4:"id_0";s:2:"40";s:6:"name_1";s:78:"キャサリン・マーシャル・ピノノワール・クレイソイルズ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:252:"豊かな酸味、しっかりした骨格。フレッシュで、とてもきれいな、シルキーななめらかさと細やかな渋み。ピュアでチャーミングなブドウの味わいで美しくエレガントにまとまっている。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:4601:"<div class="productsheet__table">   <h2><small>Catherine Marshall Pinot Noir on Clay Soils</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／エルギン</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2022</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2017’] 2015VT：84 Point／Commended<br>
+[Tim Atkin Report 2019’] 2018VT：93 Point<br>
+[Tim Atkin Report 2017’] 2016VT：93 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+設立20周年キャサリンマーシャルのトップピノ！<br>エルギンの冷涼なエリアの2カ所の畑のブドウを使用。土壌は粘土質で鉄分を多く含む。それによりワインにしっかりした骨格となめらかなタンニン、土っぽさや香ばしい香りをもたらす。ブドウはフレンチ・ディジョン・クローヌで2001年と2005年に2.2ｘ1.2ｍ間隔で植えられてもの。畑の斜面は涼しい南向きと南東向き。収穫は2月中旬から月末にかけて全て手摘みで行われた。収穫後は、手で選果を行い、破砕せずに除茎される。一晩浸漬させてから発酵。発酵はオープンタンクで天然発酵と人工酵母による発酵。パンチダウンは、香りとタンニンの抽出具合に気を配りながら毎日ピジャージュを行う。これらの作業は全て手作業で機械は使用しない。発酵終了後は、再度香りとタンニンをチェックし、ステンレスのバスケットプレスで手搾りする。様々なブレンド・パターンを試し、ベストなものを選んで最終的なアサアンブラージュ。マロラクティック発酵は225Ｌのフレンチオークで。その後9-12カ月熟成。樽はブルーゴーニュ産のオークで、1-4年目の樽を使用。熟成が完了すると、ベストな樽のみブレンドして軽く濾過して瓶詰め。<br>
+美しくきれいなルビー色。凝縮したブラックチェリーのコンポート、クランベリー、森の土、樽由来の香ばしい香りなど。豊かな酸味、しっかりした骨格。フレッシュで、とてもきれいな、シルキーななめらかさと細やかな渋み。ピュアでチャーミングなブドウの味わいで美しくエレガントにまとまっている。飲むほどに複雑性と深みが表れてくる。若い時はチェリーや赤系ベリーの香り、フレッシュな美味しさを楽しめ、熟成すると森の土、トリュフ、香ばしい香りが出てくる。開くのにやや時間がかかるワインだが、熟成した時に、このワインの真の力を感じることができる。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:51:25";s:13:"update_date_8";s:19:"2023-11-13 12:24:03";s:6:"sclr_9";s:7:"6000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:9;a:13:{s:4:"id_0";s:2:"67";s:6:"name_1";s:51:"デイビット＆ナディア・グルナッシュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:216:"グルナッシュ単一ワイン。フレッシュな酸味と細かいタンニンが綺麗なワイン。南アを代表するグルナッシュとシュナンブランの造り手、デイビット＆ナディア";s:13:"search_word_5";s:18:"グルナッシュ";s:11:"free_area_6";s:2761:"<div class="productsheet__table">   <h2><small>David ＆ Nadia Grenache</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／スワートランド</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.6％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2016’] 2015VT：94 Point<br>
+[Tim Atkin Report 2015’] 2014VT：95 Point<br>
+[Platter SA 2016’] 2014VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+色調はピノノワールのように淡く、全体の40％を全房発酵を用いテロワールにこだわっている。赤スグリ、チェリー、ザクロなどの香りから来るフレッシュ感にやさしいスパイシーさがある。全体的に柔らかい味わいだがワインの構造はしっかりしており官能的な余韻が長く続く。フレッシュな酸味ときめ細やかなタンニンが心地よい。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:54:19";s:13:"update_date_8";s:19:"2023-07-25 02:33:09";s:6:"sclr_9";s:7:"6300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:10;a:13:{s:4:"id_0";s:2:"34";s:6:"name_1";s:63:"キアモント・ポンドックラグ・カベルネフラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:324:"ストロベリー、キャンディ、ハーブなどの香り。綺麗かつ豊かな酸、明るい赤系果実の風味が豊かでレッドペッパー、黒スグリの風味も感じられる。渋みは細やかで引き締まり、しっかりしている。非常にエレガントでシルキーなテイスト。";s:13:"search_word_5";s:21:"カベルネフラン";s:11:"free_area_6";s:3780:"<div class="productsheet__table">   <h2><small>Keermont Pondokrug Cabernet Franc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2015</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2015VT：96 Point<br>
+[Platter SA 2018’] 2015VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステレンボシュ山脈の頂上付近の畑で西向き斜面に2006年に植樹。標高は380ｍで周辺は土着の植物「フィンボス」に囲まれている。土壌は、粘土が多く混ざった赤土で花崗岩ローム。これらの要因により、ワインはユニークな香りとしっかりした渋み、骨格が備わる。この頂上からのテーブルマウンテンの眺めは絶景。<br>2015年は乾燥し、昼は暖かく、夜は冷えた年だった。結果として、風味豊かな色づきの良い高品質なブドウを収穫できた。収穫は1/23-3/3で2.7トン/haと少ない。収穫後は優しくナチュラルにオープンタンクで発酵、その後は中古のフレンチオークで20ヶ月熟成。濾過なしで手作業で瓶詰め。<br>ストロベリー、キャンディ、ハーブなどの香り。綺麗かつ豊かな酸、明るい赤系果実の風味が豊かでレッドペッパー、黒スグリの風味も感じられる。渋みは細やかで引き締まり、しっかりしている。非常にエレガントでシルキーなテイスト。綺麗な酸と、長くパワフルでドライなフィニッシュが特徴的。<br>キアモントらしい豊かな酸味とキメの細やかさ、南アフリカのトップ・カベルネフランに相応しい素晴らしい1本。1464本生産。<br>様々な肉料理、羊肉、ウナギ（蒲焼）、マグロ刺身など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:42:50";s:13:"update_date_8";s:19:"2023-07-25 02:01:30";s:6:"sclr_9";s:7:"6400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:11;a:13:{s:4:"id_0";s:2:"41";s:6:"name_1";s:69:"キャサリン・マーシャル・ピーターズ・ヴィジョン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:283:"ボディは程よくしっかりした骨格を持ち、全体のバランスも良く整っている。口あたりはなめらかで非常に美しく上品。余韻は深く、長く、素晴らしいフィニッシュ。南アフリカを代表する秀逸なメルロの1本。";s:13:"search_word_5";s:31:"メルロ,カベルネフラン";s:11:"free_area_6";s:4047:"<div class="productsheet__table">   <h2><small>Catherine Marshall Peter's Vision</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／エルギン</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}(86%,14%)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：93 Point<br>
+[Tim Atkin Report 2018’] 2016VT：94 Point<br>
+[Tim Atkin Report 2017’] 2015VT：94 Point<br>
+[Platter SA 2018’] 2015VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+メルロの畑は鉄分の多い頁岩。クローンはフランスとイタリアでほぼ50％ずつ。イタリアン・クローンは、火打石、タバコ、土っぽさ、しっかりした骨格を与え、フレンチ・クローンは、黒系果実、フレッシュで華やかな風味を与える。キャノピーマネジメントは、注意深く行われ、青っぽい渋みが出ないように十分に成熟したブドウを育てている。<br>カベルネフランは、十分に成熟していないブドウは畑で取り除き、ある程度の空間を確保し、太陽にしっかり当てて、成熟したブドウのみを生育させるように気を付けている。収穫後除梗し、少しだけ破砕。発酵はブドウ500kgごとにオープンタンクで行われ、ピジャージュは手作業で行い、ポンプや機械は使用しない。プレスは、バスケットプレスを使用。その後、２２５Lと３００Lのフレンチオークで16ヵ月熟成。軽くろ過して瓶詰。<br>熟成ポテンシャル：ヴィンテージ+10年。<br>料理：牛肉、羊肉、ボロネーゼなどのミートパスタなど。<br>プラム、黒系果実、スミレ、鉛筆の芯などの豊かな香り。冷涼なエルギンらしい豊かな酸味。渋みは細やか、しなやかで洗練されている。<br>ボディは程よくしっかりした骨格を持ち、全体のバランスも良く整っている。口あたりはなめらかで非常に美しく上品。余韻は深く、長く、素晴らしいフィニッシュ。<br>南アフリカを代表する秀逸なメルロの1本。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:54:16";s:13:"update_date_8";s:19:"2023-11-13 12:24:23";s:6:"sclr_9";s:7:"6500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:12;a:13:{s:4:"id_0";s:2:"10";s:6:"name_1";s:39:"アタラクシア・ピノノワール";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:213:"豊かでしっかりした酸味、骨格のハッキリしたボディ。フレッシュで、とてもきれいな、ピュアでチャーミングなブドウの味わい。渋みは細やかで心地良い。";s:13:"search_word_5";s:18:"ピノノワール";s:11:"free_area_6";s:3303:"<div class="productsheet__table">   <h2><small>Ataraxia Pinot Noir</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウォーカーベイ・ヘメル・アン・アード・リッジ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.2％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Parker Wine Advocate] 2015VT：92 Point<br>
+[Tim Atkin Report 2019’] 2017VT：90 Point<br>
+[Tim Atkin Report 2018’] 2016VT：89 Point<br>
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+収穫後、発酵前に10日間のコールドマセラシオン。オープンタンクでの22日間の発酵（最高で28度）。発酵中は、１日２回のパンチダウンを行う。その後プレスされ、225Lのフレンチオークに移して100％マロラクティック発酵。そのまま11ヶ月熟成（新樽21％）。<br>美しくきれいなルビー色。<br>チェリー、ザクロ、森の土、スパイスや新樽などの香り。豊かでしっかりした酸味、骨格のハッキリしたボディ。フレッシュで、とてもきれいな、ピュアでチャーミングなブドウの味わい。渋みは細やかで心地良い。きれいで洗練された酸味が全体を美しく、エレガントにまとめている。<br>みずみずしく透明感のあるきれいなワインで深みもあり、優美で官能的。スタイリッシュでエレガントなフィニッシュ。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:31:39";s:13:"update_date_8";s:19:"2023-11-13 12:18:33";s:6:"sclr_9";s:7:"6500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:13;a:13:{s:4:"id_0";s:2:"36";s:6:"name_1";s:48:"キアモント・トップサイド・シラー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:285:"黒系果実、スミレ、白コショウなどが混ざった素晴らしい香り。綺麗かつ豊かな酸、透明感のある美しいワインでスパイシーな果実の風味。細やかでしっかりとした渋み、繊細でシルキー、エレガントなワイン。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:3672:"<div class="productsheet__table">   <h2><small>Keermont Topside Syrah</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2015</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2015VT：96 Point<br>
+[Platter SA 2018’] 2015VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ステレンボシュ山脈の頂上付近の畑で西向き斜面に2006年に植樹。標高は350ｍ。土壌は、砂岩と花崗岩。この標高の高さと土壌などの要因によって、ワインがスパイシーに、また細やかな渋みになる。この頂上からのテーブルマウンテンの眺めは絶景。<br>2015年は乾燥し、昼は暖かく、夜は冷えた年だった。結果として、風味豊かな色づきの良い高品質なブドウを収穫できた。収穫は1/23-3/3。収穫後は優しくナチュラルにオープンタンクで発酵、その後は500Ｌの中古のフレンチオークで20ヶ月熟成。濾過なしで手作業で瓶詰め。<br>黒系果実、スミレ、白コショウなどが混ざった素晴らしい香り。綺麗かつ豊かな酸、透明感のある美しいワインでスパイシーな果実の風味。細やかでしっかりとした渋み、繊細でシルキー、エレガントなワイン。フィニッシュはドライで活き活きとした風味や果実の旨み、ミネラルや塩味も感じる。<br>キアモントらしい豊かな酸味とキメの細やかさ、ピノノワールのようなエレガントなスタイル。南アフリカのトップシラーと肩を並べる素晴らしい1本。2541本生産。<br>様々な肉料理、繊細な料理に。
+
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:47:40";s:13:"update_date_8";s:19:"2023-07-25 02:02:04";s:6:"sclr_9";s:7:"6900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:14;a:13:{s:4:"id_0";s:2:"35";s:6:"name_1";s:54:"キアモント・スティープサイド・シラー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:315:"スパイス、ハーブ、花の香りにシナモンや熟したストロベリー、カシスなどの香りも少し感じる。綺麗かつ豊かな酸、引き締まったボディ、スパイシーな果実の風味。なめらかでキメ細やかな渋み、繊細で美しいエレガントなワイン。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:3894:"<div class="productsheet__table">   <h2><small>Keermont Steepside Syrah</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2015</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2015VT：95 Point<br>
+[Platter SA 2018’] 2015VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+2005年にヘルダーバーグ山脈の中腹の険しい斜面に植樹。標高は300ｍ。土壌は、赤い粘土質のローム層で鉄分が多く混ざっている。地中深くは花崗岩。この花崗岩と北向きの強い日光により、ワインがパワフルでしっかりした骨格を与えている。また標高が高く、周りは土着の植物（フィンボス）に囲まれている為に、スパイスやハーブの香りが豊かなワインになっている。<br>2015年は乾燥し、昼は暖かく、夜は冷えた年だった。結果として、風味豊かな色づきの良い高品質なブドウを収穫できた。収穫は1/23-3/3。収穫量は5.9トン/ha。収穫後は優しくナチュラルにオープンタンクで発酵、その後は225Ｌと500Ｌの中古のフレンチオークで20ヶ月熟成。濾過なしで手作業で瓶詰め。<br>スパイス、ハーブ、花の香りにシナモンや熟したストロベリー、カシスなどの香りも少し感じる。綺麗かつ豊かな酸、引き締まったボディ、スパイシーな果実の風味。なめらかでキメ細やかな渋み、繊細で美しいエレガントなワイン。フィニッシュはドライで活き活きとした風味や果実の旨みが最後まで長く続く。<br>キアモントらしい豊かな酸味とキメの細やかさ、ピノノワールのようなエレガントなスタイル。南アフリカのトップシラーと肩を並べる素晴らしい1本。2571本生産。<br>様々な肉料理、繊細な料理に。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 03:47:07";s:13:"update_date_8";s:19:"2023-07-25 02:02:36";s:6:"sclr_9";s:7:"6900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:15;a:13:{s:4:"id_0";s:2:"50";s:6:"name_1";s:48:"グレネリー・レディ・メイ・レッド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:269:"グレネリー社のフラグシップ。新樽フレンチオークで24カ月熟成。カシスやブラックチェリー、繊細で、ほんのりとスパイシーなプラムの香り。濃い色調で、太く、しっかりとした重みのあるボディ。";s:13:"search_word_5";s:84:"カベルネソーヴィニヨン,カベルネフラン,プチヴェルド,メルロ";s:11:"free_area_6";s:2835:"<div class="productsheet__table">   <h2><small>Glenelly Lady May</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}（85%,7%,4%,4%）</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2014VT：96 Point<br>
+[Tim Atkin Report 2017’] 2013VT：95 Point<br>
+[Tim Atkin Report 2016’] 2012VT：95 Point<br>
+[Platter SA 2017’] 2012VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+新樽フレンチオークで24カ月熟成。<br>カシスやブラックチェリー、繊細で、ほんのりとスパイシーなプラムの香り。濃い色調で、太く、しっかりとした重みのあるボディ。細やかで、なめらかな渋み、フレッシュで活き活きとした果実の味わい。余韻は長く、複雑でパーフェクトなバランスの長期熟成型ワイン。<br>早めの抜栓をお勧めします。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:05:28";s:13:"update_date_8";s:19:"2023-11-13 13:00:44";s:6:"sclr_9";s:7:"7200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:16;a:13:{s:4:"id_0";s:2:"20";s:6:"name_1";s:42:"ウォーターフォード・カベルネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:198:"スタイリッシュでエレガントなカベルネ。全てがバランス良く、なめらかでシルキーな口あたり。余韻も長いくモダンかつクラシックなスタイル。";s:13:"search_word_5";s:65:"カベルネソーヴィニヨン,メルロ,カベルネフラン";s:11:"free_area_6";s:2785:"<div class="productsheet__table">   <h2><small>Warterford Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量／キャップ：</th>
+            <td>750ml／コルク</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2016VT：94 Point<br>
+[Tim Atkin Report 2018’] 2015VT：95 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+色は濃く、柔らかな酸味、濃厚でしっかりしたボディで、非常にキメ細やかな上品な渋み。<br>12年ビンテージより柔らかいタンニン。ソフトでシルキーな味わい。余韻も長くモダンかつクラシックな両面スタイルを持ち合わせている。<br>とにかくスタイリッシュでエレガントなこれまで出会ってきた南アフリカの赤ワインの中でも最高クラス。申し分の無い1本。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:53:56";s:13:"update_date_8";s:19:"2023-11-13 11:59:26";s:6:"sclr_9";s:7:"7400.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:17;a:13:{s:4:"id_0";s:2:"27";s:6:"name_1";s:54:"カノンコップ・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:369:"深いルビー色。カシス、黒系果実、ブルーベリー、紅茶の葉、タバコ、鉛筆の芯、ビターチョコレート、ハーブ、エスプレッソ、オーク由来のスパイスなど複雑な香り。フレッシュで比較的豊かな酸味、凝縮し濃厚な果実味、上品で洗練された渋み、しっかりと太いボディ。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3452:"<div class="productsheet__table">
+	<h2><small>Kanonkop Cabernet Sauvignon</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>15.0％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2018</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2015VT：94 Point<br>
+				[Platter SA 2020’] 2015VT：5.0 STAR
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	温かく乾燥した冬で収穫時期は暑かった。収穫量4トン（2750L)/ha。樹齢：平均26年。花崗岩土壌。オープンタンクで29度で発酵。ピジャージュは2時間おきに。225Lのフレンチオークで24ヶ月熟成（新樽60％、２年目樽40％）。<br>深いルビー色。カシス、黒系果実、ブルーベリー、紅茶の葉、タバコ、鉛筆の芯、ビターチョコレート、ハーブ、エスプレッソ、オーク由来のスパイスなど複雑な香り。フレッシュで比較的豊かな酸味、凝縮し濃厚な果実味、上品で洗練された渋み、しっかりと太いボディ。なめらかでシルキーな味わいでクラシックなエレガント・スタイル。深く長い余韻。濃厚でしっかりしたワインだが、酸味もあるのでワインは決して重たく感じない。酸味、果実味、ボディ、オークの風味、余韻など、全ての要素がマックスでバランス良く保たれている。カベルネソーヴィニョン100％のワインとしては南アフリカ最高峰かつ至福の1本と呼べるだろう。これまでの経験でも、ほぼ「完璧」と言っても良いくらい、最も洗練された過去最高ヴィンテージ（当社バイヤー談）。価格パフォーマンスも優れているので、是非飲んでほしい1本。長期熟成型で早めの抜栓かデキャンターがおすすめ。<br>ビーフステーキ、ラムステーキ、牛肉料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:58:42";s:13:"update_date_8";s:19:"2023-11-13 11:03:18";s:6:"sclr_9";s:7:"7500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:18;a:13:{s:4:"id_0";s:2:"26";s:6:"name_1";s:39:"カノンコップ・ピノタージュ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:216:"過去ビンテージ15IWSCでピノタージュ世界一！なめらかで心地良い酸味、凝縮した果実味、しっかりと太いボディ。細やかで上品な渋み。エレガントなスタイル。";s:13:"search_word_5";s:18:"ピノタージュ";s:11:"free_area_6";s:2878:"<div class="productsheet__table">
+	<h2><small>Kanonkop Pinotage</small></h2>
+	<table>
+		<tr>
+			<th>ワイナリー：</th>
+			<td>{# 関連カテゴリ #}
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 62 %}
+				{% for Category in ProductCategory.Category.path %}
+				{% if Category.id != 62 %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>原産国：</th>
+			<td>南アフリカ／ステレンボッシュ</td>
+		</tr>
+		<tr>
+			<th>タイプ：</th>
+			<td>
+				{% if Product.ProductCategories is not empty %}
+				{% for ProductCategory in Product.ProductCategories %}
+				{% set Cat = ProductCategory.Category %}
+				{% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+				{% for Category in ProductCategory.Category.path %}
+				<a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+				{%- if loop.last == false %}<span>＞</span>{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>主要品種：</th>
+			<td>{{ Product.search_word }} 100％</td>
+		</tr>
+
+		<tr>
+			<th>アルコール度数：</th>
+			<td>14.2％未満</td>
+		</tr>
+		<tr>
+			<th>容量：</th>
+			<td>750ml</td>
+		</tr>
+		<tr>
+			<th>ヴィンテージ：</th>
+			<td>2020</td>
+		</tr>
+		<tr>
+			<th>受賞／評価：</th>
+			<td>[Tim Atkin Report 2019’] 2017VT：94 Point<br>
+				[Tim Atkin Report 2018’] 2016VT：94 Point<br>
+				[Tim Atkin Report 2017’] 2015VT：94 Point<br>
+				[Tim Atkin Report 2016’] 2014VT：93 Point<br>
+				[Platter SA 2018’] 2016VT：4.5 STAR<br>
+				[Platter SA 2016’] 2014VT：4.5 STAR<br>
+				[Parker Wine Advocate] 2016VT：90 Point
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div class="ec-productRole__description">
+	灌漑は無し。収穫量5トン/ha（32.5ｈL）。樹齢、最高は62年の古木。オープンタンクで発酵、225Lのフレンチオークで16ヶ月熟成（新樽75％ 2年目樽25％）。<br>若いヴィンテージでは、赤い果実、プラムなど、複雑でフルーティな香り。熟成すると、森の土などの香り。なめらかで心地良い酸味、凝縮した果実味、しっかりと太いボディ。細やかで上品な渋み。エレガントなスタイル。新樽にも負けない力を持っているが、パワフルさが前に出すぎているわけでもない。酸味、果実味、ボディの全ての要素がマックスでバランス良く保たれている。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:58:05";s:13:"update_date_8";s:19:"2023-11-13 11:03:42";s:6:"sclr_9";s:7:"7500.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:19;a:13:{s:4:"id_0";s:2:"95";s:6:"name_1";s:83:"ブーケンハーツクルーフ・ステレンボッシュ・カベルネ 2019年";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:180:"カシス、ブラックチェリー、黒系果実、鉛筆の芯、ハーブ、スパイスなどの香り。フレッシュで心地良い酸味、凝縮し豊かな果実味。";s:13:"search_word_5";s:55:"カベルネソーヴィニョン,カベルネフラン";s:11:"free_area_6";s:3667:"<div class="productsheet__table">   <h2><small>Boekenhoutskloof Stellenbosch Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (94％,6％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml未満</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：94 Point<br>
+[Tim Atkin Report 2018’] 2016VT：93 Point<br>
+[Platter SA 2020’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+畑はステレンボシュ、ヘルダーバーグ地区の北西向き斜面。土壌は花崗岩、砂岩、コーヒークリップ（鉄分の多い花崗岩で赤ワインにミネラルとエレガンスを与える）。17年は乾燥し、暖かい年で、ブドウの生育は小さく、その分ブドウの風味は凝縮している。収穫後は、ステンレスタンクで発酵、パンプオーバー、225Ｌのフレンチオークに移し、マロラクティック発酵を経て18ヶ月熟成（新樽60％）。<br>カシス、ブラックチェリー、黒系果実、鉛筆の芯、ハーブ、スパイスなどの香り。フレッシュで心地良い酸味、凝縮し豊かな果実味。渋みは細やかで洗練されているがしっかりと感じる。スッキリとタイトでフォーカスされたボディ、なめらかでシルキー。余韻は長く、フィニッシュはドライでエレガントにまとまり、ブルーベリーやフレッシュな青葉のような風味を感じる。少量のカベルネフランがアクセントになり、このワインにフレッシュさとエレガントさを加えている。酸味、果実味、ボディのバランスが良く、気持ちの良い非常に美しいカベルネに仕上がっている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:53:57";s:13:"update_date_8";s:19:"2023-07-25 03:34:22";s:6:"sclr_9";s:7:"8100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

@@ -1,0 +1,267 @@
+1754875988
+%255Ba5a1ed878250626bd237ae9fab2dfa7d415af528%255D%255B1%255D
+a:1:{s:1176:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:46;}i:1;a:4:{i:0;i:172;i:1;i:171;i:2;i:174;i:3;i:173;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:4:{i:0;a:13:{s:4:"id_0";s:3:"172";s:6:"name_1";s:46:"ラスカリオン・３３ １／３ＲＰＭ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:183:"新鮮な梨、桃、パイナップル、花などの香り。フレッシュで豊かな酸、柔らかなボディ、なめらかで心地良いバランスの取れたワイン。";s:13:"search_word_5";s:97:"シュナンブラン,ルーサンヌ,グルナッシュブラン,ヴィオニエ,ヴェルデホ";s:11:"free_area_6";s:3223:"<div class="productsheet__table">   <h2><small>Rascallion 33 1/3RPM</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (40％,40％,10％,8％,2％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2019’] 2017VT：92 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+主にピーケニアスクルーフ地区の低収量のブドウを使用。収穫は2月下旬で涼しい朝早い時間に実施。除梗、破砕後、ソフトプレスし、フリーランジュース（一番搾り）のみ使用。ステンレスタンクで発酵、そのまま澱が入ったまま（シュール・リー製法）熟成。<br>新鮮な梨、桃、パイナップル、花などの香り。フレッシュで豊かな酸、柔らかなボディ、なめらかで心地良いバランスの取れたワイン。複雑味もあり、素晴らしい南ローヌ・スタイルのブレンド。好きな曲を聞きながら気軽に軽快に楽しんでほしい1本。<br>サラダ、シーフードマリネ、サーモンや白身魚のレモンバターソースやクリームソース、天ぷらに塩、中華・アジア系料理、様々な魚介料理の揚げ物にレモンやライムを搾って。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:17:47";s:13:"update_date_8";s:19:"2023-07-25 03:54:03";s:6:"sclr_9";s:7:"2000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"171";s:6:"name_1";s:36:"ラスカリオン・４５ＲＰＭ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:246:"爽やかな赤系果実、ブラックベリー、ブラックオリーブ、ハーブ、フローラルな香り。フレッシュで心地良い酸、優しくなめらかなボディ。細やかな渋みはワインに溶け込んでいる。";s:13:"search_word_5";s:75:"グルナッシュノワール,サンソー,ムールヴェードル,タナ";s:11:"free_area_6";s:3120:"<div class="productsheet__table">   <h2><small>Rascallion 45RPM</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (36％,32％,26％,6％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2016VT：90 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+主にピーケニアスクルーフ地区の低収量のブドウを使用。収穫は3月上旬の朝早い涼しい時間に実施。除梗して軽く破砕。ステンレスタンクで発酵、熟成、ブレンド。爽やかな赤系果実、ブラックベリー、ブラックオリーブ、ハーブ、フローラルな香り。フレッシュで心地良い酸、優しくなめらかなボディ。細やかな渋みはワインに溶け込んでいる。余韻は長く、最後まで豊かな風味が続く。軽快に飲める気持ちの良いワイン。エレガントな北ローヌ・スタイル。少し冷やして飲んでも美味しいく、好きな曲を聞きながら気軽に軽快に楽しんでほしい1本。<br>ローストビーフ、焼肉、BBQ、焼鳥（タレ）、トマトやトマトソースの料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:17:12";s:13:"update_date_8";s:19:"2023-07-25 03:54:30";s:6:"sclr_9";s:7:"2000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"174";s:6:"name_1";s:36:"ラスカリオン・アクイバー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:384:"「アクイバー」とは、「ワクワクする期待感」を意味する。アプリコット、梨、グレープフルーツ、パッションフルーツ、オレンジ、メロン、フレッシュなワラ、アーモンドなどの香り。フレッシュで豊かな酸、ボディは程良い中程度。味わいは、柔らく滑らか、ほんのりクリーミー。";s:13:"search_word_5";s:80:"シュナンブラン,グルナッシュブラン,ソーヴィニヨンブラン";s:11:"free_area_6";s:4042:"<div class="productsheet__table">   <h2><small>Rascallion Aquiver</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (80％,10％,10％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2016VT：90 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+「アクイバー」とは、「ワクワクする期待感」を意味する。ブドウは、主にステレンボシュの南側、海に近い冷涼な産地の畑から購入。シュナンブランは、ステレンボシュ産で、標高200m、冷涼なフォルス湾からも15kmの単一畑。グルナッシュブランは、フォルス湾から10kmと更に近く冷涼（畑は頁岩＝ワインに骨格を与える）。ソーヴィニョンブランもフォルス湾から近く、花崗岩（＝ワインにミネラルを与える）と砂岩（＝ワインは優しく、香り豊かな品種に向いている）が混ざっている。2月中旬に収穫。6時間のスキンコンタクト。グルナッシュブラン、ソーヴィニョンブランは天然発酵。シュナンブランは人工酵母を使用して発酵。<br>シュナンブランは、フレッシュな酸味を、グルナッシュブランは、クリーミーさ、深みや複雑味を、ソーヴィニョンブランはフレッシュなライム・テイストをワインに与えている。グルナッシュブランはその後樽熟成。<br>アプリコット、梨、グレープフルーツ、パッションフルーツ、オレンジ、メロン、フレッシュなワラ、アーモンドなどの香り。フレッシュで豊かな酸、ボディは程良い中程度。味わいは、柔らく滑らか、ほんのりクリーミー。酸味と果実味、ボディ、クリーミーさなど、ちょうど良いバランスを保ち、複雑味もある。価格パフォーマンスに優れたワイン。<br>フレッシュな料理からやや濃厚なソースの料理まで幅広く。中華・アジア系料理、クリームソース料理。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:19:16";s:13:"update_date_8";s:19:"2023-07-25 03:53:35";s:6:"sclr_9";s:7:"2200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"173";s:6:"name_1";s:54:"ラスカリオン・パンディキュレーション";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:357:"「心地良い目覚め」を意味する。熟したブラックベリー、プラム、スパイスに少しオークの香り。柔らかな酸、程良いボディ、渋みは柔らかく、丸みを帯びている。豊かな果実味がジューシーでなめらか、ほんのりスパイシー。余韻も長く、バランスの良いワイン。";s:13:"search_word_5";s:43:"シラーズ,グルナッシュノワール";s:11:"free_area_6";s:3384:"<div class="productsheet__table">   <h2><small>Rascallion Pandiculation</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (85％,15％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml／スクリューキャップ</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2015VT：90 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+「パンディキュレーション」とは、「心地良い目覚め」を意味する。2種類の品種は、別の地域のブロックからブドウを購入。グルナッシュはブッシュヴァイン（株仕立て）でブドウの房は小さく、風味が豊かなブドウ。収穫は2月下旬の朝早く涼しい時間に実施。軽く破砕し、それぞれの品種で発酵後、シラーズはフレンチオークに移し、マロラクティック発酵を経て18ヶ月熟成。グルナッシュは樽使用無しでナチュラルなブドウの味を表現した。最後にブレンド。<br>熟したブラックベリー、プラム、スパイスに少しオークの香り。柔らかな酸、程良いボディ、渋みは柔らかく、丸みを帯びている。豊かな果実味がジューシーでなめらか、ほんのりスパイシー。余韻も長く、バランスの良いワイン。心地良いエレガントな南ローヌ・スタイル。価格パフォーマンスに優れたワイン。<br>様々な肉料理、ジビエ、中華・アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:18:49";s:13:"update_date_8";s:19:"2023-07-25 03:53:11";s:6:"sclr_9";s:7:"2200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

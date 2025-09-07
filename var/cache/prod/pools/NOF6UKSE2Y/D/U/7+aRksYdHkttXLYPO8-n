@@ -1,0 +1,136 @@
+1754692052
+%255B5cf2c730d360336a64c6327cb9b061fb31b4cc77%255D%255B1%255D
+a:1:{s:1154:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:72;}i:1;a:2:{i:0;i:55;i:1;i:12;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:2:{i:0;a:13:{s:4:"id_0";s:2:"55";s:6:"name_1";s:38:"コンスタンシア グレン ツー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:327:"ハーブ、グレープフルーツ、ライム、白い花などの控え目でエレガントな香り。美しく豊かな酸味、凝縮し深みのある果実味、石のニュアンスのミネラル、程良くしっかりしたボディ、ほんのりとクリーミーで抑制されたエレガントなワイン。";s:13:"search_word_5";s:43:"ソーヴィニョンブラン,セミヨン";s:11:"free_area_6";s:3551:"<div class="productsheet__table">   <h2><small>Constantia Glen Two</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／コンスタンシア</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (68％,32％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2017VT：93 Point<br>
+[Platter SA 2018’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+このワインに使われるブドウは、ベストなブロックのものを使用。早朝の涼しい時間に収穫。50％のブドウは全房でプレス。全て600mlの樽で発酵、そのまま7ヵ月熟成。新樽17％使用。残りは2-6年目の樽を使用。樽はフレンチオーク以外にオースリアンオーク10％、フレンチアカシア8％、アンフォラは７％使用している。<br>ハーブ、グレープフルーツ、ライム、白い花などの控え目でエレガントな香り。美しく豊かな酸味、凝縮し深みのある果実味、石のニュアンスのミネラル、程良くしっかりしたボディ、ほんのりとクリーミーで抑制されたエレガントなワイン。ソーヴィニョンブランは、ワインにフレッシュな酸味と骨格を与え、セミヨンは重みとリッチな味わいを与えている。二つの品種が見事に調和し、バランスのとれた美しいワインに仕上がっている。今でもフレッシュに楽しめるが、熟成しても楽しめるタイプなので、是非セラーに入れて欲しい。<br>グリルした魚、サーモンにレモンバターソース、グリーンアスパラ、鶏肉、豚肉料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:33:09";s:13:"update_date_8";s:19:"2023-11-13 12:27:20";s:6:"sclr_9";s:7:"4000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"12";s:6:"name_1";s:36:"アリステア・ＭＣＣ・ロゼ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:249:"MCCの申し子、クローヌの息子が手掛けるワイン。細やかで、綺麗、エレガントで洗練されたワイン。細やかで上品、優しいムースのような美しい泡が長く続き、かつ複雑で深みもある。";s:13:"search_word_5";s:34:"シャルドネ,ピノノワール";s:11:"free_area_6";s:3214:"<div class="productsheet__table">   <h2><small>Aristea MCC Rose</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.50％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：91 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ゆっくりと優しく全房でプレス。一番搾りとベストなジュースのみ使用。発酵後、マロラクティック発酵を経て、ベースとなるワインが完成。全てのワインをブレンドして瓶詰し、2次発酵。瓶内で最低2年熟成。生産量4000本。<br>色は繊細なサーモンピンク。赤いベリー系、ストロベリー、チェリーなど、フレッシュでチャーミングな果実の香り。活き活きとした豊かな酸味は最初から最後まで続く。細やかで上品、優しいムースのような美しい泡が長く続き、かつ複雑で深みもある。ゴージャスだけど派手すぎない、クラシックでエレガントなスタイル。南アフリカのMCCスパークリングとしては素晴らしい1本。<br>サーモン、エビ、カルパッチョなどの前菜に、また、牛肉などのメイン料理に、イチゴと一緒にデザートに多彩に対応できる。
+</div>";s:13:"create_date_7";s:19:"2020-10-07 08:33:43";s:13:"update_date_8";s:19:"2023-11-13 13:06:16";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

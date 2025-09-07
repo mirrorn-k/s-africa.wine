@@ -1,0 +1,498 @@
+1754855175
+%255B225510ee464aed19fe256036176517977f840bf0%255D%255B1%255D
+a:1:{s:1206:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:42;}i:1;a:7:{i:0;i:165;i:1;i:164;i:2;i:167;i:3;i:166;i:4;i:168;i:5;i:169;i:6;i:170;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:7:{i:0;a:13:{s:4:"id_0";s:3:"165";s:6:"name_1";s:48:"ライナカ・オーガニック・ホワイト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:279:"複雑な香り。フレッシュで活き活きとした酸、なめらかな味で、ややふくよか、優しいボディ。バランス良くまとまっていて、余韻も長く、繊細なフィニッシュ。フレッシュで心地の良い飲みやすいワイン。";s:13:"search_word_5";s:43:"ソーヴィニョンブラン,セミヨン";s:11:"free_area_6";s:3079:"<div class="productsheet__table">   <h2><small>Reyneke Organic White</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (53％,47％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>商品特徴：</th>
+            <td>オーガニック</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>-
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+土壌は主に砂岩ローム層。ブドウは除梗し、2時間のスキンコンタクト。フリーランジュースのみ使用し、ステンレスタンクで天然発酵。澱が入ったまま5か月熟成させ、ブレンド。ヴィンテージ+3年。<br>パッションフルーツ、ライム、グーズベリー、花、青りんご、アスパラガスなど、複雑な香り。フレッシュで活き活きとした酸、なめらかな味で、ややふくよか、優しいボディ。バランス良くまとまっていて、余韻も長く、繊細なフィニッシュ。フレッシュで心地の良い飲みやすいワイン。<br>サーモン、シーフードのカルパッチョ、魚料理、鶏肉料理、ポークフィレ、サラダなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:12:20";s:13:"update_date_8";s:19:"2023-07-25 03:51:14";s:6:"sclr_9";s:7:"2600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:3:"164";s:6:"name_1";s:45:"ライナカ・オーガニック・レッド";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:216:"フレッシュな黒コショウ、カシス、タイム、スミレなどの香り。優しい柔らかな酸とボディ。フレッシュで赤系果実やプラムなどのジューシーで軽快な味わい。";s:13:"search_word_5";s:46:"シラーズ,カベルネソーヴィニョン";s:11:"free_area_6";s:3083:"<div class="productsheet__table">   <h2><small>Reyneke Organic Red</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ウェスタンケープ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (89％,11％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>商品特徴：</th>
+            <td>オーガニック</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>-
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+4分の1のブドウは自社の畑から、他は他地域のオーガニックの畑から購入。除梗後は、コンクリートタンクとステンレスタンクで天然発酵。25％は、古い樽で8か月熟成させ、最後にブレンド。ヴィンテージ+3年。<br>フレッシュな黒コショウ、カシス、タイム、タバコ、スミレなどの香り。優しい柔らかな酸とボディ。フレッシュで赤系果実やプラムなどのジューシーで軽快な味わい。細やかで活き活きとした渋み、全体のバランスは良くまとまっていて、スムーズでなめらか、優しい口あたりでドライなフィニッシュ。<br>和食、洋食、アジア料理、パスタ、ピザなど幅広く様々な料理に。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:11:57";s:13:"update_date_8";s:19:"2023-07-25 03:51:37";s:6:"sclr_9";s:7:"2600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:3:"167";s:6:"name_1";s:75:"ライナカ・バイオダイナミック・ソーヴィニヨンブラン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:372:"同社の自社畑のバイオダイナミック＆オーガニック・レンジ。フレッシュな酸、凝縮し密度の詰まった果実味、ミネラルに富み、フリンティな感じもある。ソーヴィニョンブランらしい心地良いグリーンノートや苦みもある。ボディ、厚みは程良く、古い樽の風味が丁度良い。";s:13:"search_word_5";s:30:"ソーヴィニョンブラン";s:11:"free_area_6";s:3911:"<div class="productsheet__table">   <h2><small>Reyneke Biodynamic Sauvignon Blanc</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>商品特徴：</th>
+            <td>同社の自社畑のバイオダイナミック＆オーガニック・レンジ</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：93 Point<br>
+[Platter SA 2020’] 2018VT：4.0 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+自社畑のバイオダイナミック＆オーガニック農法で育てたブドウを使用。先に収穫したブドウは除梗し、後から収穫したブドウは全房でプレス。古いフレンチオークに移して天然発酵。そのまま澱が入ったまま7か月熟成（シュール・リー製法）。<br>グレープフルーツ、パッションフルーツなど活き活きした南国系果実の香りに草や大葉などの青い葉の香り。フレッシュな酸、凝縮し密度の詰まった果実味、ミネラルに富み、フリンティな感じもある。ソーヴィニョンブランらしい心地良いグリーンノートや苦みもある。ボディ、厚みは程良く、古い樽の風味が丁度良い。クリーンでナチュラルなピュア・テイスト、エレガントでバランスも良く出来ている。瑞々しい余韻が心地よい。ステレンボシュらしい温かい果実の風味に溢れたフルーティなワイン。最初は冷え気味の温度でフレッシュさを楽しみ、グラスの中で徐々に開かせ温度を上げていくとコクや複雑味が出てきて表情も変わる。今飲んでも美味しく、5年程度熟成してからも良い。<br>サーモン、シーフードマリネ、蒸し鶏、コンソメスープ、オイル系やシーフードのパスタ、イカやエビの天ぷら、ホワイトアスパラなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:13:20";s:13:"update_date_8";s:19:"2023-07-25 03:50:23";s:6:"sclr_9";s:7:"3200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:3:"166";s:6:"name_1";s:54:"ライナカ・バイオダイナミック・シラー";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:366:"自社畑のバイオダイナミック＆オーガニック農法で育てたブドウを使用。全房でプレス。フレッシュで柔らかな酸、ナチュラルでピュアな果実味がジューシー。優しいなめらかな渋み、程良い骨格のボディ。フルーティでミネラルに富み、柔らかく全体のバランスも良い。";s:13:"search_word_5";s:12:"シラーズ";s:11:"free_area_6";s:3463:"<div class="productsheet__table">   <h2><small>Reyneke Biodynamic Syrah</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>商品特徴：</th>
+            <td>同社の自社畑のバイオダイナミック＆オーガニック・レンジ</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>	[Tim Atkin Report 2019’] 2017VT：93 Point<br>
+[Platter SA 2020’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+自社畑のバイオダイナミック＆オーガニック農法で育てたブドウを使用。全房でプレス。そのうち30%は足踏みプレス。70％はコンクリートタンクで、ともに天然発酵。軽いパンチダウンとパンプオーバー。フレンチオークと2500Lの大樽でマロラクティック発酵を経て14か月熟成。ブレンドしてステンレスタンクで更に3か月熟成。<br>赤系果実、黒系果実、白コショウ、スミレ、香水、スパイスなどフレッシュで複雑な香り。フレッシュで柔らかな酸、ナチュラルでピュアな果実味がジューシー。優しいなめらかな渋み、程良い骨格のボディ。フルーティでミネラルに富み、瑞々しくて柔らかく、全体のバランスも良い。余韻は長くエレガンで綺麗なワイン。少し冷やし気味で飲んでも美味しい。<br>ローストビーフ、ステーキ、ハンバーグなど様々な牛肉料理に。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:12:44";s:13:"update_date_8";s:19:"2023-07-25 03:50:48";s:6:"sclr_9";s:7:"3200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:3:"168";s:6:"name_1";s:39:"ライナカ・コーナーストーン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:447:"ビオディナミ農法で育てられたブドウを畑でセレクションし、また、セラーでも更に一粒一粒セレクションし、ベストのブドウだけを使用。ブドウはコンクリートタンクで発酵、フレンチオークに移して18か月熟成（新樽30％、2年目、3年目の樽70％使用）。その後、バレルセレクションし、ブレンドしてタンクで4か月熟成し、瓶詰。";s:13:"search_word_5";s:65:"カベルネソーヴィニョン,メルロ,カベルネフラン";s:11:"free_area_6";s:3462:"<div class="productsheet__table">   <h2><small>Reyneke Cornerstone</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (37％,36％,27％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>商品特徴：</th>
+            <td>労働者の生活向上や子供たちの教育支援を行っているアイテム</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2014VT：93 Point<br>
+[Platter SA 2018’] 2015VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ビオディナミ農法で育てられたブドウを畑でセレクションし、また、セラーでも更に一粒一粒セレクションし、ベストのブドウだけを使用。ブドウはコンクリートタンクで発酵、フレンチオークに移して18か月熟成（新樽30％、2年目、3年目の樽70％使用）。その後、バレルセレクションし、ブレンドしてタンクで4か月熟成し、瓶詰。ヴィンテージ+7-10年。<br>カシス、黒系果実、スパイス、タバコの葉、鉛筆の芯などミネラリーな香り。フレッシュで心地良い酸、凝縮した果実の味わい、まっすぐでやや太く、はっきりとした輪郭のボディ。細やかでしっかりとした渋みを感じるが、口あたりはなめらか。全体にバランス良くまとまっている優等生的な仕上がり。<br>牛ステーキ、ローストしたラム肉、ミートソースやトマトソースのパスタ、酢豚など。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:13:45";s:13:"update_date_8";s:19:"2023-07-25 03:50:00";s:6:"sclr_9";s:7:"4000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:3:"169";s:6:"name_1";s:42:"ライナカ・リザーブ・ホワイト";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:326:"リザーブ・ホワイトには、最上のブドウのみを使用。収穫後は全房でプレス。その後、300Lのフレンチオークで天然発酵（95％は新樽、5％は2年目の樽）。そのまま澱が入ったまま12か月熟成。その後、ステンレスタンクに移して更に4か月熟成。";s:13:"search_word_5";s:30:"ソーヴィニョンブラン";s:11:"free_area_6";s:3322:"<div class="productsheet__table">   <h2><small>Reyneke Reserve White</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>13.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>商品特徴：</th>
+            <td>ビオディナミ</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2017VT：96 Point<br>
+[Platter SA 2020’] 2017VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+リザーブ・ホワイトには、最上のブドウのみを使用。収穫後は全房でプレス。その後、300Lのフレンチオークで天然発酵（95％は新樽、5％は2年目の樽）。そのまま澱が入ったまま12か月熟成。その後、ステンレスタンクに移して更に4か月熟成。飲み頃は2018-2023年。<br>フレッシュで、リンゴ、花、柑橘類の皮、火打石を擦ったような活き活きとした香り。比較的ふくよかで豊かな酸、凝縮した濃厚な果実味で複雑味を帯びている。口あたりは、なめらかで、ほんのりクリーミー。ボディは太くしっかりした骨格。全体のバランスも良く、余韻も長い。南アフリカでは少ない樽熟成した秀逸なソーヴィニョンブランの一つ。<br>サーモン、シーフードマリネ、クリーム系パスタ、蒸し鶏、コンソメスープなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:14:16";s:13:"update_date_8";s:19:"2023-07-25 03:49:31";s:6:"sclr_9";s:7:"4650.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:3:"170";s:6:"name_1";s:63:"ライナカ・リザーブ・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:269:"同社のトップレンジで良いヴィンテージのみリリースされる特別なワイン。南アフリカのカベルネソーヴィニョン100%のワインとしては、他にはない美しさとしなやかさを兼ね備えた最高クラスの1本。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:4227:"<div class="productsheet__table">   <h2><small>Reyneke Reserve Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>商品特徴：</th>
+            <td>同社のトップレンジで良いヴィンテージのみリリースされる特別なワイン</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2015VT：95 Point<br>
+[Platter SA 2019’] 2015VT：5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+自社畑のバイオダイナミック＆オーガニック農法で育てたブドウを使用。畑は南東向きの同社で最も標高が高く冷涼な畑でリザーブカベルネのみに使用される（上写真参照）。植樹は1994年。細心の注意を払ってベストなブドウを収穫し、パーフェクトな粒のみを選果。コンクリートタンクで天然発酵。プレスし、フリーランジュース（一番搾り）のみを225L のフレンチオークの新樽に移して24ヵ月熟成。更にベストな樽のみをブレンド。ヴィンテージとテロワールを忠実に表現する為、少量のSO2以外は何も入れない。<br>ブラックベリー、ブラックチェリー、ブラックオリーブ、黒系果実、杉の木、ハーブ、スパイス、黒コショウ、鉛筆の芯などの香り。フレッシュで綺麗な酸、ナチュラルでピュアな果実味がジューシーでシルクのようにソフトでしなやか。渋みは細やかで洗練されている。骨格はしっかりとしてボディは締まっている。複雑味もあり、黒系果実の風味が何層にもなって重なってくる。余韻は長くエレガントでドライなフィニッシュ。ボトルの形状も中身もスマートで、美しい黒いシルクのドレスをまとっているかのように、または黒く輝く宝石のように光を放っている。南アフリカのカベルネソーヴィニョン100%のワインとしては、他にはない美しさとしなやかさを兼ね備えた最高クラスの1本。<br>熟成ポテンシャル：ヴィンテージ+10-20年。<br>ローストビーフ、鉄板焼き、牛ステーキなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-30 08:14:46";s:13:"update_date_8";s:19:"2023-07-25 03:49:09";s:6:"sclr_9";s:8:"15100.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

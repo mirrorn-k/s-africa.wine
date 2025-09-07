@@ -1,0 +1,486 @@
+1754875183
+%255Bf7faee57f4c43ab935128e4193fb4ebb051243eb%255D%255B1%255D
+a:1:{s:1201:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:20;}i:1;a:7:{i:0;i:73;i:1;i:74;i:2;i:72;i:3;i:71;i:4;i:75;i:5;i:133;i:6;i:134;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:7:{i:0;a:13:{s:4:"id_0";s:2:"73";s:6:"name_1";s:51:"ハーテンバーグ・カベルネ・シラーズ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:222:"ラズベリー、カシスなど熟した赤い果実、スパイスなどの香り。柔らかな酸味、渋みは細やかで、程よいボディ感。なめらかでシルキーな口あたりが最後まで続く。";s:13:"search_word_5";s:78:"カベルネソーヴィニョン,シラーズ,マルベック,プチベルド";s:11:"free_area_6";s:2848:"<div class="productsheet__table">   <h2><small>Hartenberg Cabernet Sauvignon Shiraz</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} (47％,43％,6％,4％)</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2018’] 2015VT：4 STAR<br>
+[Tim Atkin Report 2017’] 2014VT：90 Point<br>
+[Parker Wine Advocate] 2010VT：90 Point<br>
+[Sakura Awards 2017’] 2013VT：Double Gold
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+発酵後、フレンチオーク（3年目樽12％、4年目樽88％）で16ヶ月熟成。ラズベリー、カシスなど熟した赤い果実、スパイスなどの香り。柔らかな酸味、渋みは細やかで、程よいボディ感。なめらかでシルキーな口あたりが最後まで続く。長い余韻。<br>ピザ、グリルした肉料理、ビーフシチュー、焼き魚、洋ナシの赤ワイン煮など様々な料理に。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:22:02";s:13:"update_date_8";s:19:"2023-11-13 12:08:58";s:6:"sclr_9";s:7:"2600.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"74";s:6:"name_1";s:36:"ハーテンバーグ・シラーズ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:261:"オーガニック農業。シラーズのスペシャリスト、ハーテンバーグ社のプレミアム・レンジ。何かの要素が突出したということの無い綺麗にまとまったステレンボシュ地区の教科書的なシラーズ。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:3119:"<div class="productsheet__table">   <h2><small>Hartenberg Shiraz</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2015VT：92 Point<br>
+[Tim Atkin Report 2017’] 2014VT：90 Point<br>
+[Syra du Monde 2019’ France] 2016VT：Gold Medal
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+発酵後は225Ｌのフレンチオークで21ヶ月熟成。新樽30％、２年目樽40％、３年目の樽30％使用。<br>黒コショウ、カシス、黒系と赤系果実、スミレなどの香り。柔らかな酸、細やかでなめらかな渋み。シルキーなタッチで、心地良いスパイスの風味。程よく濃厚、ボディは中庸からややフルボディ。洗練され、全体に綺麗にまとまっている。シラーズのスペシャリスト、ハーテンバーグ社らしいステレンボシュ地区の教科書的な（典型的なという意味で）バランスの取れたシラーズに仕上がっている。<br>グリルした肉料理、牛肉入りのチーズバーガー、ビーフシチュー、マッシュルームリゾットなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:22:39";s:13:"update_date_8";s:19:"2023-11-13 12:08:32";s:6:"sclr_9";s:7:"3200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:2;a:13:{s:4:"id_0";s:2:"72";s:6:"name_1";s:33:"ハーテンバーグ・メルロ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:142:"05年VT:08インターナショナル・Ｗ＆Ｓ・コンペティション（IWSC) ベスト・メルロ・インザワールドで世界一";s:13:"search_word_5";s:9:"メルロ";s:11:"free_area_6";s:3254:"<div class="productsheet__table">   <h2><small>Hartenberg Merlot</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2018’] 2015VT：95 Point／Gold<br>
+[Tim Atkin Report 2017’] 2014VT：92 Point<br>
+パーカーポイント90点。2013ヴェリタス（南ア）金賞。2014Concours Mondial De Bruxelles金賞。ジョンプラッター4星<br>
+2005年ヴィンテージ：2008インターナショナル・ワイン&スピリッツ・コンペティション（IWSC)でベスト・メルロ・インザワールド（世界一）獲得
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+夜明け前の涼しい時間にブドウを全て手摘みで収穫。発酵後、225Lのフレンチオーク（新樽80％、2年目の樽20％使用）でマロラクティック発酵し、17ヶ月熟成。熟成し、飲み頃を迎えている。色は褐色。熟したプラム、ヴァニラなどの香り。柔らかな酸味、渋みは細やかで、なめらかでシルキーな口あたり。長い余韻の後、香りは長く続く。南アフリカを代表するワールドクラスのメルロ。<br>様々な肉料理、鶏や鴨のムネ肉、バターナッツ、根菜類他、野菜の網焼きなど。 
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:20:29";s:13:"update_date_8";s:19:"2023-07-25 02:11:21";s:6:"sclr_9";s:7:"3900.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:3;a:13:{s:4:"id_0";s:2:"71";s:6:"name_1";s:57:"ハーテンバーグ・カベルネソーヴィニヨン";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:189:"世界一を取ったカベルネ。果実味豊かでジューシー、柔らかな酸味でなめらかな味わい。全体に綺麗にまとまっているエレガントなワイン。";s:13:"search_word_5";s:33:"カベルネソーヴィニヨン";s:11:"free_area_6";s:3312:"<div class="productsheet__table">   <h2><small>Hartenberg Cabernet Sauvignon</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2018</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Sakura Awards 2018’] 2015VT：Double Gold<br>
+[Decanter World Wine Awards 2018’] 2015VT：92 Point／Silver<br>
+[Decanter World Wine Awards 2017’] 2014VT：88 Point／Bronze<br>
+[Tim Atkin Report 2017’] 2015VT：90 Point<br>
+[Tim Atkin Report 2016’] 2012VT：89 Point<br>
+[Decanter World Wine Awards 2015’] 2010VT：International Trophy: Bordeaux Varietals under £15
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+夜明け前の涼しい時間にブドウを全て手摘みで収穫。フリーランジュースと、ソフトプレスしたジュースのみを使用。70％をフレンチオーク（新樽60％、2年目の樽40％使用）でマロラクティック発酵し、15ヶ月熟成。濃い色調。トリュフ、森の土、タバコ、鉛筆の芯、カシス、プラム、ブラックベリーなど果実の香り。果実味豊かでジューシー、柔らかな酸味でなめらかな味わい。全体に綺麗にまとまっているエレガントなワイン。程よく細やかな渋みが続き、余韻も長い。<br>熟成ポテンシャル：20年。<br>料理：ビーフシチュー、牛フィレ肉のステーキなど。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:20:04";s:13:"update_date_8";s:19:"2023-11-13 12:07:07";s:6:"sclr_9";s:7:"4300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:4;a:13:{s:4:"id_0";s:2:"75";s:6:"name_1";s:54:"ハーテンバーグ・エレノア・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:333:"ハーテンバーグ社のシャルドネのフラグシップ。「エレノア」とは、1948-1977年にハーテンバーグのオーナーだったフィンレーソン家族の奥さんの名前から取った。彼女は、強くて決断力のある、落ち着いた、品の良い素晴らしい人格の女性でした。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3512:"<div class="productsheet__table">   <h2><small>Hartenberg Eleanor Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.0％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2019</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2018’] 2016VT：95 Point<br>
+[Platter SA 2018’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+発酵後は、228Ｌのフレンチオークで13ヶ月熟成。新樽25％、２年目樽50％、３年目の樽25％使用。柑橘類、トロピカルフルーツ、トーストしたオーク、ブリオッシュなどの香り。比較的豊かな酸味と果実味、ボディのバランスが良く、味わいはリッチでほんのりクリーミー。なめらかで上質な口あたり。余韻も長く、ワンランク上のゴージャスでエレガントなワインに仕上がっている。いわゆるステレンボシュらしい口あたりの良い果実味とバランスの取れたシャルドネ。過去最高のヴィンテージで、ステレンボシュ及び南アフリカを代表するトップ・シャルドネの1本。<br>シーフード料理、グラタン、リゾット、パスタ、クリームソースなどの料理。<br>
+<br>
+オーガニック農業。ハーテンバーグ社のシャルドネのフラグシップ。「エレノア」とは、1948-1977年にハーテンバーグのオーナーだったフィンレーソン家族の奥さんの名前から取った。彼女は、強くて決断力のある、落ち着いた、品の良い素晴らしい人格の女性でした。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 05:23:05";s:13:"update_date_8";s:19:"2023-07-25 02:13:59";s:6:"sclr_9";s:7:"5000.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:5;a:13:{s:4:"id_0";s:3:"133";s:6:"name_1";s:48:"ハーテンバーグ・ストークシラーズ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:247:"キメ細やかな渋みと、繊細でなめらか、柔らかくシルキーなタッチ。上品なプレミアム・シラーズ。「さすがハーテンバーグ！」と言える南アフリカのトップクラスのシラーズの1本。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:2969:"<div class="productsheet__table">   <h2><small>Hartenberg Stork Shiraz</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>15％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2017’] 2013VT：94 Point<br>
+[Tim Atkin Report 2016’] 2012VT：93 Point<br>
+[Platter SA 2020’] 2016VT：4.5 STAR
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+ハーテンバーグ社の厳選された畑のブドウを使用。100％新樽のフレンチオークで19カ月熟成。チェリー、プラム、スミレ、白コショウなどの香り。豊かな果実味と、程よくしっかりしたボディ。キメ細やかな渋みと、繊細でなめらか、柔らかくシルキーなタッチ。上品なプレミアム・シラーズ。「さすがハーテンバーグ！」と言える南アフリカのトップクラスのシラーズの1本。過去のヴィンテージと比べても綺麗で質の高い良いヴィンテージ。ヴィンテージ+15年程度。<br>ラム肉、牛肉など。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:34:09";s:13:"update_date_8";s:19:"2023-07-25 02:14:47";s:6:"sclr_9";s:8:"15200.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:6;a:13:{s:4:"id_0";s:3:"134";s:6:"name_1";s:42:"ハーテンバーグ・グラベルヒル";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:237:"同社のトップレンジのバックヴィンテージ。もともとは、オークション用に作られていた商品。ハーテンバーグ社で、最も品質の高いシラーズ畑の１区画分から作られている。";s:13:"search_word_5";s:9:"シラー";s:11:"free_area_6";s:5176:"<div class="productsheet__table">   <h2><small>Hartenberg Gravel Hill</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }}</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>14.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Platter SA 2020’] 2015VT：4.5 STAR<br>
+[Parker Wine Advocate] 2006VT：91 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+植樹は1970年代（約40年）。グラベルヒルの畑は、表面は約40ｃｍの砂利質の土壌がになっている。その下に粘土質の層がある。ブドウの根は、その砂利質の土壌を突き抜け、粘土質の層まで数メートルにも伸びている。冬の雨は砂利土壌を抜けて、下の粘土層にまで達する。この特別なブロックは、ブドウ1本の木に数房しか出来ない。またブドウのサイズも通常のシラーズの半分程度で、その結果、凝縮した香りと色のユニークなブドウが育つ。発酵後は、225Ｌの100％新樽のフレンチオークで22ヶ月熟成。黒系果実、スミレ、クローブ、黒コショウ、コーヒー、オークなどの香りに鉄分の風味を感じる。柔らかな酸、細やかで上品な渋み、熟した果実の風味や心地良いスパイスの風味。程よいボディを残しつつ、熟成を経てシルキーなタッチのエレガントでリッチな味わい。洗練された美しいワインで余韻も長い。シラーズのスペシャリスト、ハーテンバーグ社のトップレンジに相応しい、南アフリカで他に見つけるのが非常に困難と思えるほど、飛びぬけたレベルのワイン。<br>グリルした肉料理、フィレステーキ、ローストしたサーロイン、ビーフシチュー、マッシュルームリゾットなど。<br>
+<br>
+オーガニック農業。同社のトップレンジのバックヴィンテージ。もともとは、オークション用に作られていた商品。ハーテンバーグ社で、最も品質の高いシラーズ畑の１区画分から作られている。ハーテンバーグ社は、南アフリカで最初に同一品種で畑違いのブドウを違うタンクや樽に分けて醸造し、テロワール違いを表現したワイナリーの一つ。グラベルヒルの初ヴィンテージ（当時は「モンターニュ」というラベルだった）は1978年。その後1995年に現在のグラベルヒルという名前になった。セラーマスターのカールは、1993年に同社で働き始めた時に「グラベルヒル」の畑のシラーズが、同社の他の畑から出来たシラーズと比べて特別なレベルであることを発見した。その後、ケープ・ワインメーカーズ・ギルド（ＣＷＧ）に加盟し、ＣＷＧオークション用に、このグラベルヒルを生産した。グラベルヒルは、2007年の同オークションのシラーズ部門では、最高値で取引され、また、全てのエントリーワインの中でも2番目に高い金額で落札された。また、このグラベルヒルは、ＣＷＧオークションに最も長くエントリーしている長い歴史のある商品になっている。
+</div>";s:13:"create_date_7";s:19:"2020-10-15 07:34:46";s:13:"update_date_8";s:19:"2023-07-25 02:15:34";s:6:"sclr_9";s:8:"15700.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}

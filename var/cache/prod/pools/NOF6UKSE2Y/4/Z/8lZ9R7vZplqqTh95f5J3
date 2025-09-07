@@ -1,0 +1,143 @@
+1754876640
+%255Bfcb4cc66af6c7773a9fa519338624d0742efda4d%255D%255B1%255D
+a:1:{s:1154:"query=SELECT d0_.id AS id_0, d0_.name AS name_1, d0_.note AS note_2, d0_.description_list AS description_list_3, d0_.description_detail AS description_detail_4, d0_.search_word AS search_word_5, d0_.free_area AS free_area_6, d0_.create_date AS create_date_7, d0_.update_date AS update_date_8, MIN(d1_.price02) AS sclr_9, d0_.discriminator_type AS discriminator_type_10, d0_.creator_id AS creator_id_11, d0_.product_status_id AS product_status_id_12 FROM dtb_product d0_ INNER JOIN dtb_product_category d2_ ON d0_.id = d2_.product_id AND d2_.discriminator_type IN ('productcategory') INNER JOIN dtb_category d3_ ON d2_.category_id = d3_.id AND d3_.discriminator_type IN ('category') INNER JOIN dtb_product_class d1_ ON d0_.id = d1_.product_id AND d1_.discriminator_type IN ('productclass') WHERE (d0_.product_status_id = 1 AND d2_.category_id IN (?) AND d1_.visible = 1 AND d0_.id IN (?)) AND d0_.discriminator_type IN ('product') GROUP BY d0_.id ORDER BY sclr_9 ASC, d0_.id DESC&params=a:2:{i:0;a:1:{i:0;i:71;}i:1;a:2:{i:0;i:99;i:1;i:49;}}&types=a:2:{i:0;i:101;i:1;i:101;}&connectionParams=a1acdd81edd759d1aa8e1cce4956b26c89527e604ac64a03dadddadc65da2b96";a:2:{i:0;a:13:{s:4:"id_0";s:2:"99";s:6:"name_1";s:60:"ポールクルーバー・ビレッジ・リースリング";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:324:"フレッシュな青りんご、柑橘類の花などの香り。フレッシュで、高い酸味とミネラルに富み、心地良い残糖感とのバランスが素晴らしい。レモンシャーベットやライムの風味、ほんのりとクリーミーで洗練されエレガントにまとまっている。";s:13:"search_word_5";s:18:"リースリング";s:11:"free_area_6";s:3687:"<div class="productsheet__table">   <h2><small>Paul Cluver Estate Riesling</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／エルギン</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100％</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％未満</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2022</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Tim Atkin Report 2019’] 2018VT：93 Point
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+31年の物がほとんど。少しだけ若木のブドウを混ぜている。標高は300ｍ。樹齢31年の物の土壌は、頁岩に少し粘土が混ざっている。土の表面は砂地や瓦礫。これらの土壌はワインにミネラルを与える。若い木の土壌は同じような表面ですが、ほとんど頁岩。発酵前にほんの少しスキンコンタクト。優しくプレスし、フリーランジュース（一番搾り）のみ使用。一部、酸味の高い物は途中で発酵を止め、糖度の低い物はそのままシュールリーで熟成。この部分は、ワインにクリーミーさを与える。その後ブレンド。32%は2500Ｌの大樽で熟成。<br>フレッシュな青りんご、柑橘類の花などの香り。フレッシュで、高い酸味とミネラルに富み、心地良い残糖感とのバランスが素晴らしい。レモンシャーベットやライムの風味、ほんのりとクリーミーで洗練されエレガントにまとまっている。豊かな果実味と、しっかりした骨格は頁岩の多い、いかにもポールクルーバーらしい。またそれをエルギンらしい豊かな酸がしっかり支え、ポールクルーバーのテロワールを表している。南アフリカを代表する素晴らしいリースリングの1本。<br>エビのソテー、ポークチョップ、スパイス料理、アジア系料理など。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 06:00:27";s:13:"update_date_8";s:19:"2023-07-07 06:12:48";s:6:"sclr_9";s:7:"2800.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}i:1;a:13:{s:4:"id_0";s:2:"49";s:6:"name_1";s:66:"グレネリー・エステート・リザーブ・シャルドネ";s:6:"note_2";N;s:18:"description_list_3";N;s:20:"description_detail_4";s:189:"豊かな酸味と濃厚な果実味。レモン、ライム、りんご、梨、ライチ、バラなど、複雑な香りに、ワインは、クリーミーでなめらかな味わい。";s:13:"search_word_5";s:15:"シャルドネ";s:11:"free_area_6";s:3238:"<div class="productsheet__table">   <h2><small>Glenelly Estate Reserve Chardonnay</small></h2>
+    <table>
+        <tr>
+            <th>ワイナリー：</th>
+            <td>{# 関連カテゴリ #}
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 62 %}
+            {% for Category in ProductCategory.Category.path %}
+                {% if Category.id != 62 %}
+                    <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>原産国：</th>
+            <td>南アフリカ／ステレンボッシュ・シモンズバーグ</td>
+        </tr>
+        <tr>
+            <th>タイプ：</th>
+            <td>
+{% if Product.ProductCategories is not empty %}
+    {% for ProductCategory in Product.ProductCategories %}
+    {% set Cat = ProductCategory.Category %}
+        {% if Cat.Parent.id == 27 or Cat.Parent.id == 28 or Cat.Parent.id == 29 or Cat.Parent.id == 39 %}
+            {% for Category in ProductCategory.Category.path %}
+                <a href="{{ url('product_list') }}?category_id={{ Category.id }}">{{ Category.name }}</a>
+                {%- if loop.last == false %}<span>＞</span>{% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+            </td>
+        </tr>
+        <tr>
+            <th>主要品種：</th>
+            <td>{{ Product.search_word }} 100%</td>
+        </tr>
+        
+        <tr>
+            <th>アルコール度数：</th>
+            <td>12.5％</td>
+        </tr>
+        <tr>
+            <th>容量：</th>
+            <td>750ml</td>
+        </tr>
+        <tr>
+            <th>ヴィンテージ：</th>
+            <td>2021</td>
+        </tr>
+        <tr>
+            <th>受賞／評価：</th>
+            <td>[Decanter World Wine Awards 2018’] 2016VT：95 Point／Gold<br>
+[Decanter World Wine Awards 2017’] 2015VT：95 Point／Gold<br>
+[Tim Atkin Report 2019’] 2018VT：92 Point<br>
+[Tim Atkin Report 2018’] 2017VT：92 Point<br>
+[Tim Atkin Report 2017’] 2016VT：95 Point<br>
+[Parker Wine Advocate] 2014VT：92 Point<br>
+[Sakura Awards 2018’] 2015VT：Gold<br>
+[Sakura Awards 2016’] 2013VT：Gold
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div class="ec-productRole__description">
+グラン・ヴァン・ド・シャルドネがエステートリザーブに名称変更！<br>
+ブドウは房ごとプレスし、500Lの新樽と２年目のフレンチオークで天然発酵。マロラクティック発酵100％。バトナージュはせずフレッシュでミネラル感が感じられる。豊かな酸味と濃厚な果実味。レモン、ライム、りんご、梨、ライチ、バラなど、複雑な香りに、ワインは、クリーミーでなめらかな味わい。フィニッシュは、フレッシュでリッチ。余韻は長くエレガントに仕上がっている。
+</div>";s:13:"create_date_7";s:19:"2020-10-08 04:05:02";s:13:"update_date_8";s:19:"2023-11-13 13:01:14";s:6:"sclr_9";s:7:"3300.00";s:21:"discriminator_type_10";s:7:"product";s:13:"creator_id_11";s:1:"1";s:20:"product_status_id_12";s:1:"1";}}}
