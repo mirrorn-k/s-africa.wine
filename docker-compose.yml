@@ -24,7 +24,7 @@ services:
         # ビルド時点でDBサーバの起動や接続が出来ない、という場合等にエラーとなるため。
         SKIP_INSTALL_SCRIPT_ON_DOCKER_BUILD: "true"
     ports:
-      - 8080:80
+      - 8251:80
       - 4430:443
     volumes:
       - ".:/var/www/html:cached"
