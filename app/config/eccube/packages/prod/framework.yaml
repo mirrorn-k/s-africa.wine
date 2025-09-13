@@ -3,10 +3,3 @@
 #        system: cache.adapter.apcu
 framework:
   trusted_proxies: ["127.0.0.1", "::1"]
-  trusted_headers:
-    [
-      "x-forwarded-for",
-      "x-forwarded-proto",
-      "x-forwarded-port",
-      "x-forwarded-host",
-    ]
