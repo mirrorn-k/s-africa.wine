@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  ec-cube:
+    environment:
+      # 開発時は mailcatcher を使う
+      MAILER_DSN: smtp://mailcatcher:1025
+
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - "1080:1080" # Web UI
+      - "1025:1025" # SMTP ポート

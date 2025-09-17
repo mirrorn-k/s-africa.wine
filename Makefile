@@ -46,6 +46,9 @@ build:
 	$(DC) build
 
 ## 起動
+up-prod:
+	$(DC) -f docker-compose.yml up -d
+
 up:
 	$(DC) up -d
 
