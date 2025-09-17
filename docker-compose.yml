@@ -14,7 +14,7 @@ services:
       - "vendor:/var/www/html/vendor"
     environment:
       APP_ENV: prod
-      MAILER_URL: smtp://wheatllama8.sakura.ne.jp:587?encryption=tls&auth_mode=login&username=info@s-africa.wine&password=65z@nnS4N54Ugcv
+      MAILER_URL: smtp://wheatllama8.sakura.ne.jp:587?encryption=tls&auth_mode=login&username=info@s-africa.wine&password=65z%40nnS4N54Ugcv
 
   mysql:
     image: mysql:5.7
